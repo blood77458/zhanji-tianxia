@@ -1,0 +1,11 @@
+local charge_money_reward={
+	[1]={id=1,requireGold=1,worthGold=9999,backgroundCardId=102061,describe="chargeMoney_dec1",rewardType1=5,rewardId1=102061,rewardAmount1=1,rewardType2=7,rewardId2=400010,rewardAmount2=50,rewardType3=5,rewardId3=104951,rewardAmount3=1,rewardType4=0,rewardId4=0,rewardAmount4=0},
+	[2]={id=2,requireGold=3300,worthGold=18888,backgroundCardId=103011,describe="chargeMoney_dec2",rewardType1=5,rewardId1=103011,rewardAmount1=1,rewardType2=7,rewardId2=400010,rewardAmount2=300,rewardType3=5,rewardId3=104951,rewardAmount3=2,rewardType4=7,rewardId4=400050,rewardAmount4=5},
+	[3]={id=3,requireGold=7900,worthGold=28888,backgroundCardId=102031,describe="chargeMoney_dec3",rewardType1=5,rewardId1=102031,rewardAmount1=1,rewardType2=7,rewardId2=400051,rewardAmount2=5,rewardType3=5,rewardId3=104961,rewardAmount3=1,rewardType4=7,rewardId4=400010,rewardAmount4=500},
+	[4]={id=4,requireGold=39000,worthGold=38888,backgroundCardId=102032,describe="chargeMoney_dec4",rewardType1=5,rewardId1=102061,rewardAmount1=1,rewardType2=5,rewardId2=103011,rewardAmount2=1,rewardType3=5,rewardId3=102031,rewardAmount3=1,rewardType4=7,rewardId4=400052,rewardAmount4=5},
+	[5]={id=5,requireGold=150000,worthGold=58888,backgroundCardId=102001,describe="chargeMoney_dec5",rewardType1=5,rewardId1=102001,rewardAmount1=1,rewardType2=7,rewardId2=400010,rewardAmount2=1000,rewardType3=5,rewardId3=104971,rewardAmount3=3,rewardType4=7,rewardId4=400053,rewardAmount4=5},
+	[6]={id=6,requireGold=600000,worthGold=98888,backgroundCardId=102003,describe="chargeMoney_dec6",rewardType1=5,rewardId1=102001,rewardAmount1=1,rewardType2=5,rewardId2=102001,rewardAmount2=1,rewardType3=7,rewardId3=400010,rewardAmount3=1500,rewardType4=5,rewardId4=104971,rewardAmount4=3},
+	[7]={id=7,requireGold=1000000,worthGold=1288888,backgroundCardId=102005,describe="chargeMoney_dec7",rewardType1=5,rewardId1=102001,rewardAmount1=1,rewardType2=5,rewardId2=102001,rewardAmount2=1,rewardType3=7,rewardId3=400010,rewardAmount3=2000,rewardType4=5,rewardId4=104971,rewardAmount4=5},
+	[8]={id=8,requireGold=2000000,worthGold=1688888,backgroundCardId=102005,describe="chargeMoney_dec8",rewardType1=5,rewardId1=102001,rewardAmount1=1,rewardType2=5,rewardId2=102001,rewardAmount2=1,rewardType3=7,rewardId3=400010,rewardAmount3=2500,rewardType4=5,rewardId4=104971,rewardAmount4=8}
+};
+return charge_money_reward;

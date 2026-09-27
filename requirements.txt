@@ -1,0 +1,5 @@
+# Optional: prettier admin card avatars (server falls back without it)
+Pillow>=9.0.0
+
+# Only needed if you rebuild / re-patch the client APK
+pycryptodome>=3.15.0

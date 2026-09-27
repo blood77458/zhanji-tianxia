@@ -1,0 +1,69 @@
+# --- runtime / personal state (each player has their own) ---
+server/user_state.json
+server/user_state.json.bak*
+server/admin_avatars/
+server/*.pid
+server/canon_server.pid
+server/__pycache__/
+server/rpc_payloads.jsonl
+server/*.log
+server/server_stdout.txt
+server/server_stderr.txt
+server/_*.txt
+server/_out*.txt
+server/_err*.txt
+server/_boot_*.txt
+server/_restart*.py
+
+# --- build / reverse-engineering junk (not needed to run) ---
+work/__pycache__/
+work/*.txt
+!work/hosts_*.txt
+work/*.log
+work/*.jpg
+work/*.png
+work/*.xml
+work/*.bin
+work/*.dex
+work/*.jsonl
+work/shot*.png
+work/screen*.*
+work/lc_*.txt
+work/_*.txt
+work/srv_*.txt
+work/crash*.txt
+work/logcat*.txt
+work/patch_out*.txt
+work/*_out.txt
+work/hqce_dump/
+work/dexout/
+work/extract/
+work/decoded/
+work/card_preview/
+work/*.apk.parts/
+work/*.idsig
+# All APKs / signing leftovers (GitHub rejects >100MB; ship via Release)
+work/*.apk
+work/*.idsig
+work/mem*.bin
+work/classes.dex
+work/ui*.xml
+
+# --- client APK lives in client/ but is too large for git (>100MB) ---
+# Download from Release assets (see README), or copy locally:
+#   copy work\zjt_pack_enablefix_signed.apk client\zjt_pack_enablefix_signed.apk
+client/*.apk
+client/*.idsig
+
+# --- tools / emulator / IDE ---
+tools/
+avd/
+.idea/
+.vscode/
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.swp

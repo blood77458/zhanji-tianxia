@@ -1,0 +1,27 @@
+local atlas_Reward={
+	{id=1,countryType=1,cardStage=0,cardNum=10,rewardType=1,rewardID=0,rewardNum=1000000},
+	{id=2,countryType=1,cardStage=0,cardNum=20,rewardType=2,rewardID=0,rewardNum=100},
+	{id=3,countryType=1,cardStage=1,cardNum=20,rewardType=2,rewardID=0,rewardNum=300},
+	{id=4,countryType=1,cardStage=3,cardNum=20,rewardType=2,rewardID=0,rewardNum=500},
+	{id=5,countryType=1,cardStage=5,cardNum=20,rewardType=5,rewardID=101321,rewardNum=1},
+	{id=6,countryType=1,cardStage=6,cardNum=20,rewardType=5,rewardID=101011,rewardNum=1},
+	{id=7,countryType=2,cardStage=0,cardNum=10,rewardType=1,rewardID=0,rewardNum=1000000},
+	{id=8,countryType=2,cardStage=0,cardNum=20,rewardType=2,rewardID=0,rewardNum=100},
+	{id=9,countryType=2,cardStage=1,cardNum=20,rewardType=2,rewardID=0,rewardNum=300},
+	{id=10,countryType=2,cardStage=3,cardNum=20,rewardType=2,rewardID=0,rewardNum=500},
+	{id=11,countryType=2,cardStage=5,cardNum=20,rewardType=5,rewardID=102011,rewardNum=1},
+	{id=12,countryType=2,cardStage=6,cardNum=20,rewardType=5,rewardID=102001,rewardNum=1},
+	{id=13,countryType=3,cardStage=0,cardNum=10,rewardType=1,rewardID=0,rewardNum=1000000},
+	{id=14,countryType=3,cardStage=0,cardNum=20,rewardType=2,rewardID=0,rewardNum=100},
+	{id=15,countryType=3,cardStage=1,cardNum=20,rewardType=2,rewardID=0,rewardNum=300},
+	{id=16,countryType=3,cardStage=3,cardNum=20,rewardType=2,rewardID=0,rewardNum=500},
+	{id=17,countryType=3,cardStage=5,cardNum=20,rewardType=5,rewardID=103011,rewardNum=1},
+	{id=18,countryType=3,cardStage=6,cardNum=20,rewardType=5,rewardID=103151,rewardNum=1},
+	{id=19,countryType=4,cardStage=0,cardNum=10,rewardType=1,rewardID=0,rewardNum=1000000},
+	{id=20,countryType=4,cardStage=0,cardNum=20,rewardType=2,rewardID=0,rewardNum=100},
+	{id=21,countryType=4,cardStage=1,cardNum=20,rewardType=2,rewardID=0,rewardNum=300},
+	{id=22,countryType=4,cardStage=3,cardNum=20,rewardType=2,rewardID=0,rewardNum=500},
+	{id=23,countryType=4,cardStage=5,cardNum=20,rewardType=5,rewardID=104131,rewardNum=1},
+	{id=24,countryType=4,cardStage=6,cardNum=20,rewardType=5,rewardID=104001,rewardNum=1}
+};
+return atlas_Reward;

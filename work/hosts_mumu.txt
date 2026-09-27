@@ -1,0 +1,6 @@
+127.0.0.1       localhost
+::1             ip6-localhost
+172.26.160.1    android1.canon.happyelements.cn
+172.26.160.1    log.dc.cn.happyelements.com
+172.26.160.1    etlog.happyelements.cn
+172.26.160.1    android1.canon.happyelements.com

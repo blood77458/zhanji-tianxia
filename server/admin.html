@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>战姬天下 · 账号管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #1a1612;
+  --bg2: #241e18;
+  --panel: #2c241c;
+  --ink: #f3e6d4;
+  --muted: #a8947c;
+  --line: #3d3228;
+  --accent: #c45c26;
+  --accent2: #e8a05a;
+  --ok: #6a9b5a;
+  --bad: #c44;
+  --wei: #4a7ab5;
+  --shu: #b54a4a;
+  --wu: #4a9b6a;
+  --qun: #9b8a4a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans SC", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #3a2a1a 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #2a1a12 0%, transparent 50%),
+    var(--bg);
+}
+header {
+  display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #2a221a, transparent);
+}
+header h1 {
+  margin: 0; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.04em;
+}
+header .sub { color: var(--muted); font-size: 0.85rem; }
+main {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1rem;
+  padding: 1rem 1.5rem 2rem;
+  max-width: 1400px; margin: 0 auto;
+}
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; }
+}
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--accent2);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+label { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.2rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.55rem; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 0.55rem; }
+input, select, button {
+  font: inherit; border-radius: 6px; border: 1px solid var(--line);
+}
+input, select {
+  width: 100%;
+  padding: 0.45rem 0.55rem;
+  background: var(--bg2);
+  color: var(--ink);
+}
+button {
+  cursor: pointer;
+  padding: 0.5rem 0.85rem;
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+  font-weight: 600;
+}
+button.ghost {
+  background: transparent; color: var(--ink); border-color: var(--line);
+}
+button.bad { background: var(--bad); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem; }
+.stat {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+.tabs { display: flex; gap: 0.4rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+.tabs button {
+  background: transparent; color: var(--muted); border-color: var(--line);
+  padding: 0.35rem 0.7rem; font-size: 0.85rem;
+}
+.tabs button.on { background: var(--bg2); color: var(--accent2); border-color: var(--accent); }
+.toolbar {
+  display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: end;
+  margin-bottom: 0.75rem;
+}
+.toolbar > * { flex: 1; min-width: 120px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+  gap: 0.55rem;
+  max-height: 62vh; overflow: auto;
+  padding-right: 0.25rem;
+}
+.card {
+  position: relative;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.45rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .15s, transform .1s;
+}
+.card:hover { border-color: var(--accent2); transform: translateY(-1px); }
+.card.sel { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.card img {
+  width: 64px; height: 64px; object-fit: cover;
+  border-radius: 50%;
+  background: #111;
+  display: block; margin: 0 auto 0.35rem;
+}
+.card .nm {
+  font-size: 0.78rem; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card .meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem; color: var(--muted);
+}
+.badge {
+  position: absolute; top: 4px; right: 4px;
+  font-size: 0.65rem; padding: 0 0.3rem; border-radius: 4px;
+  background: #0008; color: var(--accent2);
+}
+.c-wei { outline-color: var(--wei); }
+.c-shu { outline-color: var(--shu); }
+.c-wu { outline-color: var(--wu); }
+.c-qun { outline-color: var(--qun); }
+.owned .card { cursor: default; }
+.owned .card .ops { display: flex; gap: 0.25rem; margin-top: 0.35rem; }
+.owned .card .ops button { flex: 1; padding: 0.25rem; font-size: 0.7rem; }
+.toast {
+  position: fixed; bottom: 1.2rem; right: 1.2rem;
+  background: #1e2a18; color: #cfe8c0;
+  border: 1px solid var(--ok);
+  padding: 0.65rem 1rem; border-radius: 8px;
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+  z-index: 9;
+}
+.toast.show { opacity: 1; }
+.toast.err { background: #2a1818; color: #f0c0c0; border-color: var(--bad); }
+.empty { color: var(--muted); padding: 2rem; text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>战姬天下 · 账号管理</h1>
+  <span class="sub">本地存档编辑 · 加将 / 改货币 · 需重进游戏生效</span>
+</header>
+<main>
+  <section class="panel" id="accountPanel">
+    <h2>账号数据</h2>
+    <div class="stat" id="acctStat">加载中…</div>
+    <div class="row">
+      <div><label>昵称</label><input id="f_nickname"/></div>
+      <div><label>等级</label><input id="f_level" type="number"/></div>
+    </div>
+    <div class="row">
+      <div><label>银两</label><input id="f_coins" type="number"/></div>
+      <div><label>钻石</label><input id="f_gems" type="number"/></div>
+    </div>
+    <div class="row">
+      <div><label>累充钻石</label><input id="f_rechargeGems" type="number"/></div>
+      <div><label>体力</label><input id="f_energy" type="number"/></div>
+    </div>
+    <div class="row">
+      <div><label>经验</label><input id="f_exp" type="number"/></div>
+      <div><label>武将经验池</label><input id="f_generalExp" type="number"/></div>
+    </div>
+    <div class="actions">
+      <button id="btnSave">保存账号</button>
+      <button class="ghost" id="btnReload">刷新</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="tabs">
+      <button class="on" data-tab="catalog">武将图鉴（加将）</button>
+      <button data-tab="owned">已拥有</button>
+    </div>
+
+    <div id="tab_catalog">
+      <div class="toolbar">
+        <div>
+          <label>搜索（名 / ID / figure）</label>
+          <input id="q" placeholder="诸葛亮 / 102061 / zhugeliang"/>
+        </div>
+        <div>
+          <label>阵营</label>
+          <select id="country">
+            <option value="">全部</option>
+            <option value="1">魏</option>
+            <option value="2">蜀</option>
+            <option value="3">吴</option>
+            <option value="4">群</option>
+          </select>
+        </div>
+        <div>
+          <label>星级</label>
+          <select id="rare">
+            <option value="">全部</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div>
+          <label>等级</label>
+          <input id="addLevel" type="number" value="1" min="1" max="200"/>
+        </div>
+        <div>
+          <label>数量</label>
+          <input id="addCount" type="number" value="1" min="1" max="20"/>
+        </div>
+      </div>
+      <div class="actions" style="margin-top:0;margin-bottom:0.75rem">
+        <button id="btnAddSel" disabled>添加选中武将</button>
+        <button class="ghost" id="btnClearSel">清空选择</button>
+        <span class="stat" id="catStat" style="margin:0;align-self:center"></span>
+      </div>
+      <div class="grid" id="catalogGrid"></div>
+    </div>
+
+    <div id="tab_owned" hidden>
+      <div class="stat" id="ownStat"></div>
+      <div class="grid owned" id="ownedGrid"></div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const $ = (s) => document.querySelector(s);
+const selected = new Set();
+let state = null;
+
+function toast(msg, err) {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.className = "toast show" + (err ? " err" : "");
+  setTimeout(() => t.classList.remove("show"), 2200);
+}
+
+async function api(path, opts) {
+  const r = await fetch(path, {
+    headers: { "Content-Type": "application/json" },
+    ...opts,
+  });
+  const j = await r.json();
+  if (!r.ok || j.ok === false) throw new Error(j.error || r.statusText);
+  return j;
+}
+
+function fillForm(s) {
+  state = s;
+  $("#f_nickname").value = s.nickname || "";
+  $("#f_level").value = s.level;
+  $("#f_coins").value = s.coins;
+  $("#f_gems").value = s.gems;
+  $("#f_rechargeGems").value = s.rechargeGems;
+  $("#f_energy").value = s.energy;
+  $("#f_exp").value = s.exp;
+  $("#f_generalExp").value = s.generalExp;
+  $("#acctStat").textContent =
+    `UID ${s.uid} · 武将 ${s.cardCount} · 关卡 ${s.missionId} / max ${s.maxFinishedMissionId}`;
+  renderOwned(s.cards || []);
+}
+
+function countryClass(name) {
+  if (name === "魏") return "c-wei";
+  if (name === "蜀") return "c-shu";
+  if (name === "吴") return "c-wu";
+  return "c-qun";
+}
+
+function cardCell(c, { selectable, owned } = {}) {
+  const el = document.createElement("div");
+  el.className = "card " + countryClass(c.countryName);
+  if (selectable && selected.has(c.metaId)) el.classList.add("sel");
+  const img = c.head
+    ? `<img src="${c.head}" alt="" loading="lazy" onerror="this.style.opacity=.2"/>`
+    : `<img alt="" style="opacity:.2"/>`;
+  el.innerHTML = `
+    <span class="badge">${c.rare || "?"}★</span>
+    ${img}
+    <div class="nm" title="${c.name}">${c.name}</div>
+    <div class="meta">${c.metaId}${c.level ? " · Lv" + c.level : ""}</div>
+  `;
+  if (selectable) {
+    el.onclick = () => {
+      if (selected.has(c.metaId)) selected.delete(c.metaId);
+      else selected.add(c.metaId);
+      el.classList.toggle("sel");
+      $("#btnAddSel").disabled = selected.size === 0;
+      $("#btnAddSel").textContent = selected.size
+        ? `添加选中（${selected.size}）` : "添加选中武将";
+    };
+  }
+  if (owned) {
+    const ops = document.createElement("div");
+    ops.className = "ops";
+    const lv = document.createElement("button");
+    lv.className = "ghost";
+    lv.textContent = "升级";
+    lv.onclick = async () => {
+      const n = prompt("设置等级", String(c.level || 1));
+      if (!n) return;
+      try {
+        await api("/admin/api/card/level", {
+          method: "POST",
+          body: JSON.stringify({ cardId: c.cardId, level: +n }),
+        });
+        toast("已改等级");
+        await reloadState();
+      } catch (e) { toast(e.message, true); }
+    };
+    const del = document.createElement("button");
+    del.className = "bad";
+    del.textContent = "删";
+    del.onclick = async () => {
+      if (!confirm(`删除 ${c.name} (#${c.cardId})？`)) return;
+      try {
+        await api("/admin/api/card/remove", {
+          method: "POST",
+          body: JSON.stringify({ cardId: c.cardId }),
+        });
+        toast("已删除");
+        await reloadState();
+      } catch (e) { toast(e.message, true); }
+    };
+    ops.append(lv, del);
+    el.append(ops);
+  }
+  return el;
+}
+
+async function loadCatalog() {
+  const q = $("#q").value.trim();
+  const country = $("#country").value;
+  const rare = $("#rare").value;
+  const params = new URLSearchParams({ stage1: "1" });
+  if (q) params.set("q", q);
+  if (country) params.set("country", country);
+  if (rare) params.set("rare", rare);
+  const j = await api("/admin/api/catalog?" + params);
+  const grid = $("#catalogGrid");
+  grid.innerHTML = "";
+  if (!j.cards.length) {
+    grid.innerHTML = `<div class="empty">无匹配武将</div>`;
+  } else {
+    j.cards.forEach(c => grid.appendChild(cardCell(c, { selectable: true })));
+  }
+  $("#catStat").textContent = `显示 ${j.count} / 图鉴 ${j.total}`;
+}
+
+function renderOwned(cards) {
+  const grid = $("#ownedGrid");
+  grid.innerHTML = "";
+  $("#ownStat").textContent = `共 ${cards.length} 张`;
+  if (!cards.length) {
+    grid.innerHTML = `<div class="empty">背包空</div>`;
+    return;
+  }
+  cards.forEach(c => grid.appendChild(cardCell(c, { owned: true })));
+}
+
+async function reloadState() {
+  const j = await api("/admin/api/state");
+  fillForm(j.state);
+}
+
+$("#btnReload").onclick = () => reloadState().then(() => toast("已刷新")).catch(e => toast(e.message, true));
+$("#btnSave").onclick = async () => {
+  try {
+    const body = {
+      nickname: $("#f_nickname").value,
+      level: +$("#f_level").value,
+      coins: +$("#f_coins").value,
+      gems: +$("#f_gems").value,
+      rechargeGems: +$("#f_rechargeGems").value,
+      energy: +$("#f_energy").value,
+      exp: +$("#f_exp").value,
+      generalExp: +$("#f_generalExp").value,
+    };
+    const j = await api("/admin/api/state", { method: "POST", body: JSON.stringify(body) });
+    fillForm(j.state);
+    toast("账号已保存");
+  } catch (e) { toast(e.message, true); }
+};
+
+$("#btnAddSel").onclick = async () => {
+  if (!selected.size) return;
+  try {
+    const j = await api("/admin/api/card/add", {
+      method: "POST",
+      body: JSON.stringify({
+        metaIds: [...selected],
+        level: +$("#addLevel").value || 1,
+        count: +$("#addCount").value || 1,
+      }),
+    });
+    toast(`已添加 ${j.added.length} 张`);
+    selected.clear();
+    $("#btnAddSel").disabled = true;
+    $("#btnAddSel").textContent = "添加选中武将";
+    await reloadState();
+    await loadCatalog();
+  } catch (e) { toast(e.message, true); }
+};
+$("#btnClearSel").onclick = () => {
+  selected.clear();
+  $("#btnAddSel").disabled = true;
+  $("#btnAddSel").textContent = "添加选中武将";
+  loadCatalog();
+};
+
+let timer;
+["q", "country", "rare"].forEach(id => {
+  $(`#${id}`).addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(loadCatalog, 200);
+  });
+  $(`#${id}`).addEventListener("change", loadCatalog);
+});
+
+document.querySelectorAll(".tabs button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("on"));
+    btn.classList.add("on");
+    const tab = btn.dataset.tab;
+    $("#tab_catalog").hidden = tab !== "catalog";
+    $("#tab_owned").hidden = tab !== "owned";
+  };
+});
+
+Promise.all([reloadState(), loadCatalog()]).catch(e => toast(e.message, true));
+</script>
+</body>
+</html>

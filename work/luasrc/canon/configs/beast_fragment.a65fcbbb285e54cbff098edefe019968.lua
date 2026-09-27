@@ -1,0 +1,27 @@
+local beast_fragment={
+	[700101]={id=700101,icon="Dragon1",userGroup="1|4|7|10",readName="青龙碎片1"},
+	[700102]={id=700102,icon="Dragon2",userGroup="2|5|8|11",readName="青龙碎片2"},
+	[700103]={id=700103,icon="Dragon3",userGroup="3|6|9|0",readName="青龙碎片3"},
+	[700104]={id=700104,icon="Dragon4",userGroup="1|4|7|10",readName="青龙碎片4"},
+	[700105]={id=700105,icon="Dragon5",userGroup="2|5|8|11",readName="青龙碎片5"},
+	[700106]={id=700106,icon="Dragon6",userGroup="3|6|9|0",readName="青龙碎片6"},
+	[700201]={id=700201,icon="Tiger1",userGroup="2|5|8|11",readName="白虎碎片1"},
+	[700202]={id=700202,icon="Tiger2",userGroup="3|6|9|0",readName="白虎碎片2"},
+	[700203]={id=700203,icon="Tiger3",userGroup="1|4|7|10",readName="白虎碎片3"},
+	[700204]={id=700204,icon="Tiger4",userGroup="2|5|8|11",readName="白虎碎片4"},
+	[700205]={id=700205,icon="Tiger5",userGroup="3|6|9|0",readName="白虎碎片5"},
+	[700206]={id=700206,icon="Tiger6",userGroup="1|4|7|10",readName="白虎碎片6"},
+	[700301]={id=700301,icon="Phenix1",userGroup="3|6|9|0",readName="朱雀碎片1"},
+	[700302]={id=700302,icon="Phenix2",userGroup="1|4|7|10",readName="朱雀碎片2"},
+	[700303]={id=700303,icon="Phenix3",userGroup="2|5|8|11",readName="朱雀碎片3"},
+	[700304]={id=700304,icon="Phenix4",userGroup="3|6|9|0",readName="朱雀碎片4"},
+	[700305]={id=700305,icon="Phenix5",userGroup="1|4|7|10",readName="朱雀碎片5"},
+	[700306]={id=700306,icon="Phenix6",userGroup="2|5|8|11",readName="朱雀碎片6"},
+	[700401]={id=700401,icon="Xuanwu1",userGroup="1|2|3|4",readName="玄武碎片1"},
+	[700402]={id=700402,icon="Xuanwu2",userGroup="5|6|7|8",readName="玄武碎片2"},
+	[700403]={id=700403,icon="Xuanwu3",userGroup="9|10|11|0",readName="玄武碎片3"},
+	[700404]={id=700404,icon="Xuanwu4",userGroup="9|10|11|0",readName="玄武碎片4"},
+	[700405]={id=700405,icon="Xuanwu5",userGroup="5|6|7|8",readName="玄武碎片5"},
+	[700406]={id=700406,icon="Xuanwu6",userGroup="1|2|3|4",readName="玄武碎片6"}
+};
+return beast_fragment;

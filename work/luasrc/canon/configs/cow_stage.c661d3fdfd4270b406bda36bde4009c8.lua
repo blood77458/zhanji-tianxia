@@ -1,0 +1,6 @@
+local cow_stage={
+	{id=1001,stageDesc="cowStageName_1001",playerLevelLimit=30,consumeEnergy=8,maxChallengesPerDay=3,monsterGroupId=8000001,exp=0,coin=1000,monsterLevel=50,monsterRevise=77.7,dropCardProb=0,dropPackId1=530001,dropPackProb1=1,dropPackId2=0,dropPackProb2=0,dropPackId3=0,dropPackProb3=0,dropPackId4=0,dropPackProb4=0,propId=0,cardId=104951,monsterAdvancedAttributeId=1},
+	{id=1002,stageDesc="cowStageName_1002",playerLevelLimit=40,consumeEnergy=12,maxChallengesPerDay=3,monsterGroupId=8000002,exp=0,coin=2000,monsterLevel=60,monsterRevise=177.1,dropCardProb=0,dropPackId1=530002,dropPackProb1=1,dropPackId2=0,dropPackProb2=0,dropPackId3=0,dropPackProb3=0,dropPackId4=0,dropPackProb4=0,propId=0,cardId=104961,monsterAdvancedAttributeId=1},
+	{id=1003,stageDesc="cowStageName_1003",playerLevelLimit=50,consumeEnergy=15,maxChallengesPerDay=3,monsterGroupId=8000003,exp=0,coin=3000,monsterLevel=70,monsterRevise=339.4,dropCardProb=0,dropPackId1=530003,dropPackProb1=1,dropPackId2=0,dropPackProb2=0,dropPackId3=0,dropPackProb3=0,dropPackId4=0,dropPackProb4=0,propId=0,cardId=104971,monsterAdvancedAttributeId=1}
+};
+return cow_stage;

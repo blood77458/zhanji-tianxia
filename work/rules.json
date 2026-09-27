@@ -1,0 +1,7 @@
+{
+  "default": {
+    "status": 404,
+    "ctype": "text/plain",
+    "body": "not found"
+  }
+}
