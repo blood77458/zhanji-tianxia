@@ -107,3 +107,6 @@ work/**/*.apk
 **/*.apk
 **/*.idsig
 server/static/static_config.*.xml
+work/luasrc/
+server/canon.db
+

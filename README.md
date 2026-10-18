@@ -252,3 +252,36 @@ rem 另开终端：配置 hosts → adb install client\*.apk → 启动游戏
 | `v1.0.0` | 首个可玩打包：服务端 + 配置 + 说明；APK 在 Release 附件 |
 
 祝本地重温愉快。
+
+## 快速开始（首次运行）
+
+仓库**不包含**原游戏的解包产物（`work/luasrc` 里的客户端 Lua 与配置表属于乐元素的版权物），
+也不包含 APK。首次运行按下面三步：
+
+```bash
+# 1. 装依赖
+pip install -r requirements.txt
+
+# 2. 引导：从你自己的 APK 里解出配置 + 生成 card_dict + 建库
+#    把 APK 放到 client/ 下（或 --apk 指定路径）
+python scripts/bootstrap.py
+
+# 3. 启动服务端
+#    CANON_MANIFEST_MD5 = 你的 APK 里 assets/static_config.<md5>.xml 的 md5
+cd server
+set CANON_MANIFEST_MD5=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+python -u gameserver.py
+```
+
+`bootstrap.py` 做的事：
+
+| 步骤 | 内容 |
+|---|---|
+| 解包 | 从 APK 的 `assets/src/` 解出 `canon/configs`、`canon/models`、`canon/data`、`canon/scene`、`hecore` 的 Lua 到 `work/luasrc/`（AES-128-CBC + zlib） |
+| card_dict | 运行 `server/build_card_dict.py` 生成 `server/card_dict.json` |
+| 数据库 | 运行 `server/init_db.py` 建 `server/canon.db` |
+
+执行完这三步，服务端即可 `python -u gameserver.py` 直接跑起来，客户端（模拟器/真机）
+把 `android1.canon.happyelements.cn` 指向你的机器即可登录。
+
+> 单机版 APK（服务端内置）见 `OFFLINE_APK_PLAN.md` 与 `offline/`。
