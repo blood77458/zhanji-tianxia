@@ -122,6 +122,10 @@ copy work\zjt_pack_enablefix_signed.apk client\zjt_pack_enablefix_signed.apk
 
 ## 四、配置模拟器 hosts（流量指到本机）
 
+> **用 Release 里的 `canon_net.apk` 可以跳过本章** —— 域名已指向 `10.0.2.2`。
+> 只有使用原始 APK（未改 plist）时才需要配置 hosts。
+
+
 游戏会请求：
 
 - `android1.canon.happyelements.cn`
@@ -253,84 +257,37 @@ rem 另开终端：配置 hosts → adb install client\*.apk → 启动游戏
 
 祝本地重温愉快。
 
-## 快速开始（首次运行）
+## 快速开始
 
-仓库**不包含**原游戏的解包产物（`work/luasrc` 里的客户端 Lua 与配置表属于乐元素的版权物），
-也不包含 APK。首次运行按下面三步：
+仓库不包含 APK 和游戏配置（体积 + 版权原因）。三步把服务端跑起来：
 
 ```bash
-# 1. 装依赖
-pip install -r requirements.txt
-
-# 2. 引导：从你自己的 APK 里解出配置 + 生成 card_dict + 建库
-#    把 APK 放到 client/ 下（或 --apk 指定路径）
-python scripts/bootstrap.py
-
-# 3. 启动服务端
-#    CANON_MANIFEST_MD5 = 你的 APK 里 assets/static_config.<md5>.xml 的 md5
-cd server
-set CANON_MANIFEST_MD5=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-python -u gameserver.py
+pip install -r requirements.txt          # 1. 装依赖
+python scripts/bootstrap.py              # 2. 引导：从你的 APK 解配置 + 建库
+cd server && python -u gameserver.py     # 3. 启动（自动定位资源清单，无需设环境变量）
 ```
 
-`bootstrap.py` 做的事：
+第 2 步前把客户端 APK 放到 `client/` 下（仓库根目录的 `client/` 文件夹，任意文件名）。
+它会从 APK 里解出 `canon/configs` 等到 `work/luasrc/`、生成 `server/card_dict.json`、建 `server/canon.db`。
 
-| 步骤 | 内容 |
-|---|---|
-| 解包 | 从 APK 的 `assets/src/` 解出 `canon/configs`、`canon/models`、`canon/data`、`canon/scene`、`hecore` 的 Lua 到 `work/luasrc/`（AES-128-CBC + zlib） |
-| card_dict | 运行 `server/build_card_dict.py` 生成 `server/card_dict.json` |
-| 数据库 | 运行 `server/init_db.py` 建 `server/canon.db` |
-
-执行完这三步，服务端即可 `python -u gameserver.py` 直接跑起来，客户端（模拟器/真机）
-把 `android1.canon.happyelements.cn` 指向你的机器即可登录。
-
-> 单机版 APK（服务端内置）见 `OFFLINE_APK_PLAN.md` 与 `offline/`。
-
-## 客户端 APK 与启动方式
-
-仓库不包含 APK（体积 + 版权原因），成品放在 **GitHub Release** 里。
-
-| 包 | 用途 | 依赖 |
-|---|---|---|
-| `canon_net.apk` | **模拟器直连版**（推荐）：进游戏不用改 hosts、不用端口转发 | 宿主机上跑着本仓库的服务端 |
-| 单机版（暂未发布） | 服务端内置、纯离线 | 无 |
-
-`canon_net.apk` 的原理：`assets/StartupConfig.plist` 里的 `gameDomain` 与
-`StaticSettingsUrl` 已被改成 `http://10.0.2.2`——这是 MuMu / AVD 中固定指向
-宿主机的地址，所以客户端会直接打到本机 80 端口，无需修改 `/etc/hosts`。
-
-### 启动步骤
+然后装客户端（**Release 页下载 `canon_net.apk`**）：
 
 ```bash
-# ① 装依赖
-pip install -r requirements.txt
-
-# ② 首次引导：从你自己的 APK 解出配置、生成 card_dict、建库
-#    把 APK 放到 client/ 下（或 --apk 指定路径）
-python scripts/bootstrap.py
-
-# ③ 启动服务端（80 端口 + 9700 实时通道）
-cd server
-set CANON_MANIFEST_MD5=<你的 APK 里 assets/static_config.<md5>.xml 的 md5>
-python -u gameserver.py
-```
-
-```bash
-# ④ 模拟器安装并启动客户端（无需任何网络配置）
 adb install -r canon_net.apk
 ```
 
-看到登录页点「游客登录」即可进入游戏。
-
-### 自己打这个包
+启动后点「游客登录」即可。`canon_net.apk` 已把域名指向 `10.0.2.2`（模拟器里的宿主机地址），
+所以**不需要改 hosts、不需要端口转发**。真机则用自己的局域网 IP 重新打包：
 
 ```bash
-# 模拟器（10.0.2.2 指向宿主机）
-python scripts/pack_net_apk.py --install
-
-# 真机 / 局域网（换成你电脑的 IP）
 python scripts/pack_net_apk.py --host 192.168.1.7 --install
 ```
 
-签名用 `work/canon.keystore`（本地调试用，密码见 `client/README.md`）。
-换成正式分发时请自行生成新密钥：`keytool -genkeypair -keystore my.keystore ...`。
+> 单机版（服务端内置、纯离线）仍在开发中，暂不发布。
+
+### 说明
+
+- 服务端需要 `server/canon.db` 和 `work/luasrc/` 里的配置；两者都由 `bootstrap.py` 生成，不入库。
+- `canon_net.apk` 只改了一个配置文件：`assets/StartupConfig.plist` 里的
+  `gameDomain` / `StaticSettingsUrl` → `http://10.0.2.2`。游戏资源未做任何改动。
+- 版权属乐元素，仅供个人学习与软件保存使用，请勿传播或商用。
