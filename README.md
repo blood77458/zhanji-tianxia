@@ -285,3 +285,52 @@ python -u gameserver.py
 把 `android1.canon.happyelements.cn` 指向你的机器即可登录。
 
 > 单机版 APK（服务端内置）见 `OFFLINE_APK_PLAN.md` 与 `offline/`。
+
+## 客户端 APK 与启动方式
+
+仓库不包含 APK（体积 + 版权原因），成品放在 **GitHub Release** 里。
+
+| 包 | 用途 | 依赖 |
+|---|---|---|
+| `canon_net.apk` | **模拟器直连版**（推荐）：进游戏不用改 hosts、不用端口转发 | 宿主机上跑着本仓库的服务端 |
+| 单机版（暂未发布） | 服务端内置、纯离线 | 无 |
+
+`canon_net.apk` 的原理：`assets/StartupConfig.plist` 里的 `gameDomain` 与
+`StaticSettingsUrl` 已被改成 `http://10.0.2.2`——这是 MuMu / AVD 中固定指向
+宿主机的地址，所以客户端会直接打到本机 80 端口，无需修改 `/etc/hosts`。
+
+### 启动步骤
+
+```bash
+# ① 装依赖
+pip install -r requirements.txt
+
+# ② 首次引导：从你自己的 APK 解出配置、生成 card_dict、建库
+#    把 APK 放到 client/ 下（或 --apk 指定路径）
+python scripts/bootstrap.py
+
+# ③ 启动服务端（80 端口 + 9700 实时通道）
+cd server
+set CANON_MANIFEST_MD5=<你的 APK 里 assets/static_config.<md5>.xml 的 md5>
+python -u gameserver.py
+```
+
+```bash
+# ④ 模拟器安装并启动客户端（无需任何网络配置）
+adb install -r canon_net.apk
+```
+
+看到登录页点「游客登录」即可进入游戏。
+
+### 自己打这个包
+
+```bash
+# 模拟器（10.0.2.2 指向宿主机）
+python scripts/pack_net_apk.py --install
+
+# 真机 / 局域网（换成你电脑的 IP）
+python scripts/pack_net_apk.py --host 192.168.1.7 --install
+```
+
+签名用 `work/canon.keystore`（本地调试用，密码见 `client/README.md`）。
+换成正式分发时请自行生成新密钥：`keytool -genkeypair -keystore my.keystore ...`。
