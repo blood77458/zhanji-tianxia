@@ -1,0 +1,8145 @@
+{
+ "endpoints": [
+  {
+   "method": "challengeMultiplayerBoss",
+   "category": "Boss / 通缉",
+   "desc": "ChallengeMultiplayerBossRequest",
+   "request_classes": [
+    "ChallengeMultiplayerBossRequest"
+   ],
+   "request_params": [
+    "battleType",
+    "bossId",
+    "triggerUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "bossHpMax",
+    "bossInfo",
+    "globalReturnScene",
+    "win"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeWanted",
+   "category": "Boss / 通缉",
+   "desc": "",
+   "request_classes": [
+    "WantedActivityChallengeRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "wantedId",
+    "win"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeWorldBoss",
+   "category": "Boss / 通缉",
+   "desc": "ActivityCowStageRequest.lua - 世界Boss请求",
+   "request_classes": [
+    "ChallengeWorldBossRequest"
+   ],
+   "request_params": [
+    "battleType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "bossHp",
+    "bossHpMax"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeItem",
+   "category": "Boss / 通缉",
+   "desc": "",
+   "request_classes": [
+    "WantedActivityExchangeRequest"
+   ],
+   "request_params": [
+    "itemId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainMultiplayerBossParticipationReward",
+   "category": "Boss / 通缉",
+   "desc": "GainMultiplayerBossParticipationRewardRequest",
+   "request_classes": [
+    "GainMultiplayerBossParticipationRewardRequest"
+   ],
+   "request_params": [
+    "bossKey"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainMultiplayerBossRankReward",
+   "category": "Boss / 通缉",
+   "desc": "GainMultiplayerBossRankRewardRequest",
+   "request_classes": [
+    "GainMultiplayerBossRankRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainWorldBossRewards",
+   "category": "Boss / 通缉",
+   "desc": "ActivityCowStageRequest.lua - 世界Boss请求",
+   "request_classes": [
+    "GainWorldBossRewardsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMultiplayerBossDamage",
+   "category": "Boss / 通缉",
+   "desc": "GetMultiplayerBossDamageRequest",
+   "request_classes": [
+    "GetMultiplayerBossDamageRequest"
+   ],
+   "request_params": [
+    "bossId",
+    "triggerUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "damages"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMultiplayerBossLeftHp",
+   "category": "Boss / 通缉",
+   "desc": "GetMultiplayerBossLeftHpRequest",
+   "request_classes": [
+    "GetMultiplayerBossLeftHpRequest"
+   ],
+   "request_params": [
+    "bossId",
+    "triggerUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "leftHp"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMultiplayerBossRank",
+   "category": "Boss / 通缉",
+   "desc": "GetMultiplayerBossRankRequest",
+   "request_classes": [
+    "GetMultiplayerBossRankRequest"
+   ],
+   "request_params": [
+    "beginPos",
+    "endPos"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "currRankMax",
+    "multiPlayerBossRanks"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getWantedInfo",
+   "category": "Boss / 通缉",
+   "desc": "",
+   "request_classes": [
+    "WantedActivityGetWantedInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "wantedInfo"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getWorldBossInfo",
+   "category": "Boss / 通缉",
+   "desc": "ActivityCowStageRequest.lua - 世界Boss请求",
+   "request_classes": [
+    "GetWorldBossInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 7,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "inspireInWorldBoss",
+   "category": "Boss / 通缉",
+   "desc": "ActivityCowStageRequest.lua - 世界Boss请求",
+   "request_classes": [
+    "InspireInWorldBossRequest"
+   ],
+   "request_params": [
+    "worldBossInspireInfos"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refreshWanted",
+   "category": "Boss / 通缉",
+   "desc": "",
+   "request_classes": [
+    "WantedActivityRefreshTaskRequest"
+   ],
+   "request_params": [
+    "minimum"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "wantedId"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "setAutoWorldBoss",
+   "category": "Boss / 通缉",
+   "desc": "ActivityCowStageRequest.lua - 世界Boss请求",
+   "request_classes": [
+    "SetAutoWorldBossRequest"
+   ],
+   "request_params": [
+    "autoChallenge"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainAchievementReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GainAchievementRewardRequest",
+   "request_classes": [
+    "GainAchievementRewardRequest"
+   ],
+   "request_params": [
+    "achievementId",
+    "achievementType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "reward"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainActiveReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "ActiveRewardRequest",
+   "request_classes": [
+    "ActiveRewardRequest"
+   ],
+   "request_params": [
+    "activeRewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainBalloonPointReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "BlowBalloonActGetMagicRewardRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "balloonRanks"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainBalloonRankReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "BlowBalloonActGetRankRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "balloonRanks"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainChapterFinishReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GainChapterFinishRewardRequest",
+   "request_classes": [
+    "GainChapterFinishRewardRequest"
+   ],
+   "request_params": [
+    "chapterId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "amount",
+    "itemType",
+    "metaId",
+    "reward"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainChargeMoneyReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GainChargeMoneyRewardRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainConsumeReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "多重好礼获取面板信息接口 / 接口定义 后端提供",
+   "request_classes": [
+    "ConsumeRewardGainRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "领取多重好礼活动奖励",
+     "request": [
+      {
+       "kind": "property",
+       "code": "id",
+       "type": "int",
+       "ref": "",
+       "desc": "奖励id"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "rewards",
+       "type": "",
+       "ref": "Reward",
+       "desc": "奖励"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "gainDailyAchieveReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "获取每日成就信息",
+   "request_classes": [
+    "GainDailyAchieveRequest"
+   ],
+   "request_params": [
+    "achieveId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainDailyTaskReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GainDailyTaskRewardRequest"
+   ],
+   "request_params": [
+    "taskId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainDayReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GainDayRewardRequest"
+   ],
+   "request_params": [
+    "dayRewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainDiceReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "DiceGainRewardRequest",
+   "request_classes": [
+    "DiceGainRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "changeDiceLuckCount",
+    "changeLuckCountPerThrow",
+    "diceNewRewards",
+    "gainedCoin",
+    "throwDiceCount"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainFbActivityReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "Facebook相关",
+   "request_classes": [
+    "FacebookGainActivityRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainFortuneRewards",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GainFortuneRewardsRequest",
+   "request_classes": [
+    "GainFortuneRewardsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "id",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainGemConsumeRewards",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GainGemConsumeRewardsRequest"
+   ],
+   "request_params": [
+    "rewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainGoldGodRewards",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GainGoldGodRewardsRequest",
+   "request_classes": [
+    "GainGoldGodRewardsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainInviteReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "领取邀请好友奖励",
+   "request_classes": [
+    "GainInviteRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainInvitedReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "领取邀请好友奖励",
+   "request_classes": [
+    "GainInvitedRewardRequest"
+   ],
+   "request_params": [
+    "deviceId",
+    "invitationCode"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainLevelRaceRewards",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GainLevelRaceRewardsRequest",
+   "request_classes": [
+    "GainLevelRaceRewardsRequest"
+   ],
+   "request_params": [
+    "level"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainMondayReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GainMondayRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainNewYearRewards",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GainNewYearRewardsRequest",
+   "request_classes": [
+    "GainNewYearRewardsRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainRankFirstReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GainRankFirstRewardRequest",
+   "request_classes": [
+    "GainRankFirstRewardRequest"
+   ],
+   "request_params": [
+    "rank"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "amount",
+    "itemType",
+    "metaId",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainRankRewards",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GainRankRewardsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainSwornReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "SwornRewardGainRequest"
+   ],
+   "request_params": [
+    "swornRewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainTutorialFinishReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GainTutorialFinishRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getAchievements",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GetAchievementsRequest",
+   "request_classes": [
+    "GetAchievementsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "cardBookAchievement",
+    "sharkAchievement"
+   ],
+   "call_site_count": 3,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getChargeFeedbackReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GetChargeFeedbackRewardRequest"
+   ],
+   "request_params": [
+    "rewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getConsumeRewardInfo",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "多重好礼获取面板信息接口 / 接口定义 后端提供",
+   "request_classes": [
+    "ConsumeRewardGetInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "recharges",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得多重好礼信息",
+     "request": [],
+     "response": [
+      {
+       "kind": "property",
+       "code": "recharges",
+       "type": "int",
+       "ref": "",
+       "desc": "活动期间充值金币"
+      },
+      {
+       "kind": "list",
+       "code": "rewards",
+       "type": "int",
+       "ref": "",
+       "desc": "已领取礼品id"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getContinuousLoginReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "RewardRequest.lua - all request related requeset",
+   "request_classes": [
+    "GetContinueLoginRewardRequest"
+   ],
+   "request_params": [
+    "getBigReward"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "bigReward",
+    "reward",
+    "rewardId"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCountdownReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "获取新手礼包请求",
+   "request_classes": [
+    "GetCountdownRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "finished",
+    "inProcessRewardId",
+    "latestRewardTimestamp",
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getDailyAchieveInfo",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "获取每日成就信息",
+   "request_classes": [
+    "GetDailyAchieveInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getDailyActiveInfo",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "GetDailyActiveInfoRequest",
+   "request_classes": [
+    "GetDailyActiveInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "dailyActiveInfo",
+    "dailyActiveInfo.activeValue",
+    "dailyActiveInfo.gainedRewards",
+    "dailyActiveInfo.taskCounters"
+   ],
+   "call_site_count": 5,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getLoginReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "RewardRequest.lua - all request related requeset",
+   "request_classes": [
+    "GetLoginRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMonthlyLoginRewardMeta",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "RewardRequest.lua - all request related requeset",
+   "request_classes": [
+    "GetCurMonthRewardListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [
+    "adNum",
+    "monthlyLoginRewardItems"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getQuestionDailyReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "QuestionActDailyRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "dailyNum",
+    "questionId",
+    "questionNum",
+    "wrongAnswer1Key",
+    "wrongAnswer2Key",
+    "wrongAnswer3Key"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getRewardList",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "RewardRequest.lua - all request related requeset",
+   "request_classes": [
+    "GetRewardListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkRewardList"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getSignInReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "RewardRequest.lua - all request related requeset",
+   "request_classes": [
+    "GetSigninRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getTaskInfo",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "GetTaskInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "dailyTaskInfos"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getWeekReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "",
+   "request_classes": [
+    "QuestionActWeekRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "pickUpAllReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "RewardRequest.lua - all request related requeset",
+   "request_classes": [
+    "GetAllRewardRequest"
+   ],
+   "request_params": [
+    "pickUpCard",
+    "pickUpEquip"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "pickUpReward",
+   "category": "任务 / 成就 / 奖励",
+   "desc": "RewardRequest.lua - all request related requeset",
+   "request_classes": [
+    "GetSingleRewardRequest"
+   ],
+   "request_params": [
+    "rewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "reward"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gameInit",
+   "category": "元数据 / 初始化",
+   "desc": "",
+   "request_classes": [
+    "GameInitRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "maintenanceItem",
+    "noChatEndSeconds",
+    "sharkAchievement"
+   ],
+   "call_site_count": 4,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getAnnouncementInfo",
+   "category": "元数据 / 初始化",
+   "desc": "获取公告信息请求",
+   "request_classes": [
+    "GetAnnouncementInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "announcementItemMetas"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMeta",
+   "category": "元数据 / 初始化",
+   "desc": "GetGameMetaRequest.lua - 获取游戏元配置的请求",
+   "request_classes": [
+    "GetGameMetaRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buySpiritPool",
+   "category": "元神",
+   "desc": "购买元神格子",
+   "request_classes": [
+    "BuySpiritPoolRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "requisite",
+    "requisite.amount"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "equipSpirit",
+   "category": "元神",
+   "desc": "装备元神",
+   "request_classes": [
+    "EquipSpiritRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "index",
+    "spiritId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sellSpirit",
+   "category": "元神",
+   "desc": "卖出元神",
+   "request_classes": [
+    "SellSpiritRequest"
+   ],
+   "request_params": [
+    "spiritIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "setAutoSave",
+   "category": "元神",
+   "desc": "元神刷新复选框",
+   "request_classes": [
+    "SetSpiritRefreshAutoSaveRequest"
+   ],
+   "request_params": [
+    "autoSave"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "spiritConcentrate",
+   "category": "元神",
+   "desc": "",
+   "request_classes": [
+    "SpiritConcentrateRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkSpirits"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "unequipSpirit",
+   "category": "元神",
+   "desc": "卸下元神",
+   "request_classes": [
+    "UnequipSpiritRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "index"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeSpirit",
+   "category": "元神",
+   "desc": "强化元神",
+   "request_classes": [
+    "UpgradeSpiritRequest"
+   ],
+   "request_params": [
+    "masterSpiritId",
+    "slaveSpiritIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkSpirit",
+    "sharkSpirit.spiritId"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeElite",
+   "category": "关卡 / 战斗",
+   "desc": "ChallengeEliteRequest.lua - 挑战精英关卡",
+   "request_classes": [
+    "ChallengeEliteRequest"
+   ],
+   "request_params": [
+    "eliteId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "selectId",
+    "win"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "changeBattleArray",
+   "category": "关卡 / 战斗",
+   "desc": "",
+   "request_classes": [
+    "ChangeBattleArrayRequest"
+   ],
+   "request_params": [
+    "battleArrayId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "clearElite",
+   "category": "关卡 / 战斗",
+   "desc": "精英关卡扫荡",
+   "request_classes": [
+    "EliteSweepRequest"
+   ],
+   "request_params": [
+    "eliteId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "challengeNum",
+    "lastEnergy",
+    "mergeRewards",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "扫荡精英关卡",
+     "request": [
+      {
+       "kind": "property",
+       "code": "eliteId",
+       "type": "int",
+       "ref": "",
+       "desc": "精英关卡id"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "rewards",
+       "type": "",
+       "ref": "ClearMissionReward",
+       "desc": "扫荡结果"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "clearMission",
+   "category": "关卡 / 战斗",
+   "desc": "ClearMissionRequest",
+   "request_classes": [
+    "ClearMissionRequest"
+   ],
+   "request_params": [
+    "clearRounds",
+    "missionId",
+    "routeId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "clearMissionRewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getEliteInfo",
+   "category": "关卡 / 战斗",
+   "desc": "GetEliteInfoRequest.lua - 获取精英关卡信息",
+   "request_classes": [
+    "GetEliteInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "resetClearTime",
+   "category": "关卡 / 战斗",
+   "desc": "ResetClearTimeRequest",
+   "request_classes": [
+    "ResetClearTimeRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "gemRequisite",
+    "gemRequisite.amount"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "resetElite",
+   "category": "关卡 / 战斗",
+   "desc": "ResetEliteRequest.lua - 重置精英关卡信息",
+   "request_classes": [
+    "ResetEliteRequest"
+   ],
+   "request_params": [
+    "eliteId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "triggerBattleEvent",
+   "category": "关卡 / 战斗",
+   "desc": "",
+   "request_classes": [
+    "TriggerBattleRequest"
+   ],
+   "request_params": [
+    "DoNotCaptureFailueMessage",
+    "battleType",
+    "missionId",
+    "routeId",
+    "step"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "adjustTeam",
+   "category": "其他",
+   "desc": "调整队列请求",
+   "request_classes": [
+    "AdjustTeamRequest"
+   ],
+   "request_params": [
+    "additionalCardIds",
+    "mainCardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainFloorAddition",
+   "category": "其他",
+   "desc": "",
+   "request_classes": [
+    "GainFloorAdditionRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainYesterdayAddition",
+   "category": "其他",
+   "desc": "",
+   "request_classes": [
+    "GainYesterdayAdditionRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getHomeInfo",
+   "category": "其他",
+   "desc": "获取主页信息请求",
+   "request_classes": [
+    "GetHomeInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "consumeRewardRecharges",
+    "consumeRewards",
+    "freeSpiritRefreshNum",
+    "unionMonsterEscapeSeconds",
+    "unionMonsterHp"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMultiplayserBossInfo",
+   "category": "其他",
+   "desc": "GetMultiplayserBossInfoRequest",
+   "request_classes": [
+    "GetMultiplayserBossInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getPlayerTeamInfo",
+   "category": "其他",
+   "desc": "GetPlayerTeamInfoRequest.lua - 培养卡片的请求",
+   "request_classes": [
+    "GetPlayerTeamInfoRequest"
+   ],
+   "request_params": [
+    "playerTeamData",
+    "playerUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 8,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUserBanInfo",
+   "category": "其他",
+   "desc": "刷新元神副属性",
+   "request_classes": [
+    "SpeakLimitStutasRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "noChatEndSeconds"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "login",
+   "category": "其他",
+   "desc": "",
+   "request_classes": [
+    "(direct)"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "rebirthItem",
+   "category": "其他",
+   "desc": "武将重生",
+   "request_classes": [
+    "ItemRebirthRequest"
+   ],
+   "request_params": [
+    "resourceId",
+    "resourceType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "recordAddictedTime",
+   "category": "其他",
+   "desc": "",
+   "request_classes": [
+    "RecordAddictedTimeRequest"
+   ],
+   "request_params": [
+    "minutes"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "recordTutorialStep",
+   "category": "其他",
+   "desc": "",
+   "request_classes": [
+    "RecordTutorialStepRequest"
+   ],
+   "request_params": [
+    "funcName",
+    "step"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 10,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refreshSubAttribute",
+   "category": "其他",
+   "desc": "刷新元神副属性",
+   "request_classes": [
+    "RefreshSubAttributeRequest"
+   ],
+   "request_params": [
+    "lockIndex",
+    "refreshType",
+    "spiritId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "refreshSharkSpiritAttribute"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "rename",
+   "category": "其他",
+   "desc": "卖出元神",
+   "request_classes": [
+    "ChangeNameRequest"
+   ],
+   "request_params": [
+    "nickName"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sacrificeItem",
+   "category": "其他",
+   "desc": "武将祭炼",
+   "request_classes": [
+    "ItemSacrificeRequest"
+   ],
+   "request_params": [
+    "resourceIds",
+    "resourceType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "selectSubAttribute",
+   "category": "其他",
+   "desc": "卖出元神",
+   "request_classes": [
+    "SelectSubAttributeRequest"
+   ],
+   "request_params": [
+    "refreshIndex",
+    "spiritId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "triggerCoinEvent",
+   "category": "其他",
+   "desc": "TriggerCoinEventRequest",
+   "request_classes": [
+    "TriggerCoinEventRequest"
+   ],
+   "request_params": [
+    "DoNotCaptureFailueMessage",
+    "missionId",
+    "routeId",
+    "step"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "triggerEmptyEvent",
+   "category": "其他",
+   "desc": "TriggerEmptyEventRequest",
+   "request_classes": [
+    "TriggerEmptyEventRequest"
+   ],
+   "request_params": [
+    "DoNotCaptureFailueMessage",
+    "missionId",
+    "routeId",
+    "step"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "triggerExpEvent",
+   "category": "其他",
+   "desc": "TriggerExpEventRequest",
+   "request_classes": [
+    "TriggerExpEventRequest"
+   ],
+   "request_params": [
+    "DoNotCaptureFailueMessage",
+    "missionId",
+    "routeId",
+    "step"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "triggerRandomEvent",
+   "category": "其他",
+   "desc": "TriggerRandomEventRequest",
+   "request_classes": [
+    "TriggerRandomEventRequest"
+   ],
+   "request_params": [
+    "DoNotCaptureFailueMessage",
+    "missionId",
+    "routeId",
+    "step"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "eventType"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "validatePaymentOrder",
+   "category": "其他",
+   "desc": "",
+   "request_classes": [
+    "ValidatePaymentOrderRequest"
+   ],
+   "request_params": [
+    "goldNum",
+    "orderId",
+    "productId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "succ"
+   ],
+   "call_site_count": 3,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "acceptUnionApply",
+   "category": "军团",
+   "desc": "军团同意申请",
+   "request_classes": [
+    "UnionAcceptRequest"
+   ],
+   "request_params": [
+    "applierUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "applyCrossGvg",
+   "category": "军团",
+   "desc": "跨服GvG  报名请求",
+   "request_classes": [
+    "CrossUnionPkGetApplyRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "applyUnion",
+   "category": "军团",
+   "desc": "请求加入某军团",
+   "request_classes": [
+    "UnionApplyRequest"
+   ],
+   "request_params": [
+    "unionId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "applyUnionCity",
+   "category": "军团",
+   "desc": "军团战 报名攻打城池",
+   "request_classes": [
+    "UnionPkSignAttackRequest"
+   ],
+   "request_params": [
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "appointUnion",
+   "category": "军团",
+   "desc": "任命职务请求",
+   "request_classes": [
+    "UnionAppointRequest"
+   ],
+   "request_params": [
+    "appointUid",
+    "title"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "blessForCrossGVG",
+   "category": "军团",
+   "desc": "跨服GvG  祝福请求",
+   "request_classes": [
+    "CrossUnionPkGetBlessRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rank",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyUnionProp",
+   "category": "军团",
+   "desc": "BuyUnionPropRequest",
+   "request_classes": [
+    "BuyUnionPropRequest"
+   ],
+   "request_params": [
+    "unionPropId",
+    "unionPropType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "retCode",
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "cancelDissolveUnion",
+   "category": "军团",
+   "desc": "取消解散军团",
+   "request_classes": [
+    "UnionCancelDissolveRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "cancelTransferUnion",
+   "category": "军团",
+   "desc": "撤销转让军团长",
+   "request_classes": [
+    "UnionCancelTransferRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "cancelUnionApply",
+   "category": "军团",
+   "desc": "取消申请",
+   "request_classes": [
+    "UnionCancelApplyRequest"
+   ],
+   "request_params": [
+    "unionId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeUnionMonster",
+   "category": "军团",
+   "desc": "军团挑战怪物",
+   "request_classes": [
+    "UnionColosseumChallengeRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "bossHpMax",
+    "generalExp"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "constructUnion",
+   "category": "军团",
+   "desc": "建设",
+   "request_classes": [
+    "UnionConstructUnionRequest"
+   ],
+   "request_params": [
+    "constructType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "createUnion",
+   "category": "军团",
+   "desc": "创建军团请求",
+   "request_classes": [
+    "UnionCreateRequest"
+   ],
+   "request_params": [
+    "coinType",
+    "declaration",
+    "notice",
+    "unionName"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnion",
+    "sharkUnion.unionId"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "crossGVGGroupBattle",
+   "category": "军团",
+   "desc": "获得跨服军团战小组赛战斗信息",
+   "request_classes": [
+    "CrossUnionPkGroupBattleRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得跨服军团战小组赛战斗信息",
+     "request": [],
+     "response": [
+      {
+       "kind": "property",
+       "code": "battleReport",
+       "type": "",
+       "ref": "SharkUnionBattlefieldReport",
+       "desc": "城池的战报"
+      },
+      {
+       "kind": "property",
+       "code": "changePoints",
+       "type": "int",
+       "ref": "",
+       "desc": "变化的积分数"
+      },
+      {
+       "kind": "property",
+       "code": "currPoints",
+       "type": "int",
+       "ref": "",
+       "desc": "当前积分"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "dissolveUnion",
+   "category": "军团",
+   "desc": "解散军团请求",
+   "request_classes": [
+    "UnionDissolveRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnion",
+    "sharkUserUnion"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeUnionFormation",
+   "category": "军团",
+   "desc": "军团战更换阵型请求",
+   "request_classes": [
+    "UnionPkExchangeUnionFormationRequest"
+   ],
+   "request_params": [
+    "forwardUid",
+    "headUids",
+    "middleUids",
+    "tailUids",
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "forceQuitUnion",
+   "category": "军团",
+   "desc": "军团踢人请求",
+   "request_classes": [
+    "UnionKickRequest"
+   ],
+   "request_params": [
+    "quitUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainUnionBattleReward",
+   "category": "军团",
+   "desc": "军团战 请求获得 我的奖励",
+   "request_classes": [
+    "UnionPkGainUnionBattleRewardRequest"
+   ],
+   "request_params": [
+    "rewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getAppliedUnions",
+   "category": "军团",
+   "desc": "请求获取当前玩家的已申请军团列表",
+   "request_classes": [
+    "UnionGetMyApplyListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionWrappers"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getApplyUnions",
+   "category": "军团",
+   "desc": "军团战 获得指定城池具体信息",
+   "request_classes": [
+    "UnionPkGetApplyUnionsRequest"
+   ],
+   "request_params": [
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossGVGBlessInfo",
+   "category": "军团",
+   "desc": "跨服GvG  祝福请求",
+   "request_classes": [
+    "CrossUnionPkGetBlessInFoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "crossGvgVersion",
+    "rank",
+    "rewards",
+    "selfApplyCrossGvg",
+    "selfQuitCrossGvg",
+    "unionApplyCrossGvg"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossGvgGroupReports",
+   "category": "军团",
+   "desc": "获得跨服军团战小组赛战报",
+   "request_classes": [
+    "CrossUnionPkGetGroupReportsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得跨服军团战小组赛战报",
+     "request": [],
+     "response": [
+      {
+       "kind": "list",
+       "code": "reports",
+       "type": "",
+       "ref": "GVGReport",
+       "desc": "战报信息列表"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getCrossGvgGroupTop10Score",
+   "category": "军团",
+   "desc": "取得跨服gvg 排位赛数据",
+   "request_classes": [
+    "CrossUnionPkGetGroupRankScoreRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得军团积分前十名及自己",
+     "request": [],
+     "response": [
+      {
+       "kind": "property",
+       "code": "selfScore",
+       "type": "",
+       "ref": "CrossGVGScoreInfo",
+       "desc": "自己军团的积分信息"
+      },
+      {
+       "kind": "list",
+       "code": "top10ScoreList",
+       "type": "",
+       "ref": "CrossGVGScoreInfo",
+       "desc": "积分前十名军团信息"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getFiredUnionMemberStatus",
+   "category": "军团",
+   "desc": "获得踢人之前获得被踢玩家当前状态",
+   "request_classes": [
+    "CrossUnionPkCheckFiredStatueRequest"
+   ],
+   "request_params": [
+    "firedUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getGvgBattleResultDetail",
+   "category": "军团",
+   "desc": "获取gvg战斗信息",
+   "request_classes": [
+    "CrossUnionPkGetBattleReportRequest"
+   ],
+   "request_params": [
+    "knockout",
+    "reportId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获取gvg战斗信息",
+     "request": [
+      {
+       "kind": "property",
+       "code": "reportId",
+       "type": "int",
+       "ref": "",
+       "desc": "战报id"
+      },
+      {
+       "kind": "property",
+       "code": "knockout",
+       "type": "boolean",
+       "ref": "",
+       "desc": "是否是淘汰赛"
+      }
+     ],
+     "response": [
+      {
+       "kind": "property",
+       "code": "battleReport",
+       "type": "",
+       "ref": "SharkUnionBattlefieldReport",
+       "desc": "战报"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getGvgKnockoutInfo",
+   "category": "军团",
+   "desc": "取得跨服gvg 排位赛数据",
+   "request_classes": [
+    "CrossUnionPkGetKnockoutInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "championBattle"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获取淘汰赛信息",
+     "request": [],
+     "response": [
+      {
+       "kind": "list",
+       "code": "sixteen",
+       "type": "",
+       "ref": "CrossGvgResultOutline",
+       "desc": "16强"
+      },
+      {
+       "kind": "list",
+       "code": "eight",
+       "type": "",
+       "ref": "CrossGvgResultOutline",
+       "desc": "8强"
+      },
+      {
+       "kind": "list",
+       "code": "four",
+       "type": "",
+       "ref": "CrossGvgResultOutline",
+       "desc": "4强"
+      },
+      {
+       "kind": "property",
+       "code": "championBattle",
+       "type": "",
+       "ref": "CrossGvgResultOutline",
+       "desc": "冠军赛"
+      },
+      {
+       "kind": "property",
+       "code": "thirdPlaceBattle",
+       "type": "",
+       "ref": "CrossGvgResultOutline",
+       "desc": "季军赛"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getOwnUnionInfo",
+   "category": "军团",
+   "desc": "军团战 获得 我的军团 列表信息",
+   "request_classes": [
+    "UnionPKGetMyGuildInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionAppliers",
+   "category": "军团",
+   "desc": "请求获得申请者列表",
+   "request_classes": [
+    "UnionGetApplierListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionAppliers"
+   ],
+   "call_site_count": 6,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionBattlefieldReport",
+   "category": "军团",
+   "desc": "战报接口",
+   "request_classes": [
+    "UnionPkGetBattleReportRequest"
+   ],
+   "request_params": [
+    "reportId",
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionBattlefieldReportList",
+   "category": "军团",
+   "desc": "军团战 获得指定城池具体信息",
+   "request_classes": [
+    "UnionPkGetBattleReportListRequest"
+   ],
+   "request_params": [
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionBuildingBankInfo",
+   "category": "军团",
+   "desc": "GetUnionBuildingBankInfoRequest",
+   "request_classes": [
+    "GetUnionBuildingBankInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "level"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionBuildingColosseumInfo",
+   "category": "军团",
+   "desc": "军团斗兽场建筑信息",
+   "request_classes": [
+    "UnionColosseumBuildingInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "level",
+    "rankList",
+    "sharkUnionMonster",
+    "sharkUnionMonster.distributingUid",
+    "sharkUnionMonster.escapeSeconds",
+    "sharkUnionMonster.monsterId",
+    "sharkUnionMonster.monsterLeftHp",
+    "sharkUnionMonster.reward.amount",
+    "sharkUnionMonster.rewardDistributed",
+    "sharkUnionMonster.rewardDouble",
+    "sharkUnionMonster.summonUserNickname",
+    "summonTimes",
+    "unionWealth"
+   ],
+   "call_site_count": 4,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionBuildingHallInfo",
+   "category": "军团",
+   "desc": "GetUnionBuildingHallInfoRequest",
+   "request_classes": [
+    "GetUnionBuildingHallInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "constructTimesToday",
+    "lastestConstructSeconds"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionBuildingShopInfo",
+   "category": "军团",
+   "desc": "GetUnionBuildingShopInfoRequest",
+   "request_classes": [
+    "GetUnionBuildingShopInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "level",
+    "specialProps",
+    "specialShopRecord"
+   ],
+   "call_site_count": 5,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionCityInfo",
+   "category": "军团",
+   "desc": "军团战 获得指定城池具体信息",
+   "request_classes": [
+    "UnionPkGetCityInfoRequest"
+   ],
+   "request_params": [
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionCity",
+    "sharkUnionCity.report",
+    "sharkUnionCity.successfulBid",
+    "unionFormation"
+   ],
+   "call_site_count": 4,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionCityList",
+   "category": "军团",
+   "desc": "军团战 获得城池列表",
+   "request_classes": [
+    "UnionPkGetCityListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "attendBattleNum",
+    "challengeCityIds",
+    "fightingCityIds",
+    "ownCityIds",
+    "roundWealth",
+    "smallCityNum",
+    "unionFormation",
+    "unionWinNum",
+    "userTitle"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionFormation",
+   "category": "军团",
+   "desc": "获取军团战阵型信息",
+   "request_classes": [
+    "UnionPkGetCityFormationRequest"
+   ],
+   "request_params": [
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionCityApply",
+    "unionFormation"
+   ],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionInfo",
+   "category": "军团",
+   "desc": "请求获得军团信息",
+   "request_classes": [
+    "UnionGetUnionInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "canDistributeMonsterReward",
+    "sharkUnion",
+    "sharkUnionBuildingWrapper",
+    "unionMonsterEscapeSeconds",
+    "unionMonsterHp",
+    "unionTotalFightCapacity",
+    "unionWarLightOn"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionList",
+   "category": "军团",
+   "desc": "查询军团列表请求",
+   "request_classes": [
+    "UnionGetUnionListRequest"
+   ],
+   "request_params": [
+    "amount",
+    "startNum"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionWrappers"
+   ],
+   "call_site_count": 4,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionMembersList",
+   "category": "军团",
+   "desc": "获得军团成员列表",
+   "request_classes": [
+    "UnionGetMemberListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionMemberWrappers"
+   ],
+   "call_site_count": 5,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionMonsterRank",
+   "category": "军团",
+   "desc": "获得斗兽场排行榜",
+   "request_classes": [
+    "UnionColosseumGetRankRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rankList"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionNewsList",
+   "category": "军团",
+   "desc": "获得军团动态请求",
+   "request_classes": [
+    "UnionGetNewsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionNewsWrappers",
+    "unionWarNewsWrappers"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUnionWarCityMembersList",
+   "category": "军团",
+   "desc": "获得军团战城池报名成员列表",
+   "request_classes": [
+    "UnionPkGetCityMemberListRequest"
+   ],
+   "request_params": [
+    "cityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "unionFormation"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUserUnionInfo",
+   "category": "军团",
+   "desc": "获得当前玩家的军团信息",
+   "request_classes": [
+    "UnionGetMyDataRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "crossGvgVersion",
+    "out",
+    "promotion",
+    "selfApplyCrossGvg",
+    "selfQuitCrossGvg",
+    "sharkUserUnion",
+    "unionApplyCrossGvg",
+    "unionWarHintNum"
+   ],
+   "call_site_count": 8,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "impeachUnionManager",
+   "category": "军团",
+   "desc": "弹劾军团长",
+   "request_classes": [
+    "UnionImpeachRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "currManagerNickName"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "inspireUnionBattle",
+   "category": "军团",
+   "desc": "鼓舞接口中BuffId / 1：金币鼓舞 / 2：银币鼓舞 / 3：奋力一击",
+   "request_classes": [
+    "UnionPkPowerupRequest"
+   ],
+   "request_params": [
+    "buffId",
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 5,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "modifyUnionDeclaration",
+   "category": "军团",
+   "desc": "换宣言请求",
+   "request_classes": [
+    "UnionChangeDeclarationRequest"
+   ],
+   "request_params": [
+    "declaration"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "modifyUnionNotice",
+   "category": "军团",
+   "desc": "换公告请求",
+   "request_classes": [
+    "UnionChangeNoticeRequest"
+   ],
+   "request_params": [
+    "notice"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "quitUnion",
+   "category": "军团",
+   "desc": "退出军团请求",
+   "request_classes": [
+    "UnionQuitRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUserUnion"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "receiveUnionWage",
+   "category": "军团",
+   "desc": "ReceiveUnionWageRequest",
+   "request_classes": [
+    "ReceiveUnionWageRequest"
+   ],
+   "request_params": [
+    "unionWageId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "rejectUnionAllApplies",
+   "category": "军团",
+   "desc": "请求全部拒绝",
+   "request_classes": [
+    "UnionRejectAllRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "rejectUnionApply",
+   "category": "军团",
+   "desc": "军团拒绝申请",
+   "request_classes": [
+    "UnionRejectRequest"
+   ],
+   "request_params": [
+    "applierUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "searchUnion",
+   "category": "军团",
+   "desc": "查找军团请求",
+   "request_classes": [
+    "UnionSearchRequest"
+   ],
+   "request_params": [
+    "unionName"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionWrappers"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "summonUnionMonster",
+   "category": "军团",
+   "desc": "召唤军团boss",
+   "request_classes": [
+    "UnionColosseumSummonRequest"
+   ],
+   "request_params": [
+    "monsterMetaId",
+    "summonType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUnionMonster",
+    "sharkUnionMonster.distributingUid",
+    "sharkUnionMonster.escapeSeconds",
+    "sharkUnionMonster.monsterId",
+    "sharkUnionMonster.monsterLeftHp",
+    "sharkUnionMonster.reward.amount",
+    "sharkUnionMonster.rewardDistributed",
+    "sharkUnionMonster.rewardDouble",
+    "sharkUnionMonster.summonUserNickname"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "transferUnion",
+   "category": "军团",
+   "desc": "移交军团长请求",
+   "request_classes": [
+    "UnionTransferRequest"
+   ],
+   "request_params": [
+    "transferedUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "transferTime"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "unionMonsterRewardDistributeBegin",
+   "category": "军团",
+   "desc": "军团斗兽场开始分配",
+   "request_classes": [
+    "UnionColosseumStartAllocationRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "currMonsterRewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "unionMonsterRewardDistributeGiveUp",
+   "category": "军团",
+   "desc": "军团斗兽场放弃分配",
+   "request_classes": [
+    "UnionColosseumGiveUpAllocationRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "unionMonsterRewardDistributeSave",
+   "category": "军团",
+   "desc": "军团斗兽场分配奖励",
+   "request_classes": [
+    "UnionColosseumAllocateRequest"
+   ],
+   "request_params": [
+    "unionMonsterRewards"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeUnionBuilding",
+   "category": "军团",
+   "desc": "升级建筑请求",
+   "request_classes": [
+    "UnionBuildingUpgradeRequest"
+   ],
+   "request_params": [
+    "unionBuildingId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "currLevel"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "userApplyUnionCity",
+   "category": "军团",
+   "desc": "团员报名指定城池",
+   "request_classes": [
+    "UnionPkMemberApplyRequest"
+   ],
+   "request_params": [
+    "unionCityId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "adjustCardAvatar",
+   "category": "卡牌养成",
+   "desc": "卖出元神",
+   "request_classes": [
+    "AdjustCardAvatarRequest"
+   ],
+   "request_params": [
+    "avatarMetaId",
+    "cardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyMonthGemCard",
+   "category": "卡牌养成",
+   "desc": "BuyMonthGemCardRequest",
+   "request_classes": [
+    "BuyMonthGemCardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "monthGemCardDeadline"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "evolveCard",
+   "category": "卡牌养成",
+   "desc": "卡牌进化Request / 参数1：masterId / 参数2：slaveId",
+   "request_classes": [
+    "CardEvolutionRequest"
+   ],
+   "request_params": [
+    "masterId",
+    "slaveId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkCard",
+    "sharkCard.metaId"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "evolveEquip",
+   "category": "卡牌养成",
+   "desc": "EvolveEquipRequest",
+   "request_classes": [
+    "EvolveEquipRequest"
+   ],
+   "request_params": [
+    "equipId",
+    "userGems"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "equipId",
+    "sharkEquip"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeCard",
+   "category": "卡牌养成",
+   "desc": "卡牌以旧换新兑换请求",
+   "request_classes": [
+    "CardOldToNewExchangeRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "shopId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "reward"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeCardDaily",
+   "category": "卡牌养成",
+   "desc": "易帅换将",
+   "request_classes": [
+    "ActivityexchangeCardDailyRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "metaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "reward"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeTrainDanByArenaScore",
+   "category": "卡牌养成",
+   "desc": "ExchangeTrainDanRequest",
+   "request_classes": [
+    "ExchangeTrainDanRequest"
+   ],
+   "request_params": [
+    "exchangeType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "amount",
+    "itemType",
+    "metaId",
+    "requisite",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainedMonthGemCardReward",
+   "category": "卡牌养成",
+   "desc": "GainMonthCardRequest",
+   "request_classes": [
+    "GainMonthCardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCardBook",
+   "category": "卡牌养成",
+   "desc": "GetCardBookRequest.lua - get cards illustrated info requeset",
+   "request_classes": [
+    "GetCardBookRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkCardBook",
+    "sharkCardBook.cardMetaIds",
+    "sharkCardBook.equipMetaIds"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "giveUpCardTrain",
+   "category": "卡牌养成",
+   "desc": "GiveUpCardTrainRequest.lua - 放弃卡片培养的请求",
+   "request_classes": [
+    "GiveUpCardTrainRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "masterId",
+    "slaveIds"
+   ],
+   "has_dynamic_params": true,
+   "response_fields": [
+    "sharkCard",
+    "sharkCard.usedPotential"
+   ],
+   "call_site_count": 3,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "lockCard",
+   "category": "卡牌养成",
+   "desc": "LockCardRequest",
+   "request_classes": [
+    "LockCardRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "methodType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "prayCardFragment",
+   "category": "卡牌养成",
+   "desc": "PrayCardFragmentRequest",
+   "request_classes": [
+    "PrayCardFragmentRequest"
+   ],
+   "request_params": [
+    "cardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "prayNum",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refreshCardExchangeDaillyCard",
+   "category": "卡牌养成",
+   "desc": "",
+   "request_classes": [
+    "ActivereFreshCardExchangeDaillyCardRequest"
+   ],
+   "request_params": [
+    "useGold"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "cardExchangeDailyInfo",
+    "cardExchangeDailyInfo.cardMetaIds",
+    "cardExchangeDailyInfo.exchangeTimes"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "replaceCard",
+   "category": "卡牌养成",
+   "desc": "ReplaceCardRequest.lua - 重整队列的请求",
+   "request_classes": [
+    "ReplaceCardRequest"
+   ],
+   "request_params": [
+    "insertCardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "type"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "saveCardTrain",
+   "category": "卡牌养成",
+   "desc": "SaveCardTrainRequest.lua - 保存卡片培养结果的请求",
+   "request_classes": [
+    "SaveCardTrainRequest"
+   ],
+   "request_params": [
+    "masterId",
+    "slaveIds"
+   ],
+   "has_dynamic_params": true,
+   "response_fields": [
+    "sharkCard",
+    "sharkCard.cardId",
+    "sharkCard.usedPotential"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sellCards",
+   "category": "卡牌养成",
+   "desc": "SellCardsRequest.lua - 出售装备的请求",
+   "request_classes": [
+    "SellCardsRequest"
+   ],
+   "request_params": [
+    "cardIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "setCardGroupInterworking",
+   "category": "卡牌养成",
+   "desc": "领取邀请好友奖励",
+   "request_classes": [
+    "SetCardGroupInterworkingRequest"
+   ],
+   "request_params": [
+    "cardGroupInterworking"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "splitCard",
+   "category": "卡牌养成",
+   "desc": "SplitCardRequest",
+   "request_classes": [
+    "SplitCardRequest"
+   ],
+   "request_params": [
+    "cardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "trainCard",
+   "category": "卡牌养成",
+   "desc": "CardTrainingRequest.lua - 培养卡片的请求",
+   "request_classes": [
+    "CardTrainingRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [
+    "attTrainValue",
+    "defTrainValue",
+    "hpTrainValue"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "triggerCardEvent",
+   "category": "卡牌养成",
+   "desc": "TriggerCardEventRequest",
+   "request_classes": [
+    "TriggerCardEventRequest"
+   ],
+   "request_params": [
+    "DoNotCaptureFailueMessage",
+    "missionId",
+    "routeId",
+    "step"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "unlockSubAttribute",
+   "category": "卡牌养成",
+   "desc": "解锁元神副属性",
+   "request_classes": [
+    "UnlockSubAttributeRequest"
+   ],
+   "request_params": [
+    "spiritId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkSpiritAttribute"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeCardByGeneralExp",
+   "category": "卡牌养成",
+   "desc": "卡牌经验强化接口",
+   "request_classes": [
+    "UpgradeCardByGeneralExpRequest"
+   ],
+   "request_params": [
+    "masterId",
+    "targetLevel"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkCard"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeEquipForOneCard",
+   "category": "卡牌养成",
+   "desc": "卡牌装备全部强化",
+   "request_classes": [
+    "UpgradeEquipForOneCardRequest"
+   ],
+   "request_params": [
+    "equipIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkEquips"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeSkill",
+   "category": "卡牌养成",
+   "desc": "UpgradeSkillRequest.lua - 技能升级的请求",
+   "request_classes": [
+    "UpgradeSkillRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "skillBooks",
+    "skillId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "cardSkill",
+    "cardSkill.skillId"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeUser",
+   "category": "卡牌养成",
+   "desc": "UpgradeUserRequest.lua - 用户升级的请求",
+   "request_classes": [
+    "UpgradeUserRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUser"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getRobUserList",
+   "category": "夺宝 / 神兽",
+   "desc": "GetRobUserListRequest",
+   "request_classes": [
+    "GetRobUserListRequest"
+   ],
+   "request_params": [
+    "beastFragmentId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getSharkBeasts",
+   "category": "夺宝 / 神兽",
+   "desc": "",
+   "request_classes": [
+    "GetSharkBeastsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkBeasts"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "robBeastFragment",
+   "category": "夺宝 / 神兽",
+   "desc": "RobBeastFragmentRequest",
+   "request_classes": [
+    "RobBeastFragmentRequest"
+   ],
+   "request_params": [
+    "beastFragmentId",
+    "enemyUid",
+    "robType",
+    "robotId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "acceptAllFreeGift",
+   "category": "好友社交",
+   "desc": "SendAllFreeGiftRequest.lua - 向玩家发送免费礼物",
+   "request_classes": [
+    "AcceptAllFreeGiftRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "gainedEnergy"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "acceptAllInvitations",
+   "category": "好友社交",
+   "desc": "AcceptAllInvitationsRequest.lua - 接受所有玩家的好友邀请",
+   "request_classes": [
+    "AcceptAllInvitationsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "acceptedFriends",
+    "reviewingFriends"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "acceptInvitation",
+   "category": "好友社交",
+   "desc": "AcceptInvitationRequest.lua - 接受玩家的添加好友邀请",
+   "request_classes": [
+    "AcceptInvitationRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "acceptedFriend"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "cancelInvitation",
+   "category": "好友社交",
+   "desc": "CancelInvitationRequest.lua - 接受玩家的添加好友邀请",
+   "request_classes": [
+    "CancelInvitationRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeFriend",
+   "category": "好友社交",
+   "desc": "ChallengeFriendRequest.lua - 与好友切磋请求",
+   "request_classes": [
+    "ChallengeFriendRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "tableContentHeight"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeFriendList",
+   "category": "好友社交",
+   "desc": "一键切磋",
+   "request_classes": [
+    "ChallengeFriendListRequest"
+   ],
+   "request_params": [
+    "friendUids"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "deleteFriend",
+   "category": "好友社交",
+   "desc": "DeleteFriendRequest.lua - 接受玩家的添加好友邀请",
+   "request_classes": [
+    "DeleteFriendRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainPraiseReward",
+   "category": "好友社交",
+   "desc": "领取点赞礼包奖励",
+   "request_classes": [
+    "GainPraiseRewardRequest"
+   ],
+   "request_params": [
+    "praiseId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getFriendDetail",
+   "category": "好友社交",
+   "desc": "GetFriendDetailRequest.lua - 获取好友的详情",
+   "request_classes": [
+    "GetFriendDetailRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkFriendDetail",
+    "sharkFriendDetail.fightCapacity",
+    "sharkFriendDetail.friendUid",
+    "sharkFriendDetail.level",
+    "sharkFriendDetail.mainCardMetaId",
+    "sharkFriendDetail.nickName"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getFriends",
+   "category": "好友社交",
+   "desc": "GetFriendsRequest.lua - 获取当前玩家的好友信息",
+   "request_classes": [
+    "GetFriendsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "receivedEnergy",
+    "sharkFriends"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getInvitationFriends",
+   "category": "好友社交",
+   "desc": "GetFriends.lua - 获取当前玩家的好友信息",
+   "request_classes": [
+    "GetInvitationFriendsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkFriends"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getInvitationInfo",
+   "category": "好友社交",
+   "desc": "领取邀请好友奖励",
+   "request_classes": [
+    "GetInvitationInfoRequest"
+   ],
+   "request_params": [
+    "deviceId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "deviceHasInvited",
+    "sharkAccountInvitation"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getRecommendedFriends",
+   "category": "好友社交",
+   "desc": "GetRecommendedFriendsRequest.lua - 获取推荐好友信息",
+   "request_classes": [
+    "GetRecommendedFriendsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkFriends"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getReviewFriends",
+   "category": "好友社交",
+   "desc": "GetReviewFriendsRequest.lua - 获取等待玩家审核的用户请求列表",
+   "request_classes": [
+    "GetReviewFriendsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkFriends"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "inviteFbFriends",
+   "category": "好友社交",
+   "desc": "Facebook相关",
+   "request_classes": [
+    "FacebookInviteFriendRequest"
+   ],
+   "request_params": [
+    "fbFriendIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "recordPraiseId",
+   "category": "好友社交",
+   "desc": "获取记录点赞id",
+   "request_classes": [
+    "GetRecordPraiseIdRequest"
+   ],
+   "request_params": [
+    "praiseId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refuseAllInvitations",
+   "category": "好友社交",
+   "desc": "RefuseAllInvitationsRequest.lua - 拒绝所有玩家的好友邀请",
+   "request_classes": [
+    "RefuseAllInvitationsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refuseInvitation",
+   "category": "好友社交",
+   "desc": "RefuseInvitationRequest.lua - 拒绝玩家的添加好友邀请",
+   "request_classes": [
+    "RefuseInvitationRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sendAllFreeGift",
+   "category": "好友社交",
+   "desc": "SendAllFreeGiftRequest.lua - 向玩家发送免费礼物",
+   "request_classes": [
+    "SendAllFreeGiftRequest"
+   ],
+   "request_params": [
+    "friendUids"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "friendUids",
+    "gainedEnergy"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sendAllInvitations",
+   "category": "好友社交",
+   "desc": "SendAllInvitationsRequest.lua - 发送全部邀请",
+   "request_classes": [
+    "SendAllInvitationsRequest"
+   ],
+   "request_params": [
+    "friendUids"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "friendUids"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sendFreeGift",
+   "category": "好友社交",
+   "desc": "SendFreeGiftRequest.lua - 向玩家发送免费礼物",
+   "request_classes": [
+    "SendFreeGiftRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "gainedEnergy"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sendInvitation",
+   "category": "好友社交",
+   "desc": "SendInvitationRequest.lua - 发送邀请",
+   "request_classes": [
+    "SendInvitationRequest"
+   ],
+   "request_params": [
+    "friendUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyTreasureGrid",
+   "category": "宝物",
+   "desc": "宝物格子",
+   "request_classes": [
+    "BuyTreasureGridRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "evolveTreasure",
+   "category": "宝物",
+   "desc": "宝物升星",
+   "request_classes": [
+    "EvolveTreasureRequest"
+   ],
+   "request_params": [
+    "treasureId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkTreasure"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gachaTreasure",
+   "category": "宝物",
+   "desc": "宝物扭蛋",
+   "request_classes": [
+    "GachaTreasureRequest"
+   ],
+   "request_params": [
+    "free",
+    "time"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainTreasureboxPointsRankReward",
+   "category": "宝物",
+   "desc": "TreasureboxRankRewardRequest.lua",
+   "request_classes": [
+    "TreasureboxRankRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainTreasureboxPointsReward",
+   "category": "宝物",
+   "desc": "TreasureboxPointRewardRequest.lua",
+   "request_classes": [
+    "TreasureboxPointRewardRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getTreasureboxPointsInfo",
+   "category": "宝物",
+   "desc": "TreasureboxPointsInfoGetRequest.lua",
+   "request_classes": [
+    "TreasureboxPointsInfoGetRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "treasureboxPointsRanks"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "lockTreasure",
+   "category": "宝物",
+   "desc": "宝物锁定",
+   "request_classes": [
+    "LockTreasuresRequest"
+   ],
+   "request_params": [
+    "treasureId",
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "potentialTreasure",
+   "category": "宝物",
+   "desc": "宝物激发",
+   "request_classes": [
+    "PotentialTreasureRequest"
+   ],
+   "request_params": [
+    "treasureId",
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkTreasure"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "resetTreasurePotential",
+   "category": "宝物",
+   "desc": "宝物重置潜力",
+   "request_classes": [
+    "ResetTreasurePotentialRequest"
+   ],
+   "request_params": [
+    "treasureId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sellTreasures",
+   "category": "宝物",
+   "desc": "卖出宝物",
+   "request_classes": [
+    "SellTreasureRequest"
+   ],
+   "request_params": [
+    "treasureIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "setupTreasure",
+   "category": "宝物",
+   "desc": "装备宝物 / 装备元神",
+   "request_classes": [
+    "SetupTreasureRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "treasureId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "splitTreasure",
+   "category": "宝物",
+   "desc": "request / /request / response / /response / /protocol",
+   "request_classes": [
+    "SplitTreasureRequest"
+   ],
+   "request_params": [
+    "treasureId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "拆分宝物",
+     "request": [
+      {
+       "kind": "property",
+       "code": "treasureId",
+       "type": "int",
+       "ref": "",
+       "desc": "宝物Id"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "rewards",
+       "type": "",
+       "ref": "Reward",
+       "desc": "拆分获取物品列表"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "upgradeTreasure",
+   "category": "宝物",
+   "desc": "宝物强化",
+   "request_classes": [
+    "UpgradeTreasureRequest"
+   ],
+   "request_params": [
+    "oneClick",
+    "treasureId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkTreasure"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gachaCard",
+   "category": "抽卡 / 合成",
+   "desc": "",
+   "request_classes": [
+    "GachaCardRequest"
+   ],
+   "request_params": [
+    "gachaId",
+    "time"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "countdownFreeGachaInfos",
+    "free",
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gachaCardByBox",
+   "category": "抽卡 / 合成",
+   "desc": "领取邀请好友奖励",
+   "request_classes": [
+    "GachaCardByBoxRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gachaCardFree",
+   "category": "抽卡 / 合成",
+   "desc": "",
+   "request_classes": [
+    "GachaCardFreeRequest"
+   ],
+   "request_params": [
+    "gachaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "countdownFreeGachaInfos",
+    "free",
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainGachaPointsRewards",
+   "category": "抽卡 / 合成",
+   "desc": "GainGachaPointsRewardsRequest",
+   "request_classes": [
+    "GainGachaPointsRewardsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getGachaBroadcast",
+   "category": "抽卡 / 合成",
+   "desc": "",
+   "request_classes": [
+    "GetGachaBroadcastRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getGachaPointsInfo",
+   "category": "抽卡 / 合成",
+   "desc": "GetGachaPointsInfoRequest",
+   "request_classes": [
+    "GetGachaPointsInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getSharkGachaBoxInfo",
+   "category": "抽卡 / 合成",
+   "desc": "领取邀请好友奖励",
+   "request_classes": [
+    "GetSharkGachaBoxInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "gachaBoxCard"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refreshGachaBox",
+   "category": "抽卡 / 合成",
+   "desc": "领取邀请好友奖励",
+   "request_classes": [
+    "RefreshGachaBoxRequest"
+   ],
+   "request_params": [
+    "refreshType"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "gachaBoxCard"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "synthetizeCard",
+   "category": "抽卡 / 合成",
+   "desc": "FragmentSynthetizeCardRequest 卡牌碎片合成",
+   "request_classes": [
+    "FragmentSynthetizeCardRequest"
+   ],
+   "request_params": [
+    "metaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "synthetizeEquip",
+   "category": "抽卡 / 合成",
+   "desc": "FragmentSynthetizeEquipRequest 武器碎片合成",
+   "request_classes": [
+    "FragmentSynthetizeEquipRequest"
+   ],
+   "request_params": [
+    "metaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "synthetizeItem",
+   "category": "抽卡 / 合成",
+   "desc": "",
+   "request_classes": [
+    "SynthetizeItemRequest"
+   ],
+   "request_params": [
+    "formulaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeCard",
+   "category": "抽卡 / 合成",
+   "desc": "卡牌合成Request / 参数1：masterId / 参数2：slaveIds",
+   "request_classes": [
+    "CardComposeRequest"
+   ],
+   "request_params": [
+    "masterId",
+    "slaveIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkCard",
+    "sharkCard.metaId"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "answerQuestion",
+   "category": "活动",
+   "desc": "",
+   "request_classes": [
+    "QuestionActAnswerRequest"
+   ],
+   "request_params": [
+    "answer",
+    "questionMetaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "nextQuestionMetaId",
+    "over",
+    "result",
+    "wrongAnswer1Key",
+    "wrongAnswer2Key",
+    "wrongAnswer3Key"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeChrist",
+   "category": "活动",
+   "desc": "MerryChristmasChallengeRequest.lua / luoyang.yi",
+   "request_classes": [
+    "MerryChristmasChallengeRequest"
+   ],
+   "request_params": [
+    "christId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "bigReward",
+    "chapterFinishReward",
+    "dialogId",
+    "retCode",
+    "win"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeCowStage",
+   "category": "活动",
+   "desc": "ActivityCowStageRequest.lua - 牧场大战活动相关请求 / 挑战牧场",
+   "request_classes": [
+    "ChallengeCowStageRequest"
+   ],
+   "request_params": [
+    "cowStageId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "selectId",
+    "win"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeMysterious",
+   "category": "活动",
+   "desc": "request / /request / response",
+   "request_classes": [
+    "ChallengeMysteriousRequest"
+   ],
+   "request_params": [
+    "difficultyDegree",
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": [
+    {
+     "desc": "挑战六星武将副本",
+     "request": [
+      {
+       "kind": "property",
+       "code": "id",
+       "type": "int",
+       "ref": "",
+       "desc": "要挑战的副本id"
+      },
+      {
+       "kind": "property",
+       "code": "difficultyDegree",
+       "type": "int",
+       "ref": "",
+       "desc": "难度"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "cardInitDatas",
+       "type": "",
+       "ref": "BattleCardInitData",
+       "desc": "敌我卡牌初始数据"
+      },
+      {
+       "kind": "list",
+       "code": "eventFlow",
+       "type": "",
+       "ref": "BattleEvent",
+       "desc": "战斗事件流"
+      },
+      {
+       "kind": "list",
+       "code": "rewards",
+       "type": "",
+       "ref": "Reward",
+       "desc": "挑战成功奖励"
+      },
+      {
+       "kind": "list",
+       "code": "qteRewards",
+       "type": "",
+       "ref": "Reward",
+       "desc": "qte奖励"
+      },
+      {
+       "kind": "list",
+       "code": "vipRewards",
+       "type": "",
+       "ref": "Reward",
+       "desc": "vip加成奖励"
+      },
+      {
+       "kind": "property",
+       "code": "qte",
+       "type": "boolean",
+       "ref": "",
+       "desc": "是否触发qte"
+      },
+      {
+       "kind": "property",
+       "code": "win",
+       "type": "boolean",
+       "ref": "",
+       "desc": "挑战是否成功"
+      },
+      {
+       "kind": "property",
+       "code": "leftHpRate",
+       "type": "float",
+       "ref": "",
+       "desc": "胜利方剩余血量比例"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "changeDiceLuck",
+   "category": "活动",
+   "desc": "DiceChangeLuckRequest",
+   "request_classes": [
+    "DiceChangeLuckRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "changeDiceLuckCount",
+    "changeLuckCountPerThrow",
+    "diceNewRewards",
+    "gainedCoin",
+    "throwDiceCount"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "chargeBalloon",
+   "category": "活动",
+   "desc": "",
+   "request_classes": [
+    "BlowBalloonActGetEnegyRequest"
+   ],
+   "request_params": [
+    "ensureSuccess"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "currPoint"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "defaultPhoneNum",
+   "category": "活动",
+   "desc": "修改/设定玩家手机号码",
+   "request_classes": [
+    "PhoneChargeSetNumRequest"
+   ],
+   "request_params": [
+    "phoneNum"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "distributeBonus",
+   "category": "活动",
+   "desc": "分配红包，区分好友和军团",
+   "request_classes": [
+    "DistributeBonusRequest"
+   ],
+   "request_params": [
+    "accepterList",
+    "accepterType",
+    "bonusId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "eatPeach",
+   "category": "活动",
+   "desc": "ActivityEatPeachRequest.lua - 吃桃补充体力活动相关请求",
+   "request_classes": [
+    "EatPeachRequest"
+   ],
+   "request_params": [
+    "featureName"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "gainedEnergy"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainBalloonPoint",
+   "category": "活动",
+   "desc": "",
+   "request_classes": [
+    "BlowBalloonActGainMagicValueRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "currPoint"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainLimitReward",
+   "category": "活动",
+   "desc": "ActiveRechangeRequest.lua / 2014-1-19 / meilan.xie / request / /request / response / /response / /protocol",
+   "request_classes": [
+    "ActiveRechangeRequest"
+   ],
+   "request_params": [
+    "stepId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "领取世界Boss奖励",
+     "request": [
+      {
+       "kind": "property",
+       "code": "level",
+       "type": "int",
+       "ref": "",
+       "desc": "奖励等级"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "rewards",
+       "type": "",
+       "ref": "Reward",
+       "desc": "等级奖励"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getAccumulateGems",
+   "category": "活动",
+   "desc": "GetAccumulateGemsRequest",
+   "request_classes": [
+    "GetAccumulateGemsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "accumulateGems"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getAccumulateRechargeInfo",
+   "category": "活动",
+   "desc": "",
+   "request_classes": [
+    "GetRechargeInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "remainingDays",
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getActivityBalloonInfo",
+   "category": "活动",
+   "desc": "",
+   "request_classes": [
+    "BlowBalloonActInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "balloonRanks",
+    "currPoint"
+   ],
+   "call_site_count": 5,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getBonusAccepterList",
+   "category": "活动",
+   "desc": "分配红包，区分好友和军团",
+   "request_classes": [
+    "GetBonusAccepterListRequest"
+   ],
+   "request_params": [
+    "bonusId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "friendList",
+    "unionList"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getDailyRecharge",
+   "category": "活动",
+   "desc": "获得充值活动最新状态接口",
+   "request_classes": [
+    "PhoneChargeGetInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "dailyRecharge"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getGemConsumeInfo",
+   "category": "活动",
+   "desc": "",
+   "request_classes": [
+    "GetGemConsumeInfoRequest"
+   ],
+   "request_params": [
+    "rewardId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "consumeGems",
+    "gainedRewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getLevelRaceInfo",
+   "category": "活动",
+   "desc": "GetLevelRaceInfoRequest",
+   "request_classes": [
+    "GetLevelRaceInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "levelRaceRanks"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMaintenanceMeta",
+   "category": "活动",
+   "desc": "GetActivityOnOffConfigRequest.lua - 得到活动配置请求",
+   "request_classes": [
+    "GetActivityOnOffConfigRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "maintenanceItem"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getQuestionInfo",
+   "category": "活动",
+   "desc": "",
+   "request_classes": [
+    "QuestionActGetStateRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "dailyNum",
+    "questionId",
+    "questionNum",
+    "wrongAnswer1Key",
+    "wrongAnswer2Key",
+    "wrongAnswer3Key"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "rechargeCalls",
+   "category": "活动",
+   "desc": "送话费活动 获取话费",
+   "request_classes": [
+    "PhoneChargeGainRequest"
+   ],
+   "request_params": [
+    "callsType",
+    "phoneNum"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "recordActivityFbShare",
+   "category": "活动",
+   "desc": "Facebook相关",
+   "request_classes": [
+    "ShareFacebookActivityeRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "recordGameFbShare",
+   "category": "活动",
+   "desc": "Facebook相关",
+   "request_classes": [
+    "FacebookRecordTriggerShareRequest"
+   ],
+   "request_params": [
+    "shareId",
+    "shareSuccess"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "resetChrist",
+   "category": "活动",
+   "desc": "MerryChristmasResetRequest.lua / zhehua.ou",
+   "request_classes": [
+    "MerryChristmasResetRequest"
+   ],
+   "request_params": [
+    "christId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "retCode"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "setoffFireworks",
+   "category": "活动",
+   "desc": "FireworksFireRequest.lua - 向玩家发送免费礼物",
+   "request_classes": [
+    "FireworksFireRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "throwDice",
+   "category": "活动",
+   "desc": "DiceRollRequest",
+   "request_classes": [
+    "DiceRollRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "changeDiceLuckCount",
+    "changeLuckCountPerThrow",
+    "coins",
+    "diceStates",
+    "throwDiceCount"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "wishing",
+   "category": "活动",
+   "desc": "许愿池许愿接口 / 接口定义 后端提供",
+   "request_classes": [
+    "FountainWishRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "coins",
+    "multiple"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "许愿池许愿",
+     "request": [],
+     "response": [
+      {
+       "kind": "property",
+       "code": "coins",
+       "type": "int",
+       "ref": "",
+       "desc": "基础银币获得"
+      },
+      {
+       "kind": "property",
+       "code": "multiple",
+       "type": "int",
+       "ref": "",
+       "desc": "暴击倍数"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "bindAccount",
+   "category": "登录 / 账号 / 连接",
+   "desc": "",
+   "request_classes": [
+    "BindAccountRequest"
+   ],
+   "request_params": [
+    "platformId",
+    "platformUid",
+    "sid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "createUser",
+   "category": "登录 / 账号 / 连接",
+   "desc": "",
+   "request_classes": [
+    "CreateUserRequest"
+   ],
+   "request_params": [
+    "avatarId",
+    "inviteCode",
+    "nickName"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkUser",
+    "sharkUser.serverId",
+    "sharkUser.uid"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "geneNickname",
+   "category": "登录 / 账号 / 连接",
+   "desc": "GeneNicknameRequest.lua - 获取好友的详情",
+   "request_classes": [
+    "GeneNicknameRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "nickname"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getServerStatus",
+   "category": "登录 / 账号 / 连接",
+   "desc": "",
+   "request_classes": [
+    "GetServerStatusRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getServerTimeStamp",
+   "category": "登录 / 账号 / 连接",
+   "desc": "",
+   "request_classes": [
+    "GetServerTimeStampRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getSocketServer",
+   "category": "登录 / 账号 / 连接",
+   "desc": "GetSocketServerRequest",
+   "request_classes": [
+    "GetSocketServerRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "serverAddress",
+    "serverPort",
+    "token"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "loginServer",
+   "category": "登录 / 账号 / 连接",
+   "desc": "",
+   "request_classes": [
+    "LoginServerRequest"
+   ],
+   "request_params": [
+    "accountId",
+    "serverId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "accountReturnRewards",
+    "uid"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "searchUserByNickname",
+   "category": "登录 / 账号 / 连接",
+   "desc": "SearchUserByNicknameRequest.lua - 据昵称查找用户",
+   "request_classes": [
+    "SearchUserByNicknameRequest"
+   ],
+   "request_params": [
+    "nickName"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "friendUid",
+    "sharkFriendDetail",
+    "sharkFriendDetail.friend",
+    "sharkFriendDetail.invitationSent"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "replaceMatrixGrid",
+   "category": "矩阵",
+   "desc": "",
+   "request_classes": [
+    "ReplaceMatrixGridRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "matrixId",
+    "posId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "type"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeMatrix",
+   "category": "矩阵",
+   "desc": "",
+   "request_classes": [
+    "UpgradeMatrixRequest"
+   ],
+   "request_params": [
+    "matrixId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeArena",
+   "category": "竞技场 / PK",
+   "desc": "ChallengeArenaRequest",
+   "request_classes": [
+    "ChallengeArenaRequest"
+   ],
+   "request_params": [
+    "matchedUid",
+    "revenge"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeContend",
+   "category": "竞技场 / PK",
+   "desc": "ChallengeContendRequest",
+   "request_classes": [
+    "ChallengeContendRequest"
+   ],
+   "request_params": [
+    "contendId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeCrossUser",
+   "category": "竞技场 / PK",
+   "desc": "挑战",
+   "request_classes": [
+    "ChallengeCrossUserRequest"
+   ],
+   "request_params": [
+    "index"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "matchList"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengePkUser",
+   "category": "竞技场 / PK",
+   "desc": "PKChallengePkUserRequest.lua - 比武请求挑战",
+   "request_classes": [
+    "PKChallengePkUserRequest"
+   ],
+   "request_params": [
+    "opponentUid",
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "destinyBattle",
+   "category": "竞技场 / PK",
+   "desc": "",
+   "request_classes": [
+    "DestinyBattleRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "destinyBattleId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "isBossBattle",
+    "monsterGroupId"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainArenaScoreByRank",
+   "category": "竞技场 / PK",
+   "desc": "GainArenaScoreByRankRequest",
+   "request_classes": [
+    "GainArenaScoreByRankRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "reward",
+    "reward.amount"
+   ],
+   "call_site_count": 4,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainPkBuff",
+   "category": "竞技场 / PK",
+   "desc": "PKGainPkBuffRequest.lua - 比武请求武神祝福",
+   "request_classes": [
+    "PKGainPkBuffRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainPkRewards",
+   "category": "竞技场 / PK",
+   "desc": "PKGainPkRewardsRequest.lua - 比武请求领奖",
+   "request_classes": [
+    "PKGainPkRewardsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getArenaMatchedPlayers",
+   "category": "竞技场 / PK",
+   "desc": "GetArenaMatchedPlayersRequest",
+   "request_classes": [
+    "GetArenaMatchedPlayersRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "retCode",
+    "reward",
+    "reward.amount"
+   ],
+   "call_site_count": 4,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getDestinyInfo",
+   "category": "竞技场 / PK",
+   "desc": "",
+   "request_classes": [
+    "GetDestinyInfoRequest"
+   ],
+   "request_params": [
+    "ignoreAction"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getPkFoes",
+   "category": "竞技场 / PK",
+   "desc": "PKGetPkFoesRequest.lua - 比武请求仇人列表",
+   "request_classes": [
+    "PKGetPkFoesRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "pkUserInfos"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getPkInfo",
+   "category": "竞技场 / PK",
+   "desc": "PKGetPKInfoRequest.lua - 比武请求基础信息",
+   "request_classes": [
+    "PKGetPKInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getPkTopRankUsers",
+   "category": "竞技场 / PK",
+   "desc": "PKGetPkTopRankUsersRequest.lua - 比武请求排名信息",
+   "request_classes": [
+    "PKGetPkTopRankUsersRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "pkUserInfos"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refreshMatch",
+   "category": "竞技场 / PK",
+   "desc": "刷新对手",
+   "request_classes": [
+    "RefreshMatchRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "matchList"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getEquips",
+   "category": "装备",
+   "desc": "获取装备",
+   "request_classes": [
+    "GetEquipsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "quickUpgradeEquip",
+   "category": "装备",
+   "desc": "QuickUpgradeEquipRequest",
+   "request_classes": [
+    "QuickUpgradeEquipRequest"
+   ],
+   "request_params": [
+    "equipId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "equipId",
+    "sharkEquip"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sellEquips",
+   "category": "装备",
+   "desc": "SellEquipsRequest.lua - 出售装备的请求",
+   "request_classes": [
+    "SellEquipsRequest"
+   ],
+   "request_params": [
+    "equipIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "setupEquip",
+   "category": "装备",
+   "desc": "SetupEquipRequest.lua - 更换装备的请求",
+   "request_classes": [
+    "SetupEquipRequest"
+   ],
+   "request_params": [
+    "cardId",
+    "equipId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "upgradeEquip",
+   "category": "装备",
+   "desc": "UpgradeEquipRequest",
+   "request_classes": [
+    "UpgradeEquipRequest"
+   ],
+   "request_params": [
+    "equipId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "equipId",
+    "sharkEquip"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "equipEnchant",
+   "category": "装备附灵",
+   "desc": "附灵接口",
+   "request_classes": [
+    "EnchantUpgradeRequest"
+   ],
+   "request_params": [
+    "equipId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "sharkEquip",
+    "sharkEquip.cardId",
+    "sharkEquip.enchantLevel",
+    "sharkEquip.enchantNum"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": [
+    {
+     "desc": "装备附灵",
+     "request": [
+      {
+       "kind": "property",
+       "code": "equipId",
+       "type": "int",
+       "ref": "",
+       "desc": "被附灵装备ID"
+      }
+     ],
+     "response": [
+      {
+       "kind": "property",
+       "code": "sharkEquip",
+       "type": "",
+       "ref": "SharkEquip",
+       "desc": "装备信息"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getEnchantStepReward",
+   "category": "装备附灵",
+   "desc": "附灵引导奖励接口",
+   "request_classes": [
+    "GetEnchantStepRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": [
+    {
+     "desc": "完成装备附灵新手引导",
+     "request": [],
+     "response": []
+    }
+   ]
+  },
+  {
+   "method": "buyCrossPvpChallengeTime",
+   "category": "跨服",
+   "desc": "request / /request / response / /response / /protocol",
+   "request_classes": [
+    "BuyCrossPvpChallengeTimeRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "matchList"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获取跨服pvp录像信息",
+     "request": [
+      {
+       "kind": "property",
+       "code": "reportId",
+       "type": "int",
+       "ref": "",
+       "desc": "录像id"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "cardInitDatas",
+       "type": "",
+       "ref": "BattleCardInitData",
+       "desc": "怪物/卡牌/墙的初始值"
+      },
+      {
+       "kind": "list",
+       "code": "eventFlow",
+       "type": "",
+       "ref": "BattleEvent",
+       "desc": "战斗事件流"
+      },
+      {
+       "kind": "property",
+       "code": "win",
+       "type": "boolean",
+       "ref": "",
+       "desc": "本波怪是否胜利"
+      },
+      {
+       "kind": "property",
+       "code": "leftHpRate",
+       "type": "float",
+       "ref": "",
+       "desc": "胜利方剩余血量比例"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "challengeCrossBoss",
+   "category": "跨服",
+   "desc": "获取世界boss信息",
+   "request_classes": [
+    "ChallengeCrossBossRequest"
+   ],
+   "request_params": [
+    "bossType",
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "crossGvgCanMindApply",
+   "category": "跨服",
+   "desc": "跨服GvG  军团界面弹框请求",
+   "request_classes": [
+    "CrossUnionPkcrossGvgCanMindApplyRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "applyCrossGvgRemind"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeGvgFormation",
+   "category": "跨服",
+   "desc": "request / /request / response / /response",
+   "request_classes": [
+    "ExchangeGvgFormationRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "调整阵型",
+     "request": [
+      {
+       "kind": "property",
+       "code": "override",
+       "type": "boolean",
+       "ref": "",
+       "desc": "是否强制覆盖"
+      },
+      {
+       "kind": "property",
+       "code": "unionId",
+       "type": "int",
+       "ref": "",
+       "desc": "军团id"
+      },
+      {
+       "kind": "property",
+       "code": "serverId",
+       "type": "int",
+       "ref": "",
+       "desc": "服务器"
+      },
+      {
+       "kind": "property",
+       "code": "version",
+       "type": "int",
+       "ref": "",
+       "desc": "阵型版本号"
+      },
+      {
+       "kind": "property",
+       "code": "forwardUid",
+       "type": "long",
+       "ref": "",
+       "desc": "单挑战玩家id"
+      },
+      {
+       "kind": "list",
+       "code": "headUids",
+       "type": "long",
+       "ref": "",
+       "desc": "阵首玩家id"
+      },
+      {
+       "kind": "list",
+       "code": "middleUids",
+       "type": "long",
+       "ref": "",
+       "desc": "阵中玩家id"
+      },
+      {
+       "kind": "list",
+       "code": "tailUids",
+       "type": "long",
+       "ref": "",
+       "desc": "阵尾玩家id"
+      }
+     ],
+     "response": []
+    }
+   ]
+  },
+  {
+   "method": "gainCrossBossReward",
+   "category": "跨服",
+   "desc": "领取奖励",
+   "request_classes": [
+    "GainCrossBossRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainCrossGachaPointReward",
+   "category": "跨服",
+   "desc": "跨服Gacha 小玉嫁到 相关 / 获取活动信息",
+   "request_classes": [
+    "CrossGachaGainPointRewardRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainCrossGachaRankAndMysteriousReward",
+   "category": "跨服",
+   "desc": "跨服Gacha 小玉嫁到 相关 / 获取活动信息",
+   "request_classes": [
+    "CrossGachaGainRankRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "mysteriousRewards",
+    "rankRewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainCrossPkGuessReward",
+   "category": "跨服",
+   "desc": "GainCrossPkGuessRewardRequest",
+   "request_classes": [
+    "GainCrossPkGuessRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainCrossPkRankReward",
+   "category": "跨服",
+   "desc": "GainCrossPkRankRewardRequest",
+   "request_classes": [
+    "GainCrossPkRankRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainCrossPkServerReward",
+   "category": "跨服",
+   "desc": "GainCrossPkServerRewardRequest",
+   "request_classes": [
+    "GainCrossPkServerRewardRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainCrossPvpActiveReward",
+   "category": "跨服",
+   "desc": "",
+   "request_classes": [
+    "CrossPvpActiveRewardRequest"
+   ],
+   "request_params": [
+    "activeId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainCrossPvpBattleReward",
+   "category": "跨服",
+   "desc": "领取跨服pvp奖励",
+   "request_classes": [
+    "CrossPvpGainBattleRewardRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "领取跨服pvp奖励",
+     "request": [
+      {
+       "kind": "property",
+       "code": "type",
+       "type": "int",
+       "ref": "",
+       "desc": "领取类型(0-全区礼包;1-排名礼包)"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "rewards",
+       "type": "",
+       "ref": "Reward",
+       "desc": "奖励详情"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getCrossBossInfo",
+   "category": "跨服",
+   "desc": "获取世界boss信息",
+   "request_classes": [
+    "GetCrossBossInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossBossRankInfo",
+   "category": "跨服",
+   "desc": "领取奖励",
+   "request_classes": [
+    "GetCrossBossRankInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossGachaInfo",
+   "category": "跨服",
+   "desc": "跨服Gacha 小玉嫁到 相关 / 获取活动信息",
+   "request_classes": [
+    "GetCrossGachaInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossGvgGroupInfo",
+   "category": "跨服",
+   "desc": "request / /request / response / /response / /protocol",
+   "request_classes": [
+    "GetCrossGvgGroupInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得跨服军团战分在同一个组的服务器id",
+     "request": [],
+     "response": [
+      {
+       "kind": "list",
+       "code": "serverIds",
+       "type": "int",
+       "ref": "",
+       "desc": "分在同一个组的服务器id"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getCrossGvgInfo",
+   "category": "跨服",
+   "desc": "request / /request / response / /response / /protocol",
+   "request_classes": [
+    "GetCrossGvgInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "coinInspireNum",
+    "signs",
+    "striveInspireNum"
+   ],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得跨服军团战主界面",
+     "request": [],
+     "response": [
+      {
+       "kind": "property",
+       "code": "version",
+       "type": "int",
+       "ref": "",
+       "desc": "阵型版本号"
+      },
+      {
+       "kind": "property",
+       "code": "striveInspireNum",
+       "type": "int",
+       "ref": "",
+       "desc": "奋力一击"
+      },
+      {
+       "kind": "property",
+       "code": "coinInspireNum",
+       "type": "int",
+       "ref": "",
+       "desc": "金币鼓舞次数"
+      },
+      {
+       "kind": "property",
+       "code": "gemInspireNum",
+       "type": "int",
+       "ref": "",
+       "desc": "金币鼓舞次数"
+      },
+      {
+       "kind": "list",
+       "code": "signs",
+       "type": "",
+       "ref": "ApplicantGvgUserInfo",
+       "desc": "报名玩家信息"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getCrossGvgInfoBase",
+   "category": "跨服",
+   "desc": "跨服GvG  获取淘汰信息",
+   "request_classes": [
+    "CrossUnionPkGetCrossGvgInfoBaseRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "crossGvgVersion",
+    "groupId",
+    "out",
+    "selfApplyCrossGvg",
+    "selfQuitCrossGvg",
+    "unionApplyCrossGvg"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossPkCapacity",
+   "category": "跨服",
+   "desc": "GetCrossPkCapacityRequest",
+   "request_classes": [
+    "GetCrossPkCapacityRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "crossPkUserCapacities"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossPkInfo",
+   "category": "跨服",
+   "desc": "GetCrossPkInfoRequest",
+   "request_classes": [
+    "GetCrossPkInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "crossPkGroupInfo"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossPkReport",
+   "category": "跨服",
+   "desc": "GetCrossPkReportRequest",
+   "request_classes": [
+    "GetCrossPkReportRequest"
+   ],
+   "request_params": [
+    "reportId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "userinfo1",
+    "userinfo2",
+    "whetherWin"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getCrossPvpInfo",
+   "category": "跨服",
+   "desc": "request / /request / response / /response / /protocol",
+   "request_classes": [
+    "GetCrossPvpInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "battleInfo",
+    "battleInfo.activeScore",
+    "battleInfo.battleScore",
+    "battleInfo.freeRefreshTimestamp",
+    "battleInfo.matchList",
+    "battleInfo.rank",
+    "phaseIndex",
+    "rewardInfo",
+    "rewardInfo.rankRewardStatus",
+    "rewardInfo.ranks",
+    "rewardInfo.serverRewardStatus"
+   ],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得跨服PVP信息",
+     "request": [],
+     "response": [
+      {
+       "kind": "property",
+       "code": "crossVersion",
+       "type": "int",
+       "ref": "",
+       "desc": "届数"
+      },
+      {
+       "kind": "property",
+       "code": "phaseIndex",
+       "type": "int",
+       "ref": "",
+       "desc": "阶段指针(0-战斗;1-领奖)"
+      },
+      {
+       "kind": "property",
+       "code": "battleInfo",
+       "type": "",
+       "ref": "BattlePhase",
+       "desc": "战斗阶段信息"
+      },
+      {
+       "kind": "property",
+       "code": "rewardInfo",
+       "type": "",
+       "ref": "RewawrdPhase",
+       "desc": "领奖阶段信息"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getCrossPvpRankInfo",
+   "category": "跨服",
+   "desc": "获得跨服PVP排行榜信息",
+   "request_classes": [
+    "CrossPvpGetRankInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rank",
+    "rankInfos",
+    "score"
+   ],
+   "call_site_count": 4,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得跨服PVP排行榜信息",
+     "request": [],
+     "response": [
+      {
+       "kind": "list",
+       "code": "rankInfos",
+       "type": "",
+       "ref": "RankInfo",
+       "desc": "排名列表"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getCrossPvpReport",
+   "category": "跨服",
+   "desc": "request / /request / response / /response / /protocol",
+   "request_classes": [
+    "GetCrossPvpReportRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rank",
+    "score"
+   ],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获得跨服PVP战报信息",
+     "request": [],
+     "response": [
+      {
+       "kind": "list",
+       "code": "reports",
+       "type": "",
+       "ref": "ReportInfo",
+       "desc": "战报列表"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "getCrossPvpVideo",
+   "category": "跨服",
+   "desc": "request / /request / response / /response / /protocol",
+   "request_classes": [
+    "GetCrossPvpVideoRequest"
+   ],
+   "request_params": [
+    "reportId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "retCode"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "获取跨服pvp录像信息",
+     "request": [
+      {
+       "kind": "property",
+       "code": "reportId",
+       "type": "int",
+       "ref": "",
+       "desc": "录像id"
+      }
+     ],
+     "response": [
+      {
+       "kind": "list",
+       "code": "cardInitDatas",
+       "type": "",
+       "ref": "BattleCardInitData",
+       "desc": "怪物/卡牌/墙的初始值"
+      },
+      {
+       "kind": "list",
+       "code": "eventFlow",
+       "type": "",
+       "ref": "BattleEvent",
+       "desc": "战斗事件流"
+      },
+      {
+       "kind": "property",
+       "code": "win",
+       "type": "boolean",
+       "ref": "",
+       "desc": "本波怪是否胜利"
+      },
+      {
+       "kind": "property",
+       "code": "leftHpRate",
+       "type": "float",
+       "ref": "",
+       "desc": "胜利方剩余血量比例"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "method": "guessCrossPkRank",
+   "category": "跨服",
+   "desc": "GuessCrossPkRankRequest",
+   "request_classes": [
+    "GuessCrossPkRankRequest"
+   ],
+   "request_params": [
+    "guessUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "inspireCrossBossTeam",
+   "category": "跨服",
+   "desc": "获取世界boss信息",
+   "request_classes": [
+    "InspireCrossBossTeamRequest"
+   ],
+   "request_params": [
+    "gems",
+    "props"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "inspireCrossGvg",
+   "category": "跨服",
+   "desc": "request / /request / response / /response",
+   "request_classes": [
+    "InspireCrossGvgRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": [
+    {
+     "desc": "调整阵型",
+     "request": [
+      {
+       "kind": "property",
+       "code": "override",
+       "type": "boolean",
+       "ref": "",
+       "desc": "是否强制覆盖"
+      },
+      {
+       "kind": "property",
+       "code": "unionId",
+       "type": "int",
+       "ref": "",
+       "desc": "军团id"
+      },
+      {
+       "kind": "property",
+       "code": "serverId",
+       "type": "int",
+       "ref": "",
+       "desc": "服务器"
+      },
+      {
+       "kind": "property",
+       "code": "version",
+       "type": "int",
+       "ref": "",
+       "desc": "阵型版本号"
+      },
+      {
+       "kind": "property",
+       "code": "forwardUid",
+       "type": "long",
+       "ref": "",
+       "desc": "单挑战玩家id"
+      },
+      {
+       "kind": "list",
+       "code": "headUids",
+       "type": "long",
+       "ref": "",
+       "desc": "阵首玩家id"
+      },
+      {
+       "kind": "list",
+       "code": "middleUids",
+       "type": "long",
+       "ref": "",
+       "desc": "阵中玩家id"
+      },
+      {
+       "kind": "list",
+       "code": "tailUids",
+       "type": "long",
+       "ref": "",
+       "desc": "阵尾玩家id"
+      }
+     ],
+     "response": []
+    }
+   ]
+  },
+  {
+   "method": "refreshCrossBossBattlePhase",
+   "category": "跨服",
+   "desc": "获取世界boss信息",
+   "request_classes": [
+    "RefreshCrossBossBattlePhaseRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "uploadCrossGvgTeamMirror",
+   "category": "跨服",
+   "desc": "",
+   "request_classes": [
+    "UploadCrossGvgTeamMirrorRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeBabel",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "ChallengeBabelRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [
+    "selectId"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "challengeSkyTower",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "ChallengeSkyTowerRequest"
+   ],
+   "request_params": [
+    "floor",
+    "type",
+    "version"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "clearNewBabel",
+    "currFloor",
+    "currTotalStars",
+    "firstTimeBigWin",
+    "forbidSkip",
+    "haveReward",
+    "haveTimesLeft",
+    "leftHpRate",
+    "monsterGroupId",
+    "selectDifficult",
+    "win"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainAutoClimbReward",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "GainAutoClimbRewardRequest"
+   ],
+   "request_params": [
+    "speedUp"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 6,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainSkipBattleAddition",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "SkyTowerSkipGainAddRequest"
+   ],
+   "request_params": [
+    "floorId",
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainSkipBattleRewards",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "SkyTowerSkipGainRewardsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getBabelInfo",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "GetBabelInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 6,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "resetBabel",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "ResetBabelRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "resetClimbData",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "ResetClimbTowerRequest"
+   ],
+   "request_params": [
+    "type"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 4,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "skipSkyTowerBattle",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "SkyTowerSkipBattleRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "startAutoClimbBabel",
+   "category": "通天塔",
+   "desc": "",
+   "request_classes": [
+    "StartAutoClimbBabelRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyActionPower",
+   "category": "道具 / 商店",
+   "desc": "BuyActionPowerRequest",
+   "request_classes": [
+    "BuyActionPowerRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "requisites"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyChallengeNum",
+   "category": "道具 / 商店",
+   "desc": "BuyChallengeNumRequest",
+   "request_classes": [
+    "BuyChallengeNumRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "amount",
+    "requisite"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyEnergy",
+   "category": "道具 / 商店",
+   "desc": "BuyEnergyRequest",
+   "request_classes": [
+    "BuyEnergyRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyEnergyStone",
+   "category": "道具 / 商店",
+   "desc": "",
+   "request_classes": [
+    "BlowBalloonActBuyEnegyRequest"
+   ],
+   "request_params": [
+    "num"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyEventPoint",
+   "category": "道具 / 商店",
+   "desc": "BuyEventPointRequest",
+   "request_classes": [
+    "BuyEventPointRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyGoods",
+   "category": "道具 / 商店",
+   "desc": "",
+   "request_classes": [
+    "BuyGoodsRequest"
+   ],
+   "request_params": [
+    "goodsId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "reward"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyGrid",
+   "category": "道具 / 商店",
+   "desc": "",
+   "request_classes": [
+    "BuyGridRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "requisite",
+    "requisite.amount",
+    "rewards"
+   ],
+   "call_site_count": 2,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buyMissionCompleteCount",
+   "category": "道具 / 商店",
+   "desc": "BuyMissionCompleteCountRequest",
+   "request_classes": [
+    "BuyMissionCompleteCountRequest"
+   ],
+   "request_params": [
+    "missionId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "gems"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "buySeckillItem",
+   "category": "道具 / 商店",
+   "desc": "购买限时秒杀物品接口",
+   "request_classes": [
+    "SeckillBuyRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeGiftBag",
+   "category": "道具 / 商店",
+   "desc": "兑换礼包请求",
+   "request_classes": [
+    "ExchangeGiftBagRequest"
+   ],
+   "request_params": [
+    "activationCode"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "exchangeGiftBagInfo",
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeMedalShop",
+   "category": "道具 / 商店",
+   "desc": "获得商品",
+   "request_classes": [
+    "ExchangeMedalShopRequest"
+   ],
+   "request_params": [
+    "exchangeId",
+    "exchangeListId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeMysteriousItem",
+   "category": "道具 / 商店",
+   "desc": "宝物锁定",
+   "request_classes": [
+    "ExchangeMysteriousItemRequest"
+   ],
+   "request_params": [
+    "id"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "exchangeSecretShop",
+   "category": "道具 / 商店",
+   "desc": "神秘商店兑换",
+   "request_classes": [
+    "ExchangeSecretShopRequest"
+   ],
+   "request_params": [
+    "exchangeId",
+    "exchangeListId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getMedalShopList",
+   "category": "道具 / 商店",
+   "desc": "获得商品",
+   "request_classes": [
+    "GetMedalShopListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [
+    "itemIdList"
+   ],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getProps",
+   "category": "道具 / 商店",
+   "desc": "GetPropsRequest.lua - 培养卡片的请求",
+   "request_classes": [
+    "GetPropsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getSeckillInfo",
+   "category": "道具 / 商店",
+   "desc": "获得秒杀活动当前状态",
+   "request_classes": [
+    "SeckillGetInfoRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "seckillItems"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getSecretShopList",
+   "category": "道具 / 商店",
+   "desc": "获得神秘商店列表",
+   "request_classes": [
+    "GetSecretShopListRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "itemIdList"
+   ],
+   "call_site_count": 3,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refreshMedalShop",
+   "category": "道具 / 商店",
+   "desc": "刷新勋章商城",
+   "request_classes": [
+    "RefreshMedalShopRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": true,
+   "response_fields": [
+    "itemIdList"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "refreshSecretShop",
+   "category": "道具 / 商店",
+   "desc": "刷新神秘商店",
+   "request_classes": [
+    "RefreshSecretShopRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "itemIdList"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sellProps",
+   "category": "道具 / 商店",
+   "desc": "SellPropsRequest.lua - 出售道具的请求",
+   "request_classes": [
+    "SellPropsRequest"
+   ],
+   "request_params": [
+    "requisite"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "useProp",
+   "category": "道具 / 商店",
+   "desc": "",
+   "request_classes": [
+    "UsePropRequest"
+   ],
+   "request_params": [
+    "amount",
+    "propId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 11,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "batchDeleteRewardEmail",
+   "category": "邮件",
+   "desc": "批量删除奖励邮件",
+   "request_classes": [
+    "EmailBatchDeleteRewardEmailRequest"
+   ],
+   "request_params": [
+    "rewardEmailIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 3,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "batchDeleteSysEmail",
+   "category": "邮件",
+   "desc": "批量删除系统邮件",
+   "request_classes": [
+    "EmailBatchDeleteSysEmailRequest"
+   ],
+   "request_params": [
+    "sysEmailIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 2,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "batchDeleteSysNotice",
+   "category": "邮件",
+   "desc": "批量删除系统通知",
+   "request_classes": [
+    "EmailBatchDeleteSysNoticeRequest"
+   ],
+   "request_params": [
+    "sysNoticeIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "batchDeleteUserEmail",
+   "category": "邮件",
+   "desc": "批量删除用户邮件",
+   "request_classes": [
+    "EmailBatchDeleteUserEmailRequest"
+   ],
+   "request_params": [
+    "userEmailIds"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "deleteSysEmail",
+   "category": "邮件",
+   "desc": "DeleteSysEmailRequest",
+   "request_classes": [
+    "DeleteSysEmailRequest"
+   ],
+   "request_params": [
+    "sysEmailMetaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "deleteSysNotice",
+   "category": "邮件",
+   "desc": "DeleteSysNoticeRequest",
+   "request_classes": [
+    "DeleteSysNoticeRequest"
+   ],
+   "request_params": [
+    "sysNoticeId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "deleteUserEmail",
+   "category": "邮件",
+   "desc": "DeleteUserEmailRequest",
+   "request_classes": [
+    "DeleteUserEmailRequest"
+   ],
+   "request_params": [
+    "userEmailId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainRewardEmailReward",
+   "category": "邮件",
+   "desc": "领取邮件奖励",
+   "request_classes": [
+    "EmailGainRewardEmailRewardRequest"
+   ],
+   "request_params": [
+    "rewardEmailId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "gainSysEmailReward",
+   "category": "邮件",
+   "desc": "GainSysEmailRewardRequest",
+   "request_classes": [
+    "GainSysEmailRewardRequest"
+   ],
+   "request_params": [
+    "sysEmailId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "getUserEmails",
+   "category": "邮件",
+   "desc": "GetUserEmailsRequest",
+   "request_classes": [
+    "GetUserEmailsRequest"
+   ],
+   "request_params": [],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "modifyEmail",
+   "category": "邮件",
+   "desc": "EmailChangeRequest",
+   "request_classes": [
+    "EmailChangeRequest"
+   ],
+   "request_params": [
+    "newEmail"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": false,
+   "protocol_dsl": []
+  },
+  {
+   "method": "readRewardEmail",
+   "category": "邮件",
+   "desc": "标记奖励邮件为已读",
+   "request_classes": [
+    "EmailReadRewardEmailRequest"
+   ],
+   "request_params": [
+    "rewardEmailId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "readSysEmail",
+   "category": "邮件",
+   "desc": "ReadSysEmailRequest",
+   "request_classes": [
+    "ReadSysEmailRequest"
+   ],
+   "request_params": [
+    "sysEmailMetaId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "readSysNotice",
+   "category": "邮件",
+   "desc": "ReadSysNoticeRequest",
+   "request_classes": [
+    "ReadSysNoticeRequest"
+   ],
+   "request_params": [
+    "sysNoticeId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "readUserEmail",
+   "category": "邮件",
+   "desc": "ReadUserEmailRequest",
+   "request_classes": [
+    "ReadUserEmailRequest"
+   ],
+   "request_params": [
+    "userEmailId"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  },
+  {
+   "method": "sendUserEmail",
+   "category": "邮件",
+   "desc": "SendUserEmailRequest",
+   "request_classes": [
+    "SendUserEmailRequest"
+   ],
+   "request_params": [
+    "content",
+    "receiveUid"
+   ],
+   "has_dynamic_params": false,
+   "response_fields": [
+    "rewards"
+   ],
+   "call_site_count": 1,
+   "server_implemented": true,
+   "protocol_dsl": []
+  }
+ ],
+ "unused_endpoints": [
+  "getBuyMonthGemCardResult",
+  "getCowStageInfo",
+  "getCrossGVGKnockoutStauts",
+  "getDiceInfo",
+  "getEatPeachInfo",
+  "getLimitReward",
+  "getMissionCompleteInfo",
+  "getSkyTowerInfo",
+  "getSysEmailMeta"
+ ],
+ "server_only_methods": [
+  "EmailReadRewardEmail",
+  "RefreshSecretShop",
+  "batchDeleteEmails",
+  "cardOn",
+  "deleteSysEmails",
+  "deleteSysNotices",
+  "deleteUserEmails",
+  "enchantEquip",
+  "gachaCardByRp",
+  "gainContinuousLoginRewardV2",
+  "getCardFragments",
+  "getCowStageInfo",
+  "getEatPeachInfo",
+  "getEquipFragments",
+  "getMissionCompleteInfo",
+  "getSharkBeastFragments"
+ ],
+ "error_codes": [
+  {
+   "name": "USER_NOT_EXIST",
+   "code": 710070,
+   "textKey": "EC_USER_NOT_EXIST_TXT",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 11
+  },
+  {
+   "name": "NICKNAME_IS_NULL",
+   "code": 710073,
+   "textKey": "login_popup_nicknameIsNull",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 14
+  },
+  {
+   "name": "NICKNAME_IS_INVALID",
+   "code": 710074,
+   "textKey": "login_popup_nicknameIsIllegal",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 15
+  },
+  {
+   "name": "NICKNAME_IS_TOOSHORT",
+   "code": 710075,
+   "textKey": "login_popup_nicknameIsTooShort",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 16
+  },
+  {
+   "name": "NICKNAME_IS_TOOLONG",
+   "code": 710076,
+   "textKey": "login_popup_nicknameIsTooLong",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 17
+  },
+  {
+   "name": "NICKNAME_IS_EXIST",
+   "code": 710077,
+   "textKey": "login_popup_nicknameExist",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 18
+  },
+  {
+   "name": "INVITECODE_NOT_EXIST",
+   "code": 710078,
+   "textKey": "login_popup_InvitationCodeDoesNotExist",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 19
+  },
+  {
+   "name": "NICKNAME_CONTAIN_SENSTIVEWORD",
+   "code": 710079,
+   "textKey": "login_popup_nicknameExist",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 20
+  },
+  {
+   "name": "USER_ENERGY_FULL",
+   "code": 710090,
+   "textKey": "playerInfo_energyFull",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 23
+  },
+  {
+   "name": "USER_ENERGY_BOUGHT_NUM_FULL",
+   "code": 710091,
+   "textKey": "playerInfo_cannotRecoverStamina",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 24
+  },
+  {
+   "name": "USER_EVENT_POINT_FULL",
+   "code": 710092,
+   "textKey": "playerInfo_eventPointFull",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 25
+  },
+  {
+   "name": "USER_EVENT_POINT_BOUGHT_NUM_FULL",
+   "code": 710093,
+   "textKey": "playerInfo_cannotRecoverVigour",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 26
+  },
+  {
+   "name": "FRIEND_NOT_EXIST",
+   "code": 710601,
+   "textKey": "EC_FRIEND_RELATIONSHIP_NOT_EXIST_TXT",
+   "note": "玩家已不是好友",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 29
+  },
+  {
+   "name": "FRIEND_LIST_FULL",
+   "code": 710604,
+   "textKey": "EC_FRIEND_LIST_FULL_TXT",
+   "note": "好友数达到上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 30
+  },
+  {
+   "name": "FRIEND_RELATIONSHIP_EXIST",
+   "code": 710605,
+   "textKey": "EC_FRIEND_RELATIONSHIP_EXIST_TXT",
+   "note": "好友关系已经建立",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 31
+  },
+  {
+   "name": "FRIEND_INVITATION_EXIST",
+   "code": 710606,
+   "textKey": "EC_FRIEND_INVITATION_EXIST_TXT",
+   "note": "已被好友邀请",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 32
+  },
+  {
+   "name": "FRIEND_INVITATION_NOT_EXIST",
+   "code": 710607,
+   "textKey": "EC_FRIEND_INVITATION_NOT_EXIST_TXT",
+   "note": "不被好友邀请",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 33
+  },
+  {
+   "name": "FRIEND_SENDER_INVITATION_LIST_FULL",
+   "code": 710608,
+   "textKey": "EC_FRIEND_SENDER_INVITATION_LIST_FULL_TXT",
+   "note": "玩家发送邀请数达到上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 34
+  },
+  {
+   "name": "FRIEND_RECEIVER_INVITATION_LIST_FULL",
+   "code": 710609,
+   "textKey": "EC_FRIEND_RECEIVER_INVITATION_LIST_FULL_TXT",
+   "note": "玩家接收邀请数达到上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 35
+  },
+  {
+   "name": "FRIEND_RELATIONSHIP_NOT_EXIST",
+   "code": 710610,
+   "textKey": "EC_FRIEND_RELATIONSHIP_NOT_EXIST_TXT",
+   "note": "玩家已不是好友",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 37
+  },
+  {
+   "name": "FRIEND_FREEGIFT_SEND",
+   "code": 710611,
+   "textKey": "EC_FRIEND_FREEGIFT_SEND_TXT",
+   "note": "当日已向玩家发送过礼物",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 38
+  },
+  {
+   "name": "FRIEND_FREEGIFT_SENDNUM_FULL",
+   "code": 710612,
+   "textKey": "EC_FRIEND_FREEGIFT_SENDNUM_FULL_TXT",
+   "note": "可发送礼物达到上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 39
+  },
+  {
+   "name": "FRIEND_FREEGIFT_ENERGY_POOL_EMPTY",
+   "code": 710614,
+   "textKey": "EC_FRIEND_FREEGIFT_ENERGY_POOL_EMPTY_TXT",
+   "note": "没有体力可接收",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 41
+  },
+  {
+   "name": "FRIEND_FREEGIFT_ENERGY_FULL",
+   "code": 710615,
+   "textKey": "EC_FRIEND_FREEGIFT_ENERGY_FULL_TXT",
+   "note": "玩家体力满",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 42
+  },
+  {
+   "name": "FRIEND_SELF_LIST_FULL",
+   "code": 710616,
+   "textKey": "friend_acceptRequestFailed_friendFull",
+   "note": "自己好友数达上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 43
+  },
+  {
+   "name": "FRIEND_ENEMY_LIST_FULL",
+   "code": 710617,
+   "textKey": "friend_acceptRequestFailed_opponentFriendFull",
+   "note": "对方好友数达上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 44
+  },
+  {
+   "name": "ELITE_SETTING_NOTCONFIG",
+   "code": 713201,
+   "textKey": "",
+   "note": "关卡配置不存在",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 47
+  },
+  {
+   "name": "ELITE_CHALLENGETIMES_REACH",
+   "code": 713202,
+   "textKey": "EC_ELITE_CHALLENGETIMES_REACH_TXT",
+   "note": "挑战次数达到上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 48
+  },
+  {
+   "name": "ELITE_GRID_FULL",
+   "code": 713203,
+   "textKey": "EC_ELITE_GRID_FULL_TXT",
+   "note": "背包已满",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 49
+  },
+  {
+   "name": "ELITE_PREMISSION_UNLOCK",
+   "code": 713204,
+   "textKey": "EC_ELITE_PREMISSION_UNLOCK_TXT",
+   "note": "上一精英关卡未解锁",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 50
+  },
+  {
+   "name": "ELITE_REQUIREMISSION_UNLOCK",
+   "code": 713205,
+   "textKey": "EC_ELITE_REQUIREMISSION_UNLOCK_TXT",
+   "note": "依赖的普通关卡未解锁",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 51
+  },
+  {
+   "name": "USER_LEVELUP_EVENT_NOT_EXIST",
+   "code": 710530,
+   "textKey": "popup_normalError",
+   "note": "依赖的普通关卡未解锁",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 53
+  },
+  {
+   "name": "COUNTDOWN_REWARD_META_NOT_CONFIGED",
+   "code": 714180,
+   "textKey": "countdownReward_cannotOpen",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 56
+  },
+  {
+   "name": "COUNTDOWN_REWARD_NOT_REACH_TIME",
+   "code": 714181,
+   "textKey": "countdownReward_cannotOpen",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 58
+  },
+  {
+   "name": "EXCHANGE_GIFT_BAG_INVALID_ACTIVATION_CODE",
+   "code": 714200,
+   "textKey": "",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 61
+  },
+  {
+   "name": "EXCHANGE_GIFT_BAG_HAS_GET_REWARD",
+   "code": 714201,
+   "textKey": "",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 62
+  },
+  {
+   "name": "ACTIVATION_CODE_META_NOT_CONFIGED",
+   "code": 714202,
+   "textKey": "",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 63
+  },
+  {
+   "name": "EXCHANGE_GIFT_BAG_NOT_IN_ACTIVITY_TIME",
+   "code": 714203,
+   "textKey": "",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 64
+  },
+  {
+   "name": "EXCHANGE_GIFT_BAG_ACTIVATION_CODE_NOT_EXIST",
+   "code": 714204,
+   "textKey": "",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 65
+  },
+  {
+   "name": "EXCHANGE_GIFT_BAG_ACTIVATION_HAS_USED",
+   "code": 714205,
+   "textKey": "",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 66
+  },
+  {
+   "name": "ACTIVATION_CODE_ITEM_NOT_CONFIGED",
+   "code": 714207,
+   "textKey": "",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 67
+  },
+  {
+   "name": "ACTIVITY_SECKILL_CLOSE",
+   "code": 714600,
+   "textKey": "activity_goldGod_end_remind",
+   "note": "活动已结束",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 70
+  },
+  {
+   "name": "ACTIVITY_SECKILL_ITEM_NOT_CONFIG",
+   "code": 714601,
+   "textKey": "xxx",
+   "note": "没有配置",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 71
+  },
+  {
+   "name": "ACTIVITY_SECKILL_CURRENCY_TYPE_NOT_SUPPORT",
+   "code": 714602,
+   "textKey": "xxx",
+   "note": "无效类型",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 72
+  },
+  {
+   "name": "ACTIVITY_SECKILL_USER_PURCHASE_LIMIT",
+   "code": 714603,
+   "textKey": "activity_seckill_limit",
+   "note": "购买次数到达上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 73
+  },
+  {
+   "name": "ACTIVITY_SECKILL_ITEM_SOLD_OUT",
+   "code": 714604,
+   "textKey": "activity_seckill_exhausted",
+   "note": "库存告罄，下次请早",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 74
+  },
+  {
+   "name": "ACTIVITY_SECKILL_ITEM_NOT_IN_TIME",
+   "code": 714605,
+   "textKey": "activity_seckill_close",
+   "note": "不在购买时限内",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 75
+  },
+  {
+   "name": "USER_JOINED_UNION",
+   "code": 716300,
+   "textKey": "union_creat_not_satisfied5",
+   "note": "已经加入军团",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 78
+  },
+  {
+   "name": "USER_IN_UNION_COLD",
+   "code": 716301,
+   "textKey": "union_apply_not_satisfied3",
+   "note": "加入军团冷却时间",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 79
+  },
+  {
+   "name": "USER_LEVEL_NOT_FIT_UNION",
+   "code": 716302,
+   "textKey": "union_apply_not_satisfied1",
+   "note": "需要达到{num}级才能申请加入军团",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 80
+  },
+  {
+   "name": "UNION_NAME_IS_NULL",
+   "code": 716304,
+   "textKey": "union_creat_not_satisfied6",
+   "note": "军团名称不能为空",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 81
+  },
+  {
+   "name": "UNION_NAME_IS_INVALID",
+   "code": 716305,
+   "textKey": "union_creat_not_satisfied8",
+   "note": "军团名称包含非法字符(只能是中文 数字 字母)",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 82
+  },
+  {
+   "name": "UNION_NAME_IS_TOOSHORT",
+   "code": 716306,
+   "textKey": "union_creat_not_satisfied7",
+   "note": "军团名称过短",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 83
+  },
+  {
+   "name": "UNION_NAME_IS_TOOLONG",
+   "code": 716307,
+   "textKey": "union_creat_not_satisfied2",
+   "note": "军团名不能超过6个汉字或12位英文数字",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 84
+  },
+  {
+   "name": "UNION_NAME_IS_EXIST",
+   "code": 716308,
+   "textKey": "union_creat_not_satisfied3",
+   "note": "该军团名已存在",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 85
+  },
+  {
+   "name": "UNION_NAME_CONTIAN_SENSITIVE_WORD",
+   "code": 716309,
+   "textKey": "union_creat_not_satisfied8",
+   "note": "军团名称包含非法字符",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 86
+  },
+  {
+   "name": "USER_APPLY_UNION_REACH_UPPER",
+   "code": 716311,
+   "textKey": "union_apply_not_satisfied4",
+   "note": "您提交的申请已经达到上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 87
+  },
+  {
+   "name": "UNION_APPLIERS_REACH_UPPER",
+   "code": 716312,
+   "textKey": "union_apply_not_satisfied5",
+   "note": "该军团不能接受更多的申请了",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 88
+  },
+  {
+   "name": "USER_NOT_JOIN_ANY_UNION",
+   "code": 716313,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 89
+  },
+  {
+   "name": "UNION_APPLY_NOT_EXIST",
+   "code": 716314,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 90
+  },
+  {
+   "name": "UNION_CANONT_DISSOLVE_FOR_LEVEL",
+   "code": 716316,
+   "textKey": "union_dissolve_not_satisfied2",
+   "note": "军团等级达到{num}级后不能解散",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 91
+  },
+  {
+   "name": "USER_NOT_UNION_MANAGER",
+   "code": 716317,
+   "textKey": "union_dissolve_not_satisfied1",
+   "note": "只有军团长才能解散军团",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 92
+  },
+  {
+   "name": "USER_IS_UNION_MANAGER",
+   "code": 716318,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 93
+  },
+  {
+   "name": "USERS_NOT_IN_SAME_UNION",
+   "code": 716319,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 94
+  },
+  {
+   "name": "UNION_MEMBERS_REACH_UPPER",
+   "code": 716320,
+   "textKey": "union_examine_accept_remind1",
+   "note": "军团人数已满",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 95
+  },
+  {
+   "name": "UNION_CANNOT_DISSOLVE_FOR_MULTIPLE_MEMBERS",
+   "code": 716322,
+   "textKey": "union_dissolve_not_satisfied3",
+   "note": "军团人数为1时才能解散军团",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 96
+  },
+  {
+   "name": "UNSUPPORT_UNION_APPOINT_TYPE",
+   "code": 716323,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 97
+  },
+  {
+   "name": "UNION_MEMBERS_SUBTYPE_REACH_UPPER",
+   "code": 716324,
+   "textKey": "union_player_button_appointment_remind",
+   "note": "该职位人数已满",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 98
+  },
+  {
+   "name": "UNION_MANAGER_LEAVE_TIME_NOT_ENOUGH",
+   "code": 716325,
+   "textKey": "union_player_button_impeach_remind",
+   "note": "军团长离开超过7天后才能弹劾",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 99
+  },
+  {
+   "name": "NO_MEMBERS_IN_UNION",
+   "code": 716326,
+   "textKey": "union_data_refresh_remind",
+   "note": "除了军团长没有其他成员",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 100
+  },
+  {
+   "name": "USER_IS_NOT_UNION_MANAGER",
+   "code": 716327,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 101
+  },
+  {
+   "name": "UNION_NOT_IN_TRANSFER_STATUS",
+   "code": 716328,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 102
+  },
+  {
+   "name": "UNION_NOT_IN_DISSOLVE_STATUS",
+   "code": 716329,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 103
+  },
+  {
+   "name": "UNION_ALREADY_DISSOLVED",
+   "code": 716330,
+   "textKey": "union_data_refresh_remind",
+   "note": "数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 104
+  },
+  {
+   "name": "UNION_IN_DISSOLVE_STATUS",
+   "code": 716331,
+   "textKey": "union_building_upgrade_not_satisfied3",
+   "note": "解散中不能执行该操作",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 105
+  },
+  {
+   "name": "UNION_DECLARATION_TOO_LONG",
+   "code": 716332,
+   "textKey": "union_announcement_not_satisfied1",
+   "note": "文本过长",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 106
+  },
+  {
+   "name": "UNION_DECLARATION_CONTAINS_SENSITIVE_WROD",
+   "code": 716333,
+   "textKey": "union_announcement_not_satisfied3",
+   "note": "您的公告中包含非法字符",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 107
+  },
+  {
+   "name": "UNION_DECLARATION_IS_EMPTY",
+   "code": 716334,
+   "textKey": "union_announcement_not_satisfied4",
+   "note": "文本不能为空",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 108
+  },
+  {
+   "name": "UNION_NOTICE_TOO_LONG",
+   "code": 716335,
+   "textKey": "union_announcement_not_satisfied1",
+   "note": "文本过长",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 109
+  },
+  {
+   "name": "UNION_NOTICE_CONTAINS_SENSITIVE_WORD",
+   "code": 716336,
+   "textKey": "union_announcement_not_satisfied3",
+   "note": "您的公告中包含非法字符",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 110
+  },
+  {
+   "name": "UNION_NOTICE_IS_EMPTY",
+   "code": 716337,
+   "textKey": "union_announcement_not_satisfied4",
+   "note": "文本不能为空",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 111
+  },
+  {
+   "name": "UNION_WEALTH_NOT_ENOUGH",
+   "code": 716338,
+   "textKey": "union_building_upgrade__not_satisfied3",
+   "note": "财富不够，不能进行升级",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 112
+  },
+  {
+   "name": "USER_IS_NOT_IN_UNION",
+   "code": 716339,
+   "textKey": "union_monster_errorNum1",
+   "note": "此人不在军团里，请重新分配",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 113
+  },
+  {
+   "name": "STR_HAS_WROWN_WORD",
+   "code": 716340,
+   "textKey": "union_text_explain",
+   "note": "不支持特殊符号的显示，请重新输入",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 114
+  },
+  {
+   "name": "UNION_BUILDING_REACH_MAX_LEVEL",
+   "code": 716353,
+   "textKey": "union_building_upgrade__not_satisfied1",
+   "note": "建筑已经达到满级",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 116
+  },
+  {
+   "name": "UNION_BUILDING_LEVEL_BIGGER_THAN_UNION_LEVEL",
+   "code": 716357,
+   "textKey": "union_building_upgrade__not_satisfied2",
+   "note": "建筑等级不能超过军团大厅的等级",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 117
+  },
+  {
+   "name": "UNION_BUILDING_TYPE_UNSUPPORT",
+   "code": 716358,
+   "textKey": "111",
+   "note": "不存在的建筑类型",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 118
+  },
+  {
+   "name": "ALREADY_CONSTRUCT_TODAY",
+   "code": 716359,
+   "textKey": "union_build_today_complete_remind",
+   "note": "今日已建设",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 119
+  },
+  {
+   "name": "SHARK_USER_UNION_IS_NULL",
+   "code": 716360,
+   "textKey": "111",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 120
+  },
+  {
+   "name": "USER_NOT_IN_UNION",
+   "code": 716361,
+   "textKey": "111",
+   "note": "用户不在这个军团中",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 121
+  },
+  {
+   "name": "UNION_CONSTRUCT_TYPE_UNSUPPORT",
+   "code": 716362,
+   "textKey": "111",
+   "note": "捐献类型不存在",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 122
+  },
+  {
+   "name": "UNION_SHOP_NORMAL_META_NOT_CONFIGED",
+   "code": 716363,
+   "textKey": "111",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 123
+  },
+  {
+   "name": "UNION_SHOP_SPECIAL_META_NOT_CONFIGED",
+   "code": 716364,
+   "textKey": "111",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 124
+  },
+  {
+   "name": "UNION_NORMAL_PROP_DAILY_PURCHASE_TIMES_LIMIT",
+   "code": 716365,
+   "textKey": "111",
+   "note": "道具到达上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 125
+  },
+  {
+   "name": "UNION_SPECIAL_PROP_DAILY_PURCHASE_TIMES_LIMIT",
+   "code": 716366,
+   "textKey": "111",
+   "note": "特殊道具达到上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 126
+  },
+  {
+   "name": "SPECIAL_PROP_IS_NOT_ON_SALE",
+   "code": 716367,
+   "textKey": "111",
+   "note": "现在不出售",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 127
+  },
+  {
+   "name": "UNION_SHOP_PROP_TYPE_UNSUPPORT",
+   "code": 716368,
+   "textKey": "111",
+   "note": "不支持的商城道具类型",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 128
+  },
+  {
+   "name": "UNION_SHOP_LEVEL_NOT_ENOUGH",
+   "code": 716369,
+   "textKey": "111",
+   "note": "商城等级不足",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 129
+  },
+  {
+   "name": "USER_UNION_CONTRIBUTE_NOT_ENOUGH",
+   "code": 716370,
+   "textKey": "111",
+   "note": "贡献值不足",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 130
+  },
+  {
+   "name": "RECEIVE_WAGE_AT_WRONG_TIME",
+   "code": 716371,
+   "textKey": "111",
+   "note": "领工资时间不对",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 131
+  },
+  {
+   "name": "ALREADY_RECEIVED_WAGE_TODAY",
+   "code": 716372,
+   "textKey": "111",
+   "note": "今日已领过工资",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 132
+  },
+  {
+   "name": "UNION_MONSTER_IS_ALIVE",
+   "code": 716377,
+   "textKey": "union_monster_errorNum2",
+   "note": "怪物尚未死亡，不能进行分配",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 134
+  },
+  {
+   "name": "UNOIN_MONSTER_CANNOT_SUMMON_MONSTER_THIS_TIME",
+   "code": 716378,
+   "textKey": "union_monster_errorNum3",
+   "note": "主公，现在不在召唤时间哦",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 135
+  },
+  {
+   "name": "UNION_MONSTER_HAS_REWARD_NOT_DISTRIBUTE",
+   "code": 716379,
+   "textKey": "union_monster_errorNum4",
+   "note": "奖励尚未分配",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 136
+  },
+  {
+   "name": "UNION_MONSTER_ESCAPE",
+   "code": 716382,
+   "textKey": "union_monster_errorNum5",
+   "note": "怪物已逃跑",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 138
+  },
+  {
+   "name": "UNION_MONSTER_IS_DEAD",
+   "code": 716383,
+   "textKey": "union_monster_errorNum6",
+   "note": "怪物已被击杀",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 139
+  },
+  {
+   "name": "UNION_MONSTER_COLOSSEUM_LEVEL_LIMIT",
+   "code": 716384,
+   "textKey": "union_monster_errorNum7",
+   "note": "怪物未解锁，请升级斗兽场",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 140
+  },
+  {
+   "name": "UNION_MONSTER_DAILY_ATT_TIMES_LIMIT",
+   "code": 716385,
+   "textKey": "union_monster_errorNum8",
+   "note": "攻击次数不足",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 141
+  },
+  {
+   "name": "UNION_MONSTER_REWARD_ALREADY_DISTRIBUTED",
+   "code": 716386,
+   "textKey": "union_monster_errorNum9",
+   "note": "奖励已分配",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 142
+  },
+  {
+   "name": "UNION_MONSTER_REWARD_DISTRIBUTE_NUM_NOT_MATCH",
+   "code": 716387,
+   "textKey": "union_data_refresh_remind",
+   "note": "分配总数不符--数据已过期，请重新进入界面",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 143
+  },
+  {
+   "name": "UNION_MONSTER_SUMMON_TIMES_LIMIT",
+   "code": 716388,
+   "textKey": "union_monster_errorNum10",
+   "note": "召唤次数到达上限",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 144
+  },
+  {
+   "name": "UNION_MONSTER_SOMEONE_DISTRIBUTING_REWARD",
+   "code": 716389,
+   "textKey": "union_monster_reward_distribution_not_satisfied1",
+   "note": "有其他玩家正在分配战利品",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 145
+  },
+  {
+   "name": "UNION_MONSTER_SOMEONE_SUMMONING_MONSTER",
+   "code": 716390,
+   "textKey": "union_monster_summon_not_satisfied1",
+   "note": "同一时间只能召唤一只怪兽",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 146
+  },
+  {
+   "name": "UNION_CAREER_META_NOT_CONFIGED",
+   "code": 716410,
+   "textKey": "111",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 148
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_DISSOLVE_UNION",
+   "code": 716411,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限解散",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 149
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_APPOINT_VICE_MANAGER",
+   "code": 716412,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限任命副团长",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 150
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_TRANSFER_UNION",
+   "code": 716413,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限移交",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 151
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_KICK_OUT_VICE_MANAGER",
+   "code": 716414,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限踢副团长",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 152
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_RECALL_VICE_MANAGER",
+   "code": 716415,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限罢免副团长",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 153
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_MODIFY_DECLARATION",
+   "code": 716416,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限修改宣言",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 154
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_MODIFY_ANNOUNCEMENT",
+   "code": 716417,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限修改公告",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 155
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_APPOINT_ELITE_MEMBER",
+   "code": 716418,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限任命精英成员",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 156
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_RECALL_ELITE_MEMBER",
+   "code": 716419,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限罢免精英成员",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 157
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_UPGRAGE_UNION_BUILDING",
+   "code": 716420,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限升级建筑",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 158
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_APPLY_EXAMINE",
+   "code": 716421,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "您的职务不能执行此操作",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 159
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_KICK_OUT_MEMBER",
+   "code": 716422,
+   "textKey": "union_announcement_not_satisfied2",
+   "note": "没有权限踢人",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 160
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_DONATE",
+   "code": 716423,
+   "textKey": "111",
+   "note": "没有权限捐献",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 161
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_UNION_SHOP_BUY",
+   "code": 716424,
+   "textKey": "111",
+   "note": "没有权限购买",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 162
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_RECEIVE_WAGE",
+   "code": 716425,
+   "textKey": "111",
+   "note": "没有权限领工资",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 163
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_SUMMON_MONSTER",
+   "code": 716426,
+   "textKey": "union_monster_errorNum11",
+   "note": "主公，您没有召唤权限哦",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 164
+  },
+  {
+   "name": "HAS_NO_UNION_PRIVILIGE_DISTRIBUTE_MONSTER_REWARD",
+   "code": 716427,
+   "textKey": "union_monster_errorNum12",
+   "note": "主公，您没有分配权限哦",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 165
+  },
+  {
+   "name": "CARD_TARGET_LEVEL_IS_INVALID",
+   "code": 711063,
+   "textKey": "cardEnhance_levelInvalid",
+   "note": "您选择的等级不正确",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 171
+  },
+  {
+   "name": "GENERAL_EXP_NOT_ENOUGH",
+   "code": 716471,
+   "textKey": "cardEnhance_expInsufficient",
+   "note": "当前拥有的武将经验不足",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 172
+  },
+  {
+   "name": "CREATE_USER_ERROR",
+   "code": 710071,
+   "textKey": "EC_CREATE_USER",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 174
+  },
+  {
+   "name": "OPEN_VIPBOX",
+   "code": 712908,
+   "textKey": "EC_USE_PROP",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 175
+  },
+  {
+   "name": "CHALLENAGE_PK_ERROR",
+   "code": 710103,
+   "textKey": "EC_CHALLENGE_PK_USER",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 176
+  },
+  {
+   "name": "GAIN_PK_REWARD_ERROR",
+   "code": 710544,
+   "textKey": "EC_GAIN_PK_REWARDS",
+   "note": "",
+   "file": "CommErrorCodes.efbad99dada62e7a71a3858bc6d7a370.lua",
+   "line": 177
+  }
+ ]
+}

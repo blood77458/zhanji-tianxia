@@ -1,0 +1,6291 @@
+[
+ {
+  "method": "challengeMultiplayerBoss",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "battleType",
+   "bossId",
+   "triggerUid"
+  ],
+  "response_fields": [
+   "bossHpMax",
+   "bossInfo",
+   "globalReturnScene",
+   "win"
+  ]
+ },
+ {
+  "method": "challengeWanted",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "wantedId",
+   "win"
+  ]
+ },
+ {
+  "method": "challengeWorldBoss",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "battleType"
+  ],
+  "response_fields": [
+   "bossHp",
+   "bossHpMax"
+  ]
+ },
+ {
+  "method": "exchangeItem",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "itemId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainMultiplayerBossParticipationReward",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "bossKey"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainMultiplayerBossRankReward",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainWorldBossRewards",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getMultiplayerBossDamage",
+  "category": "Boss / 通缉",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [
+   "bossId",
+   "triggerUid"
+  ],
+  "response_fields": [
+   "damages"
+  ]
+ },
+ {
+  "method": "getMultiplayerBossLeftHp",
+  "category": "Boss / 通缉",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [
+   "bossId",
+   "triggerUid"
+  ],
+  "response_fields": [
+   "leftHp"
+  ]
+ },
+ {
+  "method": "getMultiplayerBossRank",
+  "category": "Boss / 通缉",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "rank_board"
+  ],
+  "server_implemented": false,
+  "params": [
+   "beginPos",
+   "endPos"
+  ],
+  "response_fields": [
+   "currRankMax",
+   "multiPlayerBossRanks"
+  ]
+ },
+ {
+  "method": "getWantedInfo",
+  "category": "Boss / 通缉",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "wantedInfo"
+  ]
+ },
+ {
+  "method": "getWorldBossInfo",
+  "category": "Boss / 通缉",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "inspireInWorldBoss",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "worldBossInspireInfos"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "refreshWanted",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": true,
+  "params": [
+   "minimum"
+  ],
+  "response_fields": [
+   "wantedId"
+  ]
+ },
+ {
+  "method": "setAutoWorldBoss",
+  "category": "Boss / 通缉",
+  "op": "写",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": true,
+  "params": [
+   "autoChallenge"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainAchievementReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "achievementId",
+   "achievementType"
+  ],
+  "response_fields": [
+   "reward"
+  ]
+ },
+ {
+  "method": "gainActiveReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "activeRewardId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainBalloonPointReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "id"
+  ],
+  "response_fields": [
+   "balloonRanks"
+  ]
+ },
+ {
+  "method": "gainBalloonRankReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "balloonRanks"
+  ]
+ },
+ {
+  "method": "gainChapterFinishReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "chapterId"
+  ],
+  "response_fields": [
+   "amount",
+   "itemType",
+   "metaId",
+   "reward"
+  ]
+ },
+ {
+  "method": "gainChargeMoneyReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "id"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainConsumeReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "id"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainDailyAchieveReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "achieveId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainDailyTaskReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "taskId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainDayReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "dayRewardId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainDiceReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "changeDiceLuckCount",
+   "changeLuckCountPerThrow",
+   "diceNewRewards",
+   "gainedCoin",
+   "throwDiceCount"
+  ]
+ },
+ {
+  "method": "gainFbActivityReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainFortuneRewards",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "id",
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainGemConsumeRewards",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rewardId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainGoldGodRewards",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainInviteReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainInvitedReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "deviceId",
+   "invitationCode"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainLevelRaceRewards",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "level"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainMondayReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainNewYearRewards",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "id"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainRankFirstReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rank"
+  ],
+  "response_fields": [
+   "amount",
+   "itemType",
+   "metaId",
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainRankRewards",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_sky_tower",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainSwornReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "swornRewardId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainTutorialFinishReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getAchievements",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "cardBookAchievement",
+   "sharkAchievement"
+  ]
+ },
+ {
+  "method": "getChargeFeedbackReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rewardId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getConsumeRewardInfo",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "recharges",
+   "rewards"
+  ]
+ },
+ {
+  "method": "getContinuousLoginReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_continuous_login",
+   "player_continuous_login_v2",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "getBigReward"
+  ],
+  "response_fields": [
+   "bigReward",
+   "reward",
+   "rewardId"
+  ]
+ },
+ {
+  "method": "getCountdownReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "finished",
+   "inProcessRewardId",
+   "latestRewardTimestamp",
+   "rewards"
+  ]
+ },
+ {
+  "method": "getDailyAchieveInfo",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getDailyActiveInfo",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "dailyActiveInfo",
+   "dailyActiveInfo.activeValue",
+   "dailyActiveInfo.gainedRewards",
+   "dailyActiveInfo.taskCounters"
+  ]
+ },
+ {
+  "method": "getLoginReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_continuous_login",
+   "player_continuous_login_v2",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getMonthlyLoginRewardMeta",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_continuous_login",
+   "player_continuous_login_v2",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "adNum",
+   "monthlyLoginRewardItems"
+  ]
+ },
+ {
+  "method": "getQuestionDailyReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "dailyNum",
+   "questionId",
+   "questionNum",
+   "wrongAnswer1Key",
+   "wrongAnswer2Key",
+   "wrongAnswer3Key"
+  ]
+ },
+ {
+  "method": "getRewardList",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "sharkRewardList"
+  ]
+ },
+ {
+  "method": "getSignInReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_sign_in",
+   "player_activity_reward_claim",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getTaskInfo",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "dailyTaskInfos"
+  ]
+ },
+ {
+  "method": "getWeekReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "pickUpAllReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "pickUpCard",
+   "pickUpEquip"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "pickUpReward",
+  "category": "任务 / 成就 / 奖励",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rewardId"
+  ],
+  "response_fields": [
+   "reward"
+  ]
+ },
+ {
+  "method": "gameInit",
+  "category": "元数据 / 初始化",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "maintenanceItem",
+   "noChatEndSeconds",
+   "sharkAchievement"
+  ]
+ },
+ {
+  "method": "getAnnouncementInfo",
+  "category": "元数据 / 初始化",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "announcementItemMetas"
+  ]
+ },
+ {
+  "method": "getMeta",
+  "category": "元数据 / 初始化",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "buySpiritPool",
+  "category": "元神",
+  "op": "写",
+  "tables": [
+   "player_spirit",
+   "player_spirit_attr",
+   "player_spirit_unsaved",
+   "player_extend",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "requisite",
+   "requisite.amount"
+  ]
+ },
+ {
+  "method": "equipSpirit",
+  "category": "元神",
+  "op": "写",
+  "tables": [
+   "player_spirit",
+   "player_spirit_attr",
+   "player_spirit_unsaved",
+   "player_extend",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cardId",
+   "index",
+   "spiritId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "sellSpirit",
+  "category": "元神",
+  "op": "写",
+  "tables": [
+   "player_spirit",
+   "player_spirit_attr",
+   "player_spirit_unsaved",
+   "player_extend",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "spiritIds"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "setAutoSave",
+  "category": "元神",
+  "op": "写",
+  "tables": [],
+  "server_implemented": false,
+  "params": [
+   "autoSave"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "spiritConcentrate",
+  "category": "元神",
+  "op": "读",
+  "tables": [
+   "player_spirit",
+   "player_spirit_attr",
+   "player_spirit_unsaved",
+   "player_extend"
+  ],
+  "server_implemented": true,
+  "params": [
+   "type"
+  ],
+  "response_fields": [
+   "sharkSpirits"
+  ]
+ },
+ {
+  "method": "unequipSpirit",
+  "category": "元神",
+  "op": "写",
+  "tables": [
+   "player_spirit",
+   "player_spirit_attr",
+   "player_spirit_unsaved",
+   "player_extend",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cardId",
+   "index"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "upgradeSpirit",
+  "category": "元神",
+  "op": "写",
+  "tables": [
+   "player_spirit",
+   "player_spirit_attr",
+   "player_spirit_unsaved",
+   "player_extend",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "masterSpiritId",
+   "slaveSpiritIds"
+  ],
+  "response_fields": [
+   "sharkSpirit",
+   "sharkSpirit.spiritId"
+  ]
+ },
+ {
+  "method": "challengeElite",
+  "category": "关卡 / 战斗",
+  "op": "写",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [
+   "eliteId"
+  ],
+  "response_fields": [
+   "selectId",
+   "win"
+  ]
+ },
+ {
+  "method": "changeBattleArray",
+  "category": "关卡 / 战斗",
+  "op": "写",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_battle_array",
+   "player_battle_slot",
+   "player_matrix",
+   "player_matrix_grid"
+  ],
+  "server_implemented": false,
+  "params": [
+   "battleArrayId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "clearElite",
+  "category": "关卡 / 战斗",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop"
+  ],
+  "server_implemented": false,
+  "params": [
+   "eliteId"
+  ],
+  "response_fields": [
+   "challengeNum",
+   "lastEnergy",
+   "mergeRewards",
+   "rewards"
+  ]
+ },
+ {
+  "method": "clearMission",
+  "category": "关卡 / 战斗",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "clearRounds",
+   "missionId",
+   "routeId"
+  ],
+  "response_fields": [
+   "clearMissionRewards"
+  ]
+ },
+ {
+  "method": "getEliteInfo",
+  "category": "关卡 / 战斗",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "resetClearTime",
+  "category": "关卡 / 战斗",
+  "op": "写",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "gemRequisite",
+   "gemRequisite.amount"
+  ]
+ },
+ {
+  "method": "resetElite",
+  "category": "关卡 / 战斗",
+  "op": "写",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "eliteId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "triggerBattleEvent",
+  "category": "关卡 / 战斗",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "DoNotCaptureFailueMessage",
+   "battleType",
+   "missionId",
+   "routeId",
+   "step"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "adjustTeam",
+  "category": "其他",
+  "op": "写",
+  "tables": [
+   "player_battle_array",
+   "player_battle_slot",
+   "player_matrix",
+   "player_matrix_grid"
+  ],
+  "server_implemented": true,
+  "params": [
+   "additionalCardIds",
+   "mainCardId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainFloorAddition",
+  "category": "其他",
+  "op": "写",
+  "tables": [
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainYesterdayAddition",
+  "category": "其他",
+  "op": "写",
+  "tables": [
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getHomeInfo",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "consumeRewardRecharges",
+   "consumeRewards",
+   "freeSpiritRefreshNum",
+   "unionMonsterEscapeSeconds",
+   "unionMonsterHp"
+  ]
+ },
+ {
+  "method": "getMultiplayserBossInfo",
+  "category": "其他",
+  "op": "读",
+  "tables": [],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getPlayerTeamInfo",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "player_battle_array",
+   "player_battle_slot",
+   "player_matrix",
+   "player_matrix_grid"
+  ],
+  "server_implemented": true,
+  "params": [
+   "playerTeamData",
+   "playerUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getUserBanInfo",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "noChatEndSeconds"
+  ]
+ },
+ {
+  "method": "login",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "rebirthItem",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [
+   "resourceId",
+   "resourceType"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "recordAddictedTime",
+  "category": "其他",
+  "op": "写",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [
+   "minutes"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "recordTutorialStep",
+  "category": "其他",
+  "op": "写",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [
+   "funcName",
+   "step"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "refreshSubAttribute",
+  "category": "其他",
+  "op": "写",
+  "tables": [],
+  "server_implemented": false,
+  "params": [
+   "lockIndex",
+   "refreshType",
+   "spiritId"
+  ],
+  "response_fields": [
+   "refreshSharkSpiritAttribute"
+  ]
+ },
+ {
+  "method": "rename",
+  "category": "其他",
+  "op": "写",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": false,
+  "params": [
+   "nickName"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "sacrificeItem",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [
+   "resourceIds",
+   "resourceType"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "selectSubAttribute",
+  "category": "其他",
+  "op": "写",
+  "tables": [],
+  "server_implemented": false,
+  "params": [
+   "refreshIndex",
+   "spiritId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "triggerCoinEvent",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "DoNotCaptureFailueMessage",
+   "missionId",
+   "routeId",
+   "step"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "triggerEmptyEvent",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "DoNotCaptureFailueMessage",
+   "missionId",
+   "routeId",
+   "step"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "triggerExpEvent",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "DoNotCaptureFailueMessage",
+   "missionId",
+   "routeId",
+   "step"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "triggerRandomEvent",
+  "category": "其他",
+  "op": "读",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_elite",
+   "player_daily_counter",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "DoNotCaptureFailueMessage",
+   "missionId",
+   "routeId",
+   "step"
+  ],
+  "response_fields": [
+   "eventType"
+  ]
+ },
+ {
+  "method": "validatePaymentOrder",
+  "category": "其他",
+  "op": "写",
+  "tables": [
+   "payment_order",
+   "charge_log",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "goldNum",
+   "orderId",
+   "productId"
+  ],
+  "response_fields": [
+   "succ"
+  ]
+ },
+ {
+  "method": "acceptUnionApply",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [
+   "applierUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "applyCrossGvg",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "applyUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "applyUnionCity",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_city",
+   "guild_city_apply",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionCityId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "appointUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "appointUid",
+   "title"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "blessForCrossGVG",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rank",
+   "rewards"
+  ]
+ },
+ {
+  "method": "buyUnionProp",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionPropId",
+   "unionPropType"
+  ],
+  "response_fields": [
+   "retCode",
+   "rewards"
+  ]
+ },
+ {
+  "method": "cancelDissolveUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "cancelTransferUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "cancelUnionApply",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "challengeUnionMonster",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_monster",
+   "guild_monster_damage",
+   "guild_monster_allocate",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "bossHpMax",
+   "generalExp"
+  ]
+ },
+ {
+  "method": "constructUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_building",
+   "guild_donate_log",
+   "guild_shop_record"
+  ],
+  "server_implemented": false,
+  "params": [
+   "constructType"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "createUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "coinType",
+   "declaration",
+   "notice",
+   "unionName"
+  ],
+  "response_fields": [
+   "sharkUnion",
+   "sharkUnion.unionId"
+  ]
+ },
+ {
+  "method": "crossGVGGroupBattle",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "dissolveUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkUnion",
+   "sharkUserUnion"
+  ]
+ },
+ {
+  "method": "exchangeUnionFormation",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "forwardUid",
+   "headUids",
+   "middleUids",
+   "tailUids",
+   "unionCityId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "forceQuitUnion",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "quitUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainUnionBattleReward",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_monster",
+   "guild_monster_damage",
+   "guild_monster_allocate",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rewardId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getAppliedUnions",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkUnionWrappers"
+  ]
+ },
+ {
+  "method": "getApplyUnions",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionCityId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getCrossGVGBlessInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "crossGvgVersion",
+   "rank",
+   "rewards",
+   "selfApplyCrossGvg",
+   "selfQuitCrossGvg",
+   "unionApplyCrossGvg"
+  ]
+ },
+ {
+  "method": "getCrossGvgGroupReports",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getCrossGvgGroupTop10Score",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getFiredUnionMemberStatus",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "firedUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getGvgBattleResultDetail",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [
+   "knockout",
+   "reportId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getGvgKnockoutInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "championBattle"
+  ]
+ },
+ {
+  "method": "getOwnUnionInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getUnionAppliers",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkUnionAppliers"
+  ]
+ },
+ {
+  "method": "getUnionBattlefieldReport",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [
+   "reportId",
+   "unionCityId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getUnionBattlefieldReportList",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionCityId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getUnionBuildingBankInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_building",
+   "guild_donate_log",
+   "guild_shop_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "level"
+  ]
+ },
+ {
+  "method": "getUnionBuildingColosseumInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_building",
+   "guild_donate_log",
+   "guild_shop_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "level",
+   "rankList",
+   "sharkUnionMonster",
+   "sharkUnionMonster.distributingUid",
+   "sharkUnionMonster.escapeSeconds",
+   "sharkUnionMonster.monsterId",
+   "sharkUnionMonster.monsterLeftHp",
+   "sharkUnionMonster.reward.amount",
+   "sharkUnionMonster.rewardDistributed",
+   "sharkUnionMonster.rewardDouble",
+   "sharkUnionMonster.summonUserNickname",
+   "summonTimes",
+   "unionWealth"
+  ]
+ },
+ {
+  "method": "getUnionBuildingHallInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_building",
+   "guild_donate_log",
+   "guild_shop_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "constructTimesToday",
+   "lastestConstructSeconds"
+  ]
+ },
+ {
+  "method": "getUnionBuildingShopInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_building",
+   "guild_donate_log",
+   "guild_shop_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "level",
+   "specialProps",
+   "specialShopRecord"
+  ]
+ },
+ {
+  "method": "getUnionCityInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_city",
+   "guild_city_apply"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionCityId"
+  ],
+  "response_fields": [
+   "sharkUnionCity",
+   "sharkUnionCity.report",
+   "sharkUnionCity.successfulBid",
+   "unionFormation"
+  ]
+ },
+ {
+  "method": "getUnionCityList",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_city",
+   "guild_city_apply"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "attendBattleNum",
+   "challengeCityIds",
+   "fightingCityIds",
+   "ownCityIds",
+   "roundWealth",
+   "smallCityNum",
+   "unionFormation",
+   "unionWinNum",
+   "userTitle"
+  ]
+ },
+ {
+  "method": "getUnionFormation",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_formation_slot",
+   "guild_formation_team"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionCityId"
+  ],
+  "response_fields": [
+   "sharkUnionCityApply",
+   "unionFormation"
+  ]
+ },
+ {
+  "method": "getUnionInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "canDistributeMonsterReward",
+   "sharkUnion",
+   "sharkUnionBuildingWrapper",
+   "unionMonsterEscapeSeconds",
+   "unionMonsterHp",
+   "unionTotalFightCapacity",
+   "unionWarLightOn"
+  ]
+ },
+ {
+  "method": "getUnionList",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "amount",
+   "startNum"
+  ],
+  "response_fields": [
+   "sharkUnionWrappers"
+  ]
+ },
+ {
+  "method": "getUnionMembersList",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkUnionMemberWrappers"
+  ]
+ },
+ {
+  "method": "getUnionMonsterRank",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_monster",
+   "guild_monster_damage",
+   "guild_monster_allocate",
+   "rank_board"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rankList"
+  ]
+ },
+ {
+  "method": "getUnionNewsList",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_news"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkUnionNewsWrappers",
+   "unionWarNewsWrappers"
+  ]
+ },
+ {
+  "method": "getUnionWarCityMembersList",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cityId"
+  ],
+  "response_fields": [
+   "unionFormation"
+  ]
+ },
+ {
+  "method": "getUserUnionInfo",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "crossGvgVersion",
+   "out",
+   "promotion",
+   "selfApplyCrossGvg",
+   "selfQuitCrossGvg",
+   "sharkUserUnion",
+   "unionApplyCrossGvg",
+   "unionWarHintNum"
+  ]
+ },
+ {
+  "method": "impeachUnionManager",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "currManagerNickName"
+  ]
+ },
+ {
+  "method": "inspireUnionBattle",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "buffId",
+   "unionCityId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "modifyUnionDeclaration",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "declaration"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "modifyUnionNotice",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "guild"
+  ],
+  "server_implemented": false,
+  "params": [
+   "notice"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "quitUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkUserUnion"
+  ]
+ },
+ {
+  "method": "receiveUnionWage",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionWageId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "rejectUnionAllApplies",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "rejectUnionApply",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_apply"
+  ],
+  "server_implemented": false,
+  "params": [
+   "applierUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "searchUnion",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionName"
+  ],
+  "response_fields": [
+   "sharkUnionWrappers"
+  ]
+ },
+ {
+  "method": "summonUnionMonster",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_monster",
+   "guild_monster_damage",
+   "guild_monster_allocate"
+  ],
+  "server_implemented": false,
+  "params": [
+   "monsterMetaId",
+   "summonType"
+  ],
+  "response_fields": [
+   "sharkUnionMonster",
+   "sharkUnionMonster.distributingUid",
+   "sharkUnionMonster.escapeSeconds",
+   "sharkUnionMonster.monsterId",
+   "sharkUnionMonster.monsterLeftHp",
+   "sharkUnionMonster.reward.amount",
+   "sharkUnionMonster.rewardDistributed",
+   "sharkUnionMonster.rewardDouble",
+   "sharkUnionMonster.summonUserNickname"
+  ]
+ },
+ {
+  "method": "transferUnion",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member"
+  ],
+  "server_implemented": false,
+  "params": [
+   "transferedUid"
+  ],
+  "response_fields": [
+   "transferTime"
+  ]
+ },
+ {
+  "method": "unionMonsterRewardDistributeBegin",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_monster",
+   "guild_monster_damage",
+   "guild_monster_allocate",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "currMonsterRewards"
+  ]
+ },
+ {
+  "method": "unionMonsterRewardDistributeGiveUp",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_monster",
+   "guild_monster_damage",
+   "guild_monster_allocate",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "unionMonsterRewardDistributeSave",
+  "category": "军团",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_monster",
+   "guild_monster_damage",
+   "guild_monster_allocate",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionMonsterRewards"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "upgradeUnionBuilding",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_building",
+   "guild_donate_log",
+   "guild_shop_record",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionBuildingId"
+  ],
+  "response_fields": [
+   "currLevel"
+  ]
+ },
+ {
+  "method": "userApplyUnionCity",
+  "category": "军团",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_city",
+   "guild_city_apply",
+   "player_daily",
+   "player_daily_counter",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "unionCityId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "adjustCardAvatar",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": false,
+  "params": [
+   "avatarMetaId",
+   "cardId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "buyMonthGemCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player_daily_counter",
+   "player",
+   "player_activity_reward_claim",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "monthGemCardDeadline"
+  ]
+ },
+ {
+  "method": "evolveCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "masterId",
+   "slaveId"
+  ],
+  "response_fields": [
+   "sharkCard",
+   "sharkCard.metaId"
+  ]
+ },
+ {
+  "method": "evolveEquip",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "equipId",
+   "userGems"
+  ],
+  "response_fields": [
+   "equipId",
+   "sharkEquip"
+  ]
+ },
+ {
+  "method": "exchangeCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardId",
+   "shopId"
+  ],
+  "response_fields": [
+   "reward"
+  ]
+ },
+ {
+  "method": "exchangeCardDaily",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player_daily",
+   "player_daily_counter",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardId",
+   "metaId"
+  ],
+  "response_fields": [
+   "reward"
+  ]
+ },
+ {
+  "method": "exchangeTrainDanByArenaScore",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "exchangeType"
+  ],
+  "response_fields": [
+   "amount",
+   "itemType",
+   "metaId",
+   "requisite",
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainedMonthGemCardReward",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getCardBook",
+  "category": "卡牌养成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "sharkCardBook",
+   "sharkCardBook.cardMetaIds",
+   "sharkCardBook.equipMetaIds"
+  ]
+ },
+ {
+  "method": "giveUpCardTrain",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cardId",
+   "masterId",
+   "slaveIds"
+  ],
+  "response_fields": [
+   "sharkCard",
+   "sharkCard.usedPotential"
+  ]
+ },
+ {
+  "method": "lockCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cardId",
+   "methodType"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "prayCardFragment",
+  "category": "卡牌养成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_fragment",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardId"
+  ],
+  "response_fields": [
+   "prayNum",
+   "rewards"
+  ]
+ },
+ {
+  "method": "refreshCardExchangeDaillyCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": false,
+  "params": [
+   "useGold"
+  ],
+  "response_fields": [
+   "cardExchangeDailyInfo",
+   "cardExchangeDailyInfo.cardMetaIds",
+   "cardExchangeDailyInfo.exchangeTimes"
+  ]
+ },
+ {
+  "method": "replaceCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player_battle_array",
+   "player_battle_slot",
+   "player_matrix",
+   "player_matrix_grid"
+  ],
+  "server_implemented": true,
+  "params": [
+   "insertCardId"
+  ],
+  "response_fields": [
+   "type"
+  ]
+ },
+ {
+  "method": "saveCardTrain",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": true,
+  "params": [
+   "masterId",
+   "slaveIds"
+  ],
+  "response_fields": [
+   "sharkCard",
+   "sharkCard.cardId",
+   "sharkCard.usedPotential"
+  ]
+ },
+ {
+  "method": "sellCards",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cardIds"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "setCardGroupInterworking",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player_battle_array",
+   "player_battle_slot",
+   "player_matrix",
+   "player_matrix_grid"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardGroupInterworking"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "splitCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cardId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "trainCard",
+  "category": "卡牌养成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "attTrainValue",
+   "defTrainValue",
+   "hpTrainValue"
+  ]
+ },
+ {
+  "method": "triggerCardEvent",
+  "category": "卡牌养成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player_elite",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "DoNotCaptureFailueMessage",
+   "missionId",
+   "routeId",
+   "step"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "unlockSubAttribute",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [],
+  "server_implemented": false,
+  "params": [
+   "spiritId"
+  ],
+  "response_fields": [
+   "sharkSpiritAttribute"
+  ]
+ },
+ {
+  "method": "upgradeCardByGeneralExp",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "masterId",
+   "targetLevel"
+  ],
+  "response_fields": [
+   "sharkCard"
+  ]
+ },
+ {
+  "method": "upgradeEquipForOneCard",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "equipIds"
+  ],
+  "response_fields": [
+   "sharkEquips"
+  ]
+ },
+ {
+  "method": "upgradeSkill",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "player_card_skill",
+   "player_prop",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardId",
+   "skillBooks",
+   "skillId"
+  ],
+  "response_fields": [
+   "cardSkill",
+   "cardSkill.skillId"
+  ]
+ },
+ {
+  "method": "upgradeUser",
+  "category": "卡牌养成",
+  "op": "写",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkUser"
+  ]
+ },
+ {
+  "method": "getRobUserList",
+  "category": "夺宝 / 神兽",
+  "op": "读",
+  "tables": [
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "beastFragmentId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getSharkBeasts",
+  "category": "夺宝 / 神兽",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "sharkBeasts"
+  ]
+ },
+ {
+  "method": "robBeastFragment",
+  "category": "夺宝 / 神兽",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_fragment"
+  ],
+  "server_implemented": false,
+  "params": [
+   "beastFragmentId",
+   "enemyUid",
+   "robType",
+   "robotId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "acceptAllFreeGift",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "gainedEnergy"
+  ]
+ },
+ {
+  "method": "acceptAllInvitations",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "acceptedFriends",
+   "reviewingFriends"
+  ]
+ },
+ {
+  "method": "acceptInvitation",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": [
+   "acceptedFriend"
+  ]
+ },
+ {
+  "method": "cancelInvitation",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "challengeFriend",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": [
+   "tableContentHeight"
+  ]
+ },
+ {
+  "method": "challengeFriendList",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUids"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "deleteFriend",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainPraiseReward",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "player_praise",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "praiseId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getFriendDetail",
+  "category": "好友社交",
+  "op": "读",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": [
+   "sharkFriendDetail",
+   "sharkFriendDetail.fightCapacity",
+   "sharkFriendDetail.friendUid",
+   "sharkFriendDetail.level",
+   "sharkFriendDetail.mainCardMetaId",
+   "sharkFriendDetail.nickName"
+  ]
+ },
+ {
+  "method": "getFriends",
+  "category": "好友社交",
+  "op": "读",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "receivedEnergy",
+   "sharkFriends"
+  ]
+ },
+ {
+  "method": "getInvitationFriends",
+  "category": "好友社交",
+  "op": "读",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkFriends"
+  ]
+ },
+ {
+  "method": "getInvitationInfo",
+  "category": "好友社交",
+  "op": "读",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "deviceId"
+  ],
+  "response_fields": [
+   "deviceHasInvited",
+   "sharkAccountInvitation"
+  ]
+ },
+ {
+  "method": "getRecommendedFriends",
+  "category": "好友社交",
+  "op": "读",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkFriends"
+  ]
+ },
+ {
+  "method": "getReviewFriends",
+  "category": "好友社交",
+  "op": "读",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "sharkFriends"
+  ]
+ },
+ {
+  "method": "inviteFbFriends",
+  "category": "好友社交",
+  "op": "读",
+  "tables": [
+   "friend",
+   "friend_invitation",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "fbFriendIds"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "recordPraiseId",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "player_praise",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "praiseId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "refuseAllInvitations",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "refuseInvitation",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "sendAllFreeGift",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUids"
+  ],
+  "response_fields": [
+   "friendUids",
+   "gainedEnergy"
+  ]
+ },
+ {
+  "method": "sendAllInvitations",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUids"
+  ],
+  "response_fields": [
+   "friendUids"
+  ]
+ },
+ {
+  "method": "sendFreeGift",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": [
+   "gainedEnergy"
+  ]
+ },
+ {
+  "method": "sendInvitation",
+  "category": "好友社交",
+  "op": "写",
+  "tables": [
+   "friend",
+   "friend_invitation"
+  ],
+  "server_implemented": false,
+  "params": [
+   "friendUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "buyTreasureGrid",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "evolveTreasure",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "treasureId"
+  ],
+  "response_fields": [
+   "sharkTreasure"
+  ]
+ },
+ {
+  "method": "gachaTreasure",
+  "category": "宝物",
+  "op": "读",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "free",
+   "time"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainTreasureboxPointsRankReward",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainTreasureboxPointsReward",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "id"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getTreasureboxPointsInfo",
+  "category": "宝物",
+  "op": "读",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "treasureboxPointsRanks"
+  ]
+ },
+ {
+  "method": "lockTreasure",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend"
+  ],
+  "server_implemented": true,
+  "params": [
+   "treasureId",
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "potentialTreasure",
+  "category": "宝物",
+  "op": "读",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend"
+  ],
+  "server_implemented": false,
+  "params": [
+   "treasureId",
+   "type"
+  ],
+  "response_fields": [
+   "sharkTreasure"
+  ]
+ },
+ {
+  "method": "resetTreasurePotential",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "treasureId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "sellTreasures",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "treasureIds"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "setupTreasure",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardId",
+   "treasureId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "splitTreasure",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "treasureId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "upgradeTreasure",
+  "category": "宝物",
+  "op": "写",
+  "tables": [
+   "player_treasure",
+   "player_card",
+   "player_extend",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "oneClick",
+   "treasureId"
+  ],
+  "response_fields": [
+   "sharkTreasure"
+  ]
+ },
+ {
+  "method": "gachaCard",
+  "category": "抽卡 / 合成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_prop",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [
+   "gachaId",
+   "time"
+  ],
+  "response_fields": [
+   "countdownFreeGachaInfos",
+   "free",
+   "rewards"
+  ]
+ },
+ {
+  "method": "gachaCardByBox",
+  "category": "抽卡 / 合成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_prop",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gachaCardFree",
+  "category": "抽卡 / 合成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_prop",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [
+   "gachaId"
+  ],
+  "response_fields": [
+   "countdownFreeGachaInfos",
+   "free",
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainGachaPointsRewards",
+  "category": "抽卡 / 合成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getGachaBroadcast",
+  "category": "抽卡 / 合成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getGachaPointsInfo",
+  "category": "抽卡 / 合成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_activity_reward_claim",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getSharkGachaBoxInfo",
+  "category": "抽卡 / 合成",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "gachaBoxCard"
+  ]
+ },
+ {
+  "method": "refreshGachaBox",
+  "category": "抽卡 / 合成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "refreshType"
+  ],
+  "response_fields": [
+   "gachaBoxCard"
+  ]
+ },
+ {
+  "method": "synthetizeCard",
+  "category": "抽卡 / 合成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "metaId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "synthetizeEquip",
+  "category": "抽卡 / 合成",
+  "op": "写",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "metaId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "synthetizeItem",
+  "category": "抽卡 / 合成",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "formulaId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "upgradeCard",
+  "category": "抽卡 / 合成",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_prop",
+   "id_alloc",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "masterId",
+   "slaveIds"
+  ],
+  "response_fields": [
+   "sharkCard",
+   "sharkCard.metaId"
+  ]
+ },
+ {
+  "method": "answerQuestion",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "answer",
+   "questionMetaId"
+  ],
+  "response_fields": [
+   "nextQuestionMetaId",
+   "over",
+   "result",
+   "wrongAnswer1Key",
+   "wrongAnswer2Key",
+   "wrongAnswer3Key"
+  ]
+ },
+ {
+  "method": "challengeChrist",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_christ",
+   "player_activity",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "christId"
+  ],
+  "response_fields": [
+   "bigReward",
+   "chapterFinishReward",
+   "dialogId",
+   "retCode",
+   "win"
+  ]
+ },
+ {
+  "method": "challengeCowStage",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cowStageId"
+  ],
+  "response_fields": [
+   "selectId",
+   "win"
+  ]
+ },
+ {
+  "method": "challengeMysterious",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "difficultyDegree",
+   "id"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "changeDiceLuck",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "changeDiceLuckCount",
+   "changeLuckCountPerThrow",
+   "diceNewRewards",
+   "gainedCoin",
+   "throwDiceCount"
+  ]
+ },
+ {
+  "method": "chargeBalloon",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "ensureSuccess"
+  ],
+  "response_fields": [
+   "currPoint"
+  ]
+ },
+ {
+  "method": "defaultPhoneNum",
+  "category": "活动",
+  "op": "读",
+  "tables": [],
+  "server_implemented": false,
+  "params": [
+   "phoneNum"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "distributeBonus",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "red_packet",
+   "red_packet_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "accepterList",
+   "accepterType",
+   "bonusId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "eatPeach",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "featureName"
+  ],
+  "response_fields": [
+   "gainedEnergy"
+  ]
+ },
+ {
+  "method": "gainBalloonPoint",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "currPoint"
+  ]
+ },
+ {
+  "method": "gainLimitReward",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "stepId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getAccumulateGems",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "player_gem_card",
+   "payment_order",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "accumulateGems"
+  ]
+ },
+ {
+  "method": "getAccumulateRechargeInfo",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "payment_order",
+   "charge_log",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "remainingDays",
+   "rewards"
+  ]
+ },
+ {
+  "method": "getActivityBalloonInfo",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "balloonRanks",
+   "currPoint"
+  ]
+ },
+ {
+  "method": "getBonusAccepterList",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "red_packet",
+   "red_packet_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "bonusId"
+  ],
+  "response_fields": [
+   "friendList",
+   "unionList"
+  ]
+ },
+ {
+  "method": "getDailyRecharge",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "payment_order",
+   "charge_log",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "dailyRecharge"
+  ]
+ },
+ {
+  "method": "getGemConsumeInfo",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rewardId"
+  ],
+  "response_fields": [
+   "consumeGems",
+   "gainedRewards"
+  ]
+ },
+ {
+  "method": "getLevelRaceInfo",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "levelRaceRanks"
+  ]
+ },
+ {
+  "method": "getMaintenanceMeta",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "maintenanceItem"
+  ]
+ },
+ {
+  "method": "getQuestionInfo",
+  "category": "活动",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "dailyNum",
+   "questionId",
+   "questionNum",
+   "wrongAnswer1Key",
+   "wrongAnswer2Key",
+   "wrongAnswer3Key"
+  ]
+ },
+ {
+  "method": "rechargeCalls",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "payment_order",
+   "charge_log",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "callsType",
+   "phoneNum"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "recordActivityFbShare",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "recordGameFbShare",
+  "category": "活动",
+  "op": "写",
+  "tables": [],
+  "server_implemented": false,
+  "params": [
+   "shareId",
+   "shareSuccess"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "resetChrist",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_christ",
+   "player_activity",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "christId"
+  ],
+  "response_fields": [
+   "retCode"
+  ]
+ },
+ {
+  "method": "setoffFireworks",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "throwDice",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "changeDiceLuckCount",
+   "changeLuckCountPerThrow",
+   "coins",
+   "diceStates",
+   "throwDiceCount"
+  ]
+ },
+ {
+  "method": "wishing",
+  "category": "活动",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "coins",
+   "multiple"
+  ]
+ },
+ {
+  "method": "bindAccount",
+  "category": "登录 / 账号 / 连接",
+  "op": "写",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": false,
+  "params": [
+   "platformId",
+   "platformUid",
+   "sid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "createUser",
+  "category": "登录 / 账号 / 连接",
+  "op": "写",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "avatarId",
+   "inviteCode",
+   "nickName"
+  ],
+  "response_fields": [
+   "sharkUser",
+   "sharkUser.serverId",
+   "sharkUser.uid"
+  ]
+ },
+ {
+  "method": "geneNickname",
+  "category": "登录 / 账号 / 连接",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "nickname"
+  ]
+ },
+ {
+  "method": "getServerStatus",
+  "category": "登录 / 账号 / 连接",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getServerTimeStamp",
+  "category": "登录 / 账号 / 连接",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getSocketServer",
+  "category": "登录 / 账号 / 连接",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "serverAddress",
+   "serverPort",
+   "token"
+  ]
+ },
+ {
+  "method": "loginServer",
+  "category": "登录 / 账号 / 连接",
+  "op": "读",
+  "tables": [
+   "account",
+   "account_binding",
+   "player",
+   "player_extend",
+   "player_tutorial_step"
+  ],
+  "server_implemented": true,
+  "params": [
+   "accountId"
+  ],
+  "response_fields": [
+   "accountReturnRewards",
+   "uid"
+  ]
+ },
+ {
+  "method": "searchUserByNickname",
+  "category": "登录 / 账号 / 连接",
+  "op": "读",
+  "tables": [
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "nickName"
+  ],
+  "response_fields": [
+   "friendUid",
+   "sharkFriendDetail",
+   "sharkFriendDetail.friend",
+   "sharkFriendDetail.invitationSent"
+  ]
+ },
+ {
+  "method": "replaceMatrixGrid",
+  "category": "矩阵",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_battle_array",
+   "player_battle_slot",
+   "player_matrix",
+   "player_matrix_grid"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardId",
+   "matrixId",
+   "posId"
+  ],
+  "response_fields": [
+   "type"
+  ]
+ },
+ {
+  "method": "upgradeMatrix",
+  "category": "矩阵",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_battle_array",
+   "player_battle_slot",
+   "player_matrix",
+   "player_matrix_grid",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "matrixId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "challengeArena",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "matchedUid",
+   "revenge"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "challengeContend",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "contendId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "challengeCrossUser",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "index"
+  ],
+  "response_fields": [
+   "matchList"
+  ]
+ },
+ {
+  "method": "challengePkUser",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "opponentUid",
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "destinyBattle",
+  "category": "竞技场 / PK",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [
+   "cardId",
+   "destinyBattleId"
+  ],
+  "response_fields": [
+   "isBossBattle",
+   "monsterGroupId"
+  ]
+ },
+ {
+  "method": "gainArenaScoreByRank",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "reward",
+   "reward.amount"
+  ]
+ },
+ {
+  "method": "gainPkBuff",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "gainPkRewards",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getArenaMatchedPlayers",
+  "category": "竞技场 / PK",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "retCode",
+   "reward",
+   "reward.amount"
+  ]
+ },
+ {
+  "method": "getDestinyInfo",
+  "category": "竞技场 / PK",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [
+   "ignoreAction"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "getPkFoes",
+  "category": "竞技场 / PK",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "pkUserInfos"
+  ]
+ },
+ {
+  "method": "getPkInfo",
+  "category": "竞技场 / PK",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getPkTopRankUsers",
+  "category": "竞技场 / PK",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "rank_board",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "pkUserInfos"
+  ]
+ },
+ {
+  "method": "refreshMatch",
+  "category": "竞技场 / PK",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [
+   "type"
+  ],
+  "response_fields": [
+   "matchList"
+  ]
+ },
+ {
+  "method": "getEquips",
+  "category": "装备",
+  "op": "读",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "quickUpgradeEquip",
+  "category": "装备",
+  "op": "读",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "equipId"
+  ],
+  "response_fields": [
+   "equipId",
+   "sharkEquip"
+  ]
+ },
+ {
+  "method": "sellEquips",
+  "category": "装备",
+  "op": "写",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "equipIds"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "setupEquip",
+  "category": "装备",
+  "op": "写",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "cardId",
+   "equipId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "upgradeEquip",
+  "category": "装备",
+  "op": "写",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "equipId"
+  ],
+  "response_fields": [
+   "equipId",
+   "sharkEquip"
+  ]
+ },
+ {
+  "method": "equipEnchant",
+  "category": "装备附灵",
+  "op": "写",
+  "tables": [
+   "player_equip",
+   "player_card",
+   "player_prop"
+  ],
+  "server_implemented": true,
+  "params": [
+   "equipId"
+  ],
+  "response_fields": [
+   "sharkEquip",
+   "sharkEquip.cardId",
+   "sharkEquip.enchantLevel",
+   "sharkEquip.enchantNum"
+  ]
+ },
+ {
+  "method": "getEnchantStepReward",
+  "category": "装备附灵",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "buyCrossPvpChallengeTime",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "matchList"
+  ]
+ },
+ {
+  "method": "challengeCrossBoss",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "bossType",
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "crossGvgCanMindApply",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "applyCrossGvgRemind"
+  ]
+ },
+ {
+  "method": "exchangeGvgFormation",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_battle_report",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "gainCrossBossReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "gainCrossGachaPointReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "id"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainCrossGachaRankAndMysteriousReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player_daily",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "mysteriousRewards",
+   "rankRewards"
+  ]
+ },
+ {
+  "method": "gainCrossPkGuessReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainCrossPkRankReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "rank_board",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainCrossPkServerReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainCrossPvpActiveReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "activeId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainCrossPvpBattleReward",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "type"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getCrossBossInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getCrossBossRankInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "rank_board"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getCrossGachaInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "player_card",
+   "player_card_skill",
+   "player_counter",
+   "gacha_log",
+   "id_alloc",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getCrossGvgGroupInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getCrossGvgInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "coinInspireNum",
+   "signs",
+   "striveInspireNum"
+  ]
+ },
+ {
+  "method": "getCrossGvgInfoBase",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "crossGvgVersion",
+   "groupId",
+   "out",
+   "selfApplyCrossGvg",
+   "selfQuitCrossGvg",
+   "unionApplyCrossGvg"
+  ]
+ },
+ {
+  "method": "getCrossPkCapacity",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "crossPkUserCapacities"
+  ]
+ },
+ {
+  "method": "getCrossPkInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "crossPkGroupInfo"
+  ]
+ },
+ {
+  "method": "getCrossPkReport",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [
+   "reportId"
+  ],
+  "response_fields": [
+   "userinfo1",
+   "userinfo2",
+   "whetherWin"
+  ]
+ },
+ {
+  "method": "getCrossPvpInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "battleInfo",
+   "battleInfo.activeScore",
+   "battleInfo.battleScore",
+   "battleInfo.freeRefreshTimestamp",
+   "battleInfo.matchList",
+   "battleInfo.rank",
+   "phaseIndex",
+   "rewardInfo",
+   "rewardInfo.rankRewardStatus",
+   "rewardInfo.ranks",
+   "rewardInfo.serverRewardStatus"
+  ]
+ },
+ {
+  "method": "getCrossPvpRankInfo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "rank_board"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rank",
+   "rankInfos",
+   "score"
+  ]
+ },
+ {
+  "method": "getCrossPvpReport",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rank",
+   "score"
+  ]
+ },
+ {
+  "method": "getCrossPvpVideo",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record"
+  ],
+  "server_implemented": false,
+  "params": [
+   "reportId"
+  ],
+  "response_fields": [
+   "retCode"
+  ]
+ },
+ {
+  "method": "guessCrossPkRank",
+  "category": "跨服",
+  "op": "读",
+  "tables": [
+   "arena_rank",
+   "pk_record",
+   "rank_board"
+  ],
+  "server_implemented": false,
+  "params": [
+   "guessUid"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "inspireCrossBossTeam",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "gems",
+   "props"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "inspireCrossGvg",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "refreshCrossBossBattlePhase",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "player_activity"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "uploadCrossGvgTeamMirror",
+  "category": "跨服",
+  "op": "写",
+  "tables": [
+   "guild",
+   "guild_member",
+   "cross_gvg_apply",
+   "cross_gvg_score",
+   "cross_gvg_formation",
+   "cross_gvg_report",
+   "cross_gvg_group",
+   "cross_gvg_bless",
+   "cross_gvg_bless_log",
+   "guild_formation_slot",
+   "guild_formation_team",
+   "guild_battle_report"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "challengeBabel",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "selectId"
+  ]
+ },
+ {
+  "method": "challengeSkyTower",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_sky_tower",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "floor",
+   "type",
+   "version"
+  ],
+  "response_fields": [
+   "clearNewBabel",
+   "currFloor",
+   "currTotalStars",
+   "firstTimeBigWin",
+   "forbidSkip",
+   "haveReward",
+   "haveTimesLeft",
+   "leftHpRate",
+   "monsterGroupId",
+   "selectDifficult",
+   "win"
+  ]
+ },
+ {
+  "method": "gainAutoClimbReward",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_sky_tower",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "speedUp"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainSkipBattleAddition",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "floorId",
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainSkipBattleRewards",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getBabelInfo",
+  "category": "通天塔",
+  "op": "读",
+  "tables": [
+   "player_sky_tower"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "resetBabel",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_sky_tower",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "resetClimbData",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_sky_tower",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "type"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "skipSkyTowerBattle",
+  "category": "通天塔",
+  "op": "读",
+  "tables": [
+   "player_sky_tower"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "startAutoClimbBabel",
+  "category": "通天塔",
+  "op": "写",
+  "tables": [
+   "player_sky_tower"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "buyActionPower",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "requisites"
+  ]
+ },
+ {
+  "method": "buyChallengeNum",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "amount",
+   "requisite"
+  ]
+ },
+ {
+  "method": "buyEnergy",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "buyEnergyStone",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "num"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "buyEventPoint",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "buyGoods",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [
+   "goodsId"
+  ],
+  "response_fields": [
+   "reward"
+  ]
+ },
+ {
+  "method": "buyGrid",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_extend",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "requisite",
+   "requisite.amount",
+   "rewards"
+  ]
+ },
+ {
+  "method": "buyMissionCompleteCount",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_mission_context",
+   "player_scene_process",
+   "player_mission_complete",
+   "player_daily_counter",
+   "player",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "missionId"
+  ],
+  "response_fields": [
+   "gems"
+  ]
+ },
+ {
+  "method": "buySeckillItem",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily_counter",
+   "player",
+   "player_activity_reward_claim",
+   "player_daily"
+  ],
+  "server_implemented": false,
+  "params": [
+   "id"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "exchangeGiftBag",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "activationCode"
+  ],
+  "response_fields": [
+   "exchangeGiftBagInfo",
+   "rewards"
+  ]
+ },
+ {
+  "method": "exchangeMedalShop",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "exchangeId",
+   "exchangeListId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "exchangeMysteriousItem",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "id"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "exchangeSecretShop",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "exchangeId",
+   "exchangeListId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getMedalShopList",
+  "category": "道具 / 商店",
+  "op": "读",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "itemIdList"
+  ]
+ },
+ {
+  "method": "getProps",
+  "category": "道具 / 商店",
+  "op": "读",
+  "tables": [
+   "player_prop",
+   "player_secret_shop"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "getSeckillInfo",
+  "category": "道具 / 商店",
+  "op": "读",
+  "tables": [
+   "player_activity",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "seckillItems"
+  ]
+ },
+ {
+  "method": "getSecretShopList",
+  "category": "道具 / 商店",
+  "op": "读",
+  "tables": [
+   "player_prop",
+   "player_secret_shop"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "itemIdList"
+  ]
+ },
+ {
+  "method": "refreshMedalShop",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [],
+  "response_fields": [
+   "itemIdList"
+  ]
+ },
+ {
+  "method": "refreshSecretShop",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": [
+   "itemIdList"
+  ]
+ },
+ {
+  "method": "sellProps",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "requisite"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "useProp",
+  "category": "道具 / 商店",
+  "op": "写",
+  "tables": [
+   "player_prop",
+   "player_secret_shop",
+   "player_daily",
+   "player_daily_counter",
+   "player"
+  ],
+  "server_implemented": true,
+  "params": [
+   "amount",
+   "propId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "batchDeleteRewardEmail",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rewardEmailIds"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "batchDeleteSysEmail",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta"
+  ],
+  "server_implemented": false,
+  "params": [
+   "sysEmailIds"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "batchDeleteSysNotice",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta"
+  ],
+  "server_implemented": false,
+  "params": [
+   "sysNoticeIds"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "batchDeleteUserEmail",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "userEmailIds"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "deleteSysEmail",
+  "category": "邮件",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta"
+  ],
+  "server_implemented": false,
+  "params": [
+   "sysEmailMetaId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "deleteSysNotice",
+  "category": "邮件",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta"
+  ],
+  "server_implemented": false,
+  "params": [
+   "sysNoticeId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "deleteUserEmail",
+  "category": "邮件",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": false,
+  "params": [
+   "userEmailId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "gainRewardEmailReward",
+  "category": "邮件",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "rewardEmailId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "gainSysEmailReward",
+  "category": "邮件",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_activity_reward_claim",
+   "player"
+  ],
+  "server_implemented": false,
+  "params": [
+   "sysEmailId"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ },
+ {
+  "method": "getUserEmails",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [],
+  "response_fields": []
+ },
+ {
+  "method": "modifyEmail",
+  "category": "邮件",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta"
+  ],
+  "server_implemented": false,
+  "params": [
+   "newEmail"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "readRewardEmail",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_activity_reward_claim"
+  ],
+  "server_implemented": true,
+  "params": [
+   "rewardEmailId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "readSysEmail",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta"
+  ],
+  "server_implemented": true,
+  "params": [
+   "sysEmailMetaId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "readSysNotice",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta"
+  ],
+  "server_implemented": true,
+  "params": [
+   "sysNoticeId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "readUserEmail",
+  "category": "邮件",
+  "op": "读",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "userEmailId"
+  ],
+  "response_fields": []
+ },
+ {
+  "method": "sendUserEmail",
+  "category": "邮件",
+  "op": "写",
+  "tables": [
+   "mail",
+   "mail_attachment",
+   "sys_email_meta",
+   "player_daily",
+   "player_daily_counter"
+  ],
+  "server_implemented": true,
+  "params": [
+   "content",
+   "receiveUid"
+  ],
+  "response_fields": [
+   "rewards"
+  ]
+ }
+]

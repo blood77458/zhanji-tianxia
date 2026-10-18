@@ -15,11 +15,15 @@ app_server/
 ├── requirements.txt          ← Python 依赖（可选 Pillow）
 ├── ARCHITECTURE.md           ← 协议 / 架构逆向报告（进阶）
 ├── HANDOFF.md                ← 开发交接笔记（进阶）
+├── API.md / SERVER_DATA_MODEL.md  ← 新服务端协议与数据模型（进阶）
 ├── server/                   ← 兼容服务端（开箱即用）
-│   ├── canon_server.py       ← HTTP :80 + TCP :9700
-│   ├── features.py           ← 养成 / 转生 / 活动等业务
+│   ├── canon_server.py       ← 【旧】JSON 存档版 HTTP :80 + TCP :9700
+│   ├── gameserver.py         ← 【新】SQLite 版入口（推荐）
+│   ├── schema.sql / db.py / api/ / repository/ / services/
+│   ├── features.py           ← 旧版养成 / 转生 / 活动等业务
 │   ├── admin_api.py + admin.html + card_dict.json
-│   └── start_server.bat      ← 一键启动
+│   ├── start_server.bat      ← 启动旧版 canon_server
+│   └── start_gameserver.bat  ← 启动新版 gameserver（自动 init_db）
 ├── client/                   ← 客户端说明（APK 见 Release）
 │   └── README.md
 └── work/
@@ -29,8 +33,16 @@ app_server/
     └── hosts_*.txt           ← 模拟器 hosts 示例
 ```
 
+**两套服务端：**
+
+| | 旧版 `canon_server.py` | 新版 `gameserver.py` |
+|--|------------------------|---------------------|
+| 存档 | `user_state.json` | SQLite `canon.db`（88 表） |
+| 启动 | `start_server.bat` | `start_gameserver.bat` |
+| 说明 | 已验证可玩 | 见 `server/README.md`（分层 + 测试） |
+
 **账号是否共享？**  
-服务端用本地文件 `server/user_state.json` 存档（**不是 SQL 数据库**）。每人各自跑服务端 = 各自独立账号；多人连同一台服务端 = 共享同一份存档。
+各自跑各自的服务端 = 独立账号。旧版看 `user_state.json`；新版看 `canon.db`。
 
 ---
 
@@ -55,32 +67,35 @@ pip install -r requirements.txt
 
 ## 二、启动服务端
 
-1. 打开终端，进入 `server` 目录：
+进入 `server` 目录后任选其一：
+
+**推荐（新版 SQLite）**
 
 ```bat
 cd /d <本仓库>\server
-start_server.bat
+start_gameserver.bat
+rem 或：python init_db.py && python -u gameserver.py
 ```
 
-或：
+**旧版（JSON 存档，仍可用）**
 
 ```bat
-set CANON_MANIFEST_MD5=81c8ede8d76998cd852173d537c04aac
-python -u canon_server.py
+start_server.bat
+rem 或：set CANON_MANIFEST_MD5=81c8ede8d76998cd852173d537c04aac
+rem     python -u canon_server.py
 ```
 
-2. 看到类似日志即成功：
+看到类似日志即成功：
 
 - HTTP 监听 `0.0.0.0:80`
 - TCP 监听 `0.0.0.0:9700`
 
-3. 本机浏览器打开管理页：
-
-- [http://127.0.0.1/admin](http://127.0.0.1/admin)  
-  可改金币/元宝/VIP、加删武将、调等级等。
+本机管理页：[http://127.0.0.1/admin](http://127.0.0.1/admin)（改金币/元宝/VIP、加删武将等）。
 
 **重要**：`CANON_MANIFEST_MD5` 必须与客户端 APK 内 `assets/static_config.<md5>.xml` 一致。  
 当前推荐客户端对应：`81c8ede8d76998cd852173d537c04aac`。若你重新打了补丁，请用新 MD5 覆盖该环境变量。
+
+新版分层与测试说明见 [`server/README.md`](server/README.md)。
 
 ### 防火墙
 

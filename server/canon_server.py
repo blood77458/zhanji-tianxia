@@ -1570,7 +1570,16 @@ def _game_init_extra():
         "sharkSpirits": {"sharkSpirits": list(ST.spirits)},
         # RewardManager / BackpackScene expect this wrapper; omit => nil and
         # some paths assume .sharkTreasures exists.
-        "sharkTreasures": {"sharkTreasures": []},
+        "sharkTreasures": {"sharkTreasures": list(getattr(ST, "treasures", []) or [])},
+        # TreasureGachaScene / GachaScene — lastFreeTreasureGachaSeconds /
+        # rpValue. Omit => free-gacha timer treated as 0 (ok) but some paths
+        # write into the table; keep a real dict.
+        "sharkGachaInfo": {
+            "lastFreeTreasureGachaSeconds": int(getattr(
+                ST, "last_free_treasure_gacha_seconds", 0) or 0),
+            "rpValue": int(getattr(ST, "rp_value", 0) or 0),
+            "rpGachaTimes": int(getattr(ST, "rp_gacha_times", 0) or 0),
+        },
         # CountryManager.initializeData — MUST be fully populated (never {}).
         # Missing => client resets to first mission / finishedStep=0 every login.
         "sharkMissionContext": dict(ST.mission_context),
@@ -1701,8 +1710,21 @@ def _game_setting_config():
             "specialTrainCeil": 10,
         },
         "cardPowerConfig": {},
-        "eliteConfig": {},
-        "friendSystem": {},
+        # ⚠️ 不能给 {}：客户端 EliteManager.getEliteSetting().eliteConsumeEnergy 会是 nil，
+        # EliteSweepConfirmPopmPanel:94 会拿「体力 / nil」做运算直接 Lua 报错。
+        # 原值来自客户端源码注释：eliteConsumeEnergy=5、eliteRefreshGoldCost=10。
+        "eliteConfig": {
+            "eliteConsumeEnergy": 5,
+            "eliteRefreshGoldCost": 10,
+        },
+        "friendSystem": {
+            "maxFriends": 50,
+            "maxFreeGiftPerDay": 10,
+            "maxFriendInvitationSent": 20,
+            "energyGift": 5,
+            "energyReward": 5,
+            "recommendNum": 10,
+        },
         "secretShopConfig": {
             # ActivityPanelScene splits this on '|' and indexes [i+1].
             # A bare number (or single short interval) makes [i+1] nil → SIGKILL
@@ -1766,21 +1788,55 @@ def _all_maintenance_items():
     """Open every activity_panel featureName plus hard-coded enable() names."""
     names = [
         # activity_panel.featureName (tab catalog)
+        # ⚠️ cardBook 必须开：AchievementScene.isEnable() 读 getMeta.cardBookFeatureName
+        #    + MaintenanceManager.isActivityOpen("cardBook")。为 false 时客户端
+        #    `CellNumberList` 只插 3 项（缺图鉴成就那一类），而 AchievementTypeNum
+        #    是固定枚举数 —— 领成就奖励时 AchievementScene:1289
+        #    `TotalCellNum[i-1] + CellNumberList[i]` 就越界，
+        #    表现正是「任务一领取就闪退」。
+        "cardBook",
+        # crossBoss 暂时不开：meta 里没有 crossBossSettingConfig（原厂未随包下发），
+        # 客户端一进面板就读 cfg.unlockLevel，nil 直接崩。详见 assembler.py 里的说明。
         "activity1Rest", "worldBoss", "fountainWish", "mysterious",
-        "mysteriousShop", "crossBoss", "cowStage",  # goldGod off: incomplete config crashes enable()
-        "activityChargeRewardPanel", "ActivityLimitReward",
+        # 迎财神：花钻石换金币，meta_payload 的 activityGoldGodConfig 和
+        # handlers_activity_online.gainGoldGodRewards 都已就绪，之前漏开导致
+        # 「页签在、点了没反应」。
+        "mysteriousShop", "goldGod", "cowStage",
+        # ⚠️ 以下都是**纯充值**活动，本服没有支付通道，配置也没有内容：
+        #    开了只会是空白面板或直接崩。统一关闭（页签不再出现）：
+        #      activityChargeRewardPanel 豪礼大放送（客户反馈"没东西，关了也行"）
+        #      consumeRewards            多重好礼（consumeRewards 为 nil，点开必崩）
+        #      ActivityLimitReward       限时充值
+        #      chargeReward              充值豪礼
+        #      chargeFeedback            充值回馈
+        #      activity_phoneCharge      充值送话费
+        #      activity_dailyCharge      每日首充（无支付即永远领不到）
         "activityGachaXiaoyu", "activityGachaPointsPanel",
         "activityTreasureboxAll", "activityGemConsume", "activityBalloon",
-        "eventNewyear", "questionDaily", "activityInvitationCode",
+        # ⚠️ eventNewyear（面板显示「甜蜜嫁期」）关掉：它的关卡表
+        #    activityEventChristmasConfig.christList 原厂没随包下发，
+        #    开了只有空列表（"没有关卡"），challengeChrist 也只能回 714651。
+        # ⚠️ activityInvitationCode（面板显示「一起做主」）关掉：
+        #    点开直接 **原生 SIGSEGV**（GLThread 空指针，不是 Lua 错误，
+        #    服务端无法规避），而且它依赖真实邀请后台。
+        "questionDaily",
         "activityContendPanel", "activityWanted", "activityChallenge",
-        "activityFbShare", "activity_phoneCharge", "activity_dailyCharge",
+        "activityFbShare",
         "activityPray", "activityPraise", "gemCard", "activitySecretShop",
-        "consumeRewards", "activityCardExchange", "exchangeDaily",
-        "activityDayReward", "chargeReward", "chargeFeedback",
-        "activitySeckill", "multiplayerBossPanel", "activityFireworks",
+        # ⚠️ activityCardExchange（以旧换新）/ exchangeDaily（易帅换将）关掉：
+        #    这两套活动需要的 cardExchangeMeta / cardExchangeDailyMeta
+        #    原厂**没随客户端包下发**（configs 里就没有 activity_card_exchange /
+        #    exchange_daily），于是 Activity_ExchangeDailyLayer:527
+        #    拿 nil 和数字比较 → 点开直接崩。
+        "activityDayReward",
+        # ⚠️ activitySeckill（周末秒杀）关掉：商品条目缺 buyNum，
+        #    Activity_SeckillLayer:667 `currentNum < v.buyNum` 直接崩。
+        "multiplayerBossPanel", "activityFireworks",
         "activityDoubleSilver", "fortuneNow", "activityThrowDice",
         # activityLevelRacePanel off: bad displayTypes crashes ActivityPanelScene
-        "activitySwornBrothers",
+        # ⚠️ activitySwornBrothers（桃园结义）关掉：Activity_SwornLayer:494
+        #    `getRewardInfoByID(cfg.rewardPackageId)[1]` 拿到 nil 就崩，
+        #    它要的奖励包内容没有随包下发。
         "consecutiveLogin", "consecutiveLoginNew", "calendarLogin",
         # Extra names used by layer.enable() / getMeta stubs
         "activity2Rest", "worldBoss1", "activityMysteriousExchange",
@@ -1789,11 +1845,14 @@ def _all_maintenance_items():
         "activityGachaXiaoyuGainReward", "activityGachaPointsGainReward",
         "activityNewyearPanel", "questionReward", "limitReward",
         # activityLevelRace / GainReward kept closed (same crash family)
-        "activityPhoneCharge", "activityDailyCharge",
+        # ⚠️ 面板的 enable() 用的是**驼峰名**，不是 activity_panel 里的蛇形名：
+        #    Activity_DailyFirstChargeLayer:enable() 查 "activityDailyCharge"。
+        #    所以光关 activity_dailyCharge 页签还在、点进去仍原生 SIGSEGV。
+        #    activityPhoneCharge 同理（充值送话费）。
         "multiplayerBoss", "wanted", "contend", "seckill", "dice",
         "praise", "balloon", "swornBrothers", "newyear", "levelRace",
         "activityGemConsume", "activityFireworks", "activityDoubleSilver",
-        "activityThrowDice", "activitySeckill", "activityFortuneNow",
+        "activityThrowDice", "activityFortuneNow",
         "activityNewyearCalcPay", "activityNewyearGainReward",
         "doubleCharge_before", "doubleCharge_curr",
     ]
@@ -1876,7 +1935,18 @@ def _shark_user_extend(returning=False):
         # --- dicts ---
         "continuousLoginInfo": {},
         "continuousLoginRewardInfoV2": {},
-        "countdownRewardInfo": {},
+        # Empty {} is truthy in Lua — BaseUIScene then reads .finished /
+        # .inProcessRewardId / .latestRewardTimestamp and SIGKILLs. Returning
+        # guests: mark finished so the 限时奖励 tile stays quiet. New players
+        # start at reward 1 with countdown already elapsed.
+        "countdownRewardInfo": {
+            "latestRewardTimestamp": int(
+                getattr(ST, "countdown_reward_ts", 0) or time.time()),
+            "inProcessRewardId": int(
+                getattr(ST, "countdown_reward_id", 1) or 1),
+            "finished": bool(
+                returning or getattr(ST, "countdown_reward_finished", False)),
+        },
         "doubleChargeInfo": {"doubleCharge": False, "version": 0},
         "exchangeGiftBagInfo": {},
         "signInInfo": {
@@ -2635,12 +2705,23 @@ class Handler(BaseHTTPRequestHandler):
             log(f"  {method} -> battle stub win=True")
             return base
         if method in ("getCowStageInfo", "getWantedInfo", "getWorldBossInfo",
-                      "getEatPeachInfo", "getBabelInfo"):
+                      "getEatPeachInfo", "getBabelInfo", "getSkyTowerInfo",
+                      "getMultiplayserBossInfo", "getRobUserList"):
             if method == "getCowStageInfo":
                 base.update({"cowStageInfos": []})
             elif method == "getWantedInfo":
-                base.update({"wantedInfos": [], "wantedTasks": [],
-                             "refreshTimes": 5})
+                # Activity_WantedLayer:getData reads e.data.wantedInfo.wanteds /
+                # wantedConfigId — empty wantedInfos-only payload => SIGKILL.
+                base.update({
+                    "wantedInfo": {
+                        "wantedConfigId": 1,
+                        "wanteds": 0,
+                        "refresh": False,
+                    },
+                    "wantedInfos": [],
+                    "wantedTasks": [],
+                    "refreshTimes": 5,
+                })
             elif method == "getWorldBossInfo":
                 base.update({
                     "worldBossHp": 1000000,
@@ -2655,6 +2736,64 @@ class Handler(BaseHTTPRequestHandler):
                 base.update({"eatPeachInfos": [], "eatPeachStatus": True})
             elif method == "getBabelInfo":
                 base.update({"babelInfo": {"floor": 1, "maxFloor": 50}})
+            elif method == "getSkyTowerInfo":
+                # Shape from GetSkyTowerInfoRequest.lua test stub + services.
+                _days = max(1, int((time.time() - 1704067200) // 86400))
+                _st = {
+                    "days": _days,
+                    "climbTimes": 0,
+                    "maxTotalStars": 100,
+                    "currTotalStars": 0,
+                    "currUsedStars": 0,
+                    "maxFloor": 0,
+                    "currFloor": 1,
+                    "beginSkipFloor": 1,
+                    "inTopRankDays": 0,
+                    "gainFloorBuff": [],
+                    "selfAtkBuff": 0,
+                    "selfDefBuff": 0,
+                    "selfHpBuff": 0,
+                    "enemyAtkDebuff": 0,
+                    "enemyDefDebuff": 0,
+                    "gainYesterdayReward": False,
+                    "dead": False,
+                    "skipBattle": False,
+                    "selectDifficult": 0,
+                    "maxBigWinFloor": 1,
+                }
+                base.update({
+                    "pastStatus": dict(_st),
+                    "currStatus": dict(_st),
+                    "pastRanks": [],
+                    "sharkSkyTower": {
+                        "uid": str(ST.uid),
+                        "maxBigWinFloor": 1,
+                        "maxFloor": 300,
+                        "maxTotalStars": 900,
+                    },
+                })
+            elif method == "getMultiplayserBossInfo":
+                # MultiplayerBossScene / getTipInfo — empty {} => SIGKILL on
+                # #activeBossInfo / rankingFeatureName.
+                base.update({
+                    "activeBossInfo": [],
+                    "bossChallengeRecord": [],
+                    "rank": 0,
+                    "gainedRankReward": True,
+                    "actionPower": 100,
+                    "actionPowerLastUpdateTime": int(time.time()),
+                    "battleType": 0,
+                    "globalReturnScene": False,
+                })
+            elif method == "getRobUserList":
+                base.update({"robUserList": [], "robRobotList": []})
+            return base
+        if method in ("getReviewFriends", "getInvitationFriends"):
+            base.update({"sharkFriends": [], "receivedEnergy": 0})
+            return base
+        if method == "replaceMatrixGrid":
+            # BackpackScene only needs type; type!=1 skips queue rewrite.
+            base.update({"type": int(params.get("type") or 0), "succ": True})
             return base
         if method in ("eatPeach", "inspireInWorldBoss", "gainWorldBossRewards",
                       "setAutoWorldBoss", "refreshWanted", "exchangeItem",
@@ -2662,6 +2801,15 @@ class Handler(BaseHTTPRequestHandler):
                       "refreshSecretShop"):
             if "secret" in method.lower() or method.startswith("Refresh"):
                 base.update(_secret_shop_payload())
+            elif method == "refreshWanted":
+                base.update({
+                    "wantedInfo": {
+                        "wantedConfigId": min(5, int(params.get("minimum") or 1) + 1),
+                        "wanteds": 0,
+                        "refresh": True,
+                    },
+                    "succ": True,
+                })
             else:
                 base.update({"rewards": [_reward(1, 100)], "succ": True})
             return base
@@ -2703,209 +2851,10 @@ class Handler(BaseHTTPRequestHandler):
             base.update({"noChatEndSeconds": 0})
             return base
         if method == "getMeta":
-            # The client loads most of its data locally (require "canon.configs.X");
-            # only a handful of tables come from the server.  LoginScene.lua:228
-            # requires DataManager.GameMetaData.cardPictureConfig.cardPictures.
-            _ad_url = "http://android1.canon.happyelements.cn/static/ad/banner.png"
-            # GachaScene.preloadAd (line 1167) iterates these ids and dereferences
-            # MetaManager.getAdPictureById(id).url with NO nil check -> every id
-            # listed there must exist or the client SIGKILLs.
-            _ad_ids = ["advacedGacha_1", "advacedGacha_2", "normalGacha_1",
-                       "activityGacha_1", "activityGacha_2", "friendGacha_1",
-                       "boxGacha"]
-            # Activity_*:enable() / MainMenuScene icon filters dereference
-            # GameMetaData.activity*Config.featureName with NO nil guard.
-            def _act(name, name2=None, **extra):
-                d = {"featureName": name}
-                if name2:
-                    d["featureName2"] = name2
-                d.update(extra)
-                return d
-
-            return {
-                "method": method, "retCode": 200,
-                "cardPictureConfig": {"cardPictures": []},
-                # read as game_meta.adPictureConfig.adPictures (MetaManager:487)
-                "adPictureConfig": {
-                    "adPictures": [{"id": i, "url": _ad_url, "name": i}
-                                   for i in _ad_ids],
-                },
-                # MainMenuScene:440/1527 read game_meta.adMainUiConfig.adMainUis
-                # DIRECTLY (no guard); getAdvPicByMeta handles a nil entry, so an
-                # empty list degrades to the built-in default banner.
-                "adMainUiConfig": {"adMainUis": []},
-                "skyTowerSettingConfig": {},
-                # SpiritManager.isUserLevelEnough compares unlockLevel with NO
-                # nil guard (unlike TreasureManager). Empty {} => SIGKILL when
-                # MainMenu scrolls past SpiritBackPack.
-                "spiritSettingConfig": {
-                    "unlockLevel": 60,
-                    "spiritPoolInitSize": 50,
-                    "spiritPoolExtraSizePerPurchase": 10,
-                    "spiritPoolMaxExpandTimes": 20,
-                    "spiritPoolExpandCost": 50,
-                    "lockedRefreshMultiplier": 2,
-                    "unlockPrice": 100,
-                    "refreshPropId": 0,
-                },
-                "activityEventChristmasConfig": _act("eventNewyear"),
-                "activityGachaXiaoyuConfig": _act(
-                    "activityGachaXiaoyu",
-                    crossGachaServerGroups=[{"serverIds": [1]}]),
-                "activityCowStageConfig": {
-                    "featureNamesList": ["cowStage"],
-                },
-                "activityFountainWishConfig": _act(
-                    "fountainWish", requiredLevel=1),
-                "activityWorldBossConfig": _act(
-                    "worldBoss", "worldBoss1",
-                    prepareTime=1800, dantengTime=12, rankProcessTime=3600,
-                    rankingRange=100, inspireLimit=10),
-                "activityWantedConfig": _act("activityWanted", completeNum=0,
-                                              newRefreshPrice="0", refreshPrice="0"),
-                "activityGoldGodConfig": _act(
-                    "goldGod",
-                    version=2,
-                    goldGodMaxTimes=0,
-                    goldGodRewardItems=[]),
-                "activityTreasureboxPointsConfig": _act(
-                    "treasureboxPoints",
-                    featureNameTreasureboxPoints="treasureboxPoints",
-                    featureNameGainReward="treasureboxPointsReward",
-                    featureNamePanel="treasureboxPointsPanel",
-                    rankRewardMetas=[], pointRewardMetas=[]),
-                "activitySwornBrothersConfig": _act(
-                    "activitySwornBrothers", swornBrothersRewardItems=[]),
-                "activitySeckillConfig": _act("activitySeckill"),
-                "activityDiceConfig": _act("activityThrowDice", maxThrowDiceCount=10,
-                                            freeChangeLuckCount=3,
-                                            baseCoinThrowDice=100,
-                                            diceCoinMultipleItems=[],
-                                            diceGoldConsumeItems=[]),
-                "activityPraiseConfig": _act("activityPraise"),
-                "activityMultiplayerBossConfig": _act("multiplayerBossPanel"),
-                "activityNewYearConfig": _act(
-                    "newyear",
-                    featureNamePanel="activityChargeRewardPanel",
-                    featureNameCalcPay="activityNewyearCalcPay",
-                    featureNameGainReward="activityNewyearGainReward",
-                    version=1),
-                "activityBalloonConfig": _act("activityBalloon"),
-                # LotteryFortuneLayer.getTipNum / shouldShowParticle read
-                # fortuneFreeTime with no nil guard. Missing field => SIGKILL
-                # when MainMenu refreshes tip badges after closing 每日签到.
-                "activityFortuneNowConfig": _act(
-                    "fortuneNow",
-                    fortuneFreeTime=0,
-                    fortuneTimeMax=10,
-                    fortuneCost=20,
-                    fortuneRewardItems=[]),
-                "activityContendConfig": _act(
-                    "contend",
-                    panelFeatureName="activityContendPanel",
-                    featureNameList=["activityContendPanel"],
-                    levelLimit=1),
-                "activityLevelRaceConfig": _act(
-                    "activityLevelRacePanel",
-                    # Client expects [{id, type}, ...]; numbers crash ActivityPanelScene:207
-                    displayTypes=[{"id": 0, "type": 0}],
-                    levelRewardItems=[],
-                    winnerNickname="0"),
-                "activityGemConsumeConfig": _act("activityGemConsume"),
-                "activityDayRewardConfig": _act("activityDayReward", dayRewards={}),
-                "activityConsumeRewardConfig": _act("consumeRewards"),
-                "multiplicityRewardConfig": _act("activityDoubleSilver"),
-                "exchangeDailyConfig": _act("exchangeDaily"),
-                "activityCardExchangeConfig": _act(
-                    "activityCardExchange", cardExchangeMeta=[]),
-                "prayConfig": _act("activityPray"),
-                "fbShareConfig": _act("activityFbShare"),
-                "activitySettingConfig": {
-                    "gemCardConfig": {
-                        "featureName": "gemCard",
-                        "gemCardNum": 100,
-                        "gemCardLastTime": 30,
-                        "gemCardBuyConditionGem": 0,
-                        "gemCardBuyConditionTime": 0,
-                        "gemCardGemCost": 60,
-                    },
-                    "phoneChargeConfig": {
-                        "featureName": "activity_phoneCharge",
-                        "minPayment": 0,
-                        "chargeAmounts": [],
-                    },
-                },
-                # Activity_ChallengeMysteriousLayer:setData always reads
-                # eventMysteriousConfig.eventLimit (even when all nodes are off).
-                # Nil config => SIGKILL on opening 活动.
-                "eventMysteriousConfig": {
-                    "eventLimit": 99,
-                    "energyCost": 2,
-                },
-                # Shop tab gates on featureName; keep closed via empty maintenance.
-                "activityMysteriousExchangeConfig": _act(
-                    "mysteriousShop",
-                    exchangeMetas=[]),
-                # Activity_rechargeLayer.getTipNum -> getUnreceievedRewardsNum
-                # compares recharge[i] >= limitRewards[stepId].rewardDetail; missing
-                # entries leave limitMoney nil => SIGKILL on main-menu tip badges.
-                "activityLimitRewardConfig": {
-                    "featureName": "ActivityLimitReward",
-                    "limitRewards": [
-                        {"stepId": 1, "rewardDetail": 999999, "limitTime": 7,
-                         "reward": []},
-                        {"stepId": 2, "rewardDetail": 999999, "limitTime": 7,
-                         "reward": []},
-                        {"stepId": 3, "rewardDetail": 999999, "limitTime": 7,
-                         "reward": []},
-                    ],
-                    "finalReward": [],
-                },
-                # CountDownRewardNewPanel:147 indexes .rewards — nil => SIGKILL
-                # when the 限时奖励 tile/panel opens mid-chapter.
-                "countdownRewardConfig": {
-                    "rewards": [
-                        {"id": 1, "seconds": 60, "reward": [
-                            {"itemType": 1, "amount": 100}]},
-                        {"id": 2, "seconds": 300, "reward": [
-                            {"itemType": 1, "amount": 200}]},
-                        {"id": 3, "seconds": 600, "reward": [
-                            {"itemType": 1, "amount": 500}]},
-                    ],
-                },
-                "crossArenaRewardConfig": {},
-                "destinyBattleConfig": {},
-                "spiritConcentrateCostConfig": {},
-                # EnchantGuideRewardPanel / Enchant.enabled read this with no nil
-                # guard. Missing after closing 每日签到 (level>=35) => SIGKILL.
-                "enchantTotalConfig": {
-                    "equipMetaId": 210011,
-                    "enchantLevel": 1,
-                    "atk": 1,
-                    "def": 1,
-                    "hp": 1,
-                    "quality3": 100,
-                    "quality4": 100,
-                    "quality5": 100,
-                    "quality6": 100,
-                    "quality7": 100,
-                },
-                "gameSettingConfig": _game_setting_config(),
-                "battleSettingConfig": _battle_setting_config(),
-                "paymentExchangeConfig": {
-                    # MetaManager.getPaymentExchangeConfig reads .paymentExchanges
-                    "paymentExchanges": _payment_exchanges(),
-                },
-                "serverPartitionConfig": {
-                    "runningServers": [{"serverId": 1, "serverName": "本地测试服",
-                                        "enable": True, "beginTime": "0",
-                                        "serverBusy": 100000, "serverNormal": 50000,
-                                        "newServer": False, "whiteAccountIds": ""}],
-                    "preparedServers": [],
-                },
-                "metaVersion": {"meta_version": "0.0.0", "maintenance_version": "0.0.0",
-                                "methods": []},
-            }
+            # Single source of truth: meta_payload.py (keep in sync with
+            # gameserver Services.meta_payload). Missing fields => SIGKILL.
+            from meta_payload import get_meta_payload
+            return get_meta_payload()
         # Bag / team / mail / friends / beasts / shop / sweep + soft stubs.
         if _feat.handle(method, params, base, ST, _starter_card):
             return base

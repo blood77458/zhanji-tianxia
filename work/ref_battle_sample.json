@@ -1,0 +1,80 @@
+[
+ {
+  "eventType": 102,
+  "round": 0,
+  "actionType": 0,
+  "battleCardActs": {
+   "1": {
+    "posId": 1,
+    "skillId": 32000101,
+    "effectId": 1,
+    "changedValue": 57
+   }
+  }
+ },
+ {
+  "eventType": 102,
+  "round": 0,
+  "actionType": 0,
+  "battleCardActs": {
+   "1": {
+    "posId": 2,
+    "skillId": 32000101,
+    "effectId": 1,
+    "changedValue": 57
+   }
+  }
+ },
+ {
+  "eventType": 0,
+  "round": 0,
+  "actionType": 0,
+  "battleCardActs": {
+   "1": {
+    "posId": 10001,
+    "skillId": 0,
+    "effectId": 6,
+    "changedValue": 359
+   }
+  }
+ },
+ {
+  "eventType": 0,
+  "round": 0,
+  "actionType": 1,
+  "battleCardActs": {
+   "1": {
+    "posId": 1,
+    "skillId": 0,
+    "effectId": 6,
+    "changedValue": 585
+   }
+  }
+ },
+ {
+  "eventType": 0,
+  "round": 0,
+  "actionType": 0,
+  "battleCardActs": {
+   "1": {
+    "posId": 10002,
+    "skillId": 0,
+    "effectId": 6,
+    "changedValue": 282
+   }
+  }
+ },
+ {
+  "eventType": 0,
+  "round": 0,
+  "actionType": 1,
+  "battleCardActs": {
+   "1": {
+    "posId": 2,
+    "skillId": 0,
+    "effectId": 6,
+    "changedValue": 720
+   }
+  }
+ }
+]

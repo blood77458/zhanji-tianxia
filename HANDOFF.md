@@ -518,3 +518,222 @@ require "canon.panel.CanonMessageBox"
     重新打包 / python 进程被杀。若发现服务端无故退出、APK 被重建，先确认是否有别的
     会话（例如 Cursor）在同时跑，别盲目归因。
 
+
+
+## 2026-10-11 原包活动修复记录
+详见 work/reference_capture/native_online/RESULTS.md。最终测试 20+29+70 项通过；仍有23个未实现活动方法、缺失豪礼配置及完整战斗规则，不可宣称全功能恢复。当前服务PID34352、manifest d3251ca96be18de83daa73df34d34864。
+
+后续更新：维护时间别名修复后最终21+29+70=120项检查通过，当前PID28020。神兵谱尚需最终UI复核，豪礼活动与引导完成记录仍未解决。
+
+最终UI复核通过：神兵谱入口和消费送好礼六档页面重进后成功打开。详情与待办见native_online/RESULTS.md；不可认定全部玩法已恢复。
+
+## 2026-10-11 16:45 抽卡展示崩溃
+根因与验证详见 work/reference_capture/native_online/GACHA_FIX.md。RewardService返回level/exp缺失已修复，共用活动奖励同样生效，多实例逐一落库；21+29+71项通过。实际免费及98金币付费单抽结果页正常，重进新卡仍在。当前服务PID35276；新手引导完成记录仍待处理。
+
+## 2026-10-11 18:50 武将详情和关平卡面修复
+详见 work/reference_capture/native_online/CARD_DETAIL_FIX.md。修复无效avatar=1导致的详情崩溃与错误立绘，同时修复引导按钮错位、重复解锁配置和升级弹窗nil崩溃。12+21+71检查通过，MuMu实际验证详情/背包/强化/装备/战斗和若干活动入口，副本库验证阵法选将。已恢复正式canon.db，当前PID34216，manifest959c7b7062341840c21ecb4a6be36342。不要认定全部玩法恢复。
+
+## 2026-10-11 20:20 活动与培养继续恢复
+详见 work/reference_capture/native_online/MORE_ACTIVITY_TRAIN_FIX.md。新增吃桃、许愿、小玉积分领奖、财神、灵玉购买；修复灵玉充能/收取/领奖与培养保存/放弃/十次消耗，修复共用货币奖励metaId缺失导致奖励弹窗闪退。220项检查通过，MuMu副本库实际操作培养/许愿/吃桃/财神/灵玉领奖后已恢复正式canon.db并重进原角色。当前服务PID42852，APKmanifest959c7b7062341840c21ecb4a6be36342不变。注意报告中的概率与原版差异、排名/每日首充/豪礼等尚未恢复，不可宣称全功能完成。
+
+
+## 2026-10-15 反馈闪退修复
+详见 work/reference_capture/native_online/REPORTED_CRASH_FIX.md。成就领奖、军团列表、邀请码页面已实际验证；豪礼缺配置暂关闭，宿命714651仍为本地未恢复保护。13+71检查通过。当前PID43072，APK zjt_reported_crashes_fixed_signed.apk，manifest159684492b94be81269e18998b6d1d61，重启服务注意同步新manifest。
+
+
+## 2026-10-15 通缉令与世界Boss状态
+详见work/reference_capture/native_online/WANTED_WORLD_STATE_FIX.md。通缉令实际战斗/奖励/次数/返回已验证，世界Boss仅HP状态修正，旧演出仍待恢复。14+13+71检查通过。当前PID24136；manifest159684492b94be81269e18998b6d1d61和APK不变。
+
+## 2026-10-18 战斗崩溃根治 + 爆衣(破碎立绘)还原
+
+### 1. 崩溃：`canon/scene/BattleScene.lua:1372: attempt to index local 'fightEvent' (a nil value)`
+
+栈：`playBattleFlash` ← `onAttackFlashFinish`（`BattleScene.lua:1472`）。
+
+`playBattleFlash()` 的分支逻辑是：
+
+```lua
+if #SELF.fightEventFlow == 0 and SELF.selfHp > 0 and SELF.enemyHp > 0 then
+    changeAnimation(BattleAnimEnum.TimeOut)          -- 打满回合
+else
+    local fightEvent = SELF.fightEventFlow[1]        -- ← 队列空 + 有一方血量 <= 0
+    table.remove(SELF.fightEventFlow, 1)             --   这里是 nil，直接 index nil
+```
+
+正常流程里「致命一击」走的是 `playLastHitAnim()` → `onFlashAnimationEnd(FightDeath)`
+→ `Win/Crash/Lose` → `showBattleResultPanel()`，**不会再回到 `playBattleFlash`**。
+但 `onAttackFlashFinish` 只要上一个攻击 flash 播完就会回头调 `playBattleFlash`，
+于是「事件流打完时有一方血量正好归零」就会踩空。
+
+**根治方式：改客户端**（`scripts/patch_battle_guard.py`，走 `Caches/src` 热补丁覆盖，不用重打包 APK）：
+
+```lua
+local fightEvent = SELF.fightEventFlow[1]
+if not fightEvent then
+    SELF.battle_flash_co:setVisible(true)
+    if SELF.data.win then
+        if SELF.data.qte then changeAnimation(BattleAnimEnum.Crash)
+        else                  changeAnimation(BattleAnimEnum.Win) end
+    else
+        changeAnimation(BattleAnimEnum.Lose)
+    end
+    return
+end
+table.remove(SELF.fightEventFlow, 1)
+```
+
+- 命令：`python scripts/patch_battle_guard.py --deploy`
+- 产物：`work/patch_out/BattleScene.plain.lua`（明文）/ `BattleScene.enc.lua`（密文）
+- 落点：`/data/data/com.happyelements.canon.baiduDK/Caches/src/canon/scene/BattleScene.0700806167ed9176ab8f0cb94fae9b2f.lua`
+  （**文件名必须沿用 APK 里的物理名**，引擎按这个名字去 Caches/src 找覆盖；实测其它 md5 名字也会被认，但保持原样最稳）
+- 脚本会顺手删掉 `Caches/static_config.md5` 强制重扫。
+
+### 2. ⚠️ `Crash` 动画只能在 `data.qte == true` 时播
+
+`BattleScene:1931` 只在 `self.data.qte` 为真时才把
+`card/crush/<figureId 最后一段换成 _0>.png` 注册成 `battle_flash` 的 `card2crash` 实例；
+找不到那张图时它会 `self.data.qte = false`（`:1954`）。
+
+**没注册实例却硬播 `BattleAnimEnum.Crash` → GLThread 原生 SIGSEGV**（`Fatal signal 11, fault addr 0x58`，
+不会留下 `.crash` 文件，只在 `logcat -b crash` 里）。补丁里已经用 `data.qte` 做了判断。
+
+### 3. 爆衣（破碎立绘）到底是什么、什么时候出
+
+- 资源：`assets/resource/card/crush/<角色>_0.png`，共 90 张（`diaochan_0`、`daqiao_0`、`caiwenji_0`…，都是女将）。
+- 取图规则：`card_meta[enemyMainData.metaId].figureId` 的最后一段替换成 `_0`
+  （例：`diaochan_1` → `diaochan_0`）。
+- 触发条件：**我方获胜**（`SELF.data.win == true`）且 `data.qte == true`
+  → `changeAnimation(BattleAnimEnum.Crash = 32)` → `CRUSH!!!` 文字 + 全屏破碎立绘 → 结算面板。
+- **战败（`win == false`）只会播 `BattleAnimEnum.Lose`，代码里没有任何我方破碎立绘路径**。
+  也就是说爆衣是「打赢对面女将」时给**敌方**播的演出，不是我方被打空血时播的。
+
+### 4. 复现与证据
+
+```powershell
+python scripts/capture_baoyi.py     # 一键：临时开调试开关 -> 录像抽帧 -> 收证据 -> 关开关
+```
+
+内部做的两件事（`server/services/battle.py` 的两个调试钩子，只在文件存在时生效）：
+- `work/battle_debug_x.txt` = `0.02` → 敌方属性 ×0.02，保证赢
+- `work/battle_debug_enemy.txt` = `104071` → 敌方主角卡强制成貂蝉（有 `diaochan_0.png`）
+
+证据帧：`work/proof/baoyi/`
+- `sheet_start.png` —— 整段演出拼图（CRUSH!!! → 斜切转场 → 全屏破碎立绘）
+- `crush_intro.png` / `crush_wipe.png` / `crush_full.png` —— 三个关键帧
+
+### 5. 服务端为了配合演出做的改动（`server/services/battle.py`）
+
+1. `qte` 必须为 `True`（发 False 会整段跳过立绘加载）。以前发的是 False，这是「没有爆衣」的首要原因。
+2. 致命一击的 `eventType` 要在 `{0,1}` 里选，`1` 才是 `ATTACK_CRIT`
+   → `playLastHitAnim(9/10)`（最狠的收招 + `sfx_attack_final`）。早期写成了 `3`（= `ATTACK_COUNTER`），
+   走的是另一种收招。
+3. **我方受到的伤害钳制在「恰好掉到 1 血」**：`changedValue = min(dmg, hp-1)`。
+   客户端 `selfHp` 永远 > 0，事件队列空掉后会走 `TimeOut` 分支正常结算，
+   不会掉进「归 0 + 空队列」的崩溃路径。
+4. 战斗事件**不缓存**（`mission.py`），否则调参永远不生效（曾在 `player_activity.mission_event_cache` 里踩过）。
+
+### 6. 还没做的
+
+- 竞技场/演武这类「本该打真实玩家卡队」的玩法，目前服务端用的是副本 monsterGroup
+  （`_arena_mission_for`），所以敌方是怪物 → 没有 `figureId` → 不会出爆衣。
+  想在任何正常玩法里看到爆衣，需要把 PvP 类战斗改成用对手的 `player_card` 组成敌方队伍。
+- 军团战 `UnionBattleScene` 里也有一套 `playBattleFlashWithIndex`，是否同样会因为空队列崩，未验证。
+
+### 7. 2026-10-18 追加：战斗回合模型修正（用户反馈「我方连续攻击太多 / 回合数不掉但会超时」）
+
+`server/services/battle.py` 的事件生成改成了真实抓包的形状：
+
+| 项 | 之前（错） | 现在 |
+|---|---|---|
+| 出手顺序 | 一回合内我方 6 张全打完，再敌方 5 张全打 | 双方**交替单人出手**：E1, A1, E2, A2 … |
+| `round` 字段 | 整轮共用一个值，最多跑 60 轮 | 每回合 +1，上限 20（对齐 `BattleScene:1370 totalRoundNum = 20`） |
+| 我方血量 | 钳在 1 以上（为了绕 1372 崩溃） | 正常归 0（崩溃已由客户端补丁根治，钳制不再需要） |
+| 伤害保底 | `max(1, att-def)`，数值接近时满屏 `-1` | `max(att*10%, att-def)` |
+
+客户端倒计时是 `totalRoundNum - fightEvent.round`，所以 `round` 必须真的递增；
+之前 `round` 不动 + 我方永不阵亡 → 每场都拖到上限 → 空队列 + 双方都有血 → 误触发 `TimeOut`。
+
+实测（`work/battle_video/sheet_new.png` 胜、`sheet_lose2.png` 败）：
+- 回合数正常 20 → 19 → 18，2~3 回合结束；
+- 双方交替出手，出现 `暴击` 提示；
+- 胜 → 胜利/大胜面板；负（我方血真的归 0）→ 惜败面板；均无 `.crash`、无 `Fatal signal`。
+
+另外修了两个测试脚本的坑：
+- `ui_test.alive()` 现在连续两次探不到才判死（adb 抽风会把好好跑着的录像截断）；
+- `rec_battle.py` 加了 `--in-map`，主界面参照图对不上（公告栏每天不同）时可手动走到战斗地图再录。
+
+**环境注意**：adb 断线重连后 `adb root` 和 `/system/etc/hosts` 的 bind mount 会一起失效，
+表现是客户端「网络不好啊！请换一个信号更好的地方试试吧！」。
+恢复：`adb root` → `adb shell mount --bind /data/local/tmp/hosts /system/etc/hosts`。
+
+### 8. 2026-10-18 追加：战败也播「爆衣」（我方的破碎立绘）
+
+原版客户端里，「爆衣」其实存在**两条**触发路径，之前只补对了一条：
+
+| 回调 | 谁触发 | 胜利 | 战败 |
+|---|---|---|---|
+| `onLastHitFlashEnd` | 致命一击（`playLastHitAnim`）的 flash 播完 | `qte` 真 → `Crash`（敌方破碎立绘）；假 → `Win` | **只有 `Lose`（光倒地，没立绘）** |
+| `onFlashAnimationEnd` | `battle_flash` 自己的 `FightDeath` 帧事件 | 同上 | 同上 |
+
+我们看到的「战胜有爆衣」走的是 `onLastHitFlashEnd` 的 qte 分支；
+`onFlashAnimationEnd` 在副本战斗里根本没被调到（日志验证过）。
+
+要让我方战败也爆衣，改了 `scripts/patch_battle_guard.py` 的两处：
+
+**PATCH2（场景初始化，紧随敌方 `card2crash` 那段）**
+按我方主角卡的 `figureId` 推出 `card/crush/<x>_0.png`，预载成 `SELF.crushSpriteSelf`。
+然后决定 `card2crash` 这个实例归谁：
+
+```lua
+if self.data.qte then            -- 敌方有破碎立绘
+    self.card2crashSource = "enemy"
+elseif self.crushSpriteSelf then -- 敌没有，留给我方
+    self.battle_flash:addChangeInstance("card2crash", self.crushSpriteSelf)
+    self.card2crashSource = "self"
+end
+```
+
+**PATCH3 / PATCH3b（两个战败分支）**
+原本固定 `changeAnimation(BattleAnimEnum.Lose)`，改成：有自方立绘（`card2crashSource == "self"`）时
+`setChildIndex` + `refreshIndex` + `changeAnimation(BattleAnimEnum.Crash)`，否则退回 `Lose`。
+
+#### ⚠️ 关键坑：`addChangeInstance` 只能在场景初始化时调
+
+一开始是在 `FightDeath` 时**临时**把 `card2crash` 换成我方立绘再播 `Crash`，
+结果必崩：`Fatal signal 11 (SIGSEGV) SEGV_MAPERR fault addr 0xc`，tid = GLThread，
+不留 `.crash` 文件（Lua 层面完全没报错，print 都打到了）。
+所以实例必须在 `addBattleFlash()` 之前就注册好，战斗中途只能改「播哪个动画」，不能改实例表。
+
+#### 验证（`work/proof/baoyi_self/`）
+
+`sheet_defeat_crush.png` / `self_crush_full.png`，日志时间线：
+```
+[PATCH2] fig=zhugeliang_1 id=zhugeliang_0 exist=true
+[PATCH2] created=true
+[PATCH2] crashSource=self
+[PATCH3] lastHitLose selfHp=0 enemyHp=38356 qte=false src=self
+```
+→ `CRUSH!!!` → 斜切转场 → 全屏诸葛亮破碎立绘 → 惜败面板。进程存活，`Fatal signal` 计数 0。
+
+#### 已知边界
+
+- 敌方**有**破碎立绘时（`qte=true`），`card2crash` 被敌方占用，此时我方战败只播 `Lose`。
+  同一个实例名撑不起两种立绘；要做全得另开一个实例名 + 另做一段动画，代价大，先没做。
+- 普通副本的怪没有 `figureId` → `qte=false` → 走我方立绘这条路，
+  所以**日常推图战败=我方爆衣，打赢看起来有立绘的卡=敌方爆衣**，两不冲突。
+- 诊断用的 `print` 还在（logcat 里 `[PATCH1]~[PATCH4]`），不影响表现，留着方便下次定位。
+
+## 2026-10-18 战斗数值三层：伤害/加成/战力
+
+详见 `work/DAMAGE_MODEL.md`（每条都标了【实证】/【推导】/【自拟】）。
+
+- 伤害与技能：`skill_meta.statusIdList -> skill_status` 是原厂真实数据（prob/impactAttr/valueType/effectValue），
+  已用抓包校验（技能 32000101 -> 状态 630501 -> effectValue=57 与抓包 changedValue=57 完全一致）。
+  伤害公式原版在服务端、拿不到，按抓包两条样本推成 att*0.9~1.1 再乘递减式减伤；
+  命中/闪避/暴击/韧性/招架/穿透/反击的概率曲线是自拟的，常数集中在 `services/battle.py` 的 CURVE。
+- 连协/套装/神兽：按 `CommonManager` 766-772 行的原公式实现（每项各自 floor 再相加），
+  自测脚本 `scripts/test_bonus_calc.py`。神兽链路已写好但数据库没有神兽归属表，当前恒为 0。
+- 战斗力：客户端不参与（`getLocalPlayerStrength` 被注释掉，只显示服务端下发的值），
+  系数自拟并按量级校准（满级五星卡 ~2120，本存档 2809），只改 `cardstats.CARD_POWER` 即可。
+- 战斗属性现在走 `CS.panel`（含装备/宝物/元神/连协/套装），与客户端卡片详情同口径；
+  因此普通副本打赢也会播爆衣（敌方是带 figureId 的卡、且有破碎立绘时）。

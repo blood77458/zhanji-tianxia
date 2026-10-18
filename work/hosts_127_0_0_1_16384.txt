@@ -1,0 +1,7 @@
+127.0.0.1       localhost
+::1             ip6-localhost
+10.0.2.2        android1.canon.happyelements.cn
+10.0.2.2        android1.canon.happyelements.com
+10.0.2.2        log.dc.cn.happyelements.com
+10.0.2.2        etlog.happyelements.cn
+10.0.2.2        m.cn.happyelements.com

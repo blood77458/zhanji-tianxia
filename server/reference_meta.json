@@ -1,0 +1,4057 @@
+{
+  "accumulateRechargeConfig": {},
+  "activityBalloonConfig": {
+    "featureName": "activityBalloon",
+    "featureNameReward": "activityBalloonReward",
+    "propId": 400259,
+    "cost": 1,
+    "propCost": 50,
+    "gainsChance": 3,
+    "balloonLevelMetas": [
+      {
+        "point": 0,
+        "money": 50
+      },
+      {
+        "point": 5,
+        "money": 75
+      },
+      {
+        "point": 12,
+        "money": 100
+      },
+      {
+        "point": 22,
+        "money": 120
+      },
+      {
+        "point": 35,
+        "money": 150
+      },
+      {
+        "point": 55,
+        "money": 200
+      },
+      {
+        "point": 80,
+        "money": 250
+      }
+    ],
+    "balloonPointRewardMetas": [
+      {
+        "id": 1,
+        "pointSection": 20,
+        "rewardType1": 1,
+        "rewardId1": 1,
+        "rewardNum1": 50000
+      },
+      {
+        "id": 2,
+        "pointSection": 50,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 800
+      },
+      {
+        "id": 3,
+        "pointSection": 100,
+        "rewardType1": 7,
+        "rewardId1": 400010,
+        "rewardNum1": 2000
+      },
+      {
+        "id": 4,
+        "pointSection": 200,
+        "rewardType1": 5,
+        "rewardId1": 102031,
+        "rewardNum1": 1
+      },
+      {
+        "id": 5,
+        "pointSection": 400,
+        "rewardType1": 5,
+        "rewardId1": 102061,
+        "rewardNum1": 1
+      }
+    ],
+    "balloonRankRewardMetas": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 900,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardNum2": 800
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 3,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 600,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardNum2": 300
+      },
+      {
+        "rankMin": 4,
+        "rankMax": 10,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 300,
+        "rewardType2": 1,
+        "rewardId2": 1,
+        "rewardNum2": 50000
+      }
+    ]
+  },
+  "activityCardExchangeConfig": {},
+  "activityChargeFeedbackConfig": {},
+  "activityConsumeRewardConfig": {},
+  "activityContendConfig": {
+    "panelFeatureName": "activityContendPanel",
+    "featureNameList": [
+      "activityContendPanel"
+    ],
+    "challengedNum": 2,
+    "dayDareNum": 5,
+    "levelLimit": 15,
+    "battleRoundNum": 20
+  },
+  "activityCowStageConfig": {
+    "featureNamesList": [
+      "cowStage"
+    ],
+    "cowCardExps": {
+      "495": 20000,
+      "496": 30000,
+      "497": 40000
+    }
+  },
+  "activityDayRewardConfig": {},
+  "activityDiceConfig": {},
+  "activityEventChristmasConfig": {},
+  "activityFortuneNowConfig": {},
+  "activityFountainWishConfig": {
+    "featureName": "fountainWish",
+    "requiredLevel": 10,
+    "freeNum": 2,
+    "silverCoins": [
+      {
+        "fountainNum": 1,
+        "silverCoins": 10000
+      },
+      {
+        "fountainNum": 2,
+        "silverCoins": 15000
+      },
+      {
+        "fountainNum": 3,
+        "silverCoins": 20000
+      },
+      {
+        "fountainNum": 4,
+        "silverCoins": 25000
+      },
+      {
+        "fountainNum": 5,
+        "silverCoins": 30000
+      },
+      {
+        "fountainNum": 6,
+        "silverCoins": 40000
+      },
+      {
+        "fountainNum": 7,
+        "silverCoins": 50000
+      },
+      {
+        "fountainNum": 8,
+        "silverCoins": 60000
+      },
+      {
+        "fountainNum": 9,
+        "silverCoins": 80000
+      },
+      {
+        "fountainNum": 10,
+        "silverCoins": 100000
+      }
+    ]
+  },
+  "activityGachaBoxConfig": {
+    "refreshCost": [
+      {
+        "itemType": 2,
+        "amount": 30
+      }
+    ],
+    "requisites": [
+      {
+        "itemType": 2,
+        "amount": 288
+      }
+    ]
+  },
+  "activityGachaXiaoyuConfig": {
+    "featureName": "activityGachaXiaoyu",
+    "featureNamePoints": "activityGachaXiaoyuPoints",
+    "featureNameReward": "activityGachaXiaoyuGainReward",
+    "rankingNum": 100,
+    "commonGachaPoints": 2,
+    "commonTenPoints": 20,
+    "advancedGachaPoints": 4,
+    "ultimatedGachaPoints": 10,
+    "ultimatedTenPoints": 100,
+    "activityGachaPoints": 5,
+    "crossGachaServerGroups": [
+      {
+        "serverIds": [
+          1
+        ]
+      }
+    ],
+    "pointRewards": [
+      {
+        "id": 1,
+        "pointMin": 10,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 2000
+          },
+          {
+            "itemType": 6,
+            "metaId": 210051,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pointMin": 30,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 3000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400016,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pointMin": 60,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 4000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400057,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pointMin": 100,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 5000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400017,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "pointMin": 150,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 6000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400058,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "pointMin": 220,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 8000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400060,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pointMin": 300,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 10000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400062,
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pointMin": 400,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 15000
+          },
+          {
+            "itemType": 5,
+            "metaId": 102091,
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "rankRewards": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 223011,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 100000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 200
+          }
+        ]
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 10,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 212091,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 50000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 100
+          }
+        ]
+      },
+      {
+        "rankMin": 11,
+        "rankMax": 100,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 20000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 50
+          }
+        ]
+      }
+    ],
+    "mysteriousRewards": [
+      {
+        "itemType": 5,
+        "metaId": 104961,
+        "amount": 3
+      }
+    ],
+    "windows": [
+      {
+        "switch": "activityGachaXiaoyu",
+        "endTimeShiftDays": 30
+      },
+      {
+        "switch": "activityGachaXiaoyuGainReward",
+        "endTimeShiftDays": 30
+      }
+    ],
+    "crossGachaPointRewards": [
+      {
+        "id": 1,
+        "pointMin": 10,
+        "rewardPackageId": 11001,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 2000
+          },
+          {
+            "itemType": 6,
+            "metaId": 210051,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pointMin": 30,
+        "rewardPackageId": 11002,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 3000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400016,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pointMin": 60,
+        "rewardPackageId": 11003,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 4000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400057,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pointMin": 100,
+        "rewardPackageId": 11004,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 5000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400017,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "pointMin": 150,
+        "rewardPackageId": 11005,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 6000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400058,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "pointMin": 220,
+        "rewardPackageId": 11006,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 8000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400060,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pointMin": 300,
+        "rewardPackageId": 11007,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 10000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400062,
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pointMin": 400,
+        "rewardPackageId": 11008,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 15000
+          },
+          {
+            "itemType": 5,
+            "metaId": 102091,
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "crossGachaRankRewards": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewardPackageId": 13010,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 223011,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 100000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 200
+          }
+        ]
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 10,
+        "rewardPackageId": 13005,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 212091,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 50000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 100
+          }
+        ]
+      },
+      {
+        "rankMin": 11,
+        "rankMax": 100,
+        "rewardPackageId": 11007,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 20000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 50
+          }
+        ]
+      }
+    ]
+  },
+  "activityGemConsumeConfig": {},
+  "activityLevelRaceConfig": {},
+  "activityLimitRewardConfig": {
+    "featureName": "ActivityLimitReward",
+    "limitRewards": [
+      {
+        "stepId": 1,
+        "limitTime": 24,
+        "rewardDetail": 6,
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 300
+        }
+      },
+      {
+        "stepId": 2,
+        "limitTime": 48,
+        "rewardDetail": 30,
+        "reward": {
+          "itemType": 5,
+          "metaId": 103001,
+          "amount": 1
+        }
+      },
+      {
+        "stepId": 3,
+        "limitTime": 72,
+        "rewardDetail": 98,
+        "reward": {
+          "itemType": 5,
+          "metaId": 104071,
+          "amount": 1
+        }
+      }
+    ],
+    "finalReward": {
+      "stepId": 4,
+      "reward": {
+        "itemType": 5,
+        "metaId": 104061,
+        "amount": 1
+      }
+    }
+  },
+  "activityMultiplayerBossConfig": {},
+  "activityMysteriousExchangeConfig": {
+    "featureName": "mysteriousShop",
+    "exchangeMetas": [
+      {
+        "id": 1,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 101011,
+        "goodsNum": 3,
+        "coinId": 1,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 2,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 101351,
+        "goodsNum": 3,
+        "coinId": 1,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 3,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 104001,
+        "goodsNum": 3,
+        "coinId": 4,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 4,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 104471,
+        "goodsNum": 3,
+        "coinId": 4,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 5,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 102001,
+        "goodsNum": 3,
+        "coinId": 2,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 6,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 102311,
+        "goodsNum": 3,
+        "coinId": 2,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 7,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 103151,
+        "goodsNum": 3,
+        "coinId": 3,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 8,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 103161,
+        "goodsNum": 6,
+        "coinId": 3,
+        "coinNum": 12,
+        "mysteriousShopNum": 6
+      },
+      {
+        "id": 9,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 212041,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 50,
+        "mysteriousShopNum": 2
+      },
+      {
+        "id": 10,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 212061,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 50,
+        "mysteriousShopNum": 2
+      },
+      {
+        "id": 11,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 233161,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 50,
+        "mysteriousShopNum": 2
+      },
+      {
+        "id": 12,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 234061,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 13,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 211011,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 200,
+        "mysteriousShopNum": 1
+      }
+    ]
+  },
+  "activityNewYearConfig": {},
+  "activityPraiseConfig": {},
+  "activityQuestionSettingConfig": {
+    "questionGroupNum": 10,
+    "questionWeekRewards": [
+      {
+        "correctMin": 30,
+        "correctMax": 49,
+        "rewardPackageId": 15008,
+        "rewards": {}
+      },
+      {
+        "correctMin": 50,
+        "correctMax": 69,
+        "rewardPackageId": 15017,
+        "rewards": {}
+      },
+      {
+        "correctMin": 70,
+        "correctMax": 999,
+        "rewardPackageId": 15015,
+        "rewards": {}
+      }
+    ]
+  },
+  "activitySeckillConfig": {},
+  "activitySettingConfig": {},
+  "activitySwornBrothersConfig": {
+    "featureName": "activitySwornBrothers",
+    "swornBrothersRewardItems": [
+      {
+        "id": 1,
+        "conditionType1": 2,
+        "conditionValue1": 3,
+        "conditionNum1": 10,
+        "conditionType2": 0,
+        "conditionValue2": 0,
+        "conditionNum2": 0,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 2,
+            "metaId": 2,
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "conditionType1": 2,
+        "conditionValue1": 4,
+        "conditionNum1": 10,
+        "conditionType2": 0,
+        "conditionValue2": 0,
+        "conditionNum2": 0,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 2,
+            "metaId": 2,
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "conditionType1": 2,
+        "conditionValue1": 3,
+        "conditionNum1": 10,
+        "conditionType2": 5,
+        "conditionValue2": 400010,
+        "conditionNum2": 100,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 7,
+            "metaId": 400010,
+            "amount": 500
+          },
+          {
+            "itemType": 2,
+            "metaId": 1,
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "conditionType1": 2,
+        "conditionValue1": 5,
+        "conditionNum1": 5,
+        "conditionType2": 0,
+        "conditionValue2": 0,
+        "conditionNum2": 0,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 102061,
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "activityTreasureboxPointsConfig": {
+    "featureNamePanel": "activityTreasureboxAll",
+    "featureNameTreasureboxPoints": "activityTreasureboxPoints",
+    "featureNameGainReward": "activityTreasureboxGainReward",
+    "goldBoxPoint": 3,
+    "silverBoxPoint": 2,
+    "copperBoxPoint": 1,
+    "pointRewardMetas": {},
+    "rankRewardMetas": {}
+  },
+  "activityWantedConfig": {
+    "featureName": "activityWanted",
+    "completeNum": 5,
+    "refreshPrice": 20,
+    "newRefreshPrice": 50,
+    "questRewards": [
+      {
+        "contentID1": 400216,
+        "contentNum1": 1,
+        "contentNum2": 20000
+      },
+      {
+        "contentID1": 400216,
+        "contentNum1": 1,
+        "contentNum2": 30000
+      },
+      {
+        "contentID1": 400216,
+        "contentNum1": 2,
+        "contentNum2": 50000
+      },
+      {
+        "contentID1": 400217,
+        "contentNum1": 1,
+        "contentNum2": 80000
+      },
+      {
+        "contentID1": 400217,
+        "contentNum1": 2,
+        "contentNum2": 120000
+      }
+    ]
+  },
+  "activityWorldBossConfig": {
+    "featureName": "worldBoss",
+    "featureName2": "worldBoss1",
+    "prepareTime": 900,
+    "dantengTime": 15,
+    "rankingRange": 10,
+    "rankProcessTime": 30,
+    "inspireLimit": 1,
+    "normalInspireBuff": 0.05,
+    "goldInspireCost": 20,
+    "goldInspireBuff": 0.1,
+    "inspirePropId": 400062,
+    "reviveCost": 10,
+    "rebornCost": 30,
+    "rebornBuff": 0.2,
+    "battleCooldown": 300,
+    "reviveCooldown": 240
+  },
+  "cardBookFeatureName": "",
+  "cardPictureConfig": {
+    "cardPictures": {}
+  },
+  "countdownRewardConfig": {
+    "rewards": [
+      {
+        "id": 1,
+        "countdownTime": 0,
+        "rewardPackage": 11001,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 2000
+          },
+          {
+            "itemType": 6,
+            "metaId": 210051,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "countdownTime": 60,
+        "rewardPackage": 11002,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 3000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400016,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "countdownTime": 180,
+        "rewardPackage": 11003,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 4000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400057,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "countdownTime": 300,
+        "rewardPackage": 11004,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 5000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400017,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "countdownTime": 900,
+        "rewardPackage": 11005,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 6000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400058,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "countdownTime": 1800,
+        "rewardPackage": 11006,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 8000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400060,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "countdownTime": 3600,
+        "rewardPackage": 11007,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 10000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400062,
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "countdownTime": 86400,
+        "rewardPackage": 11008,
+        "rewardItems": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 15000
+          },
+          {
+            "itemType": 5,
+            "metaId": 102091,
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "crossArenaRewardConfig": {},
+  "crossArenaSettingConfig": {
+    "featureNameBattle": "crossArenaBattle",
+    "featureNameReward": "crossArenaBattle",
+    "freeBattleNum": 5
+  },
+  "crossBossGoldBattleConfig": {},
+  "crossBossHeroConfig": {},
+  "crossBossRewardConfig": {},
+  "crossBossSettingConfig": {},
+  "crossGvgTimeConfig": {
+    "interUnionWarTimeMeta": [
+      {
+        "id": 1,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 2,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 3,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 4,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 5,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 6,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 7,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 8,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 9,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 10,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 11,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 12,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      },
+      {
+        "id": 13,
+        "uwarBeginTime": 0,
+        "uwarContinueTime": 1
+      }
+    ]
+  },
+  "crossServerRewardConfig": {},
+  "crossServerTimeConfig": {},
+  "dailyAchieveConfig": {
+    "dailyAchieve": [
+      {
+        "achieveId": 1,
+        "achieveType": 1,
+        "achieveNum": 1,
+        "achieveReward": 15011
+      },
+      {
+        "achieveId": 2,
+        "achieveType": 1,
+        "achieveNum": 3,
+        "achieveReward": 15007
+      },
+      {
+        "achieveId": 3,
+        "achieveType": 2,
+        "achieveNum": 1,
+        "achieveReward": 12004
+      },
+      {
+        "achieveId": 4,
+        "achieveType": 2,
+        "achieveNum": 2,
+        "achieveReward": 15011
+      }
+    ]
+  },
+  "dailyActiveConfig": {
+    "levelLimit": 1,
+    "activeConfigItems": [
+      {
+        "id": 1,
+        "conditionNum": 3,
+        "activeValue": 10
+      },
+      {
+        "id": 2,
+        "conditionNum": 5,
+        "activeValue": 15
+      },
+      {
+        "id": 3,
+        "conditionNum": 3,
+        "activeValue": 15
+      },
+      {
+        "id": 9,
+        "conditionNum": 5,
+        "activeValue": 15
+      },
+      {
+        "id": 15,
+        "conditionNum": 1,
+        "activeValue": 10
+      },
+      {
+        "id": 16,
+        "conditionNum": 5,
+        "activeValue": 15
+      },
+      {
+        "id": 17,
+        "conditionNum": 1,
+        "activeValue": 10
+      },
+      {
+        "id": 18,
+        "conditionNum": 1,
+        "activeValue": 10
+      }
+    ],
+    "activeRewardItems": [
+      {
+        "id": 1,
+        "activeValue": 20,
+        "rewardPackageId": 18044
+      },
+      {
+        "id": 2,
+        "activeValue": 40,
+        "rewardPackageId": 11004
+      },
+      {
+        "id": 3,
+        "activeValue": 60,
+        "rewardPackageId": 18044
+      },
+      {
+        "id": 4,
+        "activeValue": 80,
+        "rewardPackageId": 19146
+      },
+      {
+        "id": 5,
+        "activeValue": 100,
+        "rewardPackageId": 19299
+      }
+    ]
+  },
+  "dailyTaskConfig": {
+    "activeTaskList": [
+      {
+        "id": 15,
+        "type": 1,
+        "conditionNum": 1,
+        "limit": 1,
+        "titleKey": "activity_daily_type15",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 300
+        }
+      },
+      {
+        "id": 9,
+        "type": 1,
+        "conditionNum": 3,
+        "limit": 1,
+        "titleKey": "activity_daily_type9",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 150
+        }
+      },
+      {
+        "id": 2,
+        "type": 5,
+        "conditionNum": 3,
+        "limit": 1,
+        "titleKey": "activity_daily_type2",
+        "reward": {
+          "itemType": 1,
+          "metaId": 1,
+          "amount": 18000
+        }
+      },
+      {
+        "id": 1,
+        "type": 5,
+        "conditionNum": 2,
+        "limit": 1,
+        "titleKey": "activity_daily_type1",
+        "reward": {
+          "itemType": 1,
+          "metaId": 1,
+          "amount": 18000
+        }
+      },
+      {
+        "id": 3,
+        "type": 7,
+        "conditionNum": 2,
+        "limit": 1,
+        "titleKey": "activity_daily_type3",
+        "reward": {
+          "itemType": 1,
+          "metaId": 1,
+          "amount": 18000
+        }
+      },
+      {
+        "id": 16,
+        "type": 12,
+        "conditionNum": 3,
+        "limit": 1,
+        "titleKey": "activity_daily_type16",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 200
+        }
+      },
+      {
+        "id": 17,
+        "type": 1,
+        "conditionNum": 1,
+        "limit": 1,
+        "titleKey": "activity_daily_type17",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 100
+        }
+      },
+      {
+        "id": 18,
+        "type": 2,
+        "conditionNum": 1,
+        "limit": 1,
+        "titleKey": "activity_daily_type18",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 100
+        }
+      }
+    ]
+  },
+  "destinyBattleConfig": {
+    "destinyBattleList": [
+      {
+        "id": 1,
+        "stageType": 1,
+        "monsterGroupId": 7000020,
+        "round": 1,
+        "stage": 1
+      },
+      {
+        "id": 2,
+        "stageType": 1,
+        "monsterGroupId": 7000021,
+        "round": 1,
+        "stage": 2
+      },
+      {
+        "id": 3,
+        "stageType": 1,
+        "monsterGroupId": 7000022,
+        "round": 1,
+        "stage": 3
+      },
+      {
+        "id": 4,
+        "stageType": 1,
+        "monsterGroupId": 7000023,
+        "round": 1,
+        "stage": 4
+      },
+      {
+        "id": 5,
+        "stageType": 2,
+        "monsterGroupId": 7100005,
+        "round": 1,
+        "stage": 5
+      },
+      {
+        "id": 6,
+        "stageType": 1,
+        "monsterGroupId": 7000024,
+        "round": 2,
+        "stage": 1
+      },
+      {
+        "id": 7,
+        "stageType": 1,
+        "monsterGroupId": 7000025,
+        "round": 2,
+        "stage": 2
+      },
+      {
+        "id": 8,
+        "stageType": 1,
+        "monsterGroupId": 7000026,
+        "round": 2,
+        "stage": 3
+      },
+      {
+        "id": 9,
+        "stageType": 1,
+        "monsterGroupId": 7000027,
+        "round": 2,
+        "stage": 4
+      },
+      {
+        "id": 10,
+        "stageType": 2,
+        "monsterGroupId": 7100010,
+        "round": 2,
+        "stage": 5
+      },
+      {
+        "id": 11,
+        "stageType": 1,
+        "monsterGroupId": 7000028,
+        "round": 3,
+        "stage": 1
+      },
+      {
+        "id": 12,
+        "stageType": 1,
+        "monsterGroupId": 7000029,
+        "round": 3,
+        "stage": 2
+      },
+      {
+        "id": 13,
+        "stageType": 1,
+        "monsterGroupId": 7000030,
+        "round": 3,
+        "stage": 3
+      },
+      {
+        "id": 14,
+        "stageType": 1,
+        "monsterGroupId": 7000031,
+        "round": 3,
+        "stage": 4
+      },
+      {
+        "id": 15,
+        "stageType": 2,
+        "monsterGroupId": 7100015,
+        "round": 3,
+        "stage": 5
+      },
+      {
+        "id": 16,
+        "stageType": 1,
+        "monsterGroupId": 7000032,
+        "round": 4,
+        "stage": 1
+      },
+      {
+        "id": 17,
+        "stageType": 1,
+        "monsterGroupId": 7000033,
+        "round": 4,
+        "stage": 2
+      },
+      {
+        "id": 18,
+        "stageType": 1,
+        "monsterGroupId": 7000034,
+        "round": 4,
+        "stage": 3
+      },
+      {
+        "id": 19,
+        "stageType": 1,
+        "monsterGroupId": 7000035,
+        "round": 4,
+        "stage": 4
+      },
+      {
+        "id": 20,
+        "stageType": 2,
+        "monsterGroupId": 7100020,
+        "round": 4,
+        "stage": 5
+      },
+      {
+        "id": 21,
+        "stageType": 1,
+        "monsterGroupId": 7000036,
+        "round": 5,
+        "stage": 1
+      },
+      {
+        "id": 22,
+        "stageType": 1,
+        "monsterGroupId": 7000037,
+        "round": 5,
+        "stage": 2
+      },
+      {
+        "id": 23,
+        "stageType": 1,
+        "monsterGroupId": 7000038,
+        "round": 5,
+        "stage": 3
+      },
+      {
+        "id": 24,
+        "stageType": 1,
+        "monsterGroupId": 7000039,
+        "round": 5,
+        "stage": 4
+      },
+      {
+        "id": 25,
+        "stageType": 2,
+        "monsterGroupId": 7100025,
+        "round": 5,
+        "stage": 5
+      },
+      {
+        "id": 26,
+        "stageType": 1,
+        "monsterGroupId": 7000040,
+        "round": 6,
+        "stage": 1
+      },
+      {
+        "id": 27,
+        "stageType": 1,
+        "monsterGroupId": 7000041,
+        "round": 6,
+        "stage": 2
+      },
+      {
+        "id": 28,
+        "stageType": 1,
+        "monsterGroupId": 7000042,
+        "round": 6,
+        "stage": 3
+      },
+      {
+        "id": 29,
+        "stageType": 1,
+        "monsterGroupId": 7000043,
+        "round": 6,
+        "stage": 4
+      },
+      {
+        "id": 30,
+        "stageType": 2,
+        "monsterGroupId": 7100030,
+        "round": 6,
+        "stage": 5
+      },
+      {
+        "id": 31,
+        "stageType": 1,
+        "monsterGroupId": 7000044,
+        "round": 7,
+        "stage": 1
+      },
+      {
+        "id": 32,
+        "stageType": 1,
+        "monsterGroupId": 7000045,
+        "round": 7,
+        "stage": 2
+      },
+      {
+        "id": 33,
+        "stageType": 1,
+        "monsterGroupId": 7000046,
+        "round": 7,
+        "stage": 3
+      },
+      {
+        "id": 34,
+        "stageType": 1,
+        "monsterGroupId": 7000047,
+        "round": 7,
+        "stage": 4
+      },
+      {
+        "id": 35,
+        "stageType": 2,
+        "monsterGroupId": 7100035,
+        "round": 7,
+        "stage": 5
+      },
+      {
+        "id": 36,
+        "stageType": 1,
+        "monsterGroupId": 7000048,
+        "round": 8,
+        "stage": 1
+      },
+      {
+        "id": 37,
+        "stageType": 1,
+        "monsterGroupId": 7000049,
+        "round": 8,
+        "stage": 2
+      },
+      {
+        "id": 38,
+        "stageType": 1,
+        "monsterGroupId": 7000050,
+        "round": 8,
+        "stage": 3
+      },
+      {
+        "id": 39,
+        "stageType": 1,
+        "monsterGroupId": 7000051,
+        "round": 8,
+        "stage": 4
+      },
+      {
+        "id": 40,
+        "stageType": 2,
+        "monsterGroupId": 7100040,
+        "round": 8,
+        "stage": 5
+      },
+      {
+        "id": 41,
+        "stageType": 1,
+        "monsterGroupId": 7000052,
+        "round": 9,
+        "stage": 1
+      },
+      {
+        "id": 42,
+        "stageType": 1,
+        "monsterGroupId": 7000053,
+        "round": 9,
+        "stage": 2
+      },
+      {
+        "id": 43,
+        "stageType": 1,
+        "monsterGroupId": 7000054,
+        "round": 9,
+        "stage": 3
+      },
+      {
+        "id": 44,
+        "stageType": 1,
+        "monsterGroupId": 7000055,
+        "round": 9,
+        "stage": 4
+      },
+      {
+        "id": 45,
+        "stageType": 2,
+        "monsterGroupId": 7100045,
+        "round": 9,
+        "stage": 5
+      },
+      {
+        "id": 46,
+        "stageType": 1,
+        "monsterGroupId": 7000056,
+        "round": 10,
+        "stage": 1
+      },
+      {
+        "id": 47,
+        "stageType": 1,
+        "monsterGroupId": 7000057,
+        "round": 10,
+        "stage": 2
+      },
+      {
+        "id": 48,
+        "stageType": 1,
+        "monsterGroupId": 7000058,
+        "round": 10,
+        "stage": 3
+      },
+      {
+        "id": 49,
+        "stageType": 1,
+        "monsterGroupId": 7000059,
+        "round": 10,
+        "stage": 4
+      },
+      {
+        "id": 50,
+        "stageType": 2,
+        "monsterGroupId": 7100050,
+        "round": 10,
+        "stage": 5
+      },
+      {
+        "id": 51,
+        "stageType": 1,
+        "monsterGroupId": 7000060,
+        "round": 11,
+        "stage": 1
+      },
+      {
+        "id": 52,
+        "stageType": 1,
+        "monsterGroupId": 7000061,
+        "round": 11,
+        "stage": 2
+      },
+      {
+        "id": 53,
+        "stageType": 1,
+        "monsterGroupId": 7000062,
+        "round": 11,
+        "stage": 3
+      },
+      {
+        "id": 54,
+        "stageType": 1,
+        "monsterGroupId": 7000063,
+        "round": 11,
+        "stage": 4
+      },
+      {
+        "id": 55,
+        "stageType": 2,
+        "monsterGroupId": 7100055,
+        "round": 11,
+        "stage": 5
+      },
+      {
+        "id": 56,
+        "stageType": 1,
+        "monsterGroupId": 7000064,
+        "round": 12,
+        "stage": 1
+      },
+      {
+        "id": 57,
+        "stageType": 1,
+        "monsterGroupId": 7000065,
+        "round": 12,
+        "stage": 2
+      },
+      {
+        "id": 58,
+        "stageType": 1,
+        "monsterGroupId": 7000066,
+        "round": 12,
+        "stage": 3
+      },
+      {
+        "id": 59,
+        "stageType": 1,
+        "monsterGroupId": 7000067,
+        "round": 12,
+        "stage": 4
+      },
+      {
+        "id": 60,
+        "stageType": 2,
+        "monsterGroupId": 7100060,
+        "round": 12,
+        "stage": 5
+      },
+      {
+        "id": 61,
+        "stageType": 1,
+        "monsterGroupId": 7000068,
+        "round": 13,
+        "stage": 1
+      },
+      {
+        "id": 62,
+        "stageType": 1,
+        "monsterGroupId": 7000069,
+        "round": 13,
+        "stage": 2
+      },
+      {
+        "id": 63,
+        "stageType": 1,
+        "monsterGroupId": 7000070,
+        "round": 13,
+        "stage": 3
+      },
+      {
+        "id": 64,
+        "stageType": 1,
+        "monsterGroupId": 7000071,
+        "round": 13,
+        "stage": 4
+      },
+      {
+        "id": 65,
+        "stageType": 2,
+        "monsterGroupId": 7100065,
+        "round": 13,
+        "stage": 5
+      },
+      {
+        "id": 66,
+        "stageType": 1,
+        "monsterGroupId": 7000072,
+        "round": 14,
+        "stage": 1
+      },
+      {
+        "id": 67,
+        "stageType": 1,
+        "monsterGroupId": 7000073,
+        "round": 14,
+        "stage": 2
+      },
+      {
+        "id": 68,
+        "stageType": 1,
+        "monsterGroupId": 7000074,
+        "round": 14,
+        "stage": 3
+      },
+      {
+        "id": 69,
+        "stageType": 1,
+        "monsterGroupId": 7000075,
+        "round": 14,
+        "stage": 4
+      },
+      {
+        "id": 70,
+        "stageType": 2,
+        "monsterGroupId": 7100070,
+        "round": 14,
+        "stage": 5
+      },
+      {
+        "id": 71,
+        "stageType": 1,
+        "monsterGroupId": 7000076,
+        "round": 15,
+        "stage": 1
+      },
+      {
+        "id": 72,
+        "stageType": 1,
+        "monsterGroupId": 7000077,
+        "round": 15,
+        "stage": 2
+      },
+      {
+        "id": 73,
+        "stageType": 1,
+        "monsterGroupId": 7000078,
+        "round": 15,
+        "stage": 3
+      },
+      {
+        "id": 74,
+        "stageType": 1,
+        "monsterGroupId": 7000079,
+        "round": 15,
+        "stage": 4
+      },
+      {
+        "id": 75,
+        "stageType": 2,
+        "monsterGroupId": 7100075,
+        "round": 15,
+        "stage": 5
+      }
+    ]
+  },
+  "enchantTotalConfig": {
+    "atk": 1,
+    "def": 1,
+    "hp": 6,
+    "quality3": 100,
+    "quality4": 120,
+    "quality5": 150,
+    "quality6": 180,
+    "quality7": 220
+  },
+  "eventMysteriousConfig": {
+    "energyCost": 10,
+    "eventLimit": 3
+  },
+  "exchangeDailyConfig": {},
+  "fbShareConfig": {},
+  "multiplicityRewardConfig": {},
+  "oneVsOneWin": 1,
+  "pkDisplayPointsConfig": {},
+  "pkRewardConfig": {},
+  "pkSettingConfig": {},
+  "prayConfig": {},
+  "redBagConfig": {},
+  "replenishEnergyConfig": {
+    "items": [
+      {
+        "endTimes": 1,
+        "goldCost": 50,
+        "amount": 50
+      },
+      {
+        "endTimes": 2,
+        "goldCost": 100,
+        "amount": 50
+      },
+      {
+        "endTimes": -1,
+        "goldCost": 200,
+        "amount": 50
+      }
+    ]
+  },
+  "replenishEventPointConfig": {
+    "items": [
+      {
+        "endTimes": 1,
+        "goldCost": 50,
+        "amount": 50
+      },
+      {
+        "endTimes": -1,
+        "goldCost": 100,
+        "amount": 50
+      }
+    ]
+  },
+  "skyTowerSettingConfig": {
+    "unlockLevel": 25,
+    "challengeChance": 3,
+    "monsterReviseHashPrime": 2543,
+    "hashModPrime": 3989,
+    "challengeTimeHashPrime": 1901,
+    "floorHashPrime": 1117,
+    "dateHashPrime": 89,
+    "userIdHashPrime": 997,
+    "lowBuffStar": 3,
+    "midBuffStar": 15,
+    "highBuffStar": 45,
+    "easyMonsterCoef": 1,
+    "normalMonsterCoef": 2,
+    "hardMonsterCoef": 3,
+    "atkBuffCoef": 0.005,
+    "defBuffCoef": 0.01,
+    "hpBuffCoef": 0.01,
+    "easyStarCoef": 1,
+    "normalStarCoef": 1.5,
+    "hardStarCoef": 2,
+    "startBuffConvertCoef": 0.005,
+    "startBuffMin": 0.05,
+    "startBuffMax": 0.2
+  },
+  "spiritConcentrateCostConfig": {
+    "spiritConcentrateCostList": [
+      {
+        "concentrateMin": 1,
+        "concentrateMax": 5,
+        "cost": 20
+      },
+      {
+        "concentrateMin": 6,
+        "concentrateMax": 10,
+        "cost": 40
+      },
+      {
+        "concentrateMin": 11,
+        "concentrateMax": 20,
+        "cost": 80
+      },
+      {
+        "concentrateMin": 21,
+        "concentrateMax": -1,
+        "cost": 150
+      }
+    ]
+  },
+  "spiritSettingConfig": {
+    "spiritPoolInitSize": 20,
+    "spiritPoolExtraSizePerPurchase": 5,
+    "spiritPoolMaxExpandTimes": 10,
+    "spiritPoolExpandCost": 50,
+    "unlockLevel": 20,
+    "refreshPropId": 400163,
+    "lockedRefreshMultiplier": 2,
+    "unlockPrice": 100
+  },
+  "treasureGachaConfig": {
+    "gachaNode": {
+      "requisites": [
+        {
+          "itemType": 2,
+          "metaId": 0,
+          "amount": 300
+        }
+      ],
+      "countdownDuration": 86400
+    }
+  },
+  "treasureSettingConfig": {
+    "unlockLevel": 60,
+    "treasurePoolInitSize": 50,
+    "treasureExtraSizePerPurchase": 5,
+    "treasurePoolExpandCost": 100,
+    "treasurePoolMaxExpandTimes": 20,
+    "treasureRenascence": 80
+  },
+  "unionSettingConfig": {
+    "unionApplyLevel": 5,
+    "unionCreateCoin": 50000,
+    "unionCreateGold": 100,
+    "unionApplierMax": 20,
+    "unionPlayerApplierMax": 3,
+    "unionDissolveForbidLevel": 3,
+    "unionNoticeContentMax": 100,
+    "unionDeclarationContentMax": 100,
+    "unionLeaderMaxLeaveTime": 604800,
+    "unionDonationMaxRevise": 5,
+    "unionDonation1Cost": 10000,
+    "unionDonation1Wealth": 100,
+    "unionDonation1Contribute": 10,
+    "unionDonation2Cost": 20,
+    "unionDonation2Wealth": 400,
+    "unionDonation2Contribute": 40,
+    "unionDonation3Cost": 100,
+    "unionDonation3Wealth": 2000,
+    "unionDonation3Contribute": 200,
+    "unionBankRewardContributeNeed": 50,
+    "unionBankRewardFeatureName": "unionBankReward",
+    "rewardDoubleGemCost": 50,
+    "unionMonsterPlayerAttMax": 3,
+    "unionMonsterRefreshDay": 6,
+    "unionMonsterRefreshHour": 5,
+    "unionMonsterFightItem": 400193,
+    "unionMonsterSummonFeatureName": "unionMonster",
+    "unionMonsterSummonRewardWeekLimit": 60
+  },
+  "unionWarRewardConfig": {
+    "unionWarRewardMeta": {}
+  },
+  "unionWarSettingConfig": {
+    "unionWarFeatureName": "unionWar",
+    "cityOccupyLimit": 3,
+    "citySignLimit": 2,
+    "cityDefenceBuff": 100,
+    "continueOccupyDown": 10,
+    "joinWarReward": 19001,
+    "cityAttNum": 5,
+    "cityDefenceNum": 5,
+    "silverBuff": 0.05,
+    "goldBuff": 0.1,
+    "silverBuffNum": 5,
+    "goldBuffNum": 5,
+    "striveNum": 3,
+    "winLimit": 3,
+    "cityVanLimit": 3,
+    "npcGroupMetas": {},
+    "unionWarBuff": {}
+  },
+  "unionWarTimeConfig": {
+    "unionWarTimeMeta": [
+      {
+        "id": 1,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      },
+      {
+        "id": 2,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      },
+      {
+        "id": 3,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      },
+      {
+        "id": 4,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      },
+      {
+        "id": 5,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      },
+      {
+        "id": 6,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      },
+      {
+        "id": 7,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      },
+      {
+        "id": 8,
+        "warBeginTime": 0,
+        "warContinueTime": 1
+      }
+    ]
+  },
+  "wantedShopConfig": {
+    "items": [
+      {
+        "id": 1,
+        "costID": 400216,
+        "costNum": 2,
+        "propType": 1,
+        "propID": 1,
+        "propNum": 50000
+      },
+      {
+        "id": 2,
+        "costID": 400216,
+        "costNum": 3,
+        "propType": 8,
+        "propID": 8,
+        "propNum": 2000
+      },
+      {
+        "id": 3,
+        "costID": 400216,
+        "costNum": 4,
+        "propType": 2,
+        "propID": 2,
+        "propNum": 100
+      },
+      {
+        "id": 4,
+        "costID": 400217,
+        "costNum": 1,
+        "propType": 2,
+        "propID": 2,
+        "propNum": 60
+      },
+      {
+        "id": 5,
+        "costID": 400217,
+        "costNum": 2,
+        "propType": 23,
+        "propID": 23,
+        "propNum": 100
+      },
+      {
+        "id": 6,
+        "costID": 400217,
+        "costNum": 3,
+        "propType": 5,
+        "propID": 101011,
+        "propNum": 1
+      }
+    ]
+  },
+  "wgvgRewardConfig": {
+    "wGVGRewardMetas": {}
+  },
+  "wgvgTotalConfig": {
+    "featureName": "wgvg",
+    "crossServerGroupMetas": {}
+  },
+  "consecutiveLoginNewConfig": [
+    {
+      "id": 1,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 1000
+    },
+    {
+      "id": 2,
+      "acquireMethod": 1,
+      "rewardType": 5,
+      "rewardId": 103001,
+      "rewardAmount": 1
+    },
+    {
+      "id": 3,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 212091,
+      "rewardAmount": 1
+    },
+    {
+      "id": 4,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 1000
+    },
+    {
+      "id": 5,
+      "acquireMethod": 1,
+      "rewardType": 5,
+      "rewardId": 103001,
+      "rewardAmount": 1
+    },
+    {
+      "id": 6,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 1000
+    },
+    {
+      "id": 7,
+      "acquireMethod": 1,
+      "rewardType": 5,
+      "rewardId": 104471,
+      "rewardAmount": 1
+    },
+    {
+      "id": 8,
+      "acquireMethod": 2,
+      "rewardType": 5,
+      "rewardId": 104471,
+      "rewardAmount": 1
+    }
+  ],
+  "consecutiveLoginConfig": [
+    {
+      "id": 1,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 40
+    },
+    {
+      "id": 2,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 212111,
+      "rewardAmount": 1
+    },
+    {
+      "id": 3,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 60
+    },
+    {
+      "id": 4,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 224071,
+      "rewardAmount": 1
+    },
+    {
+      "id": 5,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 80
+    },
+    {
+      "id": 6,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 230051,
+      "rewardAmount": 1
+    },
+    {
+      "id": 7,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 120
+    },
+    {
+      "id": 8,
+      "acquireMethod": 2,
+      "rewardType": 5,
+      "rewardId": 102081,
+      "rewardAmount": 1
+    }
+  ],
+  "chargeMoneyRewardConfig": {
+    "rewards": [
+      {
+        "id": 1,
+        "requireGold": 1,
+        "worthGold": 9999,
+        "backgroundCardId": 102061,
+        "describe": "chargeMoney_dec1",
+        "rewardType1": 5,
+        "rewardId1": 102061,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardAmount2": 500,
+        "rewardType3": 5,
+        "rewardId3": 104951,
+        "rewardAmount3": 8,
+        "rewardType4": 0,
+        "rewardId4": 0,
+        "rewardAmount4": 0
+      },
+      {
+        "id": 2,
+        "requireGold": 3300,
+        "worthGold": 18888,
+        "backgroundCardId": 103011,
+        "describe": "chargeMoney_dec2",
+        "rewardType1": 5,
+        "rewardId1": 103011,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardAmount2": 1200,
+        "rewardType3": 5,
+        "rewardId3": 104951,
+        "rewardAmount3": 10,
+        "rewardType4": 7,
+        "rewardId4": 400050,
+        "rewardAmount4": 5
+      },
+      {
+        "id": 3,
+        "requireGold": 7900,
+        "worthGold": 28888,
+        "backgroundCardId": 102031,
+        "describe": "chargeMoney_dec3",
+        "rewardType1": 5,
+        "rewardId1": 102031,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400051,
+        "rewardAmount2": 15,
+        "rewardType3": 5,
+        "rewardId3": 104961,
+        "rewardAmount3": 10,
+        "rewardType4": 7,
+        "rewardId4": 400010,
+        "rewardAmount4": 1500
+      },
+      {
+        "id": 4,
+        "requireGold": 39000,
+        "worthGold": 38888,
+        "backgroundCardId": 102032,
+        "describe": "chargeMoney_dec4",
+        "rewardType1": 5,
+        "rewardId1": 102061,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 103011,
+        "rewardAmount2": 1,
+        "rewardType3": 5,
+        "rewardId3": 102031,
+        "rewardAmount3": 1,
+        "rewardType4": 7,
+        "rewardId4": 400052,
+        "rewardAmount4": 15
+      },
+      {
+        "id": 5,
+        "requireGold": 60000,
+        "worthGold": 58888,
+        "backgroundCardId": 102001,
+        "describe": "chargeMoney_dec5",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardAmount2": 2000,
+        "rewardType3": 5,
+        "rewardId3": 104971,
+        "rewardAmount3": 10,
+        "rewardType4": 7,
+        "rewardId4": 400053,
+        "rewardAmount4": 15
+      },
+      {
+        "id": 6,
+        "requireGold": 80000,
+        "worthGold": 98888,
+        "backgroundCardId": 102003,
+        "describe": "chargeMoney_dec6",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 102001,
+        "rewardAmount2": 1,
+        "rewardType3": 7,
+        "rewardId3": 400010,
+        "rewardAmount3": 3500,
+        "rewardType4": 5,
+        "rewardId4": 104971,
+        "rewardAmount4": 10
+      },
+      {
+        "id": 7,
+        "requireGold": 100000,
+        "worthGold": 1288888,
+        "backgroundCardId": 102005,
+        "describe": "chargeMoney_dec7",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 102001,
+        "rewardAmount2": 1,
+        "rewardType3": 7,
+        "rewardId3": 400010,
+        "rewardAmount3": 4000,
+        "rewardType4": 5,
+        "rewardId4": 104971,
+        "rewardAmount4": 15
+      },
+      {
+        "id": 8,
+        "requireGold": 120000,
+        "worthGold": 1688888,
+        "backgroundCardId": 102005,
+        "describe": "chargeMoney_dec8",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 102001,
+        "rewardAmount2": 1,
+        "rewardType3": 7,
+        "rewardId3": 400010,
+        "rewardAmount3": 7500,
+        "rewardType4": 5,
+        "rewardId4": 104971,
+        "rewardAmount4": 18
+      }
+    ]
+  },
+  "activityGoldGodConfig": {
+    "featureName": "goldGod",
+    "version": 1,
+    "goldGodMaxTimes": 10,
+    "goldGodRewardItems": [
+      {
+        "id": 1,
+        "gemNeed": 100,
+        "gemMax": 1000,
+        "vip": 0
+      },
+      {
+        "id": 2,
+        "gemNeed": 200,
+        "gemMax": 2200,
+        "vip": 0
+      },
+      {
+        "id": 3,
+        "gemNeed": 300,
+        "gemMax": 3600,
+        "vip": 0
+      },
+      {
+        "id": 4,
+        "gemNeed": 500,
+        "gemMax": 6200,
+        "vip": 1
+      },
+      {
+        "id": 5,
+        "gemNeed": 800,
+        "gemMax": 10400,
+        "vip": 2
+      },
+      {
+        "id": 6,
+        "gemNeed": 1200,
+        "gemMax": 16000,
+        "vip": 3
+      },
+      {
+        "id": 7,
+        "gemNeed": 1800,
+        "gemMax": 23400,
+        "vip": 4
+      },
+      {
+        "id": 8,
+        "gemNeed": 2600,
+        "gemMax": 33800,
+        "vip": 5
+      },
+      {
+        "id": 9,
+        "gemNeed": 3600,
+        "gemMax": 46800,
+        "vip": 6
+      },
+      {
+        "id": 10,
+        "gemNeed": 5000,
+        "gemMax": 65000,
+        "vip": 7
+      }
+    ]
+  },
+  "activityGachaPointsConfig": {
+    "rankingNum": 20,
+    "rankRewards": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 104001,
+            "amount": 1
+          },
+          {
+            "itemType": 5,
+            "metaId": 104061,
+            "amount": 1
+          },
+          {
+            "itemType": 5,
+            "metaId": 101271,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 10,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 104061,
+            "amount": 1
+          },
+          {
+            "itemType": 5,
+            "metaId": 101271,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "rankMin": 11,
+        "rankMax": 20,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 101271,
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "shopMetaConfig": {
+    "goods": {
+      "1": {
+        "id": 1,
+        "itemType": 7,
+        "metaId": 400019,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 50,
+        "discountPrice": 50,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": true,
+        "enable": true,
+        "order": 3,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "2": {
+        "id": 2,
+        "itemType": 7,
+        "metaId": 400059,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 30,
+        "discountPrice": 30,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 4,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "3": {
+        "id": 3,
+        "itemType": 7,
+        "metaId": 400019,
+        "amount": 10,
+        "moneyType": 2,
+        "price": 500,
+        "discountPrice": 500,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": true,
+        "enable": true,
+        "order": 5,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "4": {
+        "id": 4,
+        "itemType": 7,
+        "metaId": 400059,
+        "amount": 10,
+        "moneyType": 2,
+        "price": 300,
+        "discountPrice": 300,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 6,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "5": {
+        "id": 5,
+        "itemType": 7,
+        "metaId": 400017,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 30,
+        "discountPrice": 30,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 8,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "6": {
+        "id": 6,
+        "itemType": 7,
+        "metaId": 400058,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 20,
+        "discountPrice": 20,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 9,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "7": {
+        "id": 7,
+        "itemType": 7,
+        "metaId": 400016,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 20,
+        "discountPrice": 20,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 12,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "8": {
+        "id": 8,
+        "itemType": 7,
+        "metaId": 400057,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 10,
+        "discountPrice": 10,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 13,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "9": {
+        "id": 9,
+        "itemType": 7,
+        "metaId": 400061,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 120,
+        "discountPrice": 120,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 16,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "10": {
+        "id": 10,
+        "itemType": 7,
+        "metaId": 400063,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 100,
+        "discountPrice": 10,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 17,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "11": {
+        "id": 11,
+        "itemType": 7,
+        "metaId": 400064,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 200,
+        "discountPrice": 20,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 18,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "12": {
+        "id": 12,
+        "itemType": 7,
+        "metaId": 400065,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 300,
+        "discountPrice": 30,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 19,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "13": {
+        "id": 13,
+        "itemType": 7,
+        "metaId": 400066,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 500,
+        "discountPrice": 50,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 20,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "14": {
+        "id": 14,
+        "itemType": 7,
+        "metaId": 400067,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 1000,
+        "discountPrice": 100,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 21,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "15": {
+        "id": 15,
+        "itemType": 7,
+        "metaId": 400068,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 2000,
+        "discountPrice": 200,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 22,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "16": {
+        "id": 16,
+        "itemType": 7,
+        "metaId": 400069,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 2000,
+        "discountPrice": 200,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 23,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "17": {
+        "id": 17,
+        "itemType": 7,
+        "metaId": 400070,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 4000,
+        "discountPrice": 400,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 24,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "18": {
+        "id": 18,
+        "itemType": 7,
+        "metaId": 400071,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 8000,
+        "discountPrice": 800,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 25,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "19": {
+        "id": 19,
+        "itemType": 7,
+        "metaId": 400072,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 11000,
+        "discountPrice": 1100,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 26,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "20": {
+        "id": 20,
+        "itemType": 7,
+        "metaId": 400073,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 16000,
+        "discountPrice": 1600,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 27,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "21": {
+        "id": 21,
+        "itemType": 7,
+        "metaId": 400074,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 35000,
+        "discountPrice": 3500,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 28,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "22": {
+        "id": 22,
+        "itemType": 7,
+        "metaId": 400075,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 40000,
+        "discountPrice": 4000,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 29,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "23": {
+        "id": 23,
+        "itemType": 7,
+        "metaId": 400076,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 80000,
+        "discountPrice": 8000,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 30,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "24": {
+        "id": 24,
+        "itemType": 7,
+        "metaId": 400077,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 300000,
+        "discountPrice": 30000,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 31,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "25": {
+        "id": 25,
+        "itemType": 7,
+        "metaId": 400112,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 400000,
+        "discountPrice": 40000,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 32,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "26": {
+        "id": 26,
+        "itemType": 7,
+        "metaId": 400113,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 600000,
+        "discountPrice": 60000,
+        "dailyPurchaseLimit": 1,
+        "lifePurchaseLimit": 1,
+        "requireVipLevel": "17",
+        "fresh": false,
+        "enable": true,
+        "order": 33,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "27": {
+        "id": 27,
+        "itemType": 7,
+        "metaId": 400114,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 200,
+        "discountPrice": 200,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 7,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "28": {
+        "id": 28,
+        "itemType": 7,
+        "metaId": 400127,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 20,
+        "discountPrice": 20,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 34,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "29": {
+        "id": 29,
+        "itemType": 7,
+        "metaId": 400199,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 300,
+        "discountPrice": 300,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 35,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "30": {
+        "id": 30,
+        "itemType": 7,
+        "metaId": 400262,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 30,
+        "discountPrice": 30,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "10,11,12,13,14,15,16,17",
+        "fresh": true,
+        "enable": true,
+        "order": 37,
+        "loopLimitDateStart": "2015/01/13",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 55,
+        "loopLimitTime": "3|0|0"
+      },
+      "31": {
+        "id": 31,
+        "itemType": 7,
+        "metaId": 400017,
+        "amount": 10,
+        "moneyType": 2,
+        "price": 300,
+        "discountPrice": 300,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 10,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "32": {
+        "id": 32,
+        "itemType": 7,
+        "metaId": 400058,
+        "amount": 10,
+        "moneyType": 2,
+        "price": 200,
+        "discountPrice": 200,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 11,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "33": {
+        "id": 33,
+        "itemType": 7,
+        "metaId": 400016,
+        "amount": 10,
+        "moneyType": 2,
+        "price": 200,
+        "discountPrice": 200,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 14,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "34": {
+        "id": 34,
+        "itemType": 7,
+        "metaId": 400057,
+        "amount": 10,
+        "moneyType": 2,
+        "price": 100,
+        "discountPrice": 100,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 15,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "35": {
+        "id": 35,
+        "itemType": 7,
+        "metaId": 400280,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 18,
+        "discountPrice": 18,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 36,
+        "loopLimitDateStart": "2015/02/08",
+        "loopLimitDateEnd": "2015/03/06",
+        "loopLimit": 68,
+        "loopLimitTime": "1|0|0"
+      },
+      "36": {
+        "id": 36,
+        "itemType": 7,
+        "metaId": 400284,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 500,
+        "discountPrice": 200,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 1,
+        "loopLimitDateStart": "2015/02/10",
+        "loopLimitDateEnd": "2020/03/06",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "37": {
+        "id": 37,
+        "itemType": 7,
+        "metaId": 400285,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 1500,
+        "discountPrice": 500,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "5,6,7,8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 2,
+        "loopLimitDateStart": "2015/02/10",
+        "loopLimitDateEnd": "2020/03/07",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "38": {
+        "id": 38,
+        "itemType": 7,
+        "metaId": 400262,
+        "amount": 10,
+        "moneyType": 2,
+        "price": 300,
+        "discountPrice": 300,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "10,11,12,13,14,15,16,17",
+        "fresh": true,
+        "enable": true,
+        "order": 38,
+        "loopLimitDateStart": "2015/01/13",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 55,
+        "loopLimitTime": "3|0|0"
+      },
+      "39": {
+        "id": 39,
+        "itemType": 7,
+        "metaId": 400306,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 800,
+        "discountPrice": 800,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 39,
+        "loopLimitDateStart": "2015/04/27",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "40": {
+        "id": 40,
+        "itemType": 7,
+        "metaId": 400307,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 1500,
+        "discountPrice": 1500,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 40,
+        "loopLimitDateStart": "2015/04/27",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "41": {
+        "id": 41,
+        "itemType": 7,
+        "metaId": 400308,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 1500,
+        "discountPrice": 1500,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 41,
+        "loopLimitDateStart": "2015/04/27",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "42": {
+        "id": 42,
+        "itemType": 7,
+        "metaId": 400309,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 3000,
+        "discountPrice": 3000,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 42,
+        "loopLimitDateStart": "2015/04/27",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "43": {
+        "id": 43,
+        "itemType": 7,
+        "metaId": 400310,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 3000,
+        "discountPrice": 4000,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 43,
+        "loopLimitDateStart": "2015/04/27",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "44": {
+        "id": 44,
+        "itemType": 7,
+        "metaId": 400311,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 5000,
+        "discountPrice": 6000,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "17",
+        "fresh": false,
+        "enable": true,
+        "order": 44,
+        "loopLimitDateStart": "2015/04/27",
+        "loopLimitDateEnd": "2020/01/13",
+        "loopLimit": 1,
+        "loopLimitTime": "7|0|0"
+      },
+      "45": {
+        "id": 45,
+        "itemType": 7,
+        "metaId": 400163,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 30,
+        "discountPrice": 30,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": false,
+        "order": 45,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "46": {
+        "id": 46,
+        "itemType": 7,
+        "metaId": 400315,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 298,
+        "discountPrice": 298,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": false,
+        "order": 46,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "47": {
+        "id": 47,
+        "itemType": 7,
+        "metaId": 400316,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 98,
+        "discountPrice": 98,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": false,
+        "order": 47,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "48": {
+        "id": 48,
+        "itemType": 7,
+        "metaId": 400061,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 60,
+        "discountPrice": 60,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": false,
+        "order": 48,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "49": {
+        "id": 49,
+        "itemType": 7,
+        "metaId": 400114,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 50,
+        "discountPrice": 50,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": false,
+        "order": 49,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "50": {
+        "id": 50,
+        "itemType": 7,
+        "metaId": 400199,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 300,
+        "discountPrice": 300,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": false,
+        "order": 50,
+        "loopLimitDateStart": -1,
+        "loopLimitDateEnd": -1,
+        "loopLimit": -1,
+        "loopLimitTime": -1
+      },
+      "51": {
+        "id": 51,
+        "itemType": 7,
+        "metaId": 400324,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 18,
+        "discountPrice": 18,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 51,
+        "loopLimitDateStart": "2015/06/19",
+        "loopLimitDateEnd": "2015/08/27",
+        "loopLimit": 68,
+        "loopLimitTime": "1|0|0"
+      },
+      "52": {
+        "id": 52,
+        "itemType": 7,
+        "metaId": 400366,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 18,
+        "discountPrice": 18,
+        "dailyPurchaseLimit": -1,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "8,9,10,11,12,13,14,15,16,17",
+        "fresh": false,
+        "enable": true,
+        "order": 52,
+        "loopLimitDateStart": "2015/10/17",
+        "loopLimitDateEnd": "2015/11/27",
+        "loopLimit": 68,
+        "loopLimitTime": "1|0|0"
+      },
+      "100": {
+        "id": 100,
+        "itemType": 7,
+        "metaId": 400008,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 999,
+        "discountPrice": 100,
+        "dailyPurchaseLimit": 5,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 1000,
+        "loopLimitDateStart": "",
+        "loopLimitDateEnd": "",
+        "loopLimit": false,
+        "loopLimitTime": -1
+      },
+      "101": {
+        "id": 101,
+        "itemType": 7,
+        "metaId": 400009,
+        "amount": 1,
+        "moneyType": 2,
+        "price": 999,
+        "discountPrice": 100,
+        "dailyPurchaseLimit": 10,
+        "lifePurchaseLimit": -1,
+        "requireVipLevel": "0",
+        "fresh": false,
+        "enable": true,
+        "order": 1001,
+        "loopLimitDateStart": "",
+        "loopLimitDateEnd": "",
+        "loopLimit": false,
+        "loopLimitTime": -1
+      }
+    }
+  },
+  "cardMetaConfig": {
+    "overrides": {},
+    "customCards": [
+      {
+        "id": 199015,
+        "name": "Card_199015_name",
+        "isCustomCard": true,
+        "desc": "新·吕布",
+        "initLevel": 1,
+        "country": 4,
+        "mainProp": 1,
+        "cardGroupId": 9014,
+        "rare": 6,
+        "leadPoint": 24,
+        "figureId": "zj_199015",
+        "reviseHP": 55.5,
+        "reviseATT": 15,
+        "reviseDEF": 10.1,
+        "initHp": 1205,
+        "initAtt": 572,
+        "initDef": 240,
+        "skill": 31005201,
+        "mainSkill": 32004301,
+        "prefixId": 90014,
+        "evolutionLevel": 1,
+        "evolutionCardId": 199016,
+        "maxEvolvedLevel": 7,
+        "readName": "新·吕布",
+        "backgroundName": "qun567_567.png",
+        "iconHeadBgName": "",
+        "weaponType": 1,
+        "haveGallery": true,
+        "astralEssence": 39000,
+        "basicPrice": 20000,
+        "basicExp": 50000,
+        "harmoniousFigureID": "zj_199015",
+        "face": 0,
+        "expression": "215,105",
+        "areaSwitch": 1,
+        "groupSkill1": 33000201,
+        "group1": "408",
+        "groupSkill2": 0,
+        "group2": "0",
+        "groupSkill3": 0,
+        "group3": "0",
+        "groupSkill4": 0,
+        "group4": "0",
+        "groupSkill5": 0,
+        "group5": "0",
+        "groupSkill6": 0,
+        "group6": "0",
+        "groupSkill7": 0,
+        "group7": "0",
+        "groupSkill8": 0,
+        "group8": "0"
+      },
+      {
+        "id": 199016,
+        "name": "Card_199016_name",
+        "isCustomCard": true,
+        "desc": "新·吕布",
+        "initLevel": 1,
+        "country": 4,
+        "mainProp": 1,
+        "cardGroupId": 9014,
+        "rare": 6,
+        "leadPoint": 24,
+        "figureId": "zj_199015_e1",
+        "reviseHP": 55.5,
+        "reviseATT": 15,
+        "reviseDEF": 10.1,
+        "initHp": 1783,
+        "initAtt": 858,
+        "initDef": 348,
+        "skill": 31005201,
+        "mainSkill": 32004301,
+        "prefixId": 90014,
+        "evolutionLevel": 2,
+        "evolutionCardId": 199017,
+        "maxEvolvedLevel": 7,
+        "readName": "新·吕布",
+        "backgroundName": "qun567_567.png",
+        "iconHeadBgName": "",
+        "weaponType": 1,
+        "haveGallery": true,
+        "astralEssence": 39000,
+        "basicPrice": 20000,
+        "basicExp": 50000,
+        "harmoniousFigureID": "zj_199015_e1",
+        "face": 0,
+        "expression": "215,105",
+        "areaSwitch": 1,
+        "groupSkill1": 33000201,
+        "group1": "408",
+        "groupSkill2": 0,
+        "group2": "0",
+        "groupSkill3": 0,
+        "group3": "0",
+        "groupSkill4": 0,
+        "group4": "0",
+        "groupSkill5": 0,
+        "group5": "0",
+        "groupSkill6": 0,
+        "group6": "0",
+        "groupSkill7": 0,
+        "group7": "0",
+        "groupSkill8": 0,
+        "group8": "0"
+      },
+      {
+        "id": 199017,
+        "name": "Card_199017_name",
+        "isCustomCard": true,
+        "desc": "新·吕布",
+        "initLevel": 1,
+        "country": 4,
+        "mainProp": 1,
+        "cardGroupId": 9014,
+        "rare": 6,
+        "leadPoint": 24,
+        "figureId": "zj_199015_e2",
+        "reviseHP": 55.5,
+        "reviseATT": 15,
+        "reviseDEF": 10.1,
+        "initHp": 2362,
+        "initAtt": 1144,
+        "initDef": 456,
+        "skill": 31005201,
+        "mainSkill": 32004301,
+        "prefixId": 90014,
+        "evolutionLevel": 3,
+        "evolutionCardId": 199018,
+        "maxEvolvedLevel": 7,
+        "readName": "新·吕布",
+        "backgroundName": "qun567_567.png",
+        "iconHeadBgName": "",
+        "weaponType": 1,
+        "haveGallery": true,
+        "astralEssence": 39000,
+        "basicPrice": 20000,
+        "basicExp": 50000,
+        "harmoniousFigureID": "zj_199015_e2",
+        "face": 0,
+        "expression": "215,105",
+        "areaSwitch": 1,
+        "groupSkill1": 33000201,
+        "group1": "408",
+        "groupSkill2": 0,
+        "group2": "0",
+        "groupSkill3": 0,
+        "group3": "0",
+        "groupSkill4": 0,
+        "group4": "0",
+        "groupSkill5": 0,
+        "group5": "0",
+        "groupSkill6": 0,
+        "group6": "0",
+        "groupSkill7": 0,
+        "group7": "0",
+        "groupSkill8": 0,
+        "group8": "0"
+      },
+      {
+        "id": 199018,
+        "name": "Card_199018_name",
+        "isCustomCard": true,
+        "desc": "新·吕布",
+        "initLevel": 1,
+        "country": 4,
+        "mainProp": 1,
+        "cardGroupId": 9014,
+        "rare": 6,
+        "leadPoint": 24,
+        "figureId": "zj_199015_e3",
+        "reviseHP": 55.5,
+        "reviseATT": 15,
+        "reviseDEF": 10.1,
+        "initHp": 2940,
+        "initAtt": 1430,
+        "initDef": 564,
+        "skill": 31005201,
+        "mainSkill": 32004301,
+        "prefixId": 90014,
+        "evolutionLevel": 4,
+        "evolutionCardId": 199019,
+        "maxEvolvedLevel": 7,
+        "readName": "新·吕布",
+        "backgroundName": "qun567_567.png",
+        "iconHeadBgName": "",
+        "weaponType": 1,
+        "haveGallery": true,
+        "astralEssence": 39000,
+        "basicPrice": 20000,
+        "basicExp": 50000,
+        "harmoniousFigureID": "zj_199015_e3",
+        "face": 0,
+        "expression": "215,105",
+        "areaSwitch": 1,
+        "groupSkill1": 33000201,
+        "group1": "408",
+        "groupSkill2": 0,
+        "group2": "0",
+        "groupSkill3": 0,
+        "group3": "0",
+        "groupSkill4": 0,
+        "group4": "0",
+        "groupSkill5": 0,
+        "group5": "0",
+        "groupSkill6": 0,
+        "group6": "0",
+        "groupSkill7": 0,
+        "group7": "0",
+        "groupSkill8": 0,
+        "group8": "0"
+      },
+      {
+        "id": 199019,
+        "name": "Card_199019_name",
+        "isCustomCard": true,
+        "desc": "新·吕布",
+        "initLevel": 1,
+        "country": 4,
+        "mainProp": 1,
+        "cardGroupId": 9014,
+        "rare": 6,
+        "leadPoint": 24,
+        "figureId": "zj_199015_e4",
+        "reviseHP": 55.5,
+        "reviseATT": 15,
+        "reviseDEF": 10.1,
+        "initHp": 3519,
+        "initAtt": 1716,
+        "initDef": 672,
+        "skill": 31005201,
+        "mainSkill": 32004301,
+        "prefixId": 90014,
+        "evolutionLevel": 5,
+        "evolutionCardId": 199020,
+        "maxEvolvedLevel": 7,
+        "readName": "新·吕布",
+        "backgroundName": "qun567_567.png",
+        "iconHeadBgName": "",
+        "weaponType": 1,
+        "haveGallery": true,
+        "astralEssence": 39000,
+        "basicPrice": 20000,
+        "basicExp": 50000,
+        "harmoniousFigureID": "zj_199015_e4",
+        "face": 0,
+        "expression": "215,105",
+        "areaSwitch": 1,
+        "groupSkill1": 33000201,
+        "group1": "408",
+        "groupSkill2": 0,
+        "group2": "0",
+        "groupSkill3": 0,
+        "group3": "0",
+        "groupSkill4": 0,
+        "group4": "0",
+        "groupSkill5": 0,
+        "group5": "0",
+        "groupSkill6": 0,
+        "group6": "0",
+        "groupSkill7": 0,
+        "group7": "0",
+        "groupSkill8": 0,
+        "group8": "0"
+      },
+      {
+        "id": 199020,
+        "name": "Card_199020_name",
+        "isCustomCard": true,
+        "desc": "新·吕布",
+        "initLevel": 1,
+        "country": 4,
+        "mainProp": 1,
+        "cardGroupId": 9014,
+        "rare": 6,
+        "leadPoint": 24,
+        "figureId": "zj_199015_e5",
+        "reviseHP": 55.5,
+        "reviseATT": 15,
+        "reviseDEF": 10.1,
+        "initHp": 4097,
+        "initAtt": 2002,
+        "initDef": 780,
+        "skill": 31005201,
+        "mainSkill": 32004301,
+        "prefixId": 90014,
+        "evolutionLevel": 6,
+        "evolutionCardId": 199021,
+        "maxEvolvedLevel": 7,
+        "readName": "新·吕布",
+        "backgroundName": "qun567_567.png",
+        "iconHeadBgName": "",
+        "weaponType": 1,
+        "haveGallery": true,
+        "astralEssence": 39000,
+        "basicPrice": 20000,
+        "basicExp": 50000,
+        "harmoniousFigureID": "zj_199015_e5",
+        "face": 0,
+        "expression": "215,105",
+        "areaSwitch": 1,
+        "groupSkill1": 33000201,
+        "group1": "408",
+        "groupSkill2": 0,
+        "group2": "0",
+        "groupSkill3": 0,
+        "group3": "0",
+        "groupSkill4": 0,
+        "group4": "0",
+        "groupSkill5": 0,
+        "group5": "0",
+        "groupSkill6": 0,
+        "group6": "0",
+        "groupSkill7": 0,
+        "group7": "0",
+        "groupSkill8": 0,
+        "group8": "0"
+      },
+      {
+        "id": 199021,
+        "name": "Card_199021_name",
+        "isCustomCard": true,
+        "desc": "新·吕布",
+        "initLevel": 1,
+        "country": 4,
+        "mainProp": 1,
+        "cardGroupId": 9014,
+        "rare": 6,
+        "leadPoint": 24,
+        "figureId": "zj_199015",
+        "reviseHP": 55.5,
+        "reviseATT": 15,
+        "reviseDEF": 10.1,
+        "initHp": 4675,
+        "initAtt": 2288,
+        "initDef": 888,
+        "skill": 31005201,
+        "mainSkill": 32004301,
+        "prefixId": 90014,
+        "evolutionLevel": 7,
+        "evolutionCardId": 0,
+        "maxEvolvedLevel": 7,
+        "readName": "新·吕布",
+        "backgroundName": "qun567_567.png",
+        "iconHeadBgName": "",
+        "weaponType": 1,
+        "haveGallery": true,
+        "astralEssence": 39000,
+        "basicPrice": 20000,
+        "basicExp": 50000,
+        "harmoniousFigureID": "zj_199015",
+        "face": 0,
+        "expression": "215,105",
+        "areaSwitch": 1,
+        "groupSkill1": 33000201,
+        "group1": "408",
+        "groupSkill2": 0,
+        "group2": "0",
+        "groupSkill3": 0,
+        "group3": "0",
+        "groupSkill4": 0,
+        "group4": "0",
+        "groupSkill5": 0,
+        "group5": "0",
+        "groupSkill6": 0,
+        "group6": "0",
+        "groupSkill7": 0,
+        "group7": "0",
+        "groupSkill8": 0,
+        "group8": "0"
+      }
+    ],
+    "customNames": {
+      "Card_199015_name": "新·吕布",
+      "Card_199016_name": "新·吕布+1",
+      "Card_199017_name": "新·吕布+2",
+      "Card_199018_name": "新·吕布+3",
+      "Card_199019_name": "新·吕布+4",
+      "Card_199020_name": "新·吕布+5",
+      "Card_199021_name": "新·吕布MAX",
+      "Card_199015_desc": "新·吕布"
+    }
+  },
+  "skillMetaConfig": {
+    "statusOverrides": {}
+  },
+  "vipSettingConfig": {
+    "levels": {
+      "0": 0,
+      "1": 360,
+      "2": 1800,
+      "3": 3000,
+      "4": 6000,
+      "5": 12000,
+      "6": 18000,
+      "7": 24000,
+      "8": 32000,
+      "9": 54000,
+      "10": 75000,
+      "11": 92000,
+      "12": 138000,
+      "13": 180000,
+      "14": 250000,
+      "15": 300000,
+      "16": 500000,
+      "17": 800000
+    }
+  }
+}

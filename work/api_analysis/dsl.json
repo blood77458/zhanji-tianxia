@@ -1,0 +1,2405 @@
+{
+ "protocols": [
+  {
+   "file": "canon\\features\\crossArena\\request\\BuyCrossPvpChallengeTimeRequest.3bc93bf2c7a5003b7ed62d2a27503f75.lua",
+   "line": 2,
+   "desc": "获取跨服pvp录像信息",
+   "classes": [
+    "BuyCrossPvpChallengeTimeRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "reportId",
+     "type": "int",
+     "ref": "",
+     "desc": "录像id"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "cardInitDatas",
+     "type": "",
+     "ref": "BattleCardInitData",
+     "desc": "怪物/卡牌/墙的初始值"
+    },
+    {
+     "kind": "list",
+     "code": "eventFlow",
+     "type": "",
+     "ref": "BattleEvent",
+     "desc": "战斗事件流"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "本波怪是否胜利"
+    },
+    {
+     "kind": "property",
+     "code": "leftHpRate",
+     "type": "float",
+     "ref": "",
+     "desc": "胜利方剩余血量比例"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\request\\CrossPvpGainBattleRewardRequest.12e5c3251b4dfdd80ac70a4be3510f47.lua",
+   "line": 6,
+   "desc": "领取跨服pvp奖励",
+   "classes": [
+    "CrossPvpGainBattleRewardRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "type",
+     "type": "int",
+     "ref": "",
+     "desc": "领取类型(0-全区礼包;1-排名礼包)"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "奖励详情"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\request\\CrossPvpGetRankInfoRequest.2b178242c952c17081f967582e47f410.lua",
+   "line": 6,
+   "desc": "获得跨服PVP排行榜信息",
+   "classes": [
+    "CrossPvpGetRankInfoRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "list",
+     "code": "rankInfos",
+     "type": "",
+     "ref": "RankInfo",
+     "desc": "排名列表"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\request\\GetCrossPvpInfoRequest.8e25ad6fef5fd206195a504b0cd3a4ef.lua",
+   "line": 1,
+   "desc": "获得跨服PVP信息",
+   "classes": [
+    "GetCrossPvpInfoRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "property",
+     "code": "crossVersion",
+     "type": "int",
+     "ref": "",
+     "desc": "届数"
+    },
+    {
+     "kind": "property",
+     "code": "phaseIndex",
+     "type": "int",
+     "ref": "",
+     "desc": "阶段指针(0-战斗;1-领奖)"
+    },
+    {
+     "kind": "property",
+     "code": "battleInfo",
+     "type": "",
+     "ref": "BattlePhase",
+     "desc": "战斗阶段信息"
+    },
+    {
+     "kind": "property",
+     "code": "rewardInfo",
+     "type": "",
+     "ref": "RewawrdPhase",
+     "desc": "领奖阶段信息"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\request\\GetCrossPvpReportRequest.44236f0387a34a7d61efdb43d4ffaa17.lua",
+   "line": 1,
+   "desc": "获得跨服PVP战报信息",
+   "classes": [
+    "GetCrossPvpReportRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "list",
+     "code": "reports",
+     "type": "",
+     "ref": "ReportInfo",
+     "desc": "战报列表"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\request\\GetCrossPvpVideoRequest.cd099cfeb1cc234eb8730ced46482d2b.lua",
+   "line": 2,
+   "desc": "获取跨服pvp录像信息",
+   "classes": [
+    "GetCrossPvpVideoRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "reportId",
+     "type": "int",
+     "ref": "",
+     "desc": "录像id"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "cardInitDatas",
+     "type": "",
+     "ref": "BattleCardInitData",
+     "desc": "怪物/卡牌/墙的初始值"
+    },
+    {
+     "kind": "list",
+     "code": "eventFlow",
+     "type": "",
+     "ref": "BattleEvent",
+     "desc": "战斗事件流"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "本波怪是否胜利"
+    },
+    {
+     "kind": "property",
+     "code": "leftHpRate",
+     "type": "float",
+     "ref": "",
+     "desc": "胜利方剩余血量比例"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetBattleReportRequest.1b502719c35e0ebf9428d4e07f3c565f.lua",
+   "line": 6,
+   "desc": "获取gvg战斗信息",
+   "classes": [
+    "CrossUnionPkGetBattleReportRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "reportId",
+     "type": "int",
+     "ref": "",
+     "desc": "战报id"
+    },
+    {
+     "kind": "property",
+     "code": "knockout",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否是淘汰赛"
+    }
+   ],
+   "response": [
+    {
+     "kind": "property",
+     "code": "battleReport",
+     "type": "",
+     "ref": "SharkUnionBattlefieldReport",
+     "desc": "战报"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetGroupRankScoreRequest.c20fba73ab04739397846fc51412eac7.lua",
+   "line": 6,
+   "desc": "获得军团积分前十名及自己",
+   "classes": [
+    "CrossUnionPkGetGroupRankScoreRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "property",
+     "code": "selfScore",
+     "type": "",
+     "ref": "CrossGVGScoreInfo",
+     "desc": "自己军团的积分信息"
+    },
+    {
+     "kind": "list",
+     "code": "top10ScoreList",
+     "type": "",
+     "ref": "CrossGVGScoreInfo",
+     "desc": "积分前十名军团信息"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetGroupReportsRequest.1a9e91f3dd539114bb5932f2d00f974a.lua",
+   "line": 6,
+   "desc": "获得跨服军团战小组赛战报",
+   "classes": [
+    "CrossUnionPkGetGroupReportsRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "list",
+     "code": "reports",
+     "type": "",
+     "ref": "GVGReport",
+     "desc": "战报信息列表"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetKnockoutInfoRequest.9688e362c9f1441ff9fdb6487a615777.lua",
+   "line": 6,
+   "desc": "获取淘汰赛信息",
+   "classes": [
+    "CrossUnionPkGetKnockoutInfoRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "list",
+     "code": "sixteen",
+     "type": "",
+     "ref": "CrossGvgResultOutline",
+     "desc": "16强"
+    },
+    {
+     "kind": "list",
+     "code": "eight",
+     "type": "",
+     "ref": "CrossGvgResultOutline",
+     "desc": "8强"
+    },
+    {
+     "kind": "list",
+     "code": "four",
+     "type": "",
+     "ref": "CrossGvgResultOutline",
+     "desc": "4强"
+    },
+    {
+     "kind": "property",
+     "code": "championBattle",
+     "type": "",
+     "ref": "CrossGvgResultOutline",
+     "desc": "冠军赛"
+    },
+    {
+     "kind": "property",
+     "code": "thirdPlaceBattle",
+     "type": "",
+     "ref": "CrossGvgResultOutline",
+     "desc": "季军赛"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGroupBattleRequest.5b745209c87b7b51021c5da067c19dbf.lua",
+   "line": 6,
+   "desc": "获得跨服军团战小组赛战斗信息",
+   "classes": [
+    "CrossUnionPkGroupBattleRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "property",
+     "code": "battleReport",
+     "type": "",
+     "ref": "SharkUnionBattlefieldReport",
+     "desc": "城池的战报"
+    },
+    {
+     "kind": "property",
+     "code": "changePoints",
+     "type": "int",
+     "ref": "",
+     "desc": "变化的积分数"
+    },
+    {
+     "kind": "property",
+     "code": "currPoints",
+     "type": "int",
+     "ref": "",
+     "desc": "当前积分"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\ExchangeGvgFormationRequest.e50e16c2292cf6aaa58ab81772d4dcd3.lua",
+   "line": 2,
+   "desc": "调整阵型",
+   "classes": [
+    "ExchangeGvgFormationRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "override",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否强制覆盖"
+    },
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "serverId",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器"
+    },
+    {
+     "kind": "property",
+     "code": "version",
+     "type": "int",
+     "ref": "",
+     "desc": "阵型版本号"
+    },
+    {
+     "kind": "property",
+     "code": "forwardUid",
+     "type": "long",
+     "ref": "",
+     "desc": "单挑战玩家id"
+    },
+    {
+     "kind": "list",
+     "code": "headUids",
+     "type": "long",
+     "ref": "",
+     "desc": "阵首玩家id"
+    },
+    {
+     "kind": "list",
+     "code": "middleUids",
+     "type": "long",
+     "ref": "",
+     "desc": "阵中玩家id"
+    },
+    {
+     "kind": "list",
+     "code": "tailUids",
+     "type": "long",
+     "ref": "",
+     "desc": "阵尾玩家id"
+    }
+   ],
+   "response": []
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\GetCrossGvgGroupInfoRequest.6b3a365e718e8c09e2c793629183231e.lua",
+   "line": 2,
+   "desc": "获得跨服军团战分在同一个组的服务器id",
+   "classes": [
+    "GetCrossGvgGroupInfoRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "list",
+     "code": "serverIds",
+     "type": "int",
+     "ref": "",
+     "desc": "分在同一个组的服务器id"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\GetCrossGvgInfoRequest.d980ae99d42192c15ed13507afa1a358.lua",
+   "line": 2,
+   "desc": "获得跨服军团战主界面",
+   "classes": [
+    "GetCrossGvgInfoRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "property",
+     "code": "version",
+     "type": "int",
+     "ref": "",
+     "desc": "阵型版本号"
+    },
+    {
+     "kind": "property",
+     "code": "striveInspireNum",
+     "type": "int",
+     "ref": "",
+     "desc": "奋力一击"
+    },
+    {
+     "kind": "property",
+     "code": "coinInspireNum",
+     "type": "int",
+     "ref": "",
+     "desc": "金币鼓舞次数"
+    },
+    {
+     "kind": "property",
+     "code": "gemInspireNum",
+     "type": "int",
+     "ref": "",
+     "desc": "金币鼓舞次数"
+    },
+    {
+     "kind": "list",
+     "code": "signs",
+     "type": "",
+     "ref": "ApplicantGvgUserInfo",
+     "desc": "报名玩家信息"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\InspireCrossGvgRequest.3e517cf188e179ba9da814632f7a9836.lua",
+   "line": 2,
+   "desc": "调整阵型",
+   "classes": [
+    "InspireCrossGvgRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "override",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否强制覆盖"
+    },
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "serverId",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器"
+    },
+    {
+     "kind": "property",
+     "code": "version",
+     "type": "int",
+     "ref": "",
+     "desc": "阵型版本号"
+    },
+    {
+     "kind": "property",
+     "code": "forwardUid",
+     "type": "long",
+     "ref": "",
+     "desc": "单挑战玩家id"
+    },
+    {
+     "kind": "list",
+     "code": "headUids",
+     "type": "long",
+     "ref": "",
+     "desc": "阵首玩家id"
+    },
+    {
+     "kind": "list",
+     "code": "middleUids",
+     "type": "long",
+     "ref": "",
+     "desc": "阵中玩家id"
+    },
+    {
+     "kind": "list",
+     "code": "tailUids",
+     "type": "long",
+     "ref": "",
+     "desc": "阵尾玩家id"
+    }
+   ],
+   "response": []
+  },
+  {
+   "file": "canon\\features\\enchant\\request\\EnchantUpgradeRequest.2f52888139568fcf4a54851d72ba1dbc.lua",
+   "line": 6,
+   "desc": "装备附灵",
+   "classes": [
+    "EnchantUpgradeRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "equipId",
+     "type": "int",
+     "ref": "",
+     "desc": "被附灵装备ID"
+    }
+   ],
+   "response": [
+    {
+     "kind": "property",
+     "code": "sharkEquip",
+     "type": "",
+     "ref": "SharkEquip",
+     "desc": "装备信息"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\enchant\\request\\GetEnchantStepRewardRequest.7ec01e80b3ebb30d7e640ee94a4a2321.lua",
+   "line": 6,
+   "desc": "完成装备附灵新手引导",
+   "classes": [
+    "GetEnchantStepRewardRequest"
+   ],
+   "request": [],
+   "response": []
+  },
+  {
+   "file": "canon\\features\\mesterious\\request\\challengeMysteriousRequest.d3e3c682c8ade7bfaaed91ff1bd72d99.lua",
+   "line": 2,
+   "desc": "挑战六星武将副本",
+   "classes": [
+    "ChallengeMysteriousRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "要挑战的副本id"
+    },
+    {
+     "kind": "property",
+     "code": "difficultyDegree",
+     "type": "int",
+     "ref": "",
+     "desc": "难度"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "cardInitDatas",
+     "type": "",
+     "ref": "BattleCardInitData",
+     "desc": "敌我卡牌初始数据"
+    },
+    {
+     "kind": "list",
+     "code": "eventFlow",
+     "type": "",
+     "ref": "BattleEvent",
+     "desc": "战斗事件流"
+    },
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "挑战成功奖励"
+    },
+    {
+     "kind": "list",
+     "code": "qteRewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "qte奖励"
+    },
+    {
+     "kind": "list",
+     "code": "vipRewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "vip加成奖励"
+    },
+    {
+     "kind": "property",
+     "code": "qte",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否触发qte"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "挑战是否成功"
+    },
+    {
+     "kind": "property",
+     "code": "leftHpRate",
+     "type": "float",
+     "ref": "",
+     "desc": "胜利方剩余血量比例"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\treasureSystem\\request\\SplitTreasureRequest.210e2c80839cfca30684d9e788a535fd.lua",
+   "line": 2,
+   "desc": "拆分宝物",
+   "classes": [
+    "SplitTreasureRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "treasureId",
+     "type": "int",
+     "ref": "",
+     "desc": "宝物Id"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "拆分获取物品列表"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\ActiveRechangeRequest.271668d3b873d2e20803cb4cf0792686.lua",
+   "line": 5,
+   "desc": "领取世界Boss奖励",
+   "classes": [
+    "ActiveRechangeRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "level",
+     "type": "int",
+     "ref": "",
+     "desc": "奖励等级"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "等级奖励"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\ConsumeRewardGainRequest.dfd6be07409096baa8dc881be56521b8.lua",
+   "line": 7,
+   "desc": "领取多重好礼活动奖励",
+   "classes": [
+    "ConsumeRewardGainRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "奖励id"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "奖励"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\ConsumeRewardGetInfoRequest.c27c4978565ccf34e812f8c63ca7e2a1.lua",
+   "line": 7,
+   "desc": "获得多重好礼信息",
+   "classes": [
+    "ConsumeRewardGetInfoRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "property",
+     "code": "recharges",
+     "type": "int",
+     "ref": "",
+     "desc": "活动期间充值金币"
+    },
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "int",
+     "ref": "",
+     "desc": "已领取礼品id"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\EliteSweepRequest.9c91b00c947545cd7e3f1efcf33cb555.lua",
+   "line": 6,
+   "desc": "扫荡精英关卡",
+   "classes": [
+    "EliteSweepRequest"
+   ],
+   "request": [
+    {
+     "kind": "property",
+     "code": "eliteId",
+     "type": "int",
+     "ref": "",
+     "desc": "精英关卡id"
+    }
+   ],
+   "response": [
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "",
+     "ref": "ClearMissionReward",
+     "desc": "扫荡结果"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\FountainWishRequest.53e99de371b5b11bff60a6b64f1d6348.lua",
+   "line": 7,
+   "desc": "许愿池许愿",
+   "classes": [
+    "FountainWishRequest"
+   ],
+   "request": [],
+   "response": [
+    {
+     "kind": "property",
+     "code": "coins",
+     "type": "int",
+     "ref": "",
+     "desc": "基础银币获得"
+    },
+    {
+     "kind": "property",
+     "code": "multiple",
+     "type": "int",
+     "ref": "",
+     "desc": "暴击倍数"
+    }
+   ]
+  }
+ ],
+ "beans": [
+  {
+   "file": "canon\\features\\crossArena\\layer\\CrossArenaRankLayer.75b7763f35d485d55767fcda8ea69749.lua",
+   "line": 99,
+   "name": "",
+   "context": "local aCell = self:getChildByTag(rawCocosObj, cellTag)\nlocal aData = self.list[index + 1]\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "uid",
+     "type": "long",
+     "ref": "",
+     "desc": "uid"
+    },
+    {
+     "kind": "property",
+     "code": "rank",
+     "type": "int",
+     "ref": "",
+     "desc": "排名"
+    },
+    {
+     "kind": "property",
+     "code": "battleScore",
+     "type": "int",
+     "ref": "",
+     "desc": "天梯积分"
+    },
+    {
+     "kind": "property",
+     "code": "metaId",
+     "type": "int",
+     "ref": "",
+     "desc": "主卡牌ID"
+    },
+    {
+     "kind": "property",
+     "code": "nickName",
+     "type": "string",
+     "ref": "",
+     "desc": "昵称"
+    },
+    {
+     "kind": "property",
+     "code": "level",
+     "type": "int",
+     "ref": "",
+     "desc": "等级"
+    },
+    {
+     "kind": "property",
+     "code": "server",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "string",
+     "ref": "",
+     "desc": "军团名称"
+    },
+    {
+     "kind": "property",
+     "code": "combat",
+     "type": "int",
+     "ref": "",
+     "desc": "战斗力"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\layer\\CrossArenaRewardLayer.05d304bc8e2963b0c5472a3843aca0fd.lua",
+   "line": 127,
+   "name": "",
+   "context": "cell.displayInited 表示显示组件已初始化\nfunction onCellDataSet(cell)\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "rank",
+     "type": "int",
+     "ref": "",
+     "desc": "排名"
+    },
+    {
+     "kind": "property",
+     "code": "battleScore",
+     "type": "int",
+     "ref": "",
+     "desc": "天梯积分"
+    },
+    {
+     "kind": "property",
+     "code": "metaId",
+     "type": "int",
+     "ref": "",
+     "desc": "主卡牌ID"
+    },
+    {
+     "kind": "property",
+     "code": "nickName",
+     "type": "string",
+     "ref": "",
+     "desc": "昵称"
+    },
+    {
+     "kind": "property",
+     "code": "level",
+     "type": "int",
+     "ref": "",
+     "desc": "等级"
+    },
+    {
+     "kind": "property",
+     "code": "server",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "string",
+     "ref": "",
+     "desc": "军团名称"
+    },
+    {
+     "kind": "property",
+     "code": "combat",
+     "type": "int",
+     "ref": "",
+     "desc": "战斗力"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\manager\\CrossArenaTest.b6014742eeb82734b88066b69d8b81f0.lua",
+   "line": 10,
+   "name": "",
+   "context": "生成排名表\nfunction CrossArenaTest.createRanks()\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "rank",
+     "type": "int",
+     "ref": "",
+     "desc": "排名"
+    },
+    {
+     "kind": "property",
+     "code": "battleScore",
+     "type": "int",
+     "ref": "",
+     "desc": "天梯积分"
+    },
+    {
+     "kind": "property",
+     "code": "metaId",
+     "type": "int",
+     "ref": "",
+     "desc": "主卡牌ID"
+    },
+    {
+     "kind": "property",
+     "code": "nickName",
+     "type": "string",
+     "ref": "",
+     "desc": "昵称"
+    },
+    {
+     "kind": "property",
+     "code": "level",
+     "type": "int",
+     "ref": "",
+     "desc": "等级"
+    },
+    {
+     "kind": "property",
+     "code": "server",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "string",
+     "ref": "",
+     "desc": "军团名称"
+    },
+    {
+     "kind": "property",
+     "code": "combat",
+     "type": "int",
+     "ref": "",
+     "desc": "战斗力"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossArena\\request\\CrossPvpGetRankInfoRequest.2b178242c952c17081f967582e47f410.lua",
+   "line": 14,
+   "name": "",
+   "context": "</protocol>\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "rank",
+     "type": "int",
+     "ref": "",
+     "desc": "排名"
+    },
+    {
+     "kind": "property",
+     "code": "battleScore",
+     "type": "int",
+     "ref": "",
+     "desc": "天梯积分"
+    },
+    {
+     "kind": "property",
+     "code": "metaId",
+     "type": "int",
+     "ref": "",
+     "desc": "主卡牌ID"
+    },
+    {
+     "kind": "property",
+     "code": "nickName",
+     "type": "string",
+     "ref": "",
+     "desc": "昵称"
+    },
+    {
+     "kind": "property",
+     "code": "level",
+     "type": "int",
+     "ref": "",
+     "desc": "等级"
+    },
+    {
+     "kind": "property",
+     "code": "server",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "string",
+     "ref": "",
+     "desc": "军团名称"
+    },
+    {
+     "kind": "property",
+     "code": "combat",
+     "type": "int",
+     "ref": "",
+     "desc": "战斗力"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\manager\\CrossUnionPkConfig.11f122c71af1ad8ffec3aa121387821c.lua",
+   "line": 58,
+   "name": "",
+   "context": "军团战时间配置<interUnionWarTimeMeta> list\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "事件id"
+    },
+    {
+     "kind": "property",
+     "code": "warBeginTime",
+     "type": "int",
+     "ref": "",
+     "desc": "事件开始时间"
+    },
+    {
+     "kind": "property",
+     "code": "warContinueTime",
+     "type": "int",
+     "ref": "",
+     "desc": "事件持续时间"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\panel\\CrossUnionPkGroupRankPanel.1be75f8baeabd6de1b73a8a6cd5a39cd.lua",
+   "line": 97,
+   "name": "",
+   "context": "local aData = self.list[index + 1]\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "String",
+     "ref": "",
+     "desc": "军团名"
+    },
+    {
+     "kind": "property",
+     "code": "score",
+     "type": "int",
+     "ref": "",
+     "desc": "军团当前积分"
+    },
+    {
+     "kind": "property",
+     "code": "rank",
+     "type": "int",
+     "ref": "",
+     "desc": "当前积分排名"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\panel\\CrossUnionPkGroupReportsPanel.0279387b2efe1bd45627aa6a51bd3fcb.lua",
+   "line": 89,
+   "name": "",
+   "context": "local aData = self.list[index + 1]\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "uuid",
+     "type": "int",
+     "ref": "",
+     "desc": "战报id"
+    },
+    {
+     "kind": "property",
+     "code": "attUnionName",
+     "type": "string",
+     "ref": "",
+     "desc": "进攻方公会名称"
+    },
+    {
+     "kind": "property",
+     "code": "defUnionName",
+     "type": "string",
+     "ref": "",
+     "desc": "防守方公会名称"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "进攻方是否胜利"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetGroupRankScoreRequest.c20fba73ab04739397846fc51412eac7.lua",
+   "line": 16,
+   "name": "",
+   "context": "CrossGVGScoreInfo\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "String",
+     "ref": "",
+     "desc": "军团名"
+    },
+    {
+     "kind": "property",
+     "code": "score",
+     "type": "int",
+     "ref": "",
+     "desc": "军团当前积分"
+    },
+    {
+     "kind": "property",
+     "code": "rank",
+     "type": "int",
+     "ref": "",
+     "desc": "当前积分排名"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetGroupReportsRequest.1a9e91f3dd539114bb5932f2d00f974a.lua",
+   "line": 14,
+   "name": "",
+   "context": "</protocol>\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "uuid",
+     "type": "int",
+     "ref": "",
+     "desc": "战报id"
+    },
+    {
+     "kind": "property",
+     "code": "attUnionName",
+     "type": "string",
+     "ref": "",
+     "desc": "进攻方公会名称"
+    },
+    {
+     "kind": "property",
+     "code": "defUnionName",
+     "type": "string",
+     "ref": "",
+     "desc": "防守方公会名称"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "进攻方是否胜利"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetGroupReportsRequest.1a9e91f3dd539114bb5932f2d00f974a.lua",
+   "line": 110,
+   "name": "",
+   "context": "获得测试用假数据--<<<<< 4. 根据需要填写测试假数据 用完删除\nfunction CrossUnionPkGetGroupReportsRequest.getDebugDatas()\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "用于获取战报的id"
+    },
+    {
+     "kind": "property",
+     "code": "attUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "进攻军团"
+    },
+    {
+     "kind": "property",
+     "code": "defUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "防守军团"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否取胜"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetGroupReportsRequest.1a9e91f3dd539114bb5932f2d00f974a.lua",
+   "line": 117,
+   "name": "",
+   "context": "</bean>\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "serverId",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器id"
+    },
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "string",
+     "ref": "",
+     "desc": "军团名称"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetKnockoutInfoRequest.9688e362c9f1441ff9fdb6487a615777.lua",
+   "line": 18,
+   "name": "",
+   "context": "</protocol>\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "用于获取战报的id"
+    },
+    {
+     "kind": "property",
+     "code": "attUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "进攻军团"
+    },
+    {
+     "kind": "property",
+     "code": "defUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "防守军团"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否取胜"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetKnockoutInfoRequest.9688e362c9f1441ff9fdb6487a615777.lua",
+   "line": 118,
+   "name": "",
+   "context": "获得测试用假数据--<<<<< 4. 根据需要填写测试假数据 用完删除\nfunction CrossUnionPkGetKnockoutInfoRequest.getDebugDatas()\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "用于获取战报的id"
+    },
+    {
+     "kind": "property",
+     "code": "attUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "进攻军团"
+    },
+    {
+     "kind": "property",
+     "code": "defUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "防守军团"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否取胜"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\request\\CrossUnionPkGetKnockoutInfoRequest.9688e362c9f1441ff9fdb6487a615777.lua",
+   "line": 125,
+   "name": "",
+   "context": "</bean>\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "serverId",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器id"
+    },
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "string",
+     "ref": "",
+     "desc": "军团名称"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\scene\\CrossUnionPkKnockoutScene.2570206b553f46b5f1a50a7a834e88a9.lua",
+   "line": 164,
+   "name": "",
+   "context": "显示军团信息\ndata =",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "serverId",
+     "type": "int",
+     "ref": "",
+     "desc": "服务器id"
+    },
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "string",
+     "ref": "",
+     "desc": "军团名称"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\crossUnionPk\\scene\\CrossUnionPkKnockoutScene.2570206b553f46b5f1a50a7a834e88a9.lua",
+   "line": 207,
+   "name": "",
+   "context": "添加对抗内容\nlocal againstSize = {height = 200}--给个默认值 防止信息错误情况崩溃\nv =",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "用于获取战报的id"
+    },
+    {
+     "kind": "property",
+     "code": "attUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "进攻军团"
+    },
+    {
+     "kind": "property",
+     "code": "defUnion",
+     "type": "",
+     "ref": "UnionIdentification",
+     "desc": "防守军团"
+    },
+    {
+     "kind": "property",
+     "code": "win",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否取胜"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkCityData.419f91615c35ab162b5d154285de7409.lua",
+   "line": 8,
+   "name": "",
+   "context": "UnionPkCityData = {}\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "cityId",
+     "type": "int",
+     "ref": "",
+     "desc": "城池id"
+    },
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "占领的军团id，没有时为0"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "String",
+     "ref": "",
+     "desc": "军团名称"
+    },
+    {
+     "kind": "property",
+     "code": "occupyNum",
+     "type": "int",
+     "ref": "",
+     "desc": "当前占领的军团连续占领次数"
+    },
+    {
+     "kind": "property",
+     "code": "userPosition",
+     "type": "int",
+     "ref": "",
+     "desc": "当前uid的军团职位"
+    },
+    {
+     "kind": "property",
+     "code": "report",
+     "type": "boolean",
+     "ref": "",
+     "desc": "当前uid的军团是否报名该城池"
+    },
+    {
+     "kind": "property",
+     "code": "successfulBid",
+     "type": "boolean",
+     "ref": "",
+     "desc": "当前uid的军团是否竞标成功该城池"
+    },
+    {
+     "kind": "property",
+     "code": "challengeCityNum",
+     "type": "int",
+     "ref": "",
+     "desc": "玩家所在军团的挑战城池数"
+    },
+    {
+     "kind": "property",
+     "code": "ownCityNum",
+     "type": "int",
+     "ref": "",
+     "desc": "玩家所在军团的占领军团数"
+    },
+    {
+     "kind": "property",
+     "code": "applyNum",
+     "type": "int",
+     "ref": "",
+     "desc": "报名该城池的军团数量"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkConfig.b11216f2a0453acf51755bc5de9a5f00.lua",
+   "line": 107,
+   "name": "",
+   "context": "城池npc防守怪物组<CityNpcGroup> list\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "城池类型"
+    },
+    {
+     "kind": "property",
+     "code": "monsterGroupId",
+     "type": "int",
+     "ref": "",
+     "desc": "怪物组id"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkConfig.b11216f2a0453acf51755bc5de9a5f00.lua",
+   "line": 117,
+   "name": "",
+   "context": "团战buff;1单挑普通胜利2单挑大胜3阵首4阵中5阵尾<UnionWarBuff> list\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "团战buff;1单挑普通胜利2单挑大胜3阵首4阵中5阵尾"
+    },
+    {
+     "kind": "property",
+     "code": "attBuff",
+     "type": "int",
+     "ref": "",
+     "desc": "攻击BUFF"
+    },
+    {
+     "kind": "property",
+     "code": "defBuff",
+     "type": "int",
+     "ref": "",
+     "desc": "防御BUFF"
+    },
+    {
+     "kind": "property",
+     "code": "hpBuff",
+     "type": "int",
+     "ref": "",
+     "desc": "血量BUFF"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkConfig.b11216f2a0453acf51755bc5de9a5f00.lua",
+   "line": 211,
+   "name": "",
+   "context": "获得不同种类城池报名限制的配置表 list类型\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "cityId",
+     "type": "int",
+     "ref": "",
+     "desc": "城池类型id"
+    },
+    {
+     "kind": "property",
+     "code": "signUpLevel",
+     "type": "int",
+     "ref": "",
+     "desc": "军团等级限制"
+    },
+    {
+     "kind": "property",
+     "code": "signUpStrength",
+     "type": "int",
+     "ref": "",
+     "desc": "军团战斗力限制"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkConfig.b11216f2a0453acf51755bc5de9a5f00.lua",
+   "line": 260,
+   "name": "",
+   "context": "生效服务器 list类型\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "serverMin",
+     "type": "int",
+     "ref": "",
+     "desc": "生效服务器min（闭集）"
+    },
+    {
+     "kind": "property",
+     "code": "serverMax",
+     "type": "int",
+     "ref": "",
+     "desc": "生效服务器max（闭集）"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkConfig.b11216f2a0453acf51755bc5de9a5f00.lua",
+   "line": 302,
+   "name": "",
+   "context": "军团战奖励Config<UnionWarRewardMeta> dic\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "cityId",
+     "type": "int",
+     "ref": "",
+     "desc": "城市类型id"
+    },
+    {
+     "kind": "property",
+     "code": "dailyProfit1",
+     "type": "int",
+     "ref": "",
+     "desc": "奖励1"
+    },
+    {
+     "kind": "property",
+     "code": "dailyProfit2",
+     "type": "int",
+     "ref": "",
+     "desc": "奖励2"
+    },
+    {
+     "kind": "property",
+     "code": "dailyProfit3",
+     "type": "int",
+     "ref": "",
+     "desc": "奖励3"
+    },
+    {
+     "kind": "property",
+     "code": "cityOccupyReward",
+     "type": "int",
+     "ref": "",
+     "desc": "城市占领奖励"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkConfig.b11216f2a0453acf51755bc5de9a5f00.lua",
+   "line": 364,
+   "name": "",
+   "context": "军团战时间配置<UnionWarTimeMeta> list\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "事件id"
+    },
+    {
+     "kind": "property",
+     "code": "warBeginTime",
+     "type": "int",
+     "ref": "",
+     "desc": "事件开始时间"
+    },
+    {
+     "kind": "property",
+     "code": "warContinueTime",
+     "type": "int",
+     "ref": "",
+     "desc": "事件持续时间"
+    }
+   ]
+  },
+  {
+   "file": "canon\\features\\unionPk\\manager\\UnionPkData.d028b07d2a7c8f0bb901a51259d080c6.lua",
+   "line": 56,
+   "name": "",
+   "context": "军团战军团胜利次数列表\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "cityId",
+     "type": "int",
+     "ref": "",
+     "desc": "城池id"
+    },
+    {
+     "kind": "property",
+     "code": "winNum",
+     "type": "int",
+     "ref": "",
+     "desc": "胜利次数"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_CardOldToNewLayer.364882dfdcbad75bed50ec4d66346449.lua",
+   "line": 349,
+   "name": "",
+   "context": "查找获得卡牌具体配置\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "配置序列"
+    },
+    {
+     "kind": "property",
+     "code": "cardId",
+     "type": "int",
+     "ref": "",
+     "desc": "兑换卡牌metaId"
+    },
+    {
+     "kind": "property",
+     "code": "secretNum",
+     "type": "int",
+     "ref": "",
+     "desc": "需要星灵数量"
+    },
+    {
+     "kind": "property",
+     "code": "exchangeNum",
+     "type": "int",
+     "ref": "",
+     "desc": "卡牌兑换上限"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_CardOldToNewLayer.364882dfdcbad75bed50ec4d66346449.lua",
+   "line": 382,
+   "name": "",
+   "context": "获得当前的兑换信息 hash\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "shopId",
+     "type": "int",
+     "ref": "",
+     "desc": "卡牌兑换标示"
+    },
+    {
+     "kind": "property",
+     "code": "exchangeNum",
+     "type": "int",
+     "ref": "",
+     "desc": "已兑换次数"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_CardOldToNewLayer.364882dfdcbad75bed50ec4d66346449.lua",
+   "line": 453,
+   "name": "",
+   "context": "",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "cardId",
+     "type": "int",
+     "ref": "",
+     "desc": "卡牌id"
+    },
+    {
+     "kind": "property",
+     "code": "metaId",
+     "type": "int",
+     "ref": "",
+     "desc": "卡牌配置id"
+    },
+    {
+     "kind": "property",
+     "code": "level",
+     "type": "int",
+     "ref": "",
+     "desc": "卡牌等级"
+    },
+    {
+     "kind": "property",
+     "code": "exp",
+     "type": "int",
+     "ref": "",
+     "desc": "卡牌经验"
+    },
+    {
+     "kind": "property",
+     "code": "usedPotential",
+     "type": "int",
+     "ref": "",
+     "desc": "用掉的潜力值"
+    },
+    {
+     "kind": "property",
+     "code": "attTrainValue",
+     "type": "int",
+     "ref": "",
+     "desc": "培养得来的攻击属性增量"
+    },
+    {
+     "kind": "property",
+     "code": "defTrainValue",
+     "type": "int",
+     "ref": "",
+     "desc": "培养得来的防御属性增量"
+    },
+    {
+     "kind": "property",
+     "code": "hpTrainValue",
+     "type": "int",
+     "ref": "",
+     "desc": "培养得来的血量属性增量"
+    },
+    {
+     "kind": "property",
+     "code": "attEvolveValue",
+     "type": "int",
+     "ref": "",
+     "desc": "进阶获得的血量属性增量"
+    },
+    {
+     "kind": "property",
+     "code": "defEvolveValue",
+     "type": "int",
+     "ref": "",
+     "desc": "进阶获得的血量属性增量"
+    },
+    {
+     "kind": "property",
+     "code": "hpEvolveValue",
+     "type": "int",
+     "ref": "",
+     "desc": "进阶获得的血量属性增量"
+    },
+    {
+     "kind": "list",
+     "code": "equipIds",
+     "type": "int",
+     "ref": "",
+     "desc": "已安装的装备列表"
+    },
+    {
+     "kind": "list",
+     "code": "cardSkills",
+     "type": "",
+     "ref": "CardSkill",
+     "desc": "卡牌拥有的技能"
+    },
+    {
+     "kind": "list",
+     "code": "cardSpirits",
+     "type": "",
+     "ref": "CardSpirits",
+     "desc": "已装备的元神列表"
+    },
+    {
+     "kind": "property",
+     "code": "lock",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否锁定"
+    },
+    {
+     "kind": "property",
+     "code": "avatarMetaId",
+     "type": "int",
+     "ref": "",
+     "desc": "武将头像metaId"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_ChallengeMysteriousLayer.72ee98dc647bc91badfab0b432a4a9ea.lua",
+   "line": 105,
+   "name": "",
+   "context": "local aData = self.list[index + 1]\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "unionId",
+     "type": "int",
+     "ref": "",
+     "desc": "军团id"
+    },
+    {
+     "kind": "property",
+     "code": "unionName",
+     "type": "String",
+     "ref": "",
+     "desc": "军团名"
+    },
+    {
+     "kind": "property",
+     "code": "score",
+     "type": "int",
+     "ref": "",
+     "desc": "军团当前积分"
+    },
+    {
+     "kind": "property",
+     "code": "rank",
+     "type": "int",
+     "ref": "",
+     "desc": "当前积分排名"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_ConsumeRewardsLayer.56e6637015dfb43f3de66cc684b4633b.lua",
+   "line": 451,
+   "name": "",
+   "context": "获得奖励预览内容\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "奖励Id"
+    },
+    {
+     "kind": "property",
+     "code": "requiredGold",
+     "type": "int",
+     "ref": "",
+     "desc": "领取条件"
+    },
+    {
+     "kind": "list",
+     "code": "rewards",
+     "type": "",
+     "ref": "Reward",
+     "desc": "奖励内容"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_DoubleRewardLayer.068b106214d384b59167db649161474a.lua",
+   "line": 181,
+   "name": "",
+   "context": "获得多倍奖励配置 list\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "silverType",
+     "type": "int",
+     "ref": "",
+     "desc": "模块类型"
+    },
+    {
+     "kind": "property",
+     "code": "silverMultiple",
+     "type": "float",
+     "ref": "",
+     "desc": "倍数"
+    },
+    {
+     "kind": "property",
+     "code": "resourceType",
+     "type": "int",
+     "ref": "",
+     "desc": "影响属性"
+    },
+    {
+     "kind": "property",
+     "code": "open",
+     "type": "int",
+     "ref": "",
+     "desc": "是否开启"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_ExchangeDailyLayer.8ca95379067ca6aef2cb7f54298e1fee.lua",
+   "line": 412,
+   "name": "",
+   "context": "查找获得卡牌具体配置\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "配置序列"
+    },
+    {
+     "kind": "property",
+     "code": "cardId",
+     "type": "int",
+     "ref": "",
+     "desc": "兑换卡牌metaId"
+    },
+    {
+     "kind": "property",
+     "code": "secretNum",
+     "type": "int",
+     "ref": "",
+     "desc": "需要星灵数量"
+    },
+    {
+     "kind": "property",
+     "code": "exchangeNum",
+     "type": "int",
+     "ref": "",
+     "desc": "卡牌兑换上限"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_ExchangeDailyLayer.8ca95379067ca6aef2cb7f54298e1fee.lua",
+   "line": 446,
+   "name": "",
+   "context": "获得当前的兑换信息 hash\n",
+   "fields": [
+    {
+     "kind": "list",
+     "code": "cardMetaIds",
+     "type": "int",
+     "ref": "",
+     "desc": "当前可兑换的卡牌metaId"
+    },
+    {
+     "kind": "property",
+     "code": "exchangeTimes",
+     "type": "int",
+     "ref": "",
+     "desc": "当前兑换次数"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_FountainLayer.612ffc4d129ae2a5b45fc5a2effcc056.lua",
+   "line": 321,
+   "name": "",
+   "context": "获得每次奖励银币数量列表 list\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "fountainNum",
+     "type": "int",
+     "ref": "",
+     "desc": "许愿次数"
+    },
+    {
+     "kind": "property",
+     "code": "silverCoins",
+     "type": "int",
+     "ref": "",
+     "desc": "银币基数"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_rechargeLayer.9cd8a922f2a6cd6939d81bc4dddd8eba.lua",
+   "line": 707,
+   "name": "",
+   "context": "获得多倍奖励配置 list\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "stepId",
+     "type": "int",
+     "ref": "",
+     "desc": "奖励Id"
+    },
+    {
+     "kind": "property",
+     "code": "reward",
+     "type": "",
+     "ref": "Reward",
+     "desc": "奖励内容"
+    },
+    {
+     "kind": "property",
+     "code": "rewardDetail",
+     "type": "string",
+     "ref": "",
+     "desc": "奖励条件"
+    }
+   ]
+  },
+  {
+   "file": "canon\\layer\\Activity_SeckillLayer.75fdb5bebbf9ba41e71041e6031bf33f.lua",
+   "line": 427,
+   "name": "",
+   "context": "print(\"self.list[\" .. (index+1) .. \"] : \" .. table.tostring(self.list[index+1]))\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "id",
+     "type": "int",
+     "ref": "",
+     "desc": "活动配置id"
+    },
+    {
+     "kind": "property",
+     "code": "itemType",
+     "type": "int",
+     "ref": "",
+     "desc": "物品类型"
+    },
+    {
+     "kind": "property",
+     "code": "itemNum",
+     "type": "int",
+     "ref": "",
+     "desc": "物品数量"
+    },
+    {
+     "kind": "property",
+     "code": "itemId",
+     "type": "int",
+     "ref": "",
+     "desc": "物品配置id"
+    },
+    {
+     "kind": "property",
+     "code": "limitNum",
+     "type": "int",
+     "ref": "",
+     "desc": "单人限购数量"
+    },
+    {
+     "kind": "property",
+     "code": "activeTime",
+     "type": "int",
+     "ref": "",
+     "desc": "物品开放时间（单位天）"
+    },
+    {
+     "kind": "property",
+     "code": "timeBegin",
+     "type": "int",
+     "ref": "",
+     "desc": "秒杀起始时间（单位分钟）"
+    },
+    {
+     "kind": "property",
+     "code": "timeContinue",
+     "type": "int",
+     "ref": "",
+     "desc": "秒杀持续时间（单位分钟）"
+    },
+    {
+     "kind": "property",
+     "code": "coinType",
+     "type": "int",
+     "ref": "",
+     "desc": "货币类型（1：银币，2：金币）"
+    },
+    {
+     "kind": "property",
+     "code": "realNum",
+     "type": "int",
+     "ref": "",
+     "desc": "真实库存"
+    },
+    {
+     "kind": "property",
+     "code": "showNum",
+     "type": "int",
+     "ref": "",
+     "desc": "显示库存"
+    },
+    {
+     "kind": "property",
+     "code": "costPrice",
+     "type": "int",
+     "ref": "",
+     "desc": "原始价格"
+    },
+    {
+     "kind": "property",
+     "code": "presentPrice",
+     "type": "int",
+     "ref": "",
+     "desc": "折后价格"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\UnionColosseumAllocateRequest.6f4c3160a325464e671d1422c8d9f796.lua",
+   "line": 39,
+   "name": "",
+   "context": "UnionMonsterReward\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "uid",
+     "type": "long",
+     "ref": "",
+     "desc": "用户id"
+    },
+    {
+     "kind": "property",
+     "code": "amount",
+     "type": "int",
+     "ref": "",
+     "desc": "用户分得的奖励数量"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\UnionColosseumGetRankRequest.a7691f7095246a435ce02b608f21423a.lua",
+   "line": 53,
+   "name": "",
+   "context": "</response>\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "uid",
+     "type": "long",
+     "ref": "",
+     "desc": "用户id"
+    },
+    {
+     "kind": "property",
+     "code": "nickName",
+     "type": "string",
+     "ref": "",
+     "desc": "用户昵称"
+    },
+    {
+     "kind": "property",
+     "code": "totalDamage",
+     "type": "int",
+     "ref": "",
+     "desc": "用户对怪兽的累积伤害"
+    }
+   ]
+  },
+  {
+   "file": "canon\\request\\UnionColosseumStartAllocationRequest.f9c320a6a7a0b33ec91c91e7ab6cdc8d.lua",
+   "line": 57,
+   "name": "",
+   "context": "重置成员本周领取数量\nlocal tempHash = {}\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "uid",
+     "type": "long",
+     "ref": "",
+     "desc": "用户id"
+    },
+    {
+     "kind": "property",
+     "code": "amount",
+     "type": "int",
+     "ref": "",
+     "desc": "用户分得的奖励数量"
+    }
+   ]
+  },
+  {
+   "file": "canon\\scene\\DailyTargetScene.51fbbf86fa1535470eecb2a8961fec39.lua",
+   "line": 7,
+   "name": "",
+   "context": "DailyAchieve.xml\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "taskId",
+     "type": "int",
+     "ref": "",
+     "desc": "任务ID"
+    },
+    {
+     "kind": "property",
+     "code": "num",
+     "type": "int",
+     "ref": "",
+     "desc": "任务完成次数"
+    },
+    {
+     "kind": "property",
+     "code": "complete",
+     "type": "boolean",
+     "ref": "",
+     "desc": "任务是否完成"
+    },
+    {
+     "kind": "property",
+     "code": "gain",
+     "type": "boolean",
+     "ref": "",
+     "desc": "是否已领取"
+    }
+   ]
+  },
+  {
+   "file": "canon\\scene\\DailyTargetScene.51fbbf86fa1535470eecb2a8961fec39.lua",
+   "line": 575,
+   "name": "",
+   "context": "获取目标列表\n",
+   "fields": [
+    {
+     "kind": "property",
+     "code": "achieveId",
+     "type": "int",
+     "ref": "",
+     "desc": "每日成就唯一id"
+    },
+    {
+     "kind": "property",
+     "code": "achieveType",
+     "type": "int",
+     "ref": "",
+     "desc": "每日成就奖励类型，用于区分成就种类"
+    },
+    {
+     "kind": "property",
+     "code": "achieveNum",
+     "type": "int",
+     "ref": "",
+     "desc": "成就计数"
+    },
+    {
+     "kind": "property",
+     "code": "achieveReward",
+     "type": "int",
+     "ref": "",
+     "desc": "成就奖励包id"
+    }
+   ]
+  }
+ ]
+}

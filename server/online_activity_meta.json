@@ -1,0 +1,1457 @@
+{
+  "activityBalloonConfig": {
+    "featureName": "activityBalloon",
+    "featureNameReward": "activityBalloonReward",
+    "propId": 400259,
+    "cost": 1,
+    "propCost": 50,
+    "gainsChance": 3,
+    "balloonLevelMetas": [
+      {
+        "point": 0,
+        "money": 50
+      },
+      {
+        "point": 5,
+        "money": 75
+      },
+      {
+        "point": 12,
+        "money": 100
+      },
+      {
+        "point": 22,
+        "money": 120
+      },
+      {
+        "point": 35,
+        "money": 150
+      },
+      {
+        "point": 55,
+        "money": 200
+      },
+      {
+        "point": 80,
+        "money": 250
+      }
+    ],
+    "balloonPointRewardMetas": [
+      {
+        "id": 1,
+        "pointSection": 20,
+        "rewardType1": 1,
+        "rewardId1": 1,
+        "rewardNum1": 50000
+      },
+      {
+        "id": 2,
+        "pointSection": 50,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 800
+      },
+      {
+        "id": 3,
+        "pointSection": 100,
+        "rewardType1": 7,
+        "rewardId1": 400010,
+        "rewardNum1": 2000
+      },
+      {
+        "id": 4,
+        "pointSection": 200,
+        "rewardType1": 5,
+        "rewardId1": 102031,
+        "rewardNum1": 1
+      },
+      {
+        "id": 5,
+        "pointSection": 400,
+        "rewardType1": 5,
+        "rewardId1": 102061,
+        "rewardNum1": 1
+      }
+    ],
+    "balloonRankRewardMetas": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 900,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardNum2": 800
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 3,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 600,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardNum2": 300
+      },
+      {
+        "rankMin": 4,
+        "rankMax": 10,
+        "rewardType1": 2,
+        "rewardId1": 2,
+        "rewardNum1": 300,
+        "rewardType2": 1,
+        "rewardId2": 1,
+        "rewardNum2": 50000
+      }
+    ]
+  },
+  "activityContendConfig": {
+    "panelFeatureName": "activityContendPanel",
+    "featureNameList": [
+      "activityContendPanel"
+    ],
+    "challengedNum": 2,
+    "dayDareNum": 5,
+    "levelLimit": 15,
+    "battleRoundNum": 20
+  },
+  "activityCowStageConfig": {
+    "featureNamesList": [
+      "cowStage"
+    ],
+    "cowCardExps": {
+      "495": 20000,
+      "496": 30000,
+      "497": 40000
+    }
+  },
+  "activityFountainWishConfig": {
+    "featureName": "fountainWish",
+    "requiredLevel": 10,
+    "freeNum": 2,
+    "silverCoins": [
+      {
+        "fountainNum": 1,
+        "silverCoins": 10000
+      },
+      {
+        "fountainNum": 2,
+        "silverCoins": 15000
+      },
+      {
+        "fountainNum": 3,
+        "silverCoins": 20000
+      },
+      {
+        "fountainNum": 4,
+        "silverCoins": 25000
+      },
+      {
+        "fountainNum": 5,
+        "silverCoins": 30000
+      },
+      {
+        "fountainNum": 6,
+        "silverCoins": 40000
+      },
+      {
+        "fountainNum": 7,
+        "silverCoins": 50000
+      },
+      {
+        "fountainNum": 8,
+        "silverCoins": 60000
+      },
+      {
+        "fountainNum": 9,
+        "silverCoins": 80000
+      },
+      {
+        "fountainNum": 10,
+        "silverCoins": 100000
+      }
+    ]
+  },
+  "activityGachaBoxConfig": {
+    "refreshCost": [
+      {
+        "itemType": 2,
+        "amount": 30
+      }
+    ],
+    "requisites": [
+      {
+        "itemType": 2,
+        "amount": 288
+      }
+    ]
+  },
+  "activityGachaXiaoyuConfig": {
+    "featureName": "activityGachaXiaoyu",
+    "featureNamePoints": "activityGachaXiaoyuPoints",
+    "featureNameReward": "activityGachaXiaoyuGainReward",
+    "rankingNum": 100,
+    "commonGachaPoints": 2,
+    "commonTenPoints": 20,
+    "advancedGachaPoints": 4,
+    "ultimatedGachaPoints": 10,
+    "ultimatedTenPoints": 100,
+    "activityGachaPoints": 5,
+    "crossGachaServerGroups": [
+      {
+        "serverIds": [
+          1
+        ]
+      }
+    ],
+    "pointRewards": [
+      {
+        "id": 1,
+        "pointMin": 10,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 2000
+          },
+          {
+            "itemType": 6,
+            "metaId": 210051,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pointMin": 30,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 3000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400016,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pointMin": 60,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 4000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400057,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pointMin": 100,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 5000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400017,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "pointMin": 150,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 6000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400058,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "pointMin": 220,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 8000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400060,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pointMin": 300,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 10000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400062,
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pointMin": 400,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 15000
+          },
+          {
+            "itemType": 5,
+            "metaId": 102091,
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "rankRewards": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 223011,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 100000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 200
+          }
+        ]
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 10,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 212091,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 50000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 100
+          }
+        ]
+      },
+      {
+        "rankMin": 11,
+        "rankMax": 100,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 20000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 50
+          }
+        ]
+      }
+    ],
+    "mysteriousRewards": [
+      {
+        "itemType": 5,
+        "metaId": 104961,
+        "amount": 3
+      }
+    ],
+    "windows": [
+      {
+        "switch": "activityGachaXiaoyu",
+        "endTimeShiftDays": 30
+      },
+      {
+        "switch": "activityGachaXiaoyuGainReward",
+        "endTimeShiftDays": 30
+      }
+    ],
+    "crossGachaPointRewards": [
+      {
+        "id": 1,
+        "pointMin": 10,
+        "rewardPackageId": 11001,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 2000
+          },
+          {
+            "itemType": 6,
+            "metaId": 210051,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pointMin": 30,
+        "rewardPackageId": 11002,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 3000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400016,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pointMin": 60,
+        "rewardPackageId": 11003,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 4000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400057,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pointMin": 100,
+        "rewardPackageId": 11004,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 5000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400017,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "pointMin": 150,
+        "rewardPackageId": 11005,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 6000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400058,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "pointMin": 220,
+        "rewardPackageId": 11006,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 8000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400060,
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pointMin": 300,
+        "rewardPackageId": 11007,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 10000
+          },
+          {
+            "itemType": 7,
+            "metaId": 400062,
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pointMin": 400,
+        "rewardPackageId": 11008,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 15000
+          },
+          {
+            "itemType": 5,
+            "metaId": 102091,
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "crossGachaRankRewards": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewardPackageId": 13010,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 223011,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 100000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 200
+          }
+        ]
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 10,
+        "rewardPackageId": 13005,
+        "rewards": [
+          {
+            "itemType": 6,
+            "metaId": 212091,
+            "amount": 1
+          },
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 50000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 100
+          }
+        ]
+      },
+      {
+        "rankMin": 11,
+        "rankMax": 100,
+        "rewardPackageId": 11007,
+        "rewards": [
+          {
+            "itemType": 1,
+            "metaId": 0,
+            "amount": 20000
+          },
+          {
+            "itemType": 2,
+            "metaId": 0,
+            "amount": 50
+          }
+        ]
+      }
+    ]
+  },
+  "activityLimitRewardConfig": {
+    "featureName": "ActivityLimitReward",
+    "limitRewards": [
+      {
+        "stepId": 1,
+        "limitTime": 24,
+        "rewardDetail": 6,
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 300
+        }
+      },
+      {
+        "stepId": 2,
+        "limitTime": 48,
+        "rewardDetail": 30,
+        "reward": {
+          "itemType": 5,
+          "metaId": 103001,
+          "amount": 1
+        }
+      },
+      {
+        "stepId": 3,
+        "limitTime": 72,
+        "rewardDetail": 98,
+        "reward": {
+          "itemType": 5,
+          "metaId": 104071,
+          "amount": 1
+        }
+      }
+    ],
+    "finalReward": {
+      "stepId": 4,
+      "reward": {
+        "itemType": 5,
+        "metaId": 104061,
+        "amount": 1
+      }
+    }
+  },
+  "activityMysteriousExchangeConfig": {
+    "featureName": "mysteriousShop",
+    "exchangeMetas": [
+      {
+        "id": 1,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 101011,
+        "goodsNum": 3,
+        "coinId": 1,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 2,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 101351,
+        "goodsNum": 3,
+        "coinId": 1,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 3,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 104001,
+        "goodsNum": 3,
+        "coinId": 4,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 4,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 104471,
+        "goodsNum": 3,
+        "coinId": 4,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 5,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 102001,
+        "goodsNum": 3,
+        "coinId": 2,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 6,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 102311,
+        "goodsNum": 3,
+        "coinId": 2,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 7,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 103151,
+        "goodsNum": 3,
+        "coinId": 3,
+        "coinNum": 50,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 8,
+        "listId": 1,
+        "goodsType": 5,
+        "goodsId": 103161,
+        "goodsNum": 6,
+        "coinId": 3,
+        "coinNum": 12,
+        "mysteriousShopNum": 6
+      },
+      {
+        "id": 9,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 212041,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 50,
+        "mysteriousShopNum": 2
+      },
+      {
+        "id": 10,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 212061,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 50,
+        "mysteriousShopNum": 2
+      },
+      {
+        "id": 11,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 233161,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 50,
+        "mysteriousShopNum": 2
+      },
+      {
+        "id": 12,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 234061,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 60,
+        "mysteriousShopNum": 1
+      },
+      {
+        "id": 13,
+        "listId": 2,
+        "goodsType": 6,
+        "goodsId": 211011,
+        "goodsNum": 1,
+        "coinId": 5,
+        "coinNum": 200,
+        "mysteriousShopNum": 1
+      }
+    ]
+  },
+  "activityQuestionSettingConfig": {
+    "questionGroupNum": 10,
+    "questionWeekRewards": [
+      {
+        "correctMin": 30,
+        "correctMax": 49,
+        "rewardPackageId": 15008,
+        "rewards": {}
+      },
+      {
+        "correctMin": 50,
+        "correctMax": 69,
+        "rewardPackageId": 15017,
+        "rewards": {}
+      },
+      {
+        "correctMin": 70,
+        "correctMax": 999,
+        "rewardPackageId": 15015,
+        "rewards": {}
+      }
+    ]
+  },
+  "activitySwornBrothersConfig": {
+    "featureName": "activitySwornBrothers",
+    "swornBrothersRewardItems": [
+      {
+        "id": 1,
+        "conditionType1": 2,
+        "conditionValue1": 3,
+        "conditionNum1": 10,
+        "conditionType2": 0,
+        "conditionValue2": 0,
+        "conditionNum2": 0,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 2,
+            "metaId": 2,
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "conditionType1": 2,
+        "conditionValue1": 4,
+        "conditionNum1": 10,
+        "conditionType2": 0,
+        "conditionValue2": 0,
+        "conditionNum2": 0,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 2,
+            "metaId": 2,
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "conditionType1": 2,
+        "conditionValue1": 3,
+        "conditionNum1": 10,
+        "conditionType2": 5,
+        "conditionValue2": 400010,
+        "conditionNum2": 100,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 7,
+            "metaId": 400010,
+            "amount": 500
+          },
+          {
+            "itemType": 2,
+            "metaId": 1,
+            "amount": 500
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "conditionType1": 2,
+        "conditionValue1": 5,
+        "conditionNum1": 5,
+        "conditionType2": 0,
+        "conditionValue2": 0,
+        "conditionNum2": 0,
+        "conditionType3": 0,
+        "conditionValue3": 0,
+        "conditionNum3": 0,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 102061,
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "activityTreasureboxPointsConfig": {
+    "featureNamePanel": "activityTreasureboxAll",
+    "featureNameTreasureboxPoints": "activityTreasureboxPoints",
+    "featureNameGainReward": "activityTreasureboxGainReward",
+    "goldBoxPoint": 3,
+    "silverBoxPoint": 2,
+    "copperBoxPoint": 1,
+    "pointRewardMetas": {},
+    "rankRewardMetas": {}
+  },
+  "activityWantedConfig": {
+    "featureName": "activityWanted",
+    "completeNum": 5,
+    "refreshPrice": 20,
+    "newRefreshPrice": 50,
+    "questRewards": [
+      {
+        "contentID1": 400216,
+        "contentNum1": 1,
+        "contentNum2": 20000
+      },
+      {
+        "contentID1": 400216,
+        "contentNum1": 1,
+        "contentNum2": 30000
+      },
+      {
+        "contentID1": 400216,
+        "contentNum1": 2,
+        "contentNum2": 50000
+      },
+      {
+        "contentID1": 400217,
+        "contentNum1": 1,
+        "contentNum2": 80000
+      },
+      {
+        "contentID1": 400217,
+        "contentNum1": 2,
+        "contentNum2": 120000
+      }
+    ]
+  },
+  "activityWorldBossConfig": {
+    "featureName": "worldBoss",
+    "featureName2": "worldBoss1",
+    "prepareTime": 900,
+    "dantengTime": 15,
+    "rankingRange": 10,
+    "rankProcessTime": 30,
+    "inspireLimit": 1,
+    "normalInspireBuff": 0.05,
+    "goldInspireCost": 20,
+    "goldInspireBuff": 0.1,
+    "inspirePropId": 400062,
+    "reviveCost": 10,
+    "rebornCost": 30,
+    "rebornBuff": 0.2,
+    "battleCooldown": 300,
+    "reviveCooldown": 240
+  },
+  "dailyTaskConfig": {
+    "activeTaskList": [
+      {
+        "id": 15,
+        "type": 1,
+        "conditionNum": 1,
+        "limit": 1,
+        "titleKey": "activity_daily_type15",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 300
+        }
+      },
+      {
+        "id": 9,
+        "type": 1,
+        "conditionNum": 3,
+        "limit": 1,
+        "titleKey": "activity_daily_type9",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 150
+        }
+      },
+      {
+        "id": 2,
+        "type": 5,
+        "conditionNum": 3,
+        "limit": 1,
+        "titleKey": "activity_daily_type2",
+        "reward": {
+          "itemType": 1,
+          "metaId": 1,
+          "amount": 18000
+        }
+      },
+      {
+        "id": 1,
+        "type": 5,
+        "conditionNum": 2,
+        "limit": 1,
+        "titleKey": "activity_daily_type1",
+        "reward": {
+          "itemType": 1,
+          "metaId": 1,
+          "amount": 18000
+        }
+      },
+      {
+        "id": 3,
+        "type": 7,
+        "conditionNum": 2,
+        "limit": 1,
+        "titleKey": "activity_daily_type3",
+        "reward": {
+          "itemType": 1,
+          "metaId": 1,
+          "amount": 18000
+        }
+      },
+      {
+        "id": 16,
+        "type": 12,
+        "conditionNum": 3,
+        "limit": 1,
+        "titleKey": "activity_daily_type16",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 200
+        }
+      },
+      {
+        "id": 17,
+        "type": 1,
+        "conditionNum": 1,
+        "limit": 1,
+        "titleKey": "activity_daily_type17",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 100
+        }
+      },
+      {
+        "id": 18,
+        "type": 2,
+        "conditionNum": 1,
+        "limit": 1,
+        "titleKey": "activity_daily_type18",
+        "reward": {
+          "itemType": 2,
+          "metaId": 2,
+          "amount": 100
+        }
+      }
+    ]
+  },
+  "consecutiveLoginNewConfig": [
+    {
+      "id": 1,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 1000
+    },
+    {
+      "id": 2,
+      "acquireMethod": 1,
+      "rewardType": 5,
+      "rewardId": 103001,
+      "rewardAmount": 1
+    },
+    {
+      "id": 3,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 212091,
+      "rewardAmount": 1
+    },
+    {
+      "id": 4,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 1000
+    },
+    {
+      "id": 5,
+      "acquireMethod": 1,
+      "rewardType": 5,
+      "rewardId": 103001,
+      "rewardAmount": 1
+    },
+    {
+      "id": 6,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 1000
+    },
+    {
+      "id": 7,
+      "acquireMethod": 1,
+      "rewardType": 5,
+      "rewardId": 104471,
+      "rewardAmount": 1
+    },
+    {
+      "id": 8,
+      "acquireMethod": 2,
+      "rewardType": 5,
+      "rewardId": 104471,
+      "rewardAmount": 1
+    }
+  ],
+  "consecutiveLoginConfig": [
+    {
+      "id": 1,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 40
+    },
+    {
+      "id": 2,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 212111,
+      "rewardAmount": 1
+    },
+    {
+      "id": 3,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 60
+    },
+    {
+      "id": 4,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 224071,
+      "rewardAmount": 1
+    },
+    {
+      "id": 5,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 80
+    },
+    {
+      "id": 6,
+      "acquireMethod": 1,
+      "rewardType": 6,
+      "rewardId": 230051,
+      "rewardAmount": 1
+    },
+    {
+      "id": 7,
+      "acquireMethod": 1,
+      "rewardType": 2,
+      "rewardId": 0,
+      "rewardAmount": 120
+    },
+    {
+      "id": 8,
+      "acquireMethod": 2,
+      "rewardType": 5,
+      "rewardId": 102081,
+      "rewardAmount": 1
+    }
+  ],
+  "chargeMoneyRewardConfig": {
+    "rewards": [
+      {
+        "id": 1,
+        "requireGold": 1,
+        "worthGold": 9999,
+        "backgroundCardId": 102061,
+        "describe": "chargeMoney_dec1",
+        "rewardType1": 5,
+        "rewardId1": 102061,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardAmount2": 500,
+        "rewardType3": 5,
+        "rewardId3": 104951,
+        "rewardAmount3": 8,
+        "rewardType4": 0,
+        "rewardId4": 0,
+        "rewardAmount4": 0
+      },
+      {
+        "id": 2,
+        "requireGold": 3300,
+        "worthGold": 18888,
+        "backgroundCardId": 103011,
+        "describe": "chargeMoney_dec2",
+        "rewardType1": 5,
+        "rewardId1": 103011,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardAmount2": 1200,
+        "rewardType3": 5,
+        "rewardId3": 104951,
+        "rewardAmount3": 10,
+        "rewardType4": 7,
+        "rewardId4": 400050,
+        "rewardAmount4": 5
+      },
+      {
+        "id": 3,
+        "requireGold": 7900,
+        "worthGold": 28888,
+        "backgroundCardId": 102031,
+        "describe": "chargeMoney_dec3",
+        "rewardType1": 5,
+        "rewardId1": 102031,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400051,
+        "rewardAmount2": 15,
+        "rewardType3": 5,
+        "rewardId3": 104961,
+        "rewardAmount3": 10,
+        "rewardType4": 7,
+        "rewardId4": 400010,
+        "rewardAmount4": 1500
+      },
+      {
+        "id": 4,
+        "requireGold": 39000,
+        "worthGold": 38888,
+        "backgroundCardId": 102032,
+        "describe": "chargeMoney_dec4",
+        "rewardType1": 5,
+        "rewardId1": 102061,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 103011,
+        "rewardAmount2": 1,
+        "rewardType3": 5,
+        "rewardId3": 102031,
+        "rewardAmount3": 1,
+        "rewardType4": 7,
+        "rewardId4": 400052,
+        "rewardAmount4": 15
+      },
+      {
+        "id": 5,
+        "requireGold": 60000,
+        "worthGold": 58888,
+        "backgroundCardId": 102001,
+        "describe": "chargeMoney_dec5",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 7,
+        "rewardId2": 400010,
+        "rewardAmount2": 2000,
+        "rewardType3": 5,
+        "rewardId3": 104971,
+        "rewardAmount3": 10,
+        "rewardType4": 7,
+        "rewardId4": 400053,
+        "rewardAmount4": 15
+      },
+      {
+        "id": 6,
+        "requireGold": 80000,
+        "worthGold": 98888,
+        "backgroundCardId": 102003,
+        "describe": "chargeMoney_dec6",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 102001,
+        "rewardAmount2": 1,
+        "rewardType3": 7,
+        "rewardId3": 400010,
+        "rewardAmount3": 3500,
+        "rewardType4": 5,
+        "rewardId4": 104971,
+        "rewardAmount4": 10
+      },
+      {
+        "id": 7,
+        "requireGold": 100000,
+        "worthGold": 1288888,
+        "backgroundCardId": 102005,
+        "describe": "chargeMoney_dec7",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 102001,
+        "rewardAmount2": 1,
+        "rewardType3": 7,
+        "rewardId3": 400010,
+        "rewardAmount3": 4000,
+        "rewardType4": 5,
+        "rewardId4": 104971,
+        "rewardAmount4": 15
+      },
+      {
+        "id": 8,
+        "requireGold": 120000,
+        "worthGold": 1688888,
+        "backgroundCardId": 102005,
+        "describe": "chargeMoney_dec8",
+        "rewardType1": 5,
+        "rewardId1": 102001,
+        "rewardAmount1": 1,
+        "rewardType2": 5,
+        "rewardId2": 102001,
+        "rewardAmount2": 1,
+        "rewardType3": 7,
+        "rewardId3": 400010,
+        "rewardAmount3": 7500,
+        "rewardType4": 5,
+        "rewardId4": 104971,
+        "rewardAmount4": 18
+      }
+    ]
+  },
+  "activityGoldGodConfig": {
+    "featureName": "goldGod",
+    "version": 1,
+    "goldGodMaxTimes": 10,
+    "goldGodRewardItems": [
+      {
+        "id": 1,
+        "gemNeed": 100,
+        "gemMax": 1000,
+        "vip": 0
+      },
+      {
+        "id": 2,
+        "gemNeed": 200,
+        "gemMax": 2200,
+        "vip": 0
+      },
+      {
+        "id": 3,
+        "gemNeed": 300,
+        "gemMax": 3600,
+        "vip": 0
+      },
+      {
+        "id": 4,
+        "gemNeed": 500,
+        "gemMax": 6200,
+        "vip": 1
+      },
+      {
+        "id": 5,
+        "gemNeed": 800,
+        "gemMax": 10400,
+        "vip": 2
+      },
+      {
+        "id": 6,
+        "gemNeed": 1200,
+        "gemMax": 16000,
+        "vip": 3
+      },
+      {
+        "id": 7,
+        "gemNeed": 1800,
+        "gemMax": 23400,
+        "vip": 4
+      },
+      {
+        "id": 8,
+        "gemNeed": 2600,
+        "gemMax": 33800,
+        "vip": 5
+      },
+      {
+        "id": 9,
+        "gemNeed": 3600,
+        "gemMax": 46800,
+        "vip": 6
+      },
+      {
+        "id": 10,
+        "gemNeed": 5000,
+        "gemMax": 65000,
+        "vip": 7
+      }
+    ]
+  },
+  "activityGachaPointsConfig": {
+    "rankingNum": 20,
+    "rankRewards": [
+      {
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 104001,
+            "amount": 1
+          },
+          {
+            "itemType": 5,
+            "metaId": 104061,
+            "amount": 1
+          },
+          {
+            "itemType": 5,
+            "metaId": 101271,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "rankMin": 2,
+        "rankMax": 10,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 104061,
+            "amount": 1
+          },
+          {
+            "itemType": 5,
+            "metaId": 101271,
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "rankMin": 11,
+        "rankMax": 20,
+        "rewards": [
+          {
+            "itemType": 5,
+            "metaId": 101271,
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  }
+}

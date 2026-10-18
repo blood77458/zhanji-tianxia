@@ -1,0 +1,84 @@
+"""Basic chapter combat using the captured event contract and SQLite roster.
+Normal attacks are modeled; original skill, critical and QTE rules remain pending.
+This module never invokes legacy ST or grants rewards itself.
+"""
+import gamedata as G
+from . import cardstats as CS
+
+
+def chapter_battle(db, pid, mission_id, battle_type=1, event_override=None):
+    G.init_battle_meta()
+    source = G._cs
+    ev = event_override or (source._BATTLE_EVENT.get((mission_id, battle_type))
+          or source._BATTLE_EVENT.get((mission_id, 1))
+          or source._BATTLE_EVENT.get(mission_id))
+    if not ev:
+        raise ValueError('unknown mission %s' % mission_id)
+    slots = db.all('SELECT s.* FROM player_battle_slot s JOIN player_battle_array a '
+                   'ON a.player_id=s.player_id AND a.array_id=s.array_id '
+                   'WHERE s.player_id=? AND a.is_active=1 ORDER BY s.slot', (pid,))
+    units = []
+    for slot in slots:
+        card = db.one('SELECT * FROM player_card WHERE player_id=? AND card_id=?',
+                      (pid, slot['card_id']))
+        if not card: continue
+        stats = CS.card_attributes(card)
+        for table, calc in [('player_equip',CS.equip_attributes),
+                            ('player_spirit',CS.spirit_attributes),
+                            ('player_treasure',CS.treasure_attributes)]:
+            for row in db.all('SELECT * FROM '+table+' WHERE player_id=? AND card_id=?',
+                              (pid, card['card_id'])):
+                stats = CS.sum_attributes(stats,calc(row))
+        units.append({'posId':len(units)+1,'cardId':int(card['card_id']),
+                      'metaId':int(card['meta_id']),'level':int(card['level']),
+                      'exp':int(card['exp']),'hp':max(1,int(stats['hp'])),
+                      'att':max(1,int(stats['att'])),'def':max(0,int(stats['def']))})
+    if not units: raise ValueError('empty active formation')
+    allies = list(units)
+    group = source._BATTLE_MONSTER_GROUP.get(ev['monsterGroupId']) or []
+    for i,mid in enumerate(group[:5]):
+        mon=source._BATTLE_MONSTER.get(mid)
+        if not mon: continue
+        revise=float(ev.get('monsterRevise') or 1)
+        units.append({'posId':10001+i,'cardId':90000+i,'metaId':int(mon['cardId']),
+                      'level':int(ev.get('monsterLevel') or 1),'exp':0,
+                      'hp':max(1,int(mon['reviseHP']*revise)),
+                      'att':max(1,int(mon['reviseATT']*revise)),
+                      'def':max(0,int(mon['reviseDEF']*revise))})
+    enemies=units[len(allies):]
+    if not enemies: raise ValueError('empty configured monster group')
+    health={u['posId']:u['hp'] for u in units}
+    events=[]
+    # 真实服务端在开战时会先发一批 eventType=102 的「技能生效」事件，
+    # 带真实 skillId（抓包样例：posId=1/2, skillId=32000101, effectId=1）。
+    # 我们以前只发裸扣血，客户端拿不到技能信息 → 不会有任何招式/阵亡演出。
+    for u in allies:
+        try:
+            skills = G.build_card_skills(u['metaId']) or []
+        except Exception:
+            skills = []
+        if not skills:
+            continue
+        sid = int(skills[0].get('skillId') or skills[0].get('id') or 0)
+        if not sid:
+            continue
+        events.append({'eventType':102,'round':0,'actionType':0,
+                       'battleCardActs':[{'posId':u['posId'],'skillId':sid,
+                                         'effectId':1,'changedValue':0}]})
+    def living(team): return [u for u in team if health[u['posId']]>0]
+    for round_no in range(60):
+        for action,team,targets in [(0,allies,enemies),(1,enemies,allies)]:
+            for actor in living(team):
+                alive=living(targets)
+                if not alive: break
+                target=alive[0]
+                damage=min(health[target['posId']],max(1,actor['att']-target['def']))
+                health[target['posId']]-=damage
+                events.append({'eventType':0,'round':round_no,'actionType':action,
+                               'battleCardActs':[{'posId':target['posId'],'skillId':0,
+                                                 'effectId':6,'changedValue':damage}]})
+        if not living(allies) or not living(enemies): break
+    win=bool(living(allies)) and not living(enemies)
+    left=int(100*sum(health[u['posId']] for u in allies)/sum(u['hp'] for u in allies))
+    return {'win':win,'leftHpRate':left,'qte':False,'rewards':[],
+            'cardInitDatas':units,'eventFlow':events,'encounterMultiPlayerBoss':False}

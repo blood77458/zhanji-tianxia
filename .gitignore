@@ -5,6 +5,7 @@ server/admin_avatars/
 server/*.pid
 server/canon_server.pid
 server/__pycache__/
+server/**/__pycache__/
 server/rpc_payloads.jsonl
 server/*.log
 server/server_stdout.txt
@@ -14,6 +15,11 @@ server/_out*.txt
 server/_err*.txt
 server/_boot_*.txt
 server/_restart*.py
+server/_probe.db
+server/canon.db
+server/canon_test.db
+server/*.db-wal
+server/*.db-shm
 
 # --- build / reverse-engineering junk (not needed to run) ---
 work/__pycache__/
@@ -67,3 +73,37 @@ Thumbs.db
 .env
 .env.*
 *.swp
+
+# --- 原版游戏专有材料（解密出的客户端源码/配置表）---
+# 这些是乐元素《战姬天下》的版权物，**不入库**。
+# 本地需要时用 scripts/ 里的解包脚本从自己的 APK 里提取到 work/luasrc。
+work/luasrc/
+work/reference_capture/
+work/proto_capture/
+work/http_capture/
+work/growth/
+work/out/
+work/patch_out/
+offline/lua/canon/single/proto_data.lua
+offline/lua/canon/single/http_replay.lua
+work/canon.keystore
+work/hero_catalog.json
+work/hero_catalog.md
+server/card_dict.json
+
+work/uitest/
+work/lua_cmp/
+work/api_analysis/*.png
+work/battle_test/
+work/battle_video/
+work/proof/
+work/http_capture/
+work/proto_capture/
+work/recovery_20261010/
+work/baoyi_fast/
+work/baoyi/
+work/**/*.png
+work/**/*.apk
+**/*.apk
+**/*.idsig
+server/static/static_config.*.xml

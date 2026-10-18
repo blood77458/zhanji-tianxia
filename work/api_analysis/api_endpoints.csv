@@ -1,0 +1,364 @@
+﻿method,分类,说明,请求类,请求参数,响应字段,调用点数,服务端已实现
+challengeMultiplayerBoss,Boss / 通缉,ChallengeMultiplayerBossRequest,ChallengeMultiplayerBossRequest,battleType|bossId|triggerUid,bossHpMax|bossInfo|globalReturnScene|win,1,Y
+challengeWanted,Boss / 通缉,,WantedActivityChallengeRequest,,wantedId|win,1,Y
+challengeWorldBoss,Boss / 通缉,ActivityCowStageRequest.lua - 世界Boss请求,ChallengeWorldBossRequest,battleType,bossHp|bossHpMax,1,Y
+exchangeItem,Boss / 通缉,,WantedActivityExchangeRequest,itemId,rewards,1,Y
+gainMultiplayerBossParticipationReward,Boss / 通缉,GainMultiplayerBossParticipationRewardRequest,GainMultiplayerBossParticipationRewardRequest,bossKey,rewards,1,N
+gainMultiplayerBossRankReward,Boss / 通缉,GainMultiplayerBossRankRewardRequest,GainMultiplayerBossRankRewardRequest,,rewards,1,N
+gainWorldBossRewards,Boss / 通缉,ActivityCowStageRequest.lua - 世界Boss请求,GainWorldBossRewardsRequest,,,1,Y
+getMultiplayerBossDamage,Boss / 通缉,GetMultiplayerBossDamageRequest,GetMultiplayerBossDamageRequest,bossId|triggerUid,damages,2,N
+getMultiplayerBossLeftHp,Boss / 通缉,GetMultiplayerBossLeftHpRequest,GetMultiplayerBossLeftHpRequest,bossId|triggerUid,leftHp,2,N
+getMultiplayerBossRank,Boss / 通缉,GetMultiplayerBossRankRequest,GetMultiplayerBossRankRequest,beginPos|endPos,currRankMax|multiPlayerBossRanks,1,N
+getWantedInfo,Boss / 通缉,,WantedActivityGetWantedInfoRequest,,wantedInfo,1,Y
+getWorldBossInfo,Boss / 通缉,ActivityCowStageRequest.lua - 世界Boss请求,GetWorldBossInfoRequest,,,7,Y
+inspireInWorldBoss,Boss / 通缉,ActivityCowStageRequest.lua - 世界Boss请求,InspireInWorldBossRequest,worldBossInspireInfos,,1,Y
+refreshWanted,Boss / 通缉,,WantedActivityRefreshTaskRequest,minimum,wantedId,1,Y
+setAutoWorldBoss,Boss / 通缉,ActivityCowStageRequest.lua - 世界Boss请求,SetAutoWorldBossRequest,autoChallenge,,2,Y
+gainAchievementReward,任务 / 成就 / 奖励,GainAchievementRewardRequest,GainAchievementRewardRequest,achievementId|achievementType,reward,1,N
+gainActiveReward,任务 / 成就 / 奖励,ActiveRewardRequest,ActiveRewardRequest,activeRewardId,rewards,2,N
+gainBalloonPointReward,任务 / 成就 / 奖励,,BlowBalloonActGetMagicRewardRequest,id,balloonRanks,2,N
+gainBalloonRankReward,任务 / 成就 / 奖励,,BlowBalloonActGetRankRewardRequest,,balloonRanks,1,N
+gainChapterFinishReward,任务 / 成就 / 奖励,GainChapterFinishRewardRequest,GainChapterFinishRewardRequest,chapterId,amount|itemType|metaId|reward,2,N
+gainChargeMoneyReward,任务 / 成就 / 奖励,,GainChargeMoneyRewardRequest,id,rewards,1,Y
+gainConsumeReward,任务 / 成就 / 奖励,多重好礼获取面板信息接口 / 接口定义 后端提供,ConsumeRewardGainRequest,id,rewards,1,N
+gainDailyAchieveReward,任务 / 成就 / 奖励,获取每日成就信息,GainDailyAchieveRequest,achieveId,rewards,1,N
+gainDailyTaskReward,任务 / 成就 / 奖励,,GainDailyTaskRewardRequest,taskId,rewards,1,N
+gainDayReward,任务 / 成就 / 奖励,,GainDayRewardRequest,dayRewardId,,1,N
+gainDiceReward,任务 / 成就 / 奖励,DiceGainRewardRequest,DiceGainRewardRequest,,changeDiceLuckCount|changeLuckCountPerThrow|diceNewRewards|gainedCoin|throwDiceCount,1,N
+gainFbActivityReward,任务 / 成就 / 奖励,Facebook相关,FacebookGainActivityRewardRequest,,rewards,1,N
+gainFortuneRewards,任务 / 成就 / 奖励,GainFortuneRewardsRequest,GainFortuneRewardsRequest,,id|rewards,1,N
+gainGemConsumeRewards,任务 / 成就 / 奖励,,GainGemConsumeRewardsRequest,rewardId,rewards,1,N
+gainGoldGodRewards,任务 / 成就 / 奖励,GainGoldGodRewardsRequest,GainGoldGodRewardsRequest,,rewards,1,N
+gainInviteReward,任务 / 成就 / 奖励,领取邀请好友奖励,GainInviteRewardRequest,,rewards,1,N
+gainInvitedReward,任务 / 成就 / 奖励,领取邀请好友奖励,GainInvitedRewardRequest,deviceId|invitationCode,rewards,1,N
+gainLevelRaceRewards,任务 / 成就 / 奖励,GainLevelRaceRewardsRequest,GainLevelRaceRewardsRequest,level,rewards,1,N
+gainMondayReward,任务 / 成就 / 奖励,,GainMondayRewardRequest,,rewards,1,N
+gainNewYearRewards,任务 / 成就 / 奖励,GainNewYearRewardsRequest,GainNewYearRewardsRequest,id,rewards,2,N
+gainRankFirstReward,任务 / 成就 / 奖励,GainRankFirstRewardRequest,GainRankFirstRewardRequest,rank,amount|itemType|metaId|rewards,1,N
+gainRankRewards,任务 / 成就 / 奖励,,GainRankRewardsRequest,,rewards,1,N
+gainSwornReward,任务 / 成就 / 奖励,,SwornRewardGainRequest,swornRewardId,rewards,1,N
+gainTutorialFinishReward,任务 / 成就 / 奖励,,GainTutorialFinishRewardRequest,,rewards,1,N
+getAchievements,任务 / 成就 / 奖励,GetAchievementsRequest,GetAchievementsRequest,,cardBookAchievement|sharkAchievement,3,Y
+getChargeFeedbackReward,任务 / 成就 / 奖励,,GetChargeFeedbackRewardRequest,rewardId,rewards,1,N
+getConsumeRewardInfo,任务 / 成就 / 奖励,多重好礼获取面板信息接口 / 接口定义 后端提供,ConsumeRewardGetInfoRequest,,recharges|rewards,1,N
+getContinuousLoginReward,任务 / 成就 / 奖励,RewardRequest.lua - all request related requeset,GetContinueLoginRewardRequest,getBigReward,bigReward|reward|rewardId,2,N
+getCountdownReward,任务 / 成就 / 奖励,获取新手礼包请求,GetCountdownRewardRequest,,finished|inProcessRewardId|latestRewardTimestamp|rewards,2,N
+getDailyAchieveInfo,任务 / 成就 / 奖励,获取每日成就信息,GetDailyAchieveInfoRequest,,,3,N
+getDailyActiveInfo,任务 / 成就 / 奖励,GetDailyActiveInfoRequest,GetDailyActiveInfoRequest,,dailyActiveInfo|dailyActiveInfo.activeValue|dailyActiveInfo.gainedRewards|dailyActiveInfo.taskCounters,5,N
+getLoginReward,任务 / 成就 / 奖励,RewardRequest.lua - all request related requeset,GetLoginRewardRequest,,,1,Y
+getMonthlyLoginRewardMeta,任务 / 成就 / 奖励,RewardRequest.lua - all request related requeset,GetCurMonthRewardListRequest,,adNum|monthlyLoginRewardItems,1,Y
+getQuestionDailyReward,任务 / 成就 / 奖励,,QuestionActDailyRewardRequest,,dailyNum|questionId|questionNum|wrongAnswer1Key|wrongAnswer2Key|wrongAnswer3Key,1,N
+getRewardList,任务 / 成就 / 奖励,RewardRequest.lua - all request related requeset,GetRewardListRequest,,sharkRewardList,1,Y
+getSignInReward,任务 / 成就 / 奖励,RewardRequest.lua - all request related requeset,GetSigninRewardRequest,,,1,Y
+getTaskInfo,任务 / 成就 / 奖励,,GetTaskInfoRequest,,dailyTaskInfos,2,N
+getWeekReward,任务 / 成就 / 奖励,,QuestionActWeekRewardRequest,,,1,N
+pickUpAllReward,任务 / 成就 / 奖励,RewardRequest.lua - all request related requeset,GetAllRewardRequest,pickUpCard|pickUpEquip,rewards,1,N
+pickUpReward,任务 / 成就 / 奖励,RewardRequest.lua - all request related requeset,GetSingleRewardRequest,rewardId,reward,1,N
+gameInit,元数据 / 初始化,,GameInitRequest,,maintenanceItem|noChatEndSeconds|sharkAchievement,4,Y
+getAnnouncementInfo,元数据 / 初始化,获取公告信息请求,GetAnnouncementInfoRequest,,announcementItemMetas,2,Y
+getMeta,元数据 / 初始化,GetGameMetaRequest.lua - 获取游戏元配置的请求,GetGameMetaRequest,,,3,Y
+buySpiritPool,元神,购买元神格子,BuySpiritPoolRequest,,requisite|requisite.amount,2,Y
+equipSpirit,元神,装备元神,EquipSpiritRequest,cardId|index|spiritId,,1,Y
+sellSpirit,元神,卖出元神,SellSpiritRequest,spiritIds,rewards,1,Y
+setAutoSave,元神,元神刷新复选框,SetSpiritRefreshAutoSaveRequest,autoSave,,1,N
+spiritConcentrate,元神,,SpiritConcentrateRequest,type,sharkSpirits,2,Y
+unequipSpirit,元神,卸下元神,UnequipSpiritRequest,cardId|index,,1,Y
+upgradeSpirit,元神,强化元神,UpgradeSpiritRequest,masterSpiritId|slaveSpiritIds,sharkSpirit|sharkSpirit.spiritId,1,Y
+challengeElite,关卡 / 战斗,ChallengeEliteRequest.lua - 挑战精英关卡,ChallengeEliteRequest,eliteId,selectId|win,1,Y
+changeBattleArray,关卡 / 战斗,,ChangeBattleArrayRequest,battleArrayId,,1,N
+clearElite,关卡 / 战斗,精英关卡扫荡,EliteSweepRequest,eliteId,challengeNum|lastEnergy|mergeRewards|rewards,1,N
+clearMission,关卡 / 战斗,ClearMissionRequest,ClearMissionRequest,clearRounds|missionId|routeId,clearMissionRewards,1,Y
+getEliteInfo,关卡 / 战斗,GetEliteInfoRequest.lua - 获取精英关卡信息,GetEliteInfoRequest,,,1,Y
+resetClearTime,关卡 / 战斗,ResetClearTimeRequest,ResetClearTimeRequest,,gemRequisite|gemRequisite.amount,1,N
+resetElite,关卡 / 战斗,ResetEliteRequest.lua - 重置精英关卡信息,ResetEliteRequest,eliteId,,1,N
+triggerBattleEvent,关卡 / 战斗,,TriggerBattleRequest,DoNotCaptureFailueMessage|battleType|missionId|routeId|step,,2,Y
+adjustTeam,其他,调整队列请求,AdjustTeamRequest,additionalCardIds|mainCardId,,1,Y
+gainFloorAddition,其他,,GainFloorAdditionRequest,type,,1,N
+gainYesterdayAddition,其他,,GainYesterdayAdditionRequest,type,,1,N
+getHomeInfo,其他,获取主页信息请求,GetHomeInfoRequest,,consumeRewardRecharges|consumeRewards|freeSpiritRefreshNum|unionMonsterEscapeSeconds|unionMonsterHp,2,Y
+getMultiplayserBossInfo,其他,GetMultiplayserBossInfoRequest,GetMultiplayserBossInfoRequest,,,2,N
+getPlayerTeamInfo,其他,GetPlayerTeamInfoRequest.lua - 培养卡片的请求,GetPlayerTeamInfoRequest,playerTeamData|playerUid,,8,Y
+getUserBanInfo,其他,刷新元神副属性,SpeakLimitStutasRequest,,noChatEndSeconds,2,Y
+login,其他,,(direct),,,1,Y
+rebirthItem,其他,武将重生,ItemRebirthRequest,resourceId|resourceType,rewards,1,N
+recordAddictedTime,其他,,RecordAddictedTimeRequest,minutes,,2,N
+recordTutorialStep,其他,,RecordTutorialStepRequest,funcName|step,,10,Y
+refreshSubAttribute,其他,刷新元神副属性,RefreshSubAttributeRequest,lockIndex|refreshType|spiritId,refreshSharkSpiritAttribute,1,N
+rename,其他,卖出元神,ChangeNameRequest,nickName,,1,N
+sacrificeItem,其他,武将祭炼,ItemSacrificeRequest,resourceIds|resourceType,rewards,1,N
+selectSubAttribute,其他,卖出元神,SelectSubAttributeRequest,refreshIndex|spiritId,,2,N
+triggerCoinEvent,其他,TriggerCoinEventRequest,TriggerCoinEventRequest,DoNotCaptureFailueMessage|missionId|routeId|step,,1,Y
+triggerEmptyEvent,其他,TriggerEmptyEventRequest,TriggerEmptyEventRequest,DoNotCaptureFailueMessage|missionId|routeId|step,,1,Y
+triggerExpEvent,其他,TriggerExpEventRequest,TriggerExpEventRequest,DoNotCaptureFailueMessage|missionId|routeId|step,,1,Y
+triggerRandomEvent,其他,TriggerRandomEventRequest,TriggerRandomEventRequest,DoNotCaptureFailueMessage|missionId|routeId|step,eventType,1,Y
+validatePaymentOrder,其他,,ValidatePaymentOrderRequest,goldNum|orderId|productId,succ,3,Y
+acceptUnionApply,军团,军团同意申请,UnionAcceptRequest,applierUid,,1,N
+applyCrossGvg,军团,跨服GvG  报名请求,CrossUnionPkGetApplyRequest,type,,2,N
+applyUnion,军团,请求加入某军团,UnionApplyRequest,unionId,,1,N
+applyUnionCity,军团,军团战 报名攻打城池,UnionPkSignAttackRequest,unionCityId,,1,N
+appointUnion,军团,任命职务请求,UnionAppointRequest,appointUid|title,,3,N
+blessForCrossGVG,军团,跨服GvG  祝福请求,CrossUnionPkGetBlessRequest,,rank|rewards,1,N
+buyUnionProp,军团,BuyUnionPropRequest,BuyUnionPropRequest,unionPropId|unionPropType,retCode|rewards,2,N
+cancelDissolveUnion,军团,取消解散军团,UnionCancelDissolveRequest,,,1,N
+cancelTransferUnion,军团,撤销转让军团长,UnionCancelTransferRequest,,,1,N
+cancelUnionApply,军团,取消申请,UnionCancelApplyRequest,unionId,,1,N
+challengeUnionMonster,军团,军团挑战怪物,UnionColosseumChallengeRequest,,bossHpMax|generalExp,1,Y
+constructUnion,军团,建设,UnionConstructUnionRequest,constructType,,1,N
+createUnion,军团,创建军团请求,UnionCreateRequest,coinType|declaration|notice|unionName,sharkUnion|sharkUnion.unionId,2,N
+crossGVGGroupBattle,军团,获得跨服军团战小组赛战斗信息,CrossUnionPkGroupBattleRequest,,,1,N
+dissolveUnion,军团,解散军团请求,UnionDissolveRequest,,sharkUnion|sharkUserUnion,1,N
+exchangeUnionFormation,军团,军团战更换阵型请求,UnionPkExchangeUnionFormationRequest,forwardUid|headUids|middleUids|tailUids|unionCityId,,1,N
+forceQuitUnion,军团,军团踢人请求,UnionKickRequest,quitUid,,1,N
+gainUnionBattleReward,军团,军团战 请求获得 我的奖励,UnionPkGainUnionBattleRewardRequest,rewardId,rewards,1,N
+getAppliedUnions,军团,请求获取当前玩家的已申请军团列表,UnionGetMyApplyListRequest,,sharkUnionWrappers,2,N
+getApplyUnions,军团,军团战 获得指定城池具体信息,UnionPkGetApplyUnionsRequest,unionCityId,,1,N
+getCrossGVGBlessInfo,军团,跨服GvG  祝福请求,CrossUnionPkGetBlessInFoRequest,,crossGvgVersion|rank|rewards|selfApplyCrossGvg|selfQuitCrossGvg|unionApplyCrossGvg,2,N
+getCrossGvgGroupReports,军团,获得跨服军团战小组赛战报,CrossUnionPkGetGroupReportsRequest,,,1,N
+getCrossGvgGroupTop10Score,军团,取得跨服gvg 排位赛数据,CrossUnionPkGetGroupRankScoreRequest,,,1,N
+getFiredUnionMemberStatus,军团,获得踢人之前获得被踢玩家当前状态,CrossUnionPkCheckFiredStatueRequest,firedUid,,2,N
+getGvgBattleResultDetail,军团,获取gvg战斗信息,CrossUnionPkGetBattleReportRequest,knockout|reportId,,2,N
+getGvgKnockoutInfo,军团,取得跨服gvg 排位赛数据,CrossUnionPkGetKnockoutInfoRequest,,championBattle,2,N
+getOwnUnionInfo,军团,军团战 获得 我的军团 列表信息,UnionPKGetMyGuildInfoRequest,,,1,N
+getUnionAppliers,军团,请求获得申请者列表,UnionGetApplierListRequest,,sharkUnionAppliers,6,N
+getUnionBattlefieldReport,军团,战报接口,UnionPkGetBattleReportRequest,reportId|unionCityId,,2,N
+getUnionBattlefieldReportList,军团,军团战 获得指定城池具体信息,UnionPkGetBattleReportListRequest,unionCityId,,1,N
+getUnionBuildingBankInfo,军团,GetUnionBuildingBankInfoRequest,GetUnionBuildingBankInfoRequest,,level,1,N
+getUnionBuildingColosseumInfo,军团,军团斗兽场建筑信息,UnionColosseumBuildingInfoRequest,,level|rankList|sharkUnionMonster|sharkUnionMonster.distributingUid|sharkUnionMonster.escapeSeconds|sharkUnionMonster.monsterId|sharkUnionMonster.monsterLeftHp|sharkUnionMonster.reward.amount|sharkUnionMonster.rewardDistributed|sharkUnionMonster.rewardDouble|sharkUnionMonster.summonUserNickname|summonTimes|unionWealth,4,N
+getUnionBuildingHallInfo,军团,GetUnionBuildingHallInfoRequest,GetUnionBuildingHallInfoRequest,,constructTimesToday|lastestConstructSeconds,2,N
+getUnionBuildingShopInfo,军团,GetUnionBuildingShopInfoRequest,GetUnionBuildingShopInfoRequest,,level|specialProps|specialShopRecord,5,N
+getUnionCityInfo,军团,军团战 获得指定城池具体信息,UnionPkGetCityInfoRequest,unionCityId,sharkUnionCity|sharkUnionCity.report|sharkUnionCity.successfulBid|unionFormation,4,N
+getUnionCityList,军团,军团战 获得城池列表,UnionPkGetCityListRequest,,attendBattleNum|challengeCityIds|fightingCityIds|ownCityIds|roundWealth|smallCityNum|unionFormation|unionWinNum|userTitle,2,N
+getUnionFormation,军团,获取军团战阵型信息,UnionPkGetCityFormationRequest,unionCityId,sharkUnionCityApply|unionFormation,3,N
+getUnionInfo,军团,请求获得军团信息,UnionGetUnionInfoRequest,,canDistributeMonsterReward|sharkUnion|sharkUnionBuildingWrapper|unionMonsterEscapeSeconds|unionMonsterHp|unionTotalFightCapacity|unionWarLightOn,1,N
+getUnionList,军团,查询军团列表请求,UnionGetUnionListRequest,amount|startNum,sharkUnionWrappers,4,N
+getUnionMembersList,军团,获得军团成员列表,UnionGetMemberListRequest,,sharkUnionMemberWrappers,5,N
+getUnionMonsterRank,军团,获得斗兽场排行榜,UnionColosseumGetRankRequest,,rankList,2,N
+getUnionNewsList,军团,获得军团动态请求,UnionGetNewsRequest,,sharkUnionNewsWrappers|unionWarNewsWrappers,2,N
+getUnionWarCityMembersList,军团,获得军团战城池报名成员列表,UnionPkGetCityMemberListRequest,cityId,unionFormation,1,N
+getUserUnionInfo,军团,获得当前玩家的军团信息,UnionGetMyDataRequest,,crossGvgVersion|out|promotion|selfApplyCrossGvg|selfQuitCrossGvg|sharkUserUnion|unionApplyCrossGvg|unionWarHintNum,8,Y
+impeachUnionManager,军团,弹劾军团长,UnionImpeachRequest,,currManagerNickName,1,N
+inspireUnionBattle,军团,鼓舞接口中BuffId / 1：金币鼓舞 / 2：银币鼓舞 / 3：奋力一击,UnionPkPowerupRequest,buffId|unionCityId,,5,N
+modifyUnionDeclaration,军团,换宣言请求,UnionChangeDeclarationRequest,declaration,,1,N
+modifyUnionNotice,军团,换公告请求,UnionChangeNoticeRequest,notice,,1,N
+quitUnion,军团,退出军团请求,UnionQuitRequest,,sharkUserUnion,1,N
+receiveUnionWage,军团,ReceiveUnionWageRequest,ReceiveUnionWageRequest,unionWageId,rewards,1,N
+rejectUnionAllApplies,军团,请求全部拒绝,UnionRejectAllRequest,,,1,N
+rejectUnionApply,军团,军团拒绝申请,UnionRejectRequest,applierUid,,1,N
+searchUnion,军团,查找军团请求,UnionSearchRequest,unionName,sharkUnionWrappers,1,N
+summonUnionMonster,军团,召唤军团boss,UnionColosseumSummonRequest,monsterMetaId|summonType,sharkUnionMonster|sharkUnionMonster.distributingUid|sharkUnionMonster.escapeSeconds|sharkUnionMonster.monsterId|sharkUnionMonster.monsterLeftHp|sharkUnionMonster.reward.amount|sharkUnionMonster.rewardDistributed|sharkUnionMonster.rewardDouble|sharkUnionMonster.summonUserNickname,2,N
+transferUnion,军团,移交军团长请求,UnionTransferRequest,transferedUid,transferTime,1,N
+unionMonsterRewardDistributeBegin,军团,军团斗兽场开始分配,UnionColosseumStartAllocationRequest,,currMonsterRewards,2,N
+unionMonsterRewardDistributeGiveUp,军团,军团斗兽场放弃分配,UnionColosseumGiveUpAllocationRequest,,,1,N
+unionMonsterRewardDistributeSave,军团,军团斗兽场分配奖励,UnionColosseumAllocateRequest,unionMonsterRewards,,1,N
+upgradeUnionBuilding,军团,升级建筑请求,UnionBuildingUpgradeRequest,unionBuildingId,currLevel,1,N
+userApplyUnionCity,军团,团员报名指定城池,UnionPkMemberApplyRequest,unionCityId,,1,N
+adjustCardAvatar,卡牌养成,卖出元神,AdjustCardAvatarRequest,avatarMetaId|cardId,,1,N
+buyMonthGemCard,卡牌养成,BuyMonthGemCardRequest,BuyMonthGemCardRequest,,monthGemCardDeadline,1,N
+evolveCard,卡牌养成,卡牌进化Request / 参数1：masterId / 参数2：slaveId,CardEvolutionRequest,masterId|slaveId,sharkCard|sharkCard.metaId,2,Y
+evolveEquip,卡牌养成,EvolveEquipRequest,EvolveEquipRequest,equipId|userGems,equipId|sharkEquip,1,Y
+exchangeCard,卡牌养成,卡牌以旧换新兑换请求,CardOldToNewExchangeRequest,cardId|shopId,reward,1,N
+exchangeCardDaily,卡牌养成,易帅换将,ActivityexchangeCardDailyRequest,cardId|metaId,reward,1,N
+exchangeTrainDanByArenaScore,卡牌养成,ExchangeTrainDanRequest,ExchangeTrainDanRequest,exchangeType,amount|itemType|metaId|requisite|rewards,1,N
+gainedMonthGemCardReward,卡牌养成,GainMonthCardRequest,GainMonthCardRequest,,rewards,1,N
+getCardBook,卡牌养成,GetCardBookRequest.lua - get cards illustrated info requeset,GetCardBookRequest,,sharkCardBook|sharkCardBook.cardMetaIds|sharkCardBook.equipMetaIds,2,Y
+giveUpCardTrain,卡牌养成,GiveUpCardTrainRequest.lua - 放弃卡片培养的请求,GiveUpCardTrainRequest,cardId|masterId|slaveIds,sharkCard|sharkCard.usedPotential,3,Y
+lockCard,卡牌养成,LockCardRequest,LockCardRequest,cardId|methodType,,1,Y
+prayCardFragment,卡牌养成,PrayCardFragmentRequest,PrayCardFragmentRequest,cardId,prayNum|rewards,1,N
+refreshCardExchangeDaillyCard,卡牌养成,,ActivereFreshCardExchangeDaillyCardRequest,useGold,cardExchangeDailyInfo|cardExchangeDailyInfo.cardMetaIds|cardExchangeDailyInfo.exchangeTimes,2,N
+replaceCard,卡牌养成,ReplaceCardRequest.lua - 重整队列的请求,ReplaceCardRequest,insertCardId,type,1,Y
+saveCardTrain,卡牌养成,SaveCardTrainRequest.lua - 保存卡片培养结果的请求,SaveCardTrainRequest,masterId|slaveIds,sharkCard|sharkCard.cardId|sharkCard.usedPotential,2,Y
+sellCards,卡牌养成,SellCardsRequest.lua - 出售装备的请求,SellCardsRequest,cardIds,rewards,1,Y
+setCardGroupInterworking,卡牌养成,领取邀请好友奖励,SetCardGroupInterworkingRequest,cardGroupInterworking,,1,N
+splitCard,卡牌养成,SplitCardRequest,SplitCardRequest,cardId,rewards,1,Y
+trainCard,卡牌养成,CardTrainingRequest.lua - 培养卡片的请求,CardTrainingRequest,,attTrainValue|defTrainValue|hpTrainValue,2,Y
+triggerCardEvent,卡牌养成,TriggerCardEventRequest,TriggerCardEventRequest,DoNotCaptureFailueMessage|missionId|routeId|step,,1,Y
+unlockSubAttribute,卡牌养成,解锁元神副属性,UnlockSubAttributeRequest,spiritId,sharkSpiritAttribute,1,N
+upgradeCardByGeneralExp,卡牌养成,卡牌经验强化接口,UpgradeCardByGeneralExpRequest,masterId|targetLevel,sharkCard,2,Y
+upgradeEquipForOneCard,卡牌养成,卡牌装备全部强化,UpgradeEquipForOneCardRequest,equipIds,sharkEquips,1,Y
+upgradeSkill,卡牌养成,UpgradeSkillRequest.lua - 技能升级的请求,UpgradeSkillRequest,cardId|skillBooks|skillId,cardSkill|cardSkill.skillId,2,N
+upgradeUser,卡牌养成,UpgradeUserRequest.lua - 用户升级的请求,UpgradeUserRequest,,sharkUser,1,N
+getRobUserList,夺宝 / 神兽,GetRobUserListRequest,GetRobUserListRequest,beastFragmentId,,1,N
+getSharkBeasts,夺宝 / 神兽,,GetSharkBeastsRequest,,sharkBeasts,2,Y
+robBeastFragment,夺宝 / 神兽,RobBeastFragmentRequest,RobBeastFragmentRequest,beastFragmentId|enemyUid|robType|robotId,,1,N
+acceptAllFreeGift,好友社交,SendAllFreeGiftRequest.lua - 向玩家发送免费礼物,AcceptAllFreeGiftRequest,,gainedEnergy,1,N
+acceptAllInvitations,好友社交,AcceptAllInvitationsRequest.lua - 接受所有玩家的好友邀请,AcceptAllInvitationsRequest,,acceptedFriends|reviewingFriends,1,N
+acceptInvitation,好友社交,AcceptInvitationRequest.lua - 接受玩家的添加好友邀请,AcceptInvitationRequest,friendUid,acceptedFriend,2,N
+cancelInvitation,好友社交,CancelInvitationRequest.lua - 接受玩家的添加好友邀请,CancelInvitationRequest,friendUid,,2,N
+challengeFriend,好友社交,ChallengeFriendRequest.lua - 与好友切磋请求,ChallengeFriendRequest,friendUid,tableContentHeight,1,N
+challengeFriendList,好友社交,一键切磋,ChallengeFriendListRequest,friendUids,rewards,1,N
+deleteFriend,好友社交,DeleteFriendRequest.lua - 接受玩家的添加好友邀请,DeleteFriendRequest,friendUid,,1,N
+gainPraiseReward,好友社交,领取点赞礼包奖励,GainPraiseRewardRequest,praiseId,rewards,1,N
+getFriendDetail,好友社交,GetFriendDetailRequest.lua - 获取好友的详情,GetFriendDetailRequest,friendUid,sharkFriendDetail|sharkFriendDetail.fightCapacity|sharkFriendDetail.friendUid|sharkFriendDetail.level|sharkFriendDetail.mainCardMetaId|sharkFriendDetail.nickName,2,N
+getFriends,好友社交,GetFriendsRequest.lua - 获取当前玩家的好友信息,GetFriendsRequest,,receivedEnergy|sharkFriends,2,Y
+getInvitationFriends,好友社交,GetFriends.lua - 获取当前玩家的好友信息,GetInvitationFriendsRequest,,sharkFriends,1,N
+getInvitationInfo,好友社交,领取邀请好友奖励,GetInvitationInfoRequest,deviceId,deviceHasInvited|sharkAccountInvitation,1,N
+getRecommendedFriends,好友社交,GetRecommendedFriendsRequest.lua - 获取推荐好友信息,GetRecommendedFriendsRequest,,sharkFriends,2,N
+getReviewFriends,好友社交,GetReviewFriendsRequest.lua - 获取等待玩家审核的用户请求列表,GetReviewFriendsRequest,,sharkFriends,1,N
+inviteFbFriends,好友社交,Facebook相关,FacebookInviteFriendRequest,fbFriendIds,,1,N
+recordPraiseId,好友社交,获取记录点赞id,GetRecordPraiseIdRequest,praiseId,,1,N
+refuseAllInvitations,好友社交,RefuseAllInvitationsRequest.lua - 拒绝所有玩家的好友邀请,RefuseAllInvitationsRequest,,,1,N
+refuseInvitation,好友社交,RefuseInvitationRequest.lua - 拒绝玩家的添加好友邀请,RefuseInvitationRequest,friendUid,,2,N
+sendAllFreeGift,好友社交,SendAllFreeGiftRequest.lua - 向玩家发送免费礼物,SendAllFreeGiftRequest,friendUids,friendUids|gainedEnergy,1,N
+sendAllInvitations,好友社交,SendAllInvitationsRequest.lua - 发送全部邀请,SendAllInvitationsRequest,friendUids,friendUids,1,N
+sendFreeGift,好友社交,SendFreeGiftRequest.lua - 向玩家发送免费礼物,SendFreeGiftRequest,friendUid,gainedEnergy,1,N
+sendInvitation,好友社交,SendInvitationRequest.lua - 发送邀请,SendInvitationRequest,friendUid,,3,N
+buyTreasureGrid,宝物,宝物格子,BuyTreasureGridRequest,,,2,N
+evolveTreasure,宝物,宝物升星,EvolveTreasureRequest,treasureId,sharkTreasure,1,Y
+gachaTreasure,宝物,宝物扭蛋,GachaTreasureRequest,free|time,rewards,1,N
+gainTreasureboxPointsRankReward,宝物,TreasureboxRankRewardRequest.lua,TreasureboxRankRewardRequest,,rewards,1,N
+gainTreasureboxPointsReward,宝物,TreasureboxPointRewardRequest.lua,TreasureboxPointRewardRequest,id,rewards,1,N
+getTreasureboxPointsInfo,宝物,TreasureboxPointsInfoGetRequest.lua,TreasureboxPointsInfoGetRequest,,treasureboxPointsRanks,2,N
+lockTreasure,宝物,宝物锁定,LockTreasuresRequest,treasureId|type,,1,Y
+potentialTreasure,宝物,宝物激发,PotentialTreasureRequest,treasureId|type,sharkTreasure,1,N
+resetTreasurePotential,宝物,宝物重置潜力,ResetTreasurePotentialRequest,treasureId,,1,N
+sellTreasures,宝物,卖出宝物,SellTreasureRequest,treasureIds,rewards,1,N
+setupTreasure,宝物,装备宝物 / 装备元神,SetupTreasureRequest,cardId|treasureId,,1,N
+splitTreasure,宝物,request / /request / response / /response / /protocol,SplitTreasureRequest,treasureId,rewards,1,N
+upgradeTreasure,宝物,宝物强化,UpgradeTreasureRequest,oneClick|treasureId,sharkTreasure,2,Y
+gachaCard,抽卡 / 合成,,GachaCardRequest,gachaId|time,countdownFreeGachaInfos|free|rewards,2,Y
+gachaCardByBox,抽卡 / 合成,领取邀请好友奖励,GachaCardByBoxRequest,,rewards,1,N
+gachaCardFree,抽卡 / 合成,,GachaCardFreeRequest,gachaId,countdownFreeGachaInfos|free|rewards,2,Y
+gainGachaPointsRewards,抽卡 / 合成,GainGachaPointsRewardsRequest,GainGachaPointsRewardsRequest,,rewards,1,N
+getGachaBroadcast,抽卡 / 合成,,GetGachaBroadcastRequest,,,3,Y
+getGachaPointsInfo,抽卡 / 合成,GetGachaPointsInfoRequest,GetGachaPointsInfoRequest,,,1,N
+getSharkGachaBoxInfo,抽卡 / 合成,领取邀请好友奖励,GetSharkGachaBoxInfoRequest,,gachaBoxCard,1,N
+refreshGachaBox,抽卡 / 合成,领取邀请好友奖励,RefreshGachaBoxRequest,refreshType,gachaBoxCard,2,N
+synthetizeCard,抽卡 / 合成,FragmentSynthetizeCardRequest 卡牌碎片合成,FragmentSynthetizeCardRequest,metaId,rewards,1,Y
+synthetizeEquip,抽卡 / 合成,FragmentSynthetizeEquipRequest 武器碎片合成,FragmentSynthetizeEquipRequest,metaId,rewards,1,N
+synthetizeItem,抽卡 / 合成,,SynthetizeItemRequest,formulaId,,1,N
+upgradeCard,抽卡 / 合成,卡牌合成Request / 参数1：masterId / 参数2：slaveIds,CardComposeRequest,masterId|slaveIds,sharkCard|sharkCard.metaId,2,Y
+answerQuestion,活动,,QuestionActAnswerRequest,answer|questionMetaId,nextQuestionMetaId|over|result|wrongAnswer1Key|wrongAnswer2Key|wrongAnswer3Key,1,N
+challengeChrist,活动,MerryChristmasChallengeRequest.lua / luoyang.yi,MerryChristmasChallengeRequest,christId,bigReward|chapterFinishReward|dialogId|retCode|win,1,Y
+challengeCowStage,活动,ActivityCowStageRequest.lua - 牧场大战活动相关请求 / 挑战牧场,ChallengeCowStageRequest,cowStageId,selectId|win,1,Y
+challengeMysterious,活动,request / /request / response,ChallengeMysteriousRequest,difficultyDegree|id,,1,Y
+changeDiceLuck,活动,DiceChangeLuckRequest,DiceChangeLuckRequest,,changeDiceLuckCount|changeLuckCountPerThrow|diceNewRewards|gainedCoin|throwDiceCount,1,N
+chargeBalloon,活动,,BlowBalloonActGetEnegyRequest,ensureSuccess,currPoint,1,N
+defaultPhoneNum,活动,修改/设定玩家手机号码,PhoneChargeSetNumRequest,phoneNum,,2,N
+distributeBonus,活动,分配红包，区分好友和军团,DistributeBonusRequest,accepterList|accepterType|bonusId,,1,N
+eatPeach,活动,ActivityEatPeachRequest.lua - 吃桃补充体力活动相关请求,EatPeachRequest,featureName,gainedEnergy,1,Y
+gainBalloonPoint,活动,,BlowBalloonActGainMagicValueRequest,,currPoint,1,N
+gainLimitReward,活动,ActiveRechangeRequest.lua / 2014-1-19 / meilan.xie / request / /request / response / /response / /protocol,ActiveRechangeRequest,stepId,,1,N
+getAccumulateGems,活动,GetAccumulateGemsRequest,GetAccumulateGemsRequest,,accumulateGems,1,N
+getAccumulateRechargeInfo,活动,,GetRechargeInfoRequest,,remainingDays|rewards,2,N
+getActivityBalloonInfo,活动,,BlowBalloonActInfoRequest,,balloonRanks|currPoint,5,N
+getBonusAccepterList,活动,分配红包，区分好友和军团,GetBonusAccepterListRequest,bonusId,friendList|unionList,2,N
+getDailyRecharge,活动,获得充值活动最新状态接口,PhoneChargeGetInfoRequest,,dailyRecharge,1,N
+getGemConsumeInfo,活动,,GetGemConsumeInfoRequest,rewardId,consumeGems|gainedRewards,1,N
+getLevelRaceInfo,活动,GetLevelRaceInfoRequest,GetLevelRaceInfoRequest,,levelRaceRanks,1,N
+getMaintenanceMeta,活动,GetActivityOnOffConfigRequest.lua - 得到活动配置请求,GetActivityOnOffConfigRequest,,maintenanceItem,2,Y
+getQuestionInfo,活动,,QuestionActGetStateRequest,,dailyNum|questionId|questionNum|wrongAnswer1Key|wrongAnswer2Key|wrongAnswer3Key,1,N
+rechargeCalls,活动,送话费活动 获取话费,PhoneChargeGainRequest,callsType|phoneNum,,2,N
+recordActivityFbShare,活动,Facebook相关,ShareFacebookActivityeRequest,,,1,N
+recordGameFbShare,活动,Facebook相关,FacebookRecordTriggerShareRequest,shareId|shareSuccess,,1,N
+resetChrist,活动,MerryChristmasResetRequest.lua / zhehua.ou,MerryChristmasResetRequest,christId,retCode,1,N
+setoffFireworks,活动,FireworksFireRequest.lua - 向玩家发送免费礼物,FireworksFireRequest,,rewards,1,N
+throwDice,活动,DiceRollRequest,DiceRollRequest,,changeDiceLuckCount|changeLuckCountPerThrow|coins|diceStates|throwDiceCount,1,N
+wishing,活动,许愿池许愿接口 / 接口定义 后端提供,FountainWishRequest,,coins|multiple,1,N
+bindAccount,登录 / 账号 / 连接,,BindAccountRequest,platformId|platformUid|sid,,1,N
+createUser,登录 / 账号 / 连接,,CreateUserRequest,avatarId|inviteCode|nickName,sharkUser|sharkUser.serverId|sharkUser.uid,1,Y
+geneNickname,登录 / 账号 / 连接,GeneNicknameRequest.lua - 获取好友的详情,GeneNicknameRequest,,nickname,1,Y
+getServerStatus,登录 / 账号 / 连接,,GetServerStatusRequest,,,1,Y
+getServerTimeStamp,登录 / 账号 / 连接,,GetServerTimeStampRequest,,,1,Y
+getSocketServer,登录 / 账号 / 连接,GetSocketServerRequest,GetSocketServerRequest,,serverAddress|serverPort|token,1,Y
+loginServer,登录 / 账号 / 连接,,LoginServerRequest,accountId|serverId,accountReturnRewards|uid,2,Y
+searchUserByNickname,登录 / 账号 / 连接,SearchUserByNicknameRequest.lua - 据昵称查找用户,SearchUserByNicknameRequest,nickName,friendUid|sharkFriendDetail|sharkFriendDetail.friend|sharkFriendDetail.invitationSent,2,N
+replaceMatrixGrid,矩阵,,ReplaceMatrixGridRequest,cardId|matrixId|posId,type,1,N
+upgradeMatrix,矩阵,,UpgradeMatrixRequest,matrixId,,1,N
+challengeArena,竞技场 / PK,ChallengeArenaRequest,ChallengeArenaRequest,matchedUid|revenge,,3,Y
+challengeContend,竞技场 / PK,ChallengeContendRequest,ChallengeContendRequest,contendId,,1,Y
+challengeCrossUser,竞技场 / PK,挑战,ChallengeCrossUserRequest,index,matchList,1,N
+challengePkUser,竞技场 / PK,PKChallengePkUserRequest.lua - 比武请求挑战,PKChallengePkUserRequest,opponentUid|type,,1,Y
+destinyBattle,竞技场 / PK,,DestinyBattleRequest,cardId|destinyBattleId,isBossBattle|monsterGroupId,1,N
+gainArenaScoreByRank,竞技场 / PK,GainArenaScoreByRankRequest,GainArenaScoreByRankRequest,,reward|reward.amount,4,N
+gainPkBuff,竞技场 / PK,PKGainPkBuffRequest.lua - 比武请求武神祝福,PKGainPkBuffRequest,,,1,N
+gainPkRewards,竞技场 / PK,PKGainPkRewardsRequest.lua - 比武请求领奖,PKGainPkRewardsRequest,,rewards,1,N
+getArenaMatchedPlayers,竞技场 / PK,GetArenaMatchedPlayersRequest,GetArenaMatchedPlayersRequest,,retCode|reward|reward.amount,4,N
+getDestinyInfo,竞技场 / PK,,GetDestinyInfoRequest,ignoreAction,,2,N
+getPkFoes,竞技场 / PK,PKGetPkFoesRequest.lua - 比武请求仇人列表,PKGetPkFoesRequest,,pkUserInfos,2,N
+getPkInfo,竞技场 / PK,PKGetPKInfoRequest.lua - 比武请求基础信息,PKGetPKInfoRequest,,,1,N
+getPkTopRankUsers,竞技场 / PK,PKGetPkTopRankUsersRequest.lua - 比武请求排名信息,PKGetPkTopRankUsersRequest,,pkUserInfos,1,N
+refreshMatch,竞技场 / PK,刷新对手,RefreshMatchRequest,type,matchList,1,N
+getEquips,装备,获取装备,GetEquipsRequest,,,1,Y
+quickUpgradeEquip,装备,QuickUpgradeEquipRequest,QuickUpgradeEquipRequest,equipId,equipId|sharkEquip,1,Y
+sellEquips,装备,SellEquipsRequest.lua - 出售装备的请求,SellEquipsRequest,equipIds,rewards,1,Y
+setupEquip,装备,SetupEquipRequest.lua - 更换装备的请求,SetupEquipRequest,cardId|equipId,,1,Y
+upgradeEquip,装备,UpgradeEquipRequest,UpgradeEquipRequest,equipId,equipId|sharkEquip,1,Y
+equipEnchant,装备附灵,附灵接口,EnchantUpgradeRequest,equipId,sharkEquip|sharkEquip.cardId|sharkEquip.enchantLevel|sharkEquip.enchantNum,1,Y
+getEnchantStepReward,装备附灵,附灵引导奖励接口,GetEnchantStepRewardRequest,,rewards,1,Y
+buyCrossPvpChallengeTime,跨服,request / /request / response / /response / /protocol,BuyCrossPvpChallengeTimeRequest,,matchList,1,N
+challengeCrossBoss,跨服,获取世界boss信息,ChallengeCrossBossRequest,bossType|type,,1,Y
+crossGvgCanMindApply,跨服,跨服GvG  军团界面弹框请求,CrossUnionPkcrossGvgCanMindApplyRequest,,applyCrossGvgRemind,1,N
+exchangeGvgFormation,跨服,request / /request / response / /response,ExchangeGvgFormationRequest,,,1,N
+gainCrossBossReward,跨服,领取奖励,GainCrossBossRewardRequest,,,1,N
+gainCrossGachaPointReward,跨服,跨服Gacha 小玉嫁到 相关 / 获取活动信息,CrossGachaGainPointRewardRequest,id,rewards,1,N
+gainCrossGachaRankAndMysteriousReward,跨服,跨服Gacha 小玉嫁到 相关 / 获取活动信息,CrossGachaGainRankRewardRequest,,mysteriousRewards|rankRewards,1,N
+gainCrossPkGuessReward,跨服,GainCrossPkGuessRewardRequest,GainCrossPkGuessRewardRequest,,rewards,1,N
+gainCrossPkRankReward,跨服,GainCrossPkRankRewardRequest,GainCrossPkRankRewardRequest,,rewards,1,N
+gainCrossPkServerReward,跨服,GainCrossPkServerRewardRequest,GainCrossPkServerRewardRequest,,rewards,1,N
+gainCrossPvpActiveReward,跨服,,CrossPvpActiveRewardRequest,activeId,rewards,1,N
+gainCrossPvpBattleReward,跨服,领取跨服pvp奖励,CrossPvpGainBattleRewardRequest,type,rewards,2,N
+getCrossBossInfo,跨服,获取世界boss信息,GetCrossBossInfoRequest,,,3,N
+getCrossBossRankInfo,跨服,领取奖励,GetCrossBossRankInfoRequest,,,1,N
+getCrossGachaInfo,跨服,跨服Gacha 小玉嫁到 相关 / 获取活动信息,GetCrossGachaInfoRequest,,,1,N
+getCrossGvgGroupInfo,跨服,request / /request / response / /response / /protocol,GetCrossGvgGroupInfoRequest,,,1,N
+getCrossGvgInfo,跨服,request / /request / response / /response / /protocol,GetCrossGvgInfoRequest,,coinInspireNum|signs|striveInspireNum,3,N
+getCrossGvgInfoBase,跨服,跨服GvG  获取淘汰信息,CrossUnionPkGetCrossGvgInfoBaseRequest,,crossGvgVersion|groupId|out|selfApplyCrossGvg|selfQuitCrossGvg|unionApplyCrossGvg,2,N
+getCrossPkCapacity,跨服,GetCrossPkCapacityRequest,GetCrossPkCapacityRequest,,crossPkUserCapacities,1,N
+getCrossPkInfo,跨服,GetCrossPkInfoRequest,GetCrossPkInfoRequest,,crossPkGroupInfo,2,N
+getCrossPkReport,跨服,GetCrossPkReportRequest,GetCrossPkReportRequest,reportId,userinfo1|userinfo2|whetherWin,2,N
+getCrossPvpInfo,跨服,request / /request / response / /response / /protocol,GetCrossPvpInfoRequest,,battleInfo|battleInfo.activeScore|battleInfo.battleScore|battleInfo.freeRefreshTimestamp|battleInfo.matchList|battleInfo.rank|phaseIndex|rewardInfo|rewardInfo.rankRewardStatus|rewardInfo.ranks|rewardInfo.serverRewardStatus,3,N
+getCrossPvpRankInfo,跨服,获得跨服PVP排行榜信息,CrossPvpGetRankInfoRequest,,rank|rankInfos|score,4,N
+getCrossPvpReport,跨服,request / /request / response / /response / /protocol,GetCrossPvpReportRequest,,rank|score,3,N
+getCrossPvpVideo,跨服,request / /request / response / /response / /protocol,GetCrossPvpVideoRequest,reportId,retCode,1,N
+guessCrossPkRank,跨服,GuessCrossPkRankRequest,GuessCrossPkRankRequest,guessUid,,1,N
+inspireCrossBossTeam,跨服,获取世界boss信息,InspireCrossBossTeamRequest,gems|props,,1,N
+inspireCrossGvg,跨服,request / /request / response / /response,InspireCrossGvgRequest,type,,1,N
+refreshCrossBossBattlePhase,跨服,获取世界boss信息,RefreshCrossBossBattlePhaseRequest,,,1,N
+uploadCrossGvgTeamMirror,跨服,,UploadCrossGvgTeamMirrorRequest,,,2,N
+challengeBabel,通天塔,,ChallengeBabelRequest,,selectId,1,Y
+challengeSkyTower,通天塔,,ChallengeSkyTowerRequest,floor|type|version,clearNewBabel|currFloor|currTotalStars|firstTimeBigWin|forbidSkip|haveReward|haveTimesLeft|leftHpRate|monsterGroupId|selectDifficult|win,1,N
+gainAutoClimbReward,通天塔,,GainAutoClimbRewardRequest,speedUp,,6,N
+gainSkipBattleAddition,通天塔,,SkyTowerSkipGainAddRequest,floorId|type,,1,N
+gainSkipBattleRewards,通天塔,,SkyTowerSkipGainRewardsRequest,,rewards,1,N
+getBabelInfo,通天塔,,GetBabelInfoRequest,,,6,Y
+resetBabel,通天塔,,ResetBabelRequest,,,1,N
+resetClimbData,通天塔,,ResetClimbTowerRequest,type,,4,N
+skipSkyTowerBattle,通天塔,,SkyTowerSkipBattleRequest,,,1,N
+startAutoClimbBabel,通天塔,,StartAutoClimbBabelRequest,,,2,N
+buyActionPower,道具 / 商店,BuyActionPowerRequest,BuyActionPowerRequest,,requisites,1,N
+buyChallengeNum,道具 / 商店,BuyChallengeNumRequest,BuyChallengeNumRequest,,amount|requisite,1,N
+buyEnergy,道具 / 商店,BuyEnergyRequest,BuyEnergyRequest,,,1,N
+buyEnergyStone,道具 / 商店,,BlowBalloonActBuyEnegyRequest,num,rewards,1,N
+buyEventPoint,道具 / 商店,BuyEventPointRequest,BuyEventPointRequest,,,1,N
+buyGoods,道具 / 商店,,BuyGoodsRequest,goodsId,reward,2,Y
+buyGrid,道具 / 商店,,BuyGridRequest,,requisite|requisite.amount|rewards,2,Y
+buyMissionCompleteCount,道具 / 商店,BuyMissionCompleteCountRequest,BuyMissionCompleteCountRequest,missionId,gems,2,N
+buySeckillItem,道具 / 商店,购买限时秒杀物品接口,SeckillBuyRequest,id,rewards,1,N
+exchangeGiftBag,道具 / 商店,兑换礼包请求,ExchangeGiftBagRequest,activationCode,exchangeGiftBagInfo|rewards,1,N
+exchangeMedalShop,道具 / 商店,获得商品,ExchangeMedalShopRequest,exchangeId|exchangeListId,rewards,1,N
+exchangeMysteriousItem,道具 / 商店,宝物锁定,ExchangeMysteriousItemRequest,id,,1,Y
+exchangeSecretShop,道具 / 商店,神秘商店兑换,ExchangeSecretShopRequest,exchangeId|exchangeListId,rewards,1,Y
+getMedalShopList,道具 / 商店,获得商品,GetMedalShopListRequest,,itemIdList,2,N
+getProps,道具 / 商店,GetPropsRequest.lua - 培养卡片的请求,GetPropsRequest,,,1,Y
+getSeckillInfo,道具 / 商店,获得秒杀活动当前状态,SeckillGetInfoRequest,,seckillItems,1,N
+getSecretShopList,道具 / 商店,获得神秘商店列表,GetSecretShopListRequest,,itemIdList,3,Y
+refreshMedalShop,道具 / 商店,刷新勋章商城,RefreshMedalShopRequest,,itemIdList,1,N
+refreshSecretShop,道具 / 商店,刷新神秘商店,RefreshSecretShopRequest,,itemIdList,1,Y
+sellProps,道具 / 商店,SellPropsRequest.lua - 出售道具的请求,SellPropsRequest,requisite,rewards,1,Y
+useProp,道具 / 商店,,UsePropRequest,amount|propId,rewards,11,Y
+batchDeleteRewardEmail,邮件,批量删除奖励邮件,EmailBatchDeleteRewardEmailRequest,rewardEmailIds,,3,N
+batchDeleteSysEmail,邮件,批量删除系统邮件,EmailBatchDeleteSysEmailRequest,sysEmailIds,,2,N
+batchDeleteSysNotice,邮件,批量删除系统通知,EmailBatchDeleteSysNoticeRequest,sysNoticeIds,,1,N
+batchDeleteUserEmail,邮件,批量删除用户邮件,EmailBatchDeleteUserEmailRequest,userEmailIds,,1,N
+deleteSysEmail,邮件,DeleteSysEmailRequest,DeleteSysEmailRequest,sysEmailMetaId,,1,N
+deleteSysNotice,邮件,DeleteSysNoticeRequest,DeleteSysNoticeRequest,sysNoticeId,,1,N
+deleteUserEmail,邮件,DeleteUserEmailRequest,DeleteUserEmailRequest,userEmailId,,1,N
+gainRewardEmailReward,邮件,领取邮件奖励,EmailGainRewardEmailRewardRequest,rewardEmailId,rewards,1,N
+gainSysEmailReward,邮件,GainSysEmailRewardRequest,GainSysEmailRewardRequest,sysEmailId,rewards,1,N
+getUserEmails,邮件,GetUserEmailsRequest,GetUserEmailsRequest,,,1,Y
+modifyEmail,邮件,EmailChangeRequest,EmailChangeRequest,newEmail,,1,N
+readRewardEmail,邮件,标记奖励邮件为已读,EmailReadRewardEmailRequest,rewardEmailId,,1,Y
+readSysEmail,邮件,ReadSysEmailRequest,ReadSysEmailRequest,sysEmailMetaId,,1,Y
+readSysNotice,邮件,ReadSysNoticeRequest,ReadSysNoticeRequest,sysNoticeId,,1,Y
+readUserEmail,邮件,ReadUserEmailRequest,ReadUserEmailRequest,userEmailId,,1,Y
+sendUserEmail,邮件,SendUserEmailRequest,SendUserEmailRequest,content|receiveUid,rewards,1,Y

@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""关卡与战斗：clearMission / trigger*Event / 章节推进。
+
+客户端的战斗是「服务端给结果，客户端演出」：
+响应里必须有 win / rewards / cardInitDatas / eventFlow 等字段，
+缺一个就是 SIGKILL。这里沿用原服务端已实测可行的战斗包构造器。
+"""
+import gamedata as G
+
+OK = 200
+E_ENERGY_NOT_ENOUGH = 710514
+E_MISSION_NOT_EXIST = 710401
+
+MISSION_STEP_ENERGY = 2
+
+
+class MissionService:
+    def __init__(self, ctx):
+        self.ctx = ctx
+        self.db = ctx.db
+        self.r = ctx.repos
+
+    # ============================================================ 扫荡
+    def clear_mission(self, player_id, mission_id, route_id=1, clear_rounds=1):
+        rounds = max(1, int(clear_rounds or 1))
+        p = self.r.player.player(player_id)
+        cost = MISSION_STEP_ENERGY * rounds
+        if int(p['energy']) < cost:
+            return E_ENERGY_NOT_ENOUGH, None
+        self.r.player.add_currency(player_id, 'energy', -cost)
+
+        G.init_battle_meta()
+        ev = G._cs._BATTLE_EVENT.get((int(mission_id), 2)) or G.battle_event(mission_id)
+        if not ev:
+            self.r.player.add_currency(player_id, 'energy', cost)
+            return E_MISSION_NOT_EXIST, None
+        rewards = []
+        for _ in range(rounds):
+            rewards += [{'itemType':G.RE_COIN,'amount':int(ev.get('coin') or 0)},
+                        {'itemType':G.RE_EXP,'amount':int(ev.get('exp') or 0)}]
+            rewards += G.roll_drop_packs(ev.get('dropPacks') or [])
+        applied, _ = self.ctx.reward.grant(player_id, rewards, record=True, reason='clearMission')
+        self.r.progress.set_max_finished_mission(player_id, int(mission_id))
+        return OK, {'clearMissionRewards': applied}
+
+    # ============================================================ 关卡事件
+    def trigger_event(self, player_id, kind, params=None):
+        import random, json
+        params = params or {}
+        mid = int(params.get('missionId') or 100101)
+        step = int(params.get('step') or 0)
+        key = '%s:%s:%s:%s' % (mid, step, kind, params.get('battleType', 1))
+        with self.db.tx() as con:
+            cached = self.db.one('SELECT data_json FROM player_activity WHERE player_id=? AND activity_key=?',
+                                 (player_id, 'mission_event_cache'))
+            cached = json.loads(cached['data_json']) if cached else {}
+            # ⚠️ 只缓存非战斗事件。战斗回包**绝不能缓存**：
+            #    它依赖 battle.py 的当前逻辑（事件结构、qte、掉落），
+            #    缓存住会让服务端改了代码客户端却一直是旧结果，
+            #    排查时会误以为「改动没生效」。
+            if step and kind != 'battle' and cached.get('key') == key:
+                return OK, cached['payload']
+            p = self.r.player.player(player_id)
+            if step and int(p['energy']) < MISSION_STEP_ENERGY:
+                return E_ENERGY_NOT_ENOUGH, None
+            if kind == 'battle':
+                code, payload = self.challenge(player_id, mid, int(params.get('battleType') or 1))
+                if code != OK: return code, payload
+            else:
+                rewards = []
+                if kind == 'exp': rewards = [{'itemType':G.RE_EXP,'amount':20}]
+                elif kind == 'card':
+                    pool = [i for i in G.card_all_ids() if G.card_rare(i) in (2,3,4)
+                            and str((G.card_meta(i) or {}).get('figureId','')).endswith('_1')]
+                    if pool: rewards = [{'itemType':G.RE_CARD,'metaId':random.choice(pool),'amount':1,'level':1,'exp':0}]
+                elif kind in ('coin','random'):
+                    G.init_battle_meta()
+                    lo,hi = G._cs._BATTLE_COIN.get(mid//100,(5,7))
+                    rewards = [{'itemType':G.RE_COIN,'amount':random.randint(int(lo),int(hi))}]
+                applied,_ = self.ctx.reward.grant(player_id,rewards,record=True,reason='mapEvent:'+kind)
+                payload = {'rewards':applied,'encounterMultiPlayerBoss':False}
+                if kind == 'empty': payload['eventType'] = 6
+                elif kind == 'random': payload['eventType'] = 3
+            if step:
+                # Persist completed missions for the nested chapter map at login.
+                if payload.get('win', True):
+                    import luaconf
+                    events = luaconf.as_list(luaconf.load('battle_chapter_event'))
+                    last_step = max((int(e['step']) for e in events if int(e['missionId']) == mid), default=0)
+                    if last_step and step == last_step:
+                        self.r.progress.scene_process(player_id)
+                        self.r.progress.set_max_finished_mission(player_id, mid)
+                        if int(params.get('battleType') or 1) != 2:
+                            self.r.progress.add_mission_complete(player_id, mid)
+                self.r.player.add_currency(player_id,'energy',-MISSION_STEP_ENERGY)
+                self.r.progress.mission_context(player_id)
+                self.r.progress.update_mission_context(player_id,mission_id=mid,
+                    finished_step=step if payload.get('win',True) else max(0,step-1),
+                    route_id=int(params.get('routeId') or 1),fight_lose=not payload.get('win',True))
+                blob = json.dumps({'key':key,'payload':payload})
+                con.execute('INSERT INTO player_activity(player_id,activity_key,data_json) VALUES (?,?,?) '
+                            'ON CONFLICT(player_id,activity_key) DO UPDATE SET data_json=excluded.data_json',
+                            (player_id,'mission_event_cache',blob))
+            return OK,payload
+
+    # ============================================================ 挑战
+    def challenge(self, player_id, mission_id=None, battle_type=1):
+        from .battle import chapter_battle
+        mid = int(mission_id or 100101)
+        try:
+            pack = chapter_battle(self.db, player_id, mid, int(battle_type))
+        except ValueError:
+            return E_MISSION_NOT_EXIST, None
+        if pack['win']:
+            source = G._cs
+            reward_ev = source._BATTLE_EVENT.get((mid, int(battle_type))) or source._BATTLE_EVENT.get(mid) or {}
+            rewards = [{'itemType':G.RE_COIN,'amount':int(reward_ev.get('coin') or 0)},
+                       {'itemType':G.RE_EXP,'amount':int(reward_ev.get('exp') or 0)}]
+            rewards += G.roll_drop_packs(reward_ev.get('dropPacks') or [])
+            with self.db.tx():
+                applied, _ = self.ctx.reward.grant(player_id, rewards, record=True, reason='chapterBattle')
+                pack['rewards'] = applied
+                if int(battle_type) == 2:
+                    self.r.progress.set_max_finished_mission(player_id, mid)
+                    self.r.progress.add_mission_complete(player_id, mid, star=3)
+                self.r.player.bump_daily(player_id, self.db.today(), 'battle_num')
+        return OK, pack
+
+    def get_mission_complete_info(self, player_id):
+        rows = self.r.progress.mission_completes(player_id)
+        return OK, {'missionCompletes': [
+            {'missionId': int(r['mission_id']), 'star': int(r['star']),
+             'missionCompleteCount': int(r['complete_count'])} for r in rows]}
+
+    # ============================================================ 精英 / 通天塔
+    def elite_info(self, player_id):
+        row = self.r.progress.elite(player_id)
+        today = self.db.today()
+        return OK, {'eliteInfos': [], 'maxFinishedEliteId': int(row['max_finished_elite_id']),
+                    'resetTimes': self.r.player.daily_counter(player_id, today,
+                                                              'elite_reset_num')}
+
+    def reset_elite(self, player_id):
+        today = self.db.today()
+        n = self.r.player.bump_daily(player_id, today, 'elite_reset_num')
+        return OK, {'resetTimes': n}
+
+    def elite_sweep(self, player_id, elite_id, rounds=1):
+        """精英扫荡：monsterGroupId 与 rewards 是客户端的硬需求字段。"""
+        rounds = max(1, int(rounds or 1))
+        p = self.r.player.player(player_id)
+        cost = MISSION_STEP_ENERGY * rounds
+        if int(p['energy']) < cost:
+            return E_ENERGY_NOT_ENOUGH, None
+        self.r.player.add_currency(player_id, 'energy', -cost)
+        packs = G.drop_packs().get('elite') or G.drop_packs().get('mission') or []
+        rewards = []
+        for _ in range(rounds):
+            rewards += G.roll_drop_packs(packs)
+        applied, _ = self.ctx.reward.grant(player_id, rewards, record=True, reason='eliteSweep')
+        self.r.progress.set_max_finished_elite(player_id, int(elite_id))
+        return OK, {'rewards': applied, 'monsterGroupId': 0, 'isBossBattle': False}
+
+    def babel_info(self, player_id):
+        row = self.r.progress.sky_tower(player_id)
+        return OK, {'babelInfo': {'floor': int(row['max_floor']),
+                                  'maxFloor': int(row['max_big_win_floor'])}}
+
+    def challenge_babel(self, player_id, floor=None):
+        pack = G.build_battle_response(100101, 1)
+        pack['win'] = True
+        pack['bossHp'] = 0
+        pack['bossHpMax'] = 100
+        if floor:
+            self.r.progress.set_sky_tower_floor(player_id, int(floor))
+        return OK, pack

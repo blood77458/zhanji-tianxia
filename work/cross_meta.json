@@ -1,0 +1,12 @@
+{
+ "crossBossSettingConfig": [],
+ "crossBossHeroConfig": [],
+ "crossBossGoldBattleConfig": [],
+ "crossBossRewardConfig": [],
+ "crossArenaSettingConfig": {
+  "featureNameBattle": "crossArenaBattle",
+  "featureNameReward": "crossArenaBattle",
+  "freeBattleNum": 5
+ },
+ "crossServerTimeConfig": []
+}

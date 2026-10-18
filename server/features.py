@@ -19,6 +19,40 @@ RE_EQUIP = 6
 RE_PROP = 7
 RE_GRID = 9
 RE_EVENTPOINT = 11
+RE_TREASURE = 27
+
+# Countdown reward package IDs → stub rewards (mirrors reward_package 11001-11008)
+_COUNTDOWN_PKG_REWARDS = {
+    11001: [{"itemType": RE_COIN, "metaId": 0, "amount": 2000},
+            {"itemType": RE_EQUIP, "metaId": 210051, "amount": 1, "id": 0, "level": 1, "exp": 0}],
+    11002: [{"itemType": RE_COIN, "metaId": 0, "amount": 3000},
+            {"itemType": RE_PROP, "metaId": 400016, "amount": 3}],
+    11003: [{"itemType": RE_COIN, "metaId": 0, "amount": 5000},
+            {"itemType": RE_PROP, "metaId": 400017, "amount": 2}],
+    11004: [{"itemType": RE_COIN, "metaId": 0, "amount": 8000},
+            {"itemType": RE_PROP, "metaId": 400001, "amount": 5}],
+    11005: [{"itemType": RE_COIN, "metaId": 0, "amount": 10000},
+            {"itemType": RE_PROP, "metaId": 400019, "amount": 1}],
+    11006: [{"itemType": RE_COIN, "metaId": 0, "amount": 12000},
+            {"itemType": RE_GEMS, "metaId": 0, "amount": 50}],
+    11007: [{"itemType": RE_COIN, "metaId": 0, "amount": 15000},
+            {"itemType": RE_GEMS, "metaId": 0, "amount": 100}],
+    11008: [{"itemType": RE_COIN, "metaId": 0, "amount": 15000},
+            {"itemType": RE_CARD, "metaId": 102091, "amount": 1, "id": 0, "level": 1, "exp": 0}],
+}
+
+_COUNTDOWN_STEPS = [
+    {"id": 1, "countdownTime": 0, "rewardPackage": 11001},
+    {"id": 2, "countdownTime": 60, "rewardPackage": 11002},
+    {"id": 3, "countdownTime": 180, "rewardPackage": 11003},
+    {"id": 4, "countdownTime": 300, "rewardPackage": 11004},
+    {"id": 5, "countdownTime": 900, "rewardPackage": 11005},
+    {"id": 6, "countdownTime": 1800, "rewardPackage": 11006},
+    {"id": 7, "countdownTime": 3600, "rewardPackage": 11007},
+    {"id": 8, "countdownTime": 86400, "rewardPackage": 11008},
+]
+
+_TREASURE_GACHA_POOL = [271011, 271021, 271031, 271041, 271051, 271061, 271071]
 
 _PROP_META = {}       # metaId -> {sellPrice, effectType, effectValue, canSell}
 _SHOP_META = {}       # goodsId -> {itemType, metaId, amount, moneyType, discountPrice}
@@ -584,14 +618,22 @@ class InventoryMixin:
         self.equips = []         # list of equip dicts
         self.props = []          # list of {metaId, amount}
         self.spirits = []
+        self.treasures = []      # list of treasure dicts
         self.bought_grid_num = 0
         self.bought_grid_times = 0
         self.main_card_id = 1
         self.additional_card_ids = ""  # comma-separated string
         self.next_card_id = 1000
         self.next_equip_id = 100
+        self.next_treasure_id = 1
         self.inventory_seeded = False
         self.event_point = 100
+        self.last_free_treasure_gacha_seconds = 0
+        self.rp_value = 0
+        self.rp_gacha_times = 0
+        self.countdown_reward_id = 1
+        self.countdown_reward_finished = False
+        self.countdown_reward_ts = 0
 
     def load_inv(self, d):
         self.gems = int(d.get("gems", self.gems))
@@ -599,14 +641,23 @@ class InventoryMixin:
         self.equips = list(d.get("equips") or [])
         self.props = list(d.get("props") or [])
         self.spirits = list(d.get("spirits") or [])
+        self.treasures = list(d.get("treasures") or [])
         self.bought_grid_num = int(d.get("bought_grid_num", 0))
         self.bought_grid_times = int(d.get("bought_grid_times", 0))
         self.main_card_id = int(d.get("main_card_id", 1))
         self.additional_card_ids = str(d.get("additional_card_ids") or "")
         self.next_card_id = int(d.get("next_card_id", 1000))
         self.next_equip_id = int(d.get("next_equip_id", 100))
+        self.next_treasure_id = int(d.get("next_treasure_id", 1))
         self.inventory_seeded = bool(d.get("inventory_seeded", False))
         self.event_point = int(d.get("event_point", 100))
+        self.last_free_treasure_gacha_seconds = int(
+            d.get("last_free_treasure_gacha_seconds", 0) or 0)
+        self.rp_value = int(d.get("rp_value", 0) or 0)
+        self.rp_gacha_times = int(d.get("rp_gacha_times", 0) or 0)
+        self.countdown_reward_id = int(d.get("countdown_reward_id", 1) or 1)
+        self.countdown_reward_finished = bool(d.get("countdown_reward_finished", False))
+        self.countdown_reward_ts = int(d.get("countdown_reward_ts", 0) or 0)
         # Drop / repair cards whose metaId is missing from card_meta — otherwise
         # CardQueueScene/BackpackScene index nil and SIGKILL.
         self.sanitize_cards()
@@ -619,6 +670,10 @@ class InventoryMixin:
             eid = int(e.get("equipId") or 0)
             if eid >= self.next_equip_id:
                 self.next_equip_id = eid + 1
+        for t in self.treasures:
+            tid = int(t.get("treasureId") or 0)
+            if tid >= self.next_treasure_id:
+                self.next_treasure_id = tid + 1
 
     def sanitize_cards(self):
         """Remove unknown metaIds; refresh cardGroupId / crash-prone fields."""
@@ -659,14 +714,22 @@ class InventoryMixin:
             "equips": self.equips,
             "props": self.props,
             "spirits": self.spirits,
+            "treasures": self.treasures,
             "bought_grid_num": self.bought_grid_num,
             "bought_grid_times": self.bought_grid_times,
             "main_card_id": self.main_card_id,
             "additional_card_ids": self.additional_card_ids,
             "next_card_id": self.next_card_id,
             "next_equip_id": self.next_equip_id,
+            "next_treasure_id": self.next_treasure_id,
             "inventory_seeded": self.inventory_seeded,
             "event_point": self.event_point,
+            "last_free_treasure_gacha_seconds": self.last_free_treasure_gacha_seconds,
+            "rp_value": self.rp_value,
+            "rp_gacha_times": self.rp_gacha_times,
+            "countdown_reward_id": self.countdown_reward_id,
+            "countdown_reward_finished": self.countdown_reward_finished,
+            "countdown_reward_ts": self.countdown_reward_ts,
         }
 
     def ensure_seeded(self, starter_card_fn):
@@ -753,10 +816,33 @@ class InventoryMixin:
             self.add_equip_from_reward(r)
         elif it == RE_PROP:
             self.add_prop(r.get("metaId"), amt)
+        elif it == RE_TREASURE:
+            self.add_treasure_from_reward(r)
         elif it == RE_GRID:
             self.bought_grid_num = int(self.bought_grid_num) + amt
         elif it == RE_EVENTPOINT:
             self.event_point = max(0, int(self.event_point) + amt)
+
+    def add_treasure_from_reward(self, r):
+        tid = int(r.get("id") or r.get("treasureId") or 0)
+        if not tid:
+            self.next_treasure_id += 1
+            tid = self.next_treasure_id
+            r = dict(r)
+            r["id"] = tid
+        else:
+            self.next_treasure_id = max(self.next_treasure_id, tid + 1)
+        self.treasures.append({
+            "treasureId": tid,
+            "metaId": int(r.get("metaId") or 271011),
+            "level": int(r.get("level") or 1),
+            "cardId": 0,
+            "addPotential": 0,
+            "addGemPotential": 0,
+            "usedPotential": 0,
+            "lock": False,
+        })
+        return r
 
     def apply_rewards(self, rewards, st_coins_apply=None):
         for r in rewards or []:
@@ -1281,6 +1367,183 @@ def handle(method, params, base, st, starter_card_fn):
             st.save()
         return True
 
+    # ----- Countdown / treasure / destiny / chat stubs with real-shaped data -----
+    if method == "getCountdownReward":
+        import time as _time
+        cur = int(getattr(st, "countdown_reward_id", 1) or 1)
+        step = next((s for s in _COUNTDOWN_STEPS if s["id"] == cur), _COUNTDOWN_STEPS[0])
+        pkg = int(step["rewardPackage"])
+        rewards = [dict(x) for x in _COUNTDOWN_PKG_REWARDS.get(pkg, [reward_coin(1000)])]
+        for r in rewards:
+            if int(r.get("itemType") or 0) == RE_EQUIP and not r.get("id"):
+                st.next_equip_id += 1
+                r["id"] = st.next_equip_id
+            if int(r.get("itemType") or 0) == RE_CARD and not r.get("id"):
+                st.next_card_id += 1
+                r["id"] = st.next_card_id
+        st.apply_rewards(rewards, st.apply_reward)
+        nxt = cur + 1
+        finished = nxt > len(_COUNTDOWN_STEPS)
+        st.countdown_reward_id = 1 if finished else nxt
+        st.countdown_reward_finished = finished
+        st.countdown_reward_ts = int(_time.time())
+        st.save()
+        base.update({
+            "rewards": rewards,
+            "latestRewardTimestamp": st.countdown_reward_ts,
+            "inProcessRewardId": st.countdown_reward_id,
+            "finished": finished,
+        })
+        return True
+
+    if method == "gachaTreasure":
+        import time as _time
+        times = int(params.get("time") or params.get("times") or 1)
+        free = bool(params.get("free"))
+        times = max(1, min(10, times))
+        cost = 0 if free else 50 * times
+        if not free and int(st.gems) < cost:
+            base["retCode"] = 710513
+            return True
+        if free:
+            st.last_free_treasure_gacha_seconds = int(_time.time())
+        else:
+            st.gems = max(0, int(st.gems) - cost)
+        rewards = []
+        for _ in range(times):
+            st.next_treasure_id += 1
+            mid = random.choice(_TREASURE_GACHA_POOL)
+            tid = st.next_treasure_id
+            rewards.append({
+                "itemType": RE_TREASURE,
+                "id": tid,
+                "metaId": mid,
+                "amount": 1,
+                "level": 1,
+            })
+        st.apply_rewards(rewards, st.apply_reward)
+        st.save()
+        base["rewards"] = rewards
+        return True
+
+    if method == "getSharkTreasures":
+        base["sharkTreasures"] = {"sharkTreasures": list(st.treasures)}
+        return True
+
+    if method == "getDestinyInfo":
+        main = next((c for c in st.cards
+                     if int(c.get("cardId") or 0) == int(st.main_card_id)), None)
+        boss_meta = int((main or {}).get("metaId") or 101011)
+        base.update({
+            "spiritConcentrateLevel": 1,
+            "bossId": boss_meta,
+            "spiritConcentrateNum": 0,
+            "spiritConcentrateTotalNum": 5,
+            "spiritConcentrateVipNum": 0,
+            "spiritConcentrateVipTotalNum": 10,
+            "destinyBattle": 1,
+        })
+        return True
+
+    if method == "destinyBattle":
+        mid = int(params.get("destinyBattleId") or 1)
+        base.update({
+            "isBossBattle": mid >= 3,
+            "monsterGroupId": 100100 + mid,
+            "rewards": [reward_coin(500), reward_exp(50)],
+        })
+        st.apply_rewards(base["rewards"], st.apply_reward)
+        st.save()
+        return True
+
+    if method == "buyTreasureGrid":
+        cost = 50
+        grids = 10
+        if int(st.gems) < cost:
+            base["retCode"] = 710513
+            return True
+        st.gems = max(0, int(st.gems) - cost)
+        st.bought_grid_num = int(st.bought_grid_num) + grids
+        st.bought_grid_times = int(st.bought_grid_times) + 1
+        rewards = [reward_grid(grids)]
+        st.apply_rewards(rewards, st.apply_reward)
+        st.save()
+        base["rewards"] = rewards
+        return True
+
+    if method in ("getWorldChat", "getPrivateChat", "getUnionChat",
+                  "sendWorldChat", "sendPrivateChat", "sendUnionChat"):
+        base.setdefault("chatMessages", [])
+        base.setdefault("messages", [])
+        return True
+
+    if method in ("getReviewFriends", "getInvitationFriends"):
+        base["sharkFriends"] = []
+        base.setdefault("receivedEnergy", 0)
+        return True
+
+    if method == "getRobUserList":
+        base.update({"robUserList": [], "robRobotList": []})
+        return True
+
+    if method == "getSkyTowerInfo":
+        import time as _time
+        _days = max(1, int((_time.time() - 1704067200) // 86400))
+        _st = {
+            "days": _days, "climbTimes": 0, "maxTotalStars": 100,
+            "currTotalStars": 0, "currUsedStars": 0, "maxFloor": 0,
+            "currFloor": 1, "beginSkipFloor": 1, "inTopRankDays": 0,
+            "gainFloorBuff": [], "selfAtkBuff": 0, "selfDefBuff": 0,
+            "selfHpBuff": 0, "enemyAtkDebuff": 0, "enemyDefDebuff": 0,
+            "gainYesterdayReward": False, "dead": False, "skipBattle": False,
+            "selectDifficult": 0, "maxBigWinFloor": 1,
+        }
+        base.update({
+            "pastStatus": dict(_st),
+            "currStatus": dict(_st),
+            "pastRanks": [],
+            "sharkSkyTower": {
+                "uid": str(getattr(st, "uid", "100001")),
+                "maxBigWinFloor": 1, "maxFloor": 300, "maxTotalStars": 900,
+            },
+        })
+        return True
+
+    if method == "getMultiplayserBossInfo":
+        import time as _time
+        base.update({
+            "activeBossInfo": [],
+            "bossChallengeRecord": [],
+            "rank": 0,
+            "gainedRankReward": True,
+            "actionPower": 100,
+            "actionPowerLastUpdateTime": int(_time.time()),
+            "battleType": 0,
+            "globalReturnScene": False,
+        })
+        return True
+
+    if method == "replaceMatrixGrid":
+        base.update({"type": int(params.get("type") or 0), "succ": True})
+        return True
+
+    if method in ("getWantedActivityInfo", "wantedActivityGetWantedInfo"):
+        base.update({
+            "wantedConfigId": 1,
+            "wanteds": 0,
+            "refreshTimes": 0,
+        })
+        return True
+
+    if method in ("getCrossArenaInfo", "crossPvpGetInfo"):
+        base.update({
+            "score": 0,
+            "rank": 0,
+            "activeScore": 0,
+            "activeRewards": [],
+        })
+        return True
+
     # ----- Soft-ack (safe empty payloads only) -----
     if method in ("deleteUserEmails", "deleteSysEmails", "deleteSysNotices",
                   "readSysEmail", "readSysNotice", "readUserEmail",
@@ -1306,7 +1569,7 @@ def handle(method, params, base, st, starter_card_fn):
         if method == "getPlayerTeamInfo":
             base["sharkCards"] = {"sharkCards": list(st.cards)}
             base["sharkEquips"] = {"sharkEquips": list(st.equips)}
-            base["sharkTreasures"] = {"sharkTreasures": []}
+            base["sharkTreasures"] = {"sharkTreasures": list(st.treasures)}
             base["sharkUserBattleArray"] = []
         if method == "getBabelInfo":
             base["babelInfo"] = {"floor": 1, "maxFloor": 50}
@@ -1321,14 +1584,24 @@ def handle(method, params, base, st, starter_card_fn):
             base["sharkCardFragments"] = []
             base["sharkEquipFragments"] = []
         if method in ("upgradeTreasure", "evolveTreasure") and params.get("treasureId"):
-            # avoid nil sharkTreasure crash if panel opened
-            base["sharkTreasure"] = {
-                "treasureId": int(params.get("treasureId") or 1),
-                "metaId": int(params.get("metaId") or 281012),
-                "level": 1, "cardId": 0,
-                "addPotential": 0, "addGemPotential": 0,
-                "usedPotential": 0, "lock": False,
-            }
+            tid = int(params.get("treasureId") or 0)
+            found = next((t for t in st.treasures
+                          if int(t.get("treasureId") or 0) == tid), None)
+            if found:
+                if method == "upgradeTreasure":
+                    found["level"] = int(found.get("level") or 1) + 1
+                elif method == "evolveTreasure":
+                    found["metaId"] = int(found.get("metaId") or 271011) + 1
+                st.save()
+                base["sharkTreasure"] = dict(found)
+            else:
+                base["sharkTreasure"] = {
+                    "treasureId": tid or 1,
+                    "metaId": int(params.get("metaId") or 271011),
+                    "level": 1, "cardId": 0,
+                    "addPotential": 0, "addGemPotential": 0,
+                    "usedPotential": 0, "lock": False,
+                }
         return True
 
     # Catch-all for remaining *Equip / *Card methods that clients assume return

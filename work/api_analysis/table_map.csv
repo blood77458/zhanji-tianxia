@@ -1,0 +1,364 @@
+﻿method,操作,分类,涉及表,请求参数,响应字段,服务端已实现
+challengeMultiplayerBoss,写,Boss / 通缉,player_activity|player_daily|player_daily_counter,battleType|bossId|triggerUid,bossHpMax|bossInfo|globalReturnScene|win,Y
+challengeWanted,写,Boss / 通缉,player_activity|player_daily|player_daily_counter,,wantedId|win,Y
+challengeWorldBoss,写,Boss / 通缉,player_activity|player_daily|player_daily_counter,battleType,bossHp|bossHpMax,Y
+exchangeItem,写,Boss / 通缉,player_activity|player,itemId,rewards,Y
+gainMultiplayerBossParticipationReward,写,Boss / 通缉,player_activity|player_activity_reward_claim|player,bossKey,rewards,N
+gainMultiplayerBossRankReward,写,Boss / 通缉,player_activity|rank_board|player_activity_reward_claim|player,,rewards,N
+gainWorldBossRewards,写,Boss / 通缉,player_activity|player_activity_reward_claim|player,,,Y
+getMultiplayerBossDamage,读,Boss / 通缉,player_activity,bossId|triggerUid,damages,N
+getMultiplayerBossLeftHp,读,Boss / 通缉,player_activity,bossId|triggerUid,leftHp,N
+getMultiplayerBossRank,读,Boss / 通缉,player_activity|rank_board,beginPos|endPos,currRankMax|multiPlayerBossRanks,N
+getWantedInfo,读,Boss / 通缉,player_activity,,wantedInfo,Y
+getWorldBossInfo,读,Boss / 通缉,player_activity,,,Y
+inspireInWorldBoss,写,Boss / 通缉,player_activity|player,worldBossInspireInfos,,Y
+refreshWanted,写,Boss / 通缉,player_activity,minimum,wantedId,Y
+setAutoWorldBoss,写,Boss / 通缉,player_activity,autoChallenge,,Y
+gainAchievementReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim|player,achievementId|achievementType,reward,N
+gainActiveReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,activeRewardId,rewards,N
+gainBalloonPointReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,id,balloonRanks,N
+gainBalloonRankReward,写,任务 / 成就 / 奖励,player_activity|rank_board|player_activity_reward_claim|player,,balloonRanks,N
+gainChapterFinishReward,写,任务 / 成就 / 奖励,player_mission_context|player_scene_process|player_mission_complete|player_activity_reward_claim|player,chapterId,amount|itemType|metaId|reward,N
+gainChargeMoneyReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim|player,id,rewards,Y
+gainConsumeReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,id,rewards,N
+gainDailyAchieveReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim|player,achieveId,rewards,N
+gainDailyTaskReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim|player,taskId,rewards,N
+gainDayReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,dayRewardId,,N
+gainDiceReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player_daily|player,,changeDiceLuckCount|changeLuckCountPerThrow|diceNewRewards|gainedCoin|throwDiceCount,N
+gainFbActivityReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,,rewards,N
+gainFortuneRewards,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,,id|rewards,N
+gainGemConsumeRewards,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,rewardId,rewards,N
+gainGoldGodRewards,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,,rewards,N
+gainInviteReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim|player,,rewards,N
+gainInvitedReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim|player,deviceId|invitationCode,rewards,N
+gainLevelRaceRewards,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,level,rewards,N
+gainMondayReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,,rewards,N
+gainNewYearRewards,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,id,rewards,N
+gainRankFirstReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|rank_board|player_activity_reward_claim|player,rank,amount|itemType|metaId|rewards,N
+gainRankRewards,写,任务 / 成就 / 奖励,player_sky_tower|rank_board|player_activity_reward_claim|player,,rewards,N
+gainSwornReward,写,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player,swornRewardId,rewards,N
+gainTutorialFinishReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim|player,,rewards,N
+getAchievements,读,任务 / 成就 / 奖励,player_daily|player_daily_counter,,cardBookAchievement|sharkAchievement,Y
+getChargeFeedbackReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim,rewardId,rewards,N
+getConsumeRewardInfo,读,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim,,recharges|rewards,N
+getContinuousLoginReward,写,任务 / 成就 / 奖励,player_continuous_login|player_continuous_login_v2|player_activity_reward_claim,getBigReward,bigReward|reward|rewardId,N
+getCountdownReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim,,finished|inProcessRewardId|latestRewardTimestamp|rewards,N
+getDailyAchieveInfo,读,任务 / 成就 / 奖励,player_daily|player_daily_counter,,,N
+getDailyActiveInfo,读,任务 / 成就 / 奖励,player_activity|player_daily|player_daily_counter,,dailyActiveInfo|dailyActiveInfo.activeValue|dailyActiveInfo.gainedRewards|dailyActiveInfo.taskCounters,N
+getLoginReward,写,任务 / 成就 / 奖励,player_continuous_login|player_continuous_login_v2|player_activity_reward_claim,,,Y
+getMonthlyLoginRewardMeta,读,任务 / 成就 / 奖励,player_continuous_login|player_continuous_login_v2|player_activity_reward_claim,,adNum|monthlyLoginRewardItems,Y
+getQuestionDailyReward,读,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim|player_daily|player_daily_counter,,dailyNum|questionId|questionNum|wrongAnswer1Key|wrongAnswer2Key|wrongAnswer3Key,N
+getRewardList,读,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim,,sharkRewardList,Y
+getSignInReward,写,任务 / 成就 / 奖励,player_sign_in|player_activity_reward_claim|player_daily,,,Y
+getTaskInfo,读,任务 / 成就 / 奖励,player_daily|player_daily_counter,,dailyTaskInfos,N
+getWeekReward,读,任务 / 成就 / 奖励,player_activity|player_activity_reward_claim,,,N
+pickUpAllReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim,pickUpCard|pickUpEquip,rewards,N
+pickUpReward,写,任务 / 成就 / 奖励,player_daily|player_daily_counter|player_activity_reward_claim,rewardId,reward,N
+gameInit,读,元数据 / 初始化,account|account_binding|player|player_extend|player_tutorial_step,,maintenanceItem|noChatEndSeconds|sharkAchievement,Y
+getAnnouncementInfo,读,元数据 / 初始化,player_activity,,announcementItemMetas,Y
+getMeta,读,元数据 / 初始化,account|account_binding|player|player_extend|player_tutorial_step,,,Y
+buySpiritPool,写,元神,player_spirit|player_spirit_attr|player_spirit_unsaved|player_extend|player_daily_counter|player|player_daily,,requisite|requisite.amount,Y
+equipSpirit,写,元神,player_spirit|player_spirit_attr|player_spirit_unsaved|player_extend|player_prop,cardId|index|spiritId,,Y
+sellSpirit,写,元神,player_spirit|player_spirit_attr|player_spirit_unsaved|player_extend|player,spiritIds,rewards,Y
+setAutoSave,写,元神,,autoSave,,N
+spiritConcentrate,读,元神,player_spirit|player_spirit_attr|player_spirit_unsaved|player_extend,type,sharkSpirits,Y
+unequipSpirit,写,元神,player_spirit|player_spirit_attr|player_spirit_unsaved|player_extend|player_prop,cardId|index,,Y
+upgradeSpirit,写,元神,player_spirit|player_spirit_attr|player_spirit_unsaved|player_extend|player,masterSpiritId|slaveSpiritIds,sharkSpirit|sharkSpirit.spiritId,Y
+challengeElite,写,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop|player_daily,eliteId,selectId|win,Y
+changeBattleArray,写,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete|player_battle_array|player_battle_slot|player_matrix|player_matrix_grid,battleArrayId,,N
+clearElite,读,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop,eliteId,challengeNum|lastEnergy|mergeRewards|rewards,N
+clearMission,读,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop,clearRounds|missionId|routeId,clearMissionRewards,Y
+getEliteInfo,读,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete,,,Y
+resetClearTime,写,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete|player_daily|player_daily_counter,,gemRequisite|gemRequisite.amount,N
+resetElite,写,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop|player_daily,eliteId,,N
+triggerBattleEvent,读,关卡 / 战斗,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop,DoNotCaptureFailueMessage|battleType|missionId|routeId|step,,Y
+adjustTeam,写,其他,player_battle_array|player_battle_slot|player_matrix|player_matrix_grid,additionalCardIds|mainCardId,,Y
+gainFloorAddition,写,其他,player_activity_reward_claim|player,type,,N
+gainYesterdayAddition,写,其他,player_activity_reward_claim|player,type,,N
+getHomeInfo,读,其他,account|account_binding|player|player_extend|player_tutorial_step,,consumeRewardRecharges|consumeRewards|freeSpiritRefreshNum|unionMonsterEscapeSeconds|unionMonsterHp,Y
+getMultiplayserBossInfo,读,其他,,,,N
+getPlayerTeamInfo,读,其他,player_battle_array|player_battle_slot|player_matrix|player_matrix_grid,playerTeamData|playerUid,,Y
+getUserBanInfo,读,其他,account|account_binding|player|player_extend|player_tutorial_step|player_daily|player_daily_counter,,noChatEndSeconds,Y
+login,读,其他,account|account_binding|player|player_extend|player_tutorial_step,,,Y
+rebirthItem,读,其他,player_activity,resourceId|resourceType,rewards,N
+recordAddictedTime,写,其他,player_activity,minutes,,N
+recordTutorialStep,写,其他,account|account_binding|player|player_extend|player_tutorial_step,funcName|step,,Y
+refreshSubAttribute,写,其他,,lockIndex|refreshType|spiritId,refreshSharkSpiritAttribute,N
+rename,写,其他,account|account_binding|player|player_extend|player_tutorial_step,nickName,,N
+sacrificeItem,读,其他,player_activity,resourceIds|resourceType,rewards,N
+selectSubAttribute,写,其他,,refreshIndex|spiritId,,N
+triggerCoinEvent,读,其他,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop|player,DoNotCaptureFailueMessage|missionId|routeId|step,,Y
+triggerEmptyEvent,读,其他,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop,DoNotCaptureFailueMessage|missionId|routeId|step,,Y
+triggerExpEvent,读,其他,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop|player,DoNotCaptureFailueMessage|missionId|routeId|step,,Y
+triggerRandomEvent,读,其他,player_mission_context|player_scene_process|player_mission_complete|player_elite|player_daily_counter|player_prop,DoNotCaptureFailueMessage|missionId|routeId|step,eventType,Y
+validatePaymentOrder,写,其他,payment_order|charge_log|player,goldNum|orderId|productId,succ,Y
+acceptUnionApply,写,军团,guild|guild_member|guild_apply,applierUid,,N
+applyCrossGvg,写,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,type,,N
+applyUnion,写,军团,guild|guild_member|guild_apply,unionId,,N
+applyUnionCity,写,军团,guild|guild_member|guild_city|guild_city_apply|guild_apply,unionCityId,,N
+appointUnion,写,军团,guild|guild_member,appointUid|title,,N
+blessForCrossGVG,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,rank|rewards,N
+buyUnionProp,写,军团,guild|guild_member|player_daily_counter|player|player_daily,unionPropId|unionPropType,retCode|rewards,N
+cancelDissolveUnion,写,军团,guild|guild_member,,,N
+cancelTransferUnion,写,军团,guild|guild_member,,,N
+cancelUnionApply,写,军团,guild|guild_member|guild_apply,unionId,,N
+challengeUnionMonster,写,军团,guild|guild_member|guild_monster|guild_monster_damage|guild_monster_allocate|player_daily|player_daily_counter,,bossHpMax|generalExp,Y
+constructUnion,写,军团,guild|guild_member|guild_building|guild_donate_log|guild_shop_record,constructType,,N
+createUnion,写,军团,guild|guild_member,coinType|declaration|notice|unionName,sharkUnion|sharkUnion.unionId,N
+crossGVGGroupBattle,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,,N
+dissolveUnion,写,军团,guild|guild_member,,sharkUnion|sharkUserUnion,N
+exchangeUnionFormation,写,军团,guild|guild_member|guild_formation_slot|guild_formation_team|player,forwardUid|headUids|middleUids|tailUids|unionCityId,,N
+forceQuitUnion,读,军团,guild|guild_member,quitUid,,N
+gainUnionBattleReward,写,军团,guild|guild_member|guild_monster|guild_monster_damage|guild_monster_allocate|player_activity_reward_claim|player,rewardId,rewards,N
+getAppliedUnions,读,军团,guild|guild_member|guild_apply,,sharkUnionWrappers,N
+getApplyUnions,读,军团,guild|guild_member,unionCityId,,N
+getCrossGVGBlessInfo,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,crossGvgVersion|rank|rewards|selfApplyCrossGvg|selfQuitCrossGvg|unionApplyCrossGvg,N
+getCrossGvgGroupReports,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,,N
+getCrossGvgGroupTop10Score,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,,N
+getFiredUnionMemberStatus,读,军团,guild|guild_member,firedUid,,N
+getGvgBattleResultDetail,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,knockout|reportId,,N
+getGvgKnockoutInfo,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,championBattle,N
+getOwnUnionInfo,读,军团,guild|guild_member,,,N
+getUnionAppliers,读,军团,guild|guild_member|guild_apply,,sharkUnionAppliers,N
+getUnionBattlefieldReport,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,reportId|unionCityId,,N
+getUnionBattlefieldReportList,读,军团,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,unionCityId,,N
+getUnionBuildingBankInfo,读,军团,guild|guild_member|guild_building|guild_donate_log|guild_shop_record,,level,N
+getUnionBuildingColosseumInfo,读,军团,guild|guild_member|guild_building|guild_donate_log|guild_shop_record,,level|rankList|sharkUnionMonster|sharkUnionMonster.distributingUid|sharkUnionMonster.escapeSeconds|sharkUnionMonster.monsterId|sharkUnionMonster.monsterLeftHp|sharkUnionMonster.reward.amount|sharkUnionMonster.rewardDistributed|sharkUnionMonster.rewardDouble|sharkUnionMonster.summonUserNickname|summonTimes|unionWealth,N
+getUnionBuildingHallInfo,读,军团,guild|guild_member|guild_building|guild_donate_log|guild_shop_record,,constructTimesToday|lastestConstructSeconds,N
+getUnionBuildingShopInfo,读,军团,guild|guild_member|guild_building|guild_donate_log|guild_shop_record,,level|specialProps|specialShopRecord,N
+getUnionCityInfo,读,军团,guild|guild_member|guild_city|guild_city_apply,unionCityId,sharkUnionCity|sharkUnionCity.report|sharkUnionCity.successfulBid|unionFormation,N
+getUnionCityList,读,军团,guild|guild_member|guild_city|guild_city_apply,,attendBattleNum|challengeCityIds|fightingCityIds|ownCityIds|roundWealth|smallCityNum|unionFormation|unionWinNum|userTitle,N
+getUnionFormation,读,军团,guild|guild_member|guild_formation_slot|guild_formation_team,unionCityId,sharkUnionCityApply|unionFormation,N
+getUnionInfo,读,军团,guild|guild_member,,canDistributeMonsterReward|sharkUnion|sharkUnionBuildingWrapper|unionMonsterEscapeSeconds|unionMonsterHp|unionTotalFightCapacity|unionWarLightOn,N
+getUnionList,读,军团,guild|guild_member,amount|startNum,sharkUnionWrappers,N
+getUnionMembersList,读,军团,guild|guild_member,,sharkUnionMemberWrappers,N
+getUnionMonsterRank,读,军团,guild|guild_member|guild_monster|guild_monster_damage|guild_monster_allocate|rank_board,,rankList,N
+getUnionNewsList,读,军团,guild|guild_member|guild_news,,sharkUnionNewsWrappers|unionWarNewsWrappers,N
+getUnionWarCityMembersList,读,军团,guild|guild_member,cityId,unionFormation,N
+getUserUnionInfo,读,军团,guild|guild_member|player_daily|player_daily_counter,,crossGvgVersion|out|promotion|selfApplyCrossGvg|selfQuitCrossGvg|sharkUserUnion|unionApplyCrossGvg|unionWarHintNum,Y
+impeachUnionManager,写,军团,guild|guild_member,,currManagerNickName,N
+inspireUnionBattle,写,军团,guild|guild_member|player,buffId|unionCityId,,N
+modifyUnionDeclaration,写,军团,guild|guild_member,declaration,,N
+modifyUnionNotice,写,军团,mail|mail_attachment|sys_email_meta|guild,notice,,N
+quitUnion,写,军团,guild|guild_member,,sharkUserUnion,N
+receiveUnionWage,写,军团,guild|guild_member,unionWageId,rewards,N
+rejectUnionAllApplies,写,军团,guild|guild_member|guild_apply,,,N
+rejectUnionApply,写,军团,guild|guild_member|guild_apply,applierUid,,N
+searchUnion,读,军团,guild|guild_member,unionName,sharkUnionWrappers,N
+summonUnionMonster,读,军团,guild|guild_member|guild_monster|guild_monster_damage|guild_monster_allocate,monsterMetaId|summonType,sharkUnionMonster|sharkUnionMonster.distributingUid|sharkUnionMonster.escapeSeconds|sharkUnionMonster.monsterId|sharkUnionMonster.monsterLeftHp|sharkUnionMonster.reward.amount|sharkUnionMonster.rewardDistributed|sharkUnionMonster.rewardDouble|sharkUnionMonster.summonUserNickname,N
+transferUnion,写,军团,guild|guild_member,transferedUid,transferTime,N
+unionMonsterRewardDistributeBegin,读,军团,guild|guild_member|guild_monster|guild_monster_damage|guild_monster_allocate|player_activity_reward_claim,,currMonsterRewards,N
+unionMonsterRewardDistributeGiveUp,读,军团,guild|guild_member|guild_monster|guild_monster_damage|guild_monster_allocate|player_activity_reward_claim,,,N
+unionMonsterRewardDistributeSave,读,军团,guild|guild_member|guild_monster|guild_monster_damage|guild_monster_allocate|player_activity_reward_claim,unionMonsterRewards,,N
+upgradeUnionBuilding,写,军团,guild|guild_member|guild_building|guild_donate_log|guild_shop_record|player,unionBuildingId,currLevel,N
+userApplyUnionCity,写,军团,guild|guild_member|guild_city|guild_city_apply|player_daily|player_daily_counter|player,unionCityId,,N
+adjustCardAvatar,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc,avatarMetaId|cardId,,N
+buyMonthGemCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player_daily_counter|player|player_activity_reward_claim|player_daily,,monthGemCardDeadline,N
+evolveCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player,masterId|slaveId,sharkCard|sharkCard.metaId,Y
+evolveEquip,写,卡牌养成,player_equip|player_card|player_prop|player,equipId|userGems,equipId|sharkEquip,Y
+exchangeCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player,cardId|shopId,reward,N
+exchangeCardDaily,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player_daily|player_daily_counter|player,cardId|metaId,reward,N
+exchangeTrainDanByArenaScore,写,卡牌养成,arena_rank|pk_record|player,exchangeType,amount|itemType|metaId|requisite|rewards,N
+gainedMonthGemCardReward,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player_activity_reward_claim|player,,rewards,N
+getCardBook,读,卡牌养成,player_card|player_card_skill|player_prop|id_alloc,,sharkCardBook|sharkCardBook.cardMetaIds|sharkCardBook.equipMetaIds,Y
+giveUpCardTrain,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc,cardId|masterId|slaveIds,sharkCard|sharkCard.usedPotential,Y
+lockCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc,cardId|methodType,,Y
+prayCardFragment,读,卡牌养成,player_card|player_card_skill|player_fragment|player_prop|id_alloc,cardId,prayNum|rewards,N
+refreshCardExchangeDaillyCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc,useGold,cardExchangeDailyInfo|cardExchangeDailyInfo.cardMetaIds|cardExchangeDailyInfo.exchangeTimes,N
+replaceCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player_battle_array|player_battle_slot|player_matrix|player_matrix_grid,insertCardId,type,Y
+saveCardTrain,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc,masterId|slaveIds,sharkCard|sharkCard.cardId|sharkCard.usedPotential,Y
+sellCards,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player,cardIds,rewards,Y
+setCardGroupInterworking,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player_battle_array|player_battle_slot|player_matrix|player_matrix_grid,cardGroupInterworking,,N
+splitCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player,cardId,rewards,Y
+trainCard,读,卡牌养成,player_card|player_card_skill|player_prop|id_alloc,,attTrainValue|defTrainValue|hpTrainValue,Y
+triggerCardEvent,读,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player_elite|player_daily_counter,DoNotCaptureFailueMessage|missionId|routeId|step,,Y
+unlockSubAttribute,写,卡牌养成,,spiritId,sharkSpiritAttribute,N
+upgradeCardByGeneralExp,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player,masterId|targetLevel,sharkCard,Y
+upgradeEquipForOneCard,写,卡牌养成,player_card|player_card_skill|player_prop|id_alloc|player,equipIds,sharkEquips,Y
+upgradeSkill,写,卡牌养成,player_card_skill|player_prop|player,cardId|skillBooks|skillId,cardSkill|cardSkill.skillId,N
+upgradeUser,写,卡牌养成,account|account_binding|player|player_extend|player_tutorial_step|player_daily|player_daily_counter,,sharkUser,N
+getRobUserList,读,夺宝 / 神兽,player_daily|player_daily_counter,beastFragmentId,,N
+getSharkBeasts,读,夺宝 / 神兽,player_activity,,sharkBeasts,Y
+robBeastFragment,写,夺宝 / 神兽,player_activity|player_fragment,beastFragmentId|enemyUid|robType|robotId,,N
+acceptAllFreeGift,写,好友社交,friend|friend_invitation,,gainedEnergy,N
+acceptAllInvitations,写,好友社交,friend|friend_invitation,,acceptedFriends|reviewingFriends,N
+acceptInvitation,写,好友社交,friend|friend_invitation,friendUid,acceptedFriend,N
+cancelInvitation,写,好友社交,friend|friend_invitation,friendUid,,N
+challengeFriend,写,好友社交,friend|friend_invitation|player_daily|player_daily_counter,friendUid,tableContentHeight,N
+challengeFriendList,写,好友社交,friend|friend_invitation|player_daily|player_daily_counter,friendUids,rewards,N
+deleteFriend,写,好友社交,friend|friend_invitation,friendUid,,N
+gainPraiseReward,写,好友社交,player_praise|player_activity_reward_claim|player,praiseId,rewards,N
+getFriendDetail,读,好友社交,friend|friend_invitation,friendUid,sharkFriendDetail|sharkFriendDetail.fightCapacity|sharkFriendDetail.friendUid|sharkFriendDetail.level|sharkFriendDetail.mainCardMetaId|sharkFriendDetail.nickName,N
+getFriends,读,好友社交,friend|friend_invitation,,receivedEnergy|sharkFriends,Y
+getInvitationFriends,读,好友社交,friend|friend_invitation,,sharkFriends,N
+getInvitationInfo,读,好友社交,friend|friend_invitation,deviceId,deviceHasInvited|sharkAccountInvitation,N
+getRecommendedFriends,读,好友社交,friend|friend_invitation,,sharkFriends,N
+getReviewFriends,读,好友社交,friend|friend_invitation,,sharkFriends,N
+inviteFbFriends,读,好友社交,friend|friend_invitation|player_activity_reward_claim,fbFriendIds,,N
+recordPraiseId,写,好友社交,player_praise|player_activity_reward_claim,praiseId,,N
+refuseAllInvitations,写,好友社交,friend|friend_invitation|player_daily|player_daily_counter,,,N
+refuseInvitation,写,好友社交,friend|friend_invitation|player_daily|player_daily_counter,friendUid,,N
+sendAllFreeGift,写,好友社交,friend|friend_invitation,friendUids,friendUids|gainedEnergy,N
+sendAllInvitations,写,好友社交,friend|friend_invitation,friendUids,friendUids,N
+sendFreeGift,写,好友社交,friend|friend_invitation,friendUid,gainedEnergy,N
+sendInvitation,写,好友社交,friend|friend_invitation,friendUid,,N
+buyTreasureGrid,写,宝物,player_treasure|player_card|player_extend|player_daily_counter|player|player_daily,,,N
+evolveTreasure,写,宝物,player_treasure|player_card|player_extend|player,treasureId,sharkTreasure,Y
+gachaTreasure,读,宝物,player_treasure|player_card|player_extend|player_daily,free|time,rewards,N
+gainTreasureboxPointsRankReward,写,宝物,player_treasure|player_card|player_extend|rank_board|player_activity_reward_claim|player,,rewards,N
+gainTreasureboxPointsReward,写,宝物,player_treasure|player_card|player_extend|player_activity_reward_claim|player,id,rewards,N
+getTreasureboxPointsInfo,读,宝物,player_treasure|player_card|player_extend|player_activity_reward_claim,,treasureboxPointsRanks,N
+lockTreasure,写,宝物,player_treasure|player_card|player_extend,treasureId|type,,Y
+potentialTreasure,读,宝物,player_treasure|player_card|player_extend,treasureId|type,sharkTreasure,N
+resetTreasurePotential,写,宝物,player_treasure|player_card|player_extend|player_daily|player_daily_counter,treasureId,,N
+sellTreasures,写,宝物,player_treasure|player_card|player_extend|player,treasureIds,rewards,N
+setupTreasure,写,宝物,player_treasure|player_card|player_extend,cardId|treasureId,,N
+splitTreasure,写,宝物,player_treasure|player_card|player_extend|player,treasureId,rewards,N
+upgradeTreasure,写,宝物,player_treasure|player_card|player_extend|player,oneClick|treasureId,sharkTreasure,Y
+gachaCard,读,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_prop|player_daily,gachaId|time,countdownFreeGachaInfos|free|rewards,Y
+gachaCardByBox,读,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_prop|player_daily,,rewards,N
+gachaCardFree,读,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_prop|player_daily,gachaId,countdownFreeGachaInfos|free|rewards,Y
+gainGachaPointsRewards,写,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_activity_reward_claim|player_daily|player,,rewards,N
+getGachaBroadcast,读,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_daily,,,Y
+getGachaPointsInfo,读,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_activity_reward_claim|player_daily,,,N
+getSharkGachaBoxInfo,读,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_daily,,gachaBoxCard,N
+refreshGachaBox,写,抽卡 / 合成,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_daily,refreshType,gachaBoxCard,N
+synthetizeCard,写,抽卡 / 合成,player_card|player_card_skill|player_prop|id_alloc|player,metaId,rewards,Y
+synthetizeEquip,写,抽卡 / 合成,player_equip|player_card|player_prop|player,metaId,rewards,N
+synthetizeItem,写,抽卡 / 合成,player_prop|player_secret_shop|player,formulaId,,N
+upgradeCard,写,抽卡 / 合成,player_card|player_card_skill|player_prop|id_alloc|player,masterId|slaveIds,sharkCard|sharkCard.metaId,Y
+answerQuestion,写,活动,player_activity|player_activity_reward_claim|player_daily,answer|questionMetaId,nextQuestionMetaId|over|result|wrongAnswer1Key|wrongAnswer2Key|wrongAnswer3Key,N
+challengeChrist,写,活动,player_christ|player_activity|player_daily|player_daily_counter,christId,bigReward|chapterFinishReward|dialogId|retCode|win,Y
+challengeCowStage,写,活动,player_activity|player_activity_reward_claim|player_daily|player_daily_counter,cowStageId,selectId|win,Y
+challengeMysterious,写,活动,player_daily|player_daily_counter,difficultyDegree|id,,Y
+changeDiceLuck,写,活动,player_activity|player_activity_reward_claim|player_daily,,changeDiceLuckCount|changeLuckCountPerThrow|diceNewRewards|gainedCoin|throwDiceCount,N
+chargeBalloon,写,活动,player_activity|player_activity_reward_claim|player,ensureSuccess,currPoint,N
+defaultPhoneNum,读,活动,,phoneNum,,N
+distributeBonus,写,活动,red_packet|red_packet_claim,accepterList|accepterType|bonusId,,N
+eatPeach,写,活动,player_activity|player,featureName,gainedEnergy,Y
+gainBalloonPoint,写,活动,player_activity|player_activity_reward_claim|player,,currPoint,N
+gainLimitReward,写,活动,player_activity|player_activity_reward_claim|player,stepId,,N
+getAccumulateGems,读,活动,player_gem_card|payment_order|player,,accumulateGems,N
+getAccumulateRechargeInfo,读,活动,payment_order|charge_log|player_activity_reward_claim,,remainingDays|rewards,N
+getActivityBalloonInfo,读,活动,player_activity,,balloonRanks|currPoint,N
+getBonusAccepterList,读,活动,red_packet|red_packet_claim,bonusId,friendList|unionList,N
+getDailyRecharge,写,活动,payment_order|charge_log|player_activity_reward_claim|player_daily|player_daily_counter,,dailyRecharge,N
+getGemConsumeInfo,读,活动,player_activity|player,rewardId,consumeGems|gainedRewards,N
+getLevelRaceInfo,读,活动,player_activity|player_activity_reward_claim|player,,levelRaceRanks,N
+getMaintenanceMeta,读,活动,account|account_binding|player|player_extend|player_tutorial_step,,maintenanceItem,Y
+getQuestionInfo,读,活动,player_activity|player_activity_reward_claim|player_daily,,dailyNum|questionId|questionNum|wrongAnswer1Key|wrongAnswer2Key|wrongAnswer3Key,N
+rechargeCalls,写,活动,payment_order|charge_log|player_activity_reward_claim|player,callsType|phoneNum,,N
+recordActivityFbShare,写,活动,player_activity,,,N
+recordGameFbShare,写,活动,,shareId|shareSuccess,,N
+resetChrist,写,活动,player_christ|player_activity|player_daily|player_daily_counter,christId,retCode,N
+setoffFireworks,写,活动,player_activity|player,,rewards,N
+throwDice,写,活动,player_activity|player_activity_reward_claim|player_daily|player,,changeDiceLuckCount|changeLuckCountPerThrow|coins|diceStates|throwDiceCount,N
+wishing,写,活动,player_activity|player,,coins|multiple,N
+bindAccount,写,登录 / 账号 / 连接,account|account_binding|player|player_extend|player_tutorial_step,platformId|platformUid|sid,,N
+createUser,写,登录 / 账号 / 连接,account|account_binding|player|player_extend|player_tutorial_step|player_daily|player_daily_counter,avatarId|inviteCode|nickName,sharkUser|sharkUser.serverId|sharkUser.uid,Y
+geneNickname,读,登录 / 账号 / 连接,account|account_binding|player|player_extend|player_tutorial_step,,nickname,Y
+getServerStatus,读,登录 / 账号 / 连接,account|account_binding|player|player_extend|player_tutorial_step,,,Y
+getServerTimeStamp,读,登录 / 账号 / 连接,account|account_binding|player|player_extend|player_tutorial_step,,,Y
+getSocketServer,读,登录 / 账号 / 连接,account|account_binding|player|player_extend|player_tutorial_step,,serverAddress|serverPort|token,Y
+loginServer,读,登录 / 账号 / 连接,account|account_binding|player|player_extend|player_tutorial_step,accountId,accountReturnRewards|uid,Y
+searchUserByNickname,读,登录 / 账号 / 连接,player_daily|player_daily_counter,nickName,friendUid|sharkFriendDetail|sharkFriendDetail.friend|sharkFriendDetail.invitationSent,N
+replaceMatrixGrid,写,矩阵,player_activity|player_battle_array|player_battle_slot|player_matrix|player_matrix_grid,cardId|matrixId|posId,type,N
+upgradeMatrix,写,矩阵,player_activity|player_battle_array|player_battle_slot|player_matrix|player_matrix_grid|player,matrixId,,N
+challengeArena,写,竞技场 / PK,arena_rank|pk_record|player_daily|player_daily_counter,matchedUid|revenge,,Y
+challengeContend,写,竞技场 / PK,player_activity|player_activity_reward_claim|player_daily|player_daily_counter,contendId,,Y
+challengeCrossUser,写,竞技场 / PK,arena_rank|pk_record|player_daily|player_daily_counter,index,matchList,N
+challengePkUser,写,竞技场 / PK,arena_rank|pk_record|player_daily|player_daily_counter,opponentUid|type,,Y
+destinyBattle,读,竞技场 / PK,player_activity|pk_record,cardId|destinyBattleId,isBossBattle|monsterGroupId,N
+gainArenaScoreByRank,写,竞技场 / PK,arena_rank|pk_record|rank_board|player_activity_reward_claim|player,,reward|reward.amount,N
+gainPkBuff,写,竞技场 / PK,arena_rank|pk_record|player_activity_reward_claim|player,,,N
+gainPkRewards,写,竞技场 / PK,arena_rank|pk_record|player_activity_reward_claim|player,,rewards,N
+getArenaMatchedPlayers,读,竞技场 / PK,arena_rank|pk_record,,retCode|reward|reward.amount,N
+getDestinyInfo,读,竞技场 / PK,player_activity|pk_record,ignoreAction,,N
+getPkFoes,读,竞技场 / PK,arena_rank|pk_record,,pkUserInfos,N
+getPkInfo,读,竞技场 / PK,arena_rank|pk_record,,,N
+getPkTopRankUsers,读,竞技场 / PK,arena_rank|pk_record|rank_board|player_daily|player_daily_counter,,pkUserInfos,N
+refreshMatch,写,竞技场 / PK,arena_rank|pk_record,type,matchList,N
+getEquips,读,装备,player_equip|player_card|player_prop,,,Y
+quickUpgradeEquip,读,装备,player_equip|player_card|player_prop,equipId,equipId|sharkEquip,Y
+sellEquips,写,装备,player_equip|player_card|player_prop|player,equipIds,rewards,Y
+setupEquip,写,装备,player_equip|player_card|player_prop,cardId|equipId,,Y
+upgradeEquip,写,装备,player_equip|player_card|player_prop|player,equipId,equipId|sharkEquip,Y
+equipEnchant,写,装备附灵,player_equip|player_card|player_prop,equipId,sharkEquip|sharkEquip.cardId|sharkEquip.enchantLevel|sharkEquip.enchantNum,Y
+getEnchantStepReward,写,装备附灵,player_activity|player_activity_reward_claim,,rewards,Y
+buyCrossPvpChallengeTime,写,跨服,arena_rank|pk_record|player_daily_counter|player|player_daily,,matchList,N
+challengeCrossBoss,写,跨服,player_activity|player_daily|player_daily_counter,bossType|type,,Y
+crossGvgCanMindApply,读,跨服,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,applyCrossGvgRemind,N
+exchangeGvgFormation,写,跨服,guild|guild_member|guild_formation_slot|guild_formation_team|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_battle_report|player,,,N
+gainCrossBossReward,写,跨服,player_activity|player_activity_reward_claim|player,,,N
+gainCrossGachaPointReward,写,跨服,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_activity_reward_claim|player_daily|player,id,rewards,N
+gainCrossGachaRankAndMysteriousReward,写,跨服,player_card|player_card_skill|player_counter|gacha_log|id_alloc|rank_board|player_activity_reward_claim|player_daily|player,,mysteriousRewards|rankRewards,N
+gainCrossPkGuessReward,写,跨服,arena_rank|pk_record|player_activity_reward_claim|player,,rewards,N
+gainCrossPkRankReward,写,跨服,arena_rank|pk_record|rank_board|player_activity_reward_claim|player,,rewards,N
+gainCrossPkServerReward,写,跨服,arena_rank|pk_record|player_activity_reward_claim|player,,rewards,N
+gainCrossPvpActiveReward,写,跨服,arena_rank|pk_record|player_activity_reward_claim|player,activeId,rewards,N
+gainCrossPvpBattleReward,写,跨服,arena_rank|pk_record|player_activity_reward_claim|player,type,rewards,N
+getCrossBossInfo,读,跨服,player_activity,,,N
+getCrossBossRankInfo,读,跨服,player_activity|rank_board,,,N
+getCrossGachaInfo,读,跨服,player_card|player_card_skill|player_counter|gacha_log|id_alloc|player_daily,,,N
+getCrossGvgGroupInfo,读,跨服,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,,N
+getCrossGvgInfo,读,跨服,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,coinInspireNum|signs|striveInspireNum,N
+getCrossGvgInfoBase,读,跨服,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,crossGvgVersion|groupId|out|selfApplyCrossGvg|selfQuitCrossGvg|unionApplyCrossGvg,N
+getCrossPkCapacity,读,跨服,arena_rank|pk_record,,crossPkUserCapacities,N
+getCrossPkInfo,读,跨服,arena_rank|pk_record,,crossPkGroupInfo,N
+getCrossPkReport,读,跨服,arena_rank|pk_record,reportId,userinfo1|userinfo2|whetherWin,N
+getCrossPvpInfo,读,跨服,arena_rank|pk_record,,battleInfo|battleInfo.activeScore|battleInfo.battleScore|battleInfo.freeRefreshTimestamp|battleInfo.matchList|battleInfo.rank|phaseIndex|rewardInfo|rewardInfo.rankRewardStatus|rewardInfo.ranks|rewardInfo.serverRewardStatus,N
+getCrossPvpRankInfo,读,跨服,arena_rank|pk_record|rank_board,,rank|rankInfos|score,N
+getCrossPvpReport,读,跨服,arena_rank|pk_record,,rank|score,N
+getCrossPvpVideo,读,跨服,arena_rank|pk_record,reportId,retCode,N
+guessCrossPkRank,读,跨服,arena_rank|pk_record|rank_board,guessUid,,N
+inspireCrossBossTeam,写,跨服,player_activity|player,gems|props,,N
+inspireCrossGvg,写,跨服,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report|player,type,,N
+refreshCrossBossBattlePhase,写,跨服,player_activity,,,N
+uploadCrossGvgTeamMirror,写,跨服,guild|guild_member|cross_gvg_apply|cross_gvg_score|cross_gvg_formation|cross_gvg_report|cross_gvg_group|cross_gvg_bless|cross_gvg_bless_log|guild_formation_slot|guild_formation_team|guild_battle_report,,,N
+challengeBabel,写,通天塔,player_mission_context|player_scene_process|player_mission_complete|player_daily|player_daily_counter,,selectId,Y
+challengeSkyTower,写,通天塔,player_sky_tower|player_daily|player_daily_counter,floor|type|version,clearNewBabel|currFloor|currTotalStars|firstTimeBigWin|forbidSkip|haveReward|haveTimesLeft|leftHpRate|monsterGroupId|selectDifficult|win,N
+gainAutoClimbReward,写,通天塔,player_sky_tower|player_activity_reward_claim|player,speedUp,,N
+gainSkipBattleAddition,写,通天塔,player_activity|player_activity_reward_claim|player,floorId|type,,N
+gainSkipBattleRewards,写,通天塔,player_activity|player_activity_reward_claim|player,,rewards,N
+getBabelInfo,读,通天塔,player_sky_tower,,,Y
+resetBabel,写,通天塔,player_sky_tower|player_daily|player_daily_counter,,,N
+resetClimbData,写,通天塔,player_sky_tower|player_daily|player_daily_counter,type,,N
+skipSkyTowerBattle,读,通天塔,player_sky_tower,,,N
+startAutoClimbBabel,写,通天塔,player_sky_tower,,,N
+buyActionPower,写,道具 / 商店,player_prop|player_secret_shop|player_daily_counter|player|player_daily,,requisites,N
+buyChallengeNum,写,道具 / 商店,player_prop|player_secret_shop|player_daily_counter|player|player_daily,,amount|requisite,N
+buyEnergy,写,道具 / 商店,player_prop|player_secret_shop|player_daily_counter|player|player_daily,,,N
+buyEnergyStone,写,道具 / 商店,player_prop|player_secret_shop|player_daily_counter|player|player_daily,num,rewards,N
+buyEventPoint,写,道具 / 商店,player_prop|player_secret_shop|player_daily_counter|player|player_daily,,,N
+buyGoods,写,道具 / 商店,player_prop|player_secret_shop|player_daily_counter|player|player_daily,goodsId,reward,Y
+buyGrid,写,道具 / 商店,player_prop|player_secret_shop|player_extend|player_daily_counter|player|player_daily,,requisite|requisite.amount|rewards,Y
+buyMissionCompleteCount,写,道具 / 商店,player_mission_context|player_scene_process|player_mission_complete|player_daily_counter|player|player_daily,missionId,gems,N
+buySeckillItem,写,道具 / 商店,player_prop|player_secret_shop|player_daily_counter|player|player_activity_reward_claim|player_daily,id,rewards,N
+exchangeGiftBag,写,道具 / 商店,player_prop|player_secret_shop|player,activationCode,exchangeGiftBagInfo|rewards,N
+exchangeMedalShop,写,道具 / 商店,player_prop|player_secret_shop|player,exchangeId|exchangeListId,rewards,N
+exchangeMysteriousItem,写,道具 / 商店,player_prop|player_secret_shop|player,id,,Y
+exchangeSecretShop,写,道具 / 商店,player_prop|player_secret_shop|player,exchangeId|exchangeListId,rewards,Y
+getMedalShopList,读,道具 / 商店,player_prop|player_secret_shop|player,,itemIdList,N
+getProps,读,道具 / 商店,player_prop|player_secret_shop,,,Y
+getSeckillInfo,读,道具 / 商店,player_activity|player_activity_reward_claim,,seckillItems,N
+getSecretShopList,读,道具 / 商店,player_prop|player_secret_shop,,itemIdList,Y
+refreshMedalShop,写,道具 / 商店,player_prop|player_secret_shop|player,,itemIdList,N
+refreshSecretShop,写,道具 / 商店,player_prop|player_secret_shop,,itemIdList,Y
+sellProps,写,道具 / 商店,player_prop|player_secret_shop|player,requisite,rewards,Y
+useProp,写,道具 / 商店,player_prop|player_secret_shop|player_daily|player_daily_counter|player,amount|propId,rewards,Y
+batchDeleteRewardEmail,读,邮件,mail|mail_attachment|sys_email_meta|player_activity_reward_claim,rewardEmailIds,,N
+batchDeleteSysEmail,读,邮件,mail|mail_attachment|sys_email_meta,sysEmailIds,,N
+batchDeleteSysNotice,读,邮件,mail|mail_attachment|sys_email_meta,sysNoticeIds,,N
+batchDeleteUserEmail,读,邮件,mail|mail_attachment|sys_email_meta|player_daily|player_daily_counter,userEmailIds,,N
+deleteSysEmail,写,邮件,mail|mail_attachment|sys_email_meta,sysEmailMetaId,,N
+deleteSysNotice,写,邮件,mail|mail_attachment|sys_email_meta,sysNoticeId,,N
+deleteUserEmail,写,邮件,mail|mail_attachment|sys_email_meta|player_daily|player_daily_counter,userEmailId,,N
+gainRewardEmailReward,写,邮件,mail|mail_attachment|sys_email_meta|player_activity_reward_claim|player,rewardEmailId,rewards,N
+gainSysEmailReward,写,邮件,mail|mail_attachment|sys_email_meta|player_activity_reward_claim|player,sysEmailId,rewards,N
+getUserEmails,读,邮件,mail|mail_attachment|sys_email_meta|player_daily|player_daily_counter,,,Y
+modifyEmail,写,邮件,mail|mail_attachment|sys_email_meta,newEmail,,N
+readRewardEmail,读,邮件,mail|mail_attachment|sys_email_meta|player_activity_reward_claim,rewardEmailId,,Y
+readSysEmail,读,邮件,mail|mail_attachment|sys_email_meta,sysEmailMetaId,,Y
+readSysNotice,读,邮件,mail|mail_attachment|sys_email_meta,sysNoticeId,,Y
+readUserEmail,读,邮件,mail|mail_attachment|sys_email_meta|player_daily|player_daily_counter,userEmailId,,Y
+sendUserEmail,写,邮件,mail|mail_attachment|sys_email_meta|player_daily|player_daily_counter,content|receiveUid,rewards,Y
